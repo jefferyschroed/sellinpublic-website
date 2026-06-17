@@ -1,26 +1,59 @@
-const revealTargets = document.querySelectorAll(".texts-reveal");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .faq-reveal");
 
-if ("IntersectionObserver" in window) {
+const cssTimeToMs = (value) => {
+  const time = value.trim();
+  if (!time) return 0;
+  if (time.endsWith("ms")) return Number.parseFloat(time) || 0;
+  if (time.endsWith("s")) return (Number.parseFloat(time) || 0) * 1000;
+  return Number.parseFloat(time) || 0;
+};
+
+if ("IntersectionObserver" in window && !reduceMotion) {
   revealTargets.forEach((target) => {
     target.dataset.reveal = "pending";
   });
+
+  const showRevealTarget = (target) => {
+    let cleanupTimer;
+    const finish = () => {
+      window.clearTimeout(cleanupTimer);
+      target.dataset.reveal = "done";
+      target.removeEventListener("transitionend", finishReveal);
+    };
+    const finishReveal = (event) => {
+      if (event.target !== target || event.propertyName !== "opacity") return;
+      finish();
+    };
+
+    target.addEventListener("transitionend", finishReveal);
+    target.dataset.reveal = "visible";
+
+    const targetStyle = getComputedStyle(target);
+    const revealDuration = cssTimeToMs(targetStyle.getPropertyValue("--reveal-duration"));
+    const revealDelay = cssTimeToMs(targetStyle.getPropertyValue("--reveal-delay"));
+    cleanupTimer = window.setTimeout(finish, revealDuration + revealDelay + 120);
+  };
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.dataset.reveal = "visible";
+          showRevealTarget(entry.target);
           revealObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.18 }
+    {
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.16,
+    }
   );
 
   revealTargets.forEach((target) => revealObserver.observe(target));
 } else {
   revealTargets.forEach((target) => {
-    target.dataset.reveal = "visible";
+    target.dataset.reveal = "done";
   });
 }
 
@@ -170,7 +203,6 @@ if (nav) {
 }
 
 const faqItems = Array.from(document.querySelectorAll(".faq-booking__item"));
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const setPanelHeight = (item, height) => {
   const panel = item.querySelector(":scope > div");

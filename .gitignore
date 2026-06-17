@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+.netlify/
+node_modules/
+
+# Local design and QA artifacts.
+design.md
+outputs/
+redesign-targets/
+research/
+sections/
+worker-notes/

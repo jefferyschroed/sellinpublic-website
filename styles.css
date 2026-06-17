@@ -2480,7 +2480,6 @@ summary {
   color: rgba(5, 5, 5, 0.57);
   font-size: clamp(17px, 1.45vw, 19px);
   line-height: 1.58;
-  font-weight: 640;
 }
 
 .engagement-model__heading-break {

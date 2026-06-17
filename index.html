@@ -21,10 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Figtree:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=section-redesign-navglass-2" />
+    <link rel="stylesheet" href="styles.css?v=operating-desk-2" />
   </head>
   <body>
-    <header class="sip-hero" id="top" aria-labelledby="hero-title">
+    <header class="sip-hero" id="top" aria-labelledby="hero-title" data-nav-theme="dark">
       <div class="sip-hero__media" aria-hidden="true">
         <img
           class="sip-hero__image"
@@ -37,15 +37,24 @@
         <div class="sip-hero__scrim"></div>
       </div>
 
-      <nav class="sip-nav glass-surface" aria-label="Primary navigation">
+      <nav class="sip-nav glass-surface" aria-label="Primary navigation" data-theme="dark">
         <a class="sip-brand" href="#top" aria-label="Sell In Public home">
-          <img
-            class="sip-brand__logo"
-            src="public/assets/brand/hashtagicondark.webp"
-            alt=""
-            width="262"
-            height="263"
-          />
+          <span class="sip-brand__logo-wrap" aria-hidden="true">
+            <img
+              class="sip-brand__logo sip-brand__logo--light"
+              src="public/assets/brand/hashtagiconlight.webp"
+              alt=""
+              width="262"
+              height="263"
+            />
+            <img
+              class="sip-brand__logo sip-brand__logo--dark"
+              src="public/assets/brand/hashtagicondark.webp"
+              alt=""
+              width="262"
+              height="263"
+            />
+          </span>
         </a>
 
         <div class="sip-nav__links" aria-label="Page sections">
@@ -56,7 +65,7 @@
         </div>
 
         <a
-          class="sip-nav__cta sip-btn sip-btn--primary border-beam-pulse"
+          class="sip-nav__cta sip-btn sip-btn--primary"
           href="https://calendly.com/jeff-tryquicksetters/30min"
           aria-label="Book a discovery call"
           title="Book a discovery call"
@@ -80,7 +89,7 @@
         </p>
 
         <div class="sip-hero__actions" aria-label="Hero actions">
-          <a class="sip-btn sip-btn--primary border-beam-pulse" href="https://calendly.com/jeff-tryquicksetters/30min">
+          <a class="sip-btn sip-btn--primary" href="https://calendly.com/jeff-tryquicksetters/30min">
             <span>Book a discovery call</span>
           </a>
           <a class="sip-btn sip-btn--secondary" href="#system">
@@ -91,7 +100,7 @@
     </header>
 
     <main>
-      <section class="problem-proof section-band" id="proof" aria-labelledby="problem-proof-heading">
+      <section class="problem-proof section-band" id="proof" aria-labelledby="problem-proof-heading" data-nav-theme="light">
         <div class="problem-proof__inner section-inner">
           <div class="problem-proof__grid">
             <div class="problem-proof__copy texts-reveal">
@@ -153,7 +162,7 @@
         </div>
       </section>
 
-      <section class="sip-how section-band" id="services" aria-labelledby="sip-how-title">
+      <section class="sip-how section-band" id="services" aria-labelledby="sip-how-title" data-nav-theme="light">
         <div class="sip-how__inner section-inner">
           <div class="sip-how__header texts-reveal">
             <div>
@@ -288,7 +297,7 @@
         </div>
       </section>
 
-      <section class="managed-system section-band" id="system" aria-labelledby="managed-system-title">
+      <section class="managed-system section-band" id="system" aria-labelledby="managed-system-title" data-nav-theme="light">
         <div class="managed-system__inner section-inner">
           <div class="managed-system__header">
             <p class="section-eyebrow">Managed GTM system</p>
@@ -303,265 +312,106 @@
             </p>
           </div>
 
-          <div class="managed-system__console glass-surface glass-surface--light" aria-label="Managed GTM operations system">
-            <div class="console-workspace">
-              <div class="console-network">
-                <div class="managed-system__console-grid" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <div class="managed-system__grid" aria-label="Managed GTM system modules">
-                  <article class="system-module-card is-selected border-beam-pulse" data-tone="violet">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">EGC</div>
-                      <div class="console-metric">
-                        <strong>18</strong>
-                        <span>Posts queued</span>
-                      </div>
-                    </div>
-                    <p>EGC</p>
-                    <h3>Employee-generated content</h3>
-                    <p>We turn executive, AE, SDR, and operator expertise into credible LinkedIn posts, proof-led prompts, and conversation starters.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Proof</span>
-                      <span>Queue</span>
-                    </div>
-                  </article>
-                  <article class="system-module-card" data-tone="blue">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">DM</div>
-                      <div class="console-metric">
-                        <strong>420</strong>
-                        <span>Accounts touched</span>
-                      </div>
-                    </div>
-                    <p>Outbound motion</p>
-                    <h3>Cold DM and connection ops</h3>
-                    <p>Target accounts move through connection requests, context-rich DMs, profile touches, and follow-up sequences.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Connect</span>
-                      <span>Follow-up</span>
-                    </div>
-                  </article>
-                  <article class="system-module-card" data-tone="green">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">LI</div>
-                      <div class="console-metric">
-                        <strong>186</strong>
-                        <span>Buyer engagements</span>
-                      </div>
-                    </div>
-                    <p>Distribution</p>
-                    <h3>LinkedIn engagement</h3>
-                    <p>We identify the conversations your buyers already trust, then use comments, reactions, and employee amplification.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Comments</span>
-                      <span>Signals</span>
-                    </div>
-                  </article>
-                  <div class="console-hub" aria-hidden="true">
-                    <span class="console-mark"><span></span><span></span><span></span><span></span></span>
-                    <strong>Managed operating rhythm</strong>
-                    <div class="console-hub__metric">
-                      <b>12</b>
-                      <span>Meetings booked</span>
-                    </div>
-                  </div>
-                  <article class="system-module-card" data-tone="orange">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">EM</div>
-                      <div class="console-metric">
-                        <strong>97%</strong>
-                        <span>Delivered</span>
-                      </div>
-                    </div>
-                    <p>Email engine</p>
-                    <h3>Cold email infrastructure</h3>
-                    <p>Domains, inboxes, targeting, message testing, and deliverability are managed as one engine.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Domains</span>
-                      <span>Tests</span>
-                    </div>
-                  </article>
-                  <article class="system-module-card" data-tone="teal">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">RX</div>
-                      <div class="console-metric">
-                        <strong>36</strong>
-                        <span>Replies routed</span>
-                      </div>
-                    </div>
-                    <p>Inbox ops</p>
-                    <h3>Reply handling and routing</h3>
-                    <p>Positive replies, objections, referrals, and soft interest are triaged quickly and routed to the right owner.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Triage</span>
-                      <span>Owner</span>
-                    </div>
-                  </article>
-                  <article class="system-module-card" data-tone="gold">
-                    <div class="system-module-card__top">
-                      <div class="module-icon">AI</div>
-                      <div class="console-metric">
-                        <strong>$1.24M</strong>
-                        <span>Pipeline impact</span>
-                      </div>
-                    </div>
-                    <p>Iteration loop</p>
-                    <h3>Analytics and iteration</h3>
-                    <p>Weekly reporting shows what shipped, who engaged, which accounts responded, and where messaging should change.</p>
-                    <div class="system-module-card__signals" aria-hidden="true">
-                      <span>Report</span>
-                      <span>Iterate</span>
-                    </div>
-                  </article>
-                </div>
-              </div>
-
-              <aside class="console-activity" aria-label="Activity stream">
-                <div class="console-activity-header">
-                  <span>Activity stream</span>
-                  <h3>Signals moving through the system</h3>
-                </div>
-                <ol class="console-activity-list">
-                  <li data-tone="orange">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>Positive reply</strong>
-                      <p>Intro request tagged as interested.</p>
-                      <span>Routed</span>
-                    </div>
-                    <time>Now</time>
-                  </li>
-                  <li data-tone="teal">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>Meeting booked</strong>
-                      <p>Intro call added to pipeline.</p>
-                      <span>Meeting</span>
-                    </div>
-                    <time>4m</time>
-                  </li>
-                  <li data-tone="violet">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>New post queued</strong>
-                      <p>Founder POV moved into review.</p>
-                      <span>Queued</span>
-                    </div>
-                    <time>9m</time>
-                  </li>
-                  <li data-tone="blue">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>Connection accepted</strong>
-                      <p>Target account moved to follow-up.</p>
-                      <span>Next step</span>
-                    </div>
-                    <time>14m</time>
-                  </li>
-                  <li data-tone="green">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>Buyer thread engaged</strong>
-                      <p>Comment conversation routed.</p>
-                      <span>Signal</span>
-                    </div>
-                    <time>21m</time>
-                  </li>
-                  <li data-tone="gold">
-                    <span class="console-activity-icon" aria-hidden="true"></span>
-                    <div>
-                      <strong>Report generated</strong>
-                      <p>Iteration notes ready for review.</p>
-                      <span>Report</span>
-                    </div>
-                    <time>1h</time>
-                  </li>
-                </ol>
-              </aside>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="proof-outcomes section-band" id="proof-outcomes" aria-labelledby="proof-outcomes-heading">
-        <div class="proof-outcomes__inner section-inner">
-          <div class="proof-outcomes__header">
-            <div class="proof-outcomes__intro texts-reveal">
-              <p class="section-eyebrow">Proof and outcomes</p>
-              <h2 class="section-heading" id="proof-outcomes-heading">
-                Turn visible expertise into qualified
-                <span class="serif-italic">pipeline.</span>
-              </h2>
-              <p class="section-intro">
-                Sell In Public is built around measurable sales movement: ICP accounts
-                touched, executive authority shipped, positive replies routed, and
-                qualified conversations created for the revenue team.
-              </p>
-            </div>
-
-            <aside class="proof-outcomes__index" aria-label="Movement index">
-              <div class="proof-outcomes__index-head">
-                <span>Movement index</span>
-                <span><i aria-hidden="true"></i>routed</span>
-              </div>
-              <svg class="proof-outcomes__index-chart" viewBox="0 0 260 116" role="img" aria-label="Rising movement index line">
-                <path d="M18 86 H242 M18 58 H242 M18 30 H242" />
-                <path d="M24 82 C54 76 76 63 100 58 S145 66 164 58 S202 24 240 24" />
-                <circle cx="102" cy="58" r="6" />
-                <circle cx="164" cy="58" r="6" />
-                <circle cx="224" cy="24" r="6" />
+          <div class="managed-system__console operating-desk-visual glass-surface glass-surface--light" aria-label="Authority inputs become pipeline through the Sell in Public inbound system">
+            <div class="operating-desk-visual__flow">
+              <svg class="operating-desk-visual__connectors" viewBox="0 0 1000 430" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <marker id="operating-desk-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                    <path d="M0 0 10 5 0 10z"></path>
+                  </marker>
+                  <path id="operating-input-path-1" d="M220 71 C286 71 288 176 350 215" />
+                  <path id="operating-input-path-2" d="M220 167 C286 167 300 197 350 215" />
+                  <path id="operating-input-path-3" d="M220 263 C286 263 300 233 350 215" />
+                  <path id="operating-input-path-4" d="M220 359 C286 359 288 254 350 215" />
+                  <path id="operating-output-path" d="M694 215 C748 215 790 215 842 215" />
+                </defs>
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--green" href="#operating-input-path-1" />
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--orange" href="#operating-input-path-2" />
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--blue" href="#operating-input-path-3" />
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--teal" href="#operating-input-path-4" />
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--output-glow" href="#operating-output-path" />
+                <use class="operating-desk-visual__connector operating-desk-visual__connector--output" href="#operating-output-path" />
+                <circle class="operating-flow-dot operating-flow-dot--green" r="5">
+                  <animateMotion dur="8.8s" repeatCount="indefinite">
+                    <mpath href="#operating-input-path-1" />
+                  </animateMotion>
+                </circle>
+                <circle class="operating-flow-dot operating-flow-dot--orange" r="5">
+                  <animateMotion dur="9.4s" begin="-2.1s" repeatCount="indefinite">
+                    <mpath href="#operating-input-path-2" />
+                  </animateMotion>
+                </circle>
+                <circle class="operating-flow-dot operating-flow-dot--blue" r="5">
+                  <animateMotion dur="9s" begin="-4.3s" repeatCount="indefinite">
+                    <mpath href="#operating-input-path-3" />
+                  </animateMotion>
+                </circle>
+                <circle class="operating-flow-dot operating-flow-dot--teal" r="5">
+                  <animateMotion dur="9.8s" begin="-1.2s" repeatCount="indefinite">
+                    <mpath href="#operating-input-path-4" />
+                  </animateMotion>
+                </circle>
+                <circle class="operating-flow-dot operating-flow-dot--output" r="5.5">
+                  <animateMotion dur="6.8s" begin="-1.7s" repeatCount="indefinite">
+                    <mpath href="#operating-output-path" />
+                  </animateMotion>
+                </circle>
               </svg>
-              <div class="proof-outcomes__index-stats">
-                <span><strong>42%</strong>warm signals</span>
-                <span><strong>3.6x</strong>reply lift</span>
-                <span><strong>18</strong>days live</span>
+
+              <div class="operating-desk-visual__inputs" aria-label="Authority inputs">
+                <article class="operating-signal operating-signal--green">
+                  <span class="operating-signal__label">Employee posts</span>
+                </article>
+                <article class="operating-signal operating-signal--orange">
+                  <span class="operating-signal__label">Competitor engagement</span>
+                </article>
+                <article class="operating-signal operating-signal--blue">
+                  <span class="operating-signal__label">Connection signals</span>
+                </article>
+                <article class="operating-signal operating-signal--teal">
+                  <span class="operating-signal__label">DM conversations</span>
+                </article>
               </div>
-            </aside>
+
+              <article class="operating-machine" aria-labelledby="operating-machine-title">
+                <p class="operating-machine__eyebrow">Sell in Public</p>
+                <h3 id="operating-machine-title">Inbound System</h3>
+                <div class="operating-machine__stages">
+                  <section class="operating-stage operating-stage--violet">
+                    <span class="operating-stage__number">01</span>
+                    <div>
+                      <h4>Create</h4>
+                      <p>Turn expertise into buyer-ready POVs.</p>
+                    </div>
+                  </section>
+                  <section class="operating-stage operating-stage--green">
+                    <span class="operating-stage__number">02</span>
+                    <div>
+                      <h4>Distribute</h4>
+                      <p>Publish and engage where buyers pay attention.</p>
+                    </div>
+                  </section>
+                  <section class="operating-stage operating-stage--blue">
+                    <span class="operating-stage__number">03</span>
+                    <div>
+                      <h4>Learn</h4>
+                      <p>Use replies and results to tune the next move.</p>
+                    </div>
+                  </section>
+                </div>
+              </article>
+
+              <article class="pipeline-output-card" aria-label="Pipeline output">
+                <h3>Pipeline</h3>
+                <p>Meetings, opportunities, and momentum.</p>
+              </article>
+            </div>
+            <p class="operating-desk-visual__footer">Every signal becomes a <span>step towards pipeline.</span></p>
           </div>
-
-          <dl class="proof-outcomes__metrics" aria-label="Sell In Public outcome metrics">
-            <div class="proof-outcomes__metric"><dt>86</dt><dd>qualified conversations sourced</dd><dd>Buyer conversations created from LinkedIn engagement, cold DMs, and cold email follow-up.</dd></div>
-            <div class="proof-outcomes__metric"><dt>1,240</dt><dd>ICP accounts touched</dd><dd>Mid-market accounts reached with relevant executive content, connections, comments, DMs, and email.</dd></div>
-            <div class="proof-outcomes__metric"><dt>148</dt><dd>executive posts shipped</dd><dd>Founder and operator posts translated from internal expertise into consistent market-facing authority.</dd></div>
-            <div class="proof-outcomes__metric"><dt>312</dt><dd>positive replies routed</dd><dd>Hand-raisers, objections, referrals, and meeting-ready replies triaged into the right next step.</dd></div>
-          </dl>
-
-          <article class="proof-outcomes__case glass-surface glass-surface--light" aria-labelledby="case-title">
-            <div>
-              <p class="proof-outcomes__case-kicker">Anonymized mid-market case study</p>
-              <h3 id="case-title">
-                For a B2B software team selling to mid-market operators, content became the reason outbound felt relevant.
-              </h3>
-              <p>
-                Category: operations SaaS. Buyer: VP and director-level operators.
-                Motion: executive LinkedIn, ICP engagement, cold DMs, cold email, and managed follow-up.
-              </p>
-            </div>
-            <div class="proof-outcomes__case-body">
-              <div class="proof-outcomes__case-grid">
-                <section><strong>Problem</strong><p>The team had strong customer insight, but founder posts were inconsistent and SDR outreach lacked timely context.</p></section>
-                <section><strong>Play</strong><p>Sell In Public mapped account triggers, turned executive expertise into weekly posts, and ran connected DM and email follow-up.</p></section>
-                <section><strong>Outcome</strong><p>Sales had warmer first touches, clearer buyer objections, and a steady flow of qualified conversations.</p></section>
-              </div>
-              <div class="proof-outcomes__case-flow" aria-hidden="true">
-                <div class="proof-outcomes__case-line">
-                  <span data-tone="blue"></span>
-                  <span data-tone="orange"></span>
-                  <span data-tone="gold"></span>
-                </div>
-                <div class="proof-outcomes__case-tags">
-                  <span data-tone="blue"><i></i>Signal</span>
-                  <span data-tone="orange"><i></i>Reply</span>
-                  <span data-tone="gold"><i></i>Meeting</span>
-                </div>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 
-      <section class="engagement-model section-band" id="engagement-model" aria-labelledby="engagement-model-heading">
+      <section class="engagement-model section-band" id="engagement-model" aria-labelledby="engagement-model-heading" data-nav-theme="light">
         <div class="engagement-model__inner section-inner">
           <div class="engagement-model__header texts-reveal">
             <p class="section-eyebrow">Engagement model</p>
@@ -618,7 +468,7 @@
         </div>
       </section>
 
-      <section class="faq-booking section-band" id="faq" aria-labelledby="faq-booking-heading">
+      <section class="faq-booking section-band" id="faq" aria-labelledby="faq-booking-heading" data-nav-theme="light">
         <div class="faq-booking__inner section-inner">
           <div class="faq-booking__intro texts-reveal">
             <p class="section-eyebrow">Frequently asked questions</p>
@@ -668,124 +518,52 @@
               </details>
             </div>
 
-            <aside
-              class="faq-booking__card"
-              aria-labelledby="faq-card-title"
-              data-faq-booking
-              data-calendly-base-url="https://calendly.com/jeff-tryquicksetters/30min"
-            >
-              <div class="faq-booking__orbit" aria-hidden="true">
-                <span></span><span></span><span></span>
+            <aside class="faq-booking__card" aria-labelledby="faq-card-title">
+              <div class="faq-booking__profile" aria-hidden="true">
+                <img
+                  src="public/assets/profile/jeff-tshirt-square.png"
+                  alt=""
+                  width="800"
+                  height="800"
+                  loading="lazy"
+                />
               </div>
-              <div class="faq-booking__card-top">
-                <span>
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8 3v4M16 3v4M4 9h16M5 5h14v15H5z" />
-                  </svg>
-                  Private working session
-                </span>
-                <span>15 min</span>
-              </div>
+              <p class="faq-booking__card-kicker">Private working session</p>
               <h3 id="faq-card-title">Book a 15-min intro call</h3>
               <p>Bring your ICP, current pipeline motion, and the employee voices you want to activate.</p>
-              <div class="faq-booking__booking-preview faq-booking__calendar-bridge glass-surface">
-                <div><span></span><strong>Intro call availability</strong></div>
-                <div class="faq-booking__preview-grid" role="group" aria-label="Select an intro call day">
-                  <button
-                    class="faq-booking__date-button is-selected"
-                    type="button"
-                    data-faq-booking-date="2026-06-17"
-                    data-faq-booking-date-label="Wed 17"
-                    aria-pressed="true"
-                  >Wed 17</button>
-                  <button
-                    class="faq-booking__date-button"
-                    type="button"
-                    data-faq-booking-date="2026-06-18"
-                    data-faq-booking-date-label="Thu 18"
-                    aria-pressed="false"
-                  >Thu 18</button>
-                  <button
-                    class="faq-booking__date-button"
-                    type="button"
-                    data-faq-booking-date="2026-06-19"
-                    data-faq-booking-date-label="Fri 19"
-                    aria-pressed="false"
-                  >Fri 19</button>
-                </div>
-                <div class="faq-booking__preview-slots" role="group" aria-label="Select an intro call time">
-                  <button
-                    class="faq-booking__time-button is-selected"
-                    type="button"
-                    data-faq-booking-time="09:30"
-                    data-faq-booking-time-label="9:30 AM"
-                    aria-pressed="true"
-                  >9:30 AM</button>
-                  <button
-                    class="faq-booking__time-button"
-                    type="button"
-                    data-faq-booking-time="11:00"
-                    data-faq-booking-time-label="11:00 AM"
-                    aria-pressed="false"
-                  >11:00 AM</button>
-                  <button
-                    class="faq-booking__time-button"
-                    type="button"
-                    data-faq-booking-time="14:15"
-                    data-faq-booking-time-label="2:15 PM"
-                    aria-pressed="false"
-                  >2:15 PM</button>
-                </div>
-                <p class="faq-booking__selection-status" data-faq-booking-status aria-live="polite">Selected: Wed 17 at 9:30 AM</p>
-              </div>
-              <div class="faq-booking__reply-panel" aria-hidden="true">
-                <div class="faq-booking__reply-title">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M4 6h16v12H4z" />
-                    <path d="m4 7 8 6 8-6" />
-                  </svg>
-                  <span>Recent reply streams</span>
-                </div>
-                <div class="faq-booking__reply-list">
-                  <div class="faq-booking__reply-row faq-booking__reply-row--blue">
-                    <span></span><i></i><i></i><strong>Replied</strong>
-                  </div>
-                  <div class="faq-booking__reply-row faq-booking__reply-row--orange">
-                    <span></span><i></i><i></i><strong>Meeting set</strong>
-                  </div>
-                  <div class="faq-booking__reply-row faq-booking__reply-row--green">
-                    <span></span><i></i><i></i><strong>Follow up</strong>
-                  </div>
-                </div>
-              </div>
               <a
                 class="sip-btn sip-btn--light faq-booking__calendly-cta"
                 href="https://calendly.com/jeff-tryquicksetters/30min"
                 target="_blank"
                 rel="noopener"
-                data-faq-booking-cta
-                data-selected-date="2026-06-17"
-                data-selected-time="09:30"
-              >
-                <span class="faq-booking__cta-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24">
-                    <path d="M4 6h16v12H4z" />
-                    <path d="m4 7 8 6 8-6" />
-                  </svg>
-                </span>
-                Book a time
-              </a>
+              >Book a call</a>
               <a
                 class="faq-booking__email"
-                href="mailto:hello@sellinpublic.co?subject=Intro%20call%20request&body=Hi%20Jeff%2C%0A%0AI%20would%20like%20to%20book%20an%20intro%20call%20around%20Wed%2017%20at%209%3A30%20AM.%0A%0A"
-                data-faq-booking-email
-              >hello@sellinpublic.co</a>
+                href="mailto:jeff@sellinpublic.co?subject=Intro%20call%20request"
+              >
+                <span class="faq-booking__email-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 11.5 21 4l-7.5 17-3-7-7.5-2.5Z" />
+                    <path d="m10.5 14 4-4" />
+                  </svg>
+                </span>
+                <span class="faq-booking__email-copy">
+                  <strong>Prefer to email?</strong>
+                  <span>jeff@sellinpublic.co</span>
+                </span>
+                <span class="faq-booking__email-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </span>
+              </a>
             </aside>
           </div>
         </div>
       </section>
 
-      <section class="final-cta-footer" id="booking" aria-labelledby="final-cta-footer-heading">
+      <section class="final-cta-footer" id="booking" aria-labelledby="final-cta-footer-heading" data-nav-theme="dark">
         <div class="final-cta-footer__panel">
           <div class="final-cta-footer__art" aria-hidden="true">
             <img
@@ -813,14 +591,9 @@
                 voices, and current pipeline motion.
               </p>
               <div class="final-cta-footer__actions">
-                <a class="final-cta-footer__button final-cta-footer__button--primary border-beam-pulse" href="https://calendly.com/jeff-tryquicksetters/30min">Book a working session</a>
+                <a class="final-cta-footer__button final-cta-footer__button--primary" href="https://calendly.com/jeff-tryquicksetters/30min">Book a working session</a>
                 <a class="final-cta-footer__button final-cta-footer__button--secondary" href="#system">Review the system</a>
               </div>
-              <ul class="final-cta-footer__review-list">
-                <li>ICP fit and account triggers</li>
-                <li>Executive and employee voice inventory</li>
-                <li>Content, DM, email, and follow-up motion</li>
-              </ul>
             </div>
           </div>
 
@@ -848,6 +621,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=faq-booking-navglass"></script>
+    <script src="script.js?v=consistency-pass-1"></script>
   </body>
 </html>

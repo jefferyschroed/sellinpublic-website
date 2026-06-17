@@ -24,95 +24,143 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-const FAQ_BOOKING_CALENDLY_URL = "https://calendly.com/jeff-tryquicksetters/30min";
+const nav = document.querySelector(".sip-nav");
 
-document.querySelectorAll(".faq-booking__item").forEach((item) => {
-  item.addEventListener("toggle", () => {
-    if (!item.open) return;
-    const parent = item.parentElement;
-    if (!parent) return;
-    parent.querySelectorAll(".faq-booking__item").forEach((sibling) => {
-      if (sibling !== item) sibling.removeAttribute("open");
-    });
-  });
-});
+if (nav) {
+  let lastScrollY = window.scrollY;
+  let ticking = false;
 
-document.querySelectorAll("[data-faq-booking]").forEach((bookingCard) => {
-  const calendlyUrl = bookingCard.dataset.calendlyBaseUrl || FAQ_BOOKING_CALENDLY_URL;
-  const dateButtons = Array.from(bookingCard.querySelectorAll("[data-faq-booking-date]"));
-  const timeButtons = Array.from(bookingCard.querySelectorAll("[data-faq-booking-time]"));
-  const bookingCta = bookingCard.querySelector("[data-faq-booking-cta]");
-  const emailFallback = bookingCard.querySelector("[data-faq-booking-email]");
-  const status = bookingCard.querySelector("[data-faq-booking-status]");
+  const getNavTheme = () => {
+    const navStyle = window.getComputedStyle(nav);
+    const navTop = Number.parseFloat(navStyle.top) || 0;
+    const sampleX = Math.min(window.innerWidth - 1, Math.max(0, window.innerWidth / 2));
+    const sampleY = Math.min(window.innerHeight - 1, Math.max(0, navTop + nav.offsetHeight / 2));
+    const stack = document.elementsFromPoint(sampleX, sampleY);
+    const themedElement = stack
+      .filter((element) => !nav.contains(element))
+      .map((element) => element.closest("[data-nav-theme]"))
+      .find(Boolean);
 
-  const selectOption = (buttons, selectedButton) => {
-    buttons.forEach((button) => {
-      const isSelected = button === selectedButton;
-      button.classList.toggle("is-selected", isSelected);
-      button.setAttribute("aria-pressed", String(isSelected));
-    });
+    return themedElement?.dataset.navTheme === "dark" ? "dark" : "light";
   };
 
-  const getSelectedOption = (buttons) => (
-    buttons.find((button) => button.getAttribute("aria-pressed") === "true") || buttons[0]
-  );
+  const syncNav = () => {
+    const currentScrollY = Math.max(window.scrollY, 0);
+    const delta = currentScrollY - lastScrollY;
 
-  const syncBookingState = () => {
-    const selectedDate = getSelectedOption(dateButtons);
-    const selectedTime = getSelectedOption(timeButtons);
-    const dateIso = selectedDate?.dataset.faqBookingDate || "";
-    const dateLabel = selectedDate?.dataset.faqBookingDateLabel || selectedDate?.textContent.trim() || "";
-    const timeValue = selectedTime?.dataset.faqBookingTime || "";
-    const timeLabel = selectedTime?.dataset.faqBookingTimeLabel || selectedTime?.textContent.trim() || "";
-
-    bookingCard.dataset.selectedDate = dateIso;
-    bookingCard.dataset.selectedDateLabel = dateLabel;
-    bookingCard.dataset.selectedTime = timeValue;
-    bookingCard.dataset.selectedTimeLabel = timeLabel;
-
-    if (bookingCta) {
-      bookingCta.href = calendlyUrl;
-      bookingCta.dataset.selectedDate = dateIso;
-      bookingCta.dataset.selectedTime = timeValue;
-      bookingCta.dataset.calendlyUrl = calendlyUrl;
+    if (currentScrollY < 28 || delta < -6) {
+      nav.classList.remove("is-hidden");
+    } else if (currentScrollY > 120 && delta > 6) {
+      nav.classList.add("is-hidden");
     }
 
-    if (status) {
-      status.textContent = dateLabel && timeLabel
-        ? `Selected: ${dateLabel} at ${timeLabel}`
-        : "Select an intro call day and time";
-    }
-
-    if (emailFallback) {
-      const subject = "Intro call request";
-      const body = dateLabel && timeLabel
-        ? `Hi Jeff,\n\nI would like to book an intro call around ${dateLabel} at ${timeLabel}.\n\n`
-        : "Hi Jeff,\n\nI would like to book an intro call.\n\n";
-      emailFallback.href = `mailto:hello@sellinpublic.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+    nav.dataset.theme = getNavTheme();
+    lastScrollY = currentScrollY;
+    ticking = false;
   };
 
-  if (dateButtons.length) {
-    selectOption(dateButtons, getSelectedOption(dateButtons));
+  const requestNavSync = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(syncNav);
+  };
+
+  nav.dataset.theme = getNavTheme();
+
+  window.addEventListener("scroll", requestNavSync, { passive: true });
+  window.addEventListener("resize", requestNavSync, { passive: true });
+}
+
+const faqItems = Array.from(document.querySelectorAll(".faq-booking__item"));
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const setPanelHeight = (item, height) => {
+  const panel = item.querySelector(":scope > div");
+  if (!panel) return;
+  panel.style.height = height;
+};
+
+const closeFaq = (item) => {
+  const panel = item.querySelector(":scope > div");
+  if (!panel || !item.open) return;
+
+  if (reduceMotion) {
+    item.open = false;
+    panel.style.height = "";
+    panel.style.opacity = "";
+    return;
   }
 
-  if (timeButtons.length) {
-    selectOption(timeButtons, getSelectedOption(timeButtons));
+  panel.style.height = `${panel.scrollHeight}px`;
+  panel.style.opacity = "1";
+  panel.offsetHeight;
+  item.classList.add("is-animating");
+  panel.style.height = "0px";
+  panel.style.opacity = "0";
+
+  const finish = (event) => {
+    if (event.propertyName !== "height") return;
+    panel.removeEventListener("transitionend", finish);
+    item.open = false;
+    item.classList.remove("is-animating");
+    panel.style.height = "";
+    panel.style.opacity = "";
+  };
+
+  panel.addEventListener("transitionend", finish);
+};
+
+const openFaq = (item) => {
+  const panel = item.querySelector(":scope > div");
+  if (!panel || item.open) return;
+
+  faqItems.forEach((sibling) => {
+    if (sibling !== item) closeFaq(sibling);
+  });
+
+  if (reduceMotion) {
+    item.open = true;
+    panel.style.height = "";
+    panel.style.opacity = "";
+    return;
   }
 
-  dateButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      selectOption(dateButtons, button);
-      syncBookingState();
-    });
-  });
+  item.open = true;
+  item.classList.add("is-animating");
+  panel.style.height = "0px";
+  panel.style.opacity = "0";
+  panel.offsetHeight;
+  panel.style.height = `${panel.scrollHeight}px`;
+  panel.style.opacity = "1";
 
-  timeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      selectOption(timeButtons, button);
-      syncBookingState();
-    });
-  });
+  const finish = (event) => {
+    if (event.propertyName !== "height") return;
+    panel.removeEventListener("transitionend", finish);
+    item.classList.remove("is-animating");
+    panel.style.height = "auto";
+    panel.style.opacity = "";
+  };
 
-  syncBookingState();
+  panel.addEventListener("transitionend", finish);
+};
+
+faqItems.forEach((item) => {
+  const summary = item.querySelector("summary");
+  const panel = item.querySelector(":scope > div");
+
+  if (item.open) {
+    setPanelHeight(item, "auto");
+  }
+
+  summary?.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (!panel) return;
+
+    if (item.open) {
+      closeFaq(item);
+    } else {
+      openFaq(item);
+    }
+  });
 });

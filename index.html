@@ -57,22 +57,39 @@
           </span>
         </a>
 
-        <div class="sip-nav__links" aria-label="Page sections">
-          <a href="#services">Services</a>
-          <a href="#system">System</a>
-          <a href="#proof">Proof</a>
-          <a href="#faq">FAQ</a>
-        </div>
-
-        <a
-          class="sip-nav__cta sip-btn sip-btn--primary"
-          href="https://calendly.com/jeff-tryquicksetters/30min"
-          aria-label="Book a discovery call"
-          title="Book a discovery call"
+        <button
+          class="sip-nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav-menu"
+          aria-label="Open navigation menu"
+          title="Open navigation menu"
         >
-          <span class="sip-nav__cta-full">Book a discovery call</span>
-          <span class="sip-nav__cta-short">Book call</span>
-        </a>
+          <span class="sip-nav__toggle-box" aria-hidden="true">
+            <span class="sip-nav__toggle-line"></span>
+            <span class="sip-nav__toggle-line"></span>
+            <span class="sip-nav__toggle-line"></span>
+          </span>
+        </button>
+
+        <div class="sip-nav__menu t-dropdown" id="primary-nav-menu" data-origin="top-right" aria-hidden="true">
+          <div class="sip-nav__links" aria-label="Page sections">
+            <a href="#services">Services</a>
+            <a href="#system">System</a>
+            <a href="#proof">Proof</a>
+            <a href="#faq">FAQ</a>
+          </div>
+
+          <a
+            class="sip-nav__cta sip-btn sip-btn--primary"
+            href="https://calendly.com/jeff-tryquicksetters/30min"
+            aria-label="Book a discovery call"
+            title="Book a discovery call"
+          >
+            <span class="sip-nav__cta-full">Book a discovery call</span>
+            <span class="sip-nav__cta-short">Book call</span>
+          </a>
+        </div>
       </nav>
 
       <div class="sip-hero__content texts-reveal">
@@ -255,9 +272,9 @@
                     <div class="sip-bubble sip-bubble--in">Worth sending over.</div>
                   </div>
                   <div class="sip-channel-panel">
-                    <div class="sip-channel-row"><span class="sip-channel-icon">C</span><div><strong>Connect</strong><span>42 queued</span></div></div>
-                    <div class="sip-channel-row"><span class="sip-channel-icon sip-channel-icon--green">D</span><div><strong>DM</strong><span>18 replies</span></div></div>
-                    <div class="sip-channel-row"><span class="sip-channel-icon sip-channel-icon--orange">E</span><div><strong>Email</strong><span>Follow-up live</span></div></div>
+                    <div class="sip-channel-row"><span class="sip-channel-icon sip-channel-icon--connect"><svg viewBox="0 0 24 24" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M19 8v6" /><path d="M22 11h-6" /></svg></span><div><strong>Connect</strong><span>42 queued</span></div></div>
+                    <div class="sip-channel-row"><span class="sip-channel-icon sip-channel-icon--green"><svg viewBox="0 0 24 24" focusable="false"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" /></svg></span><div><strong>DM</strong><span>18 replies</span></div></div>
+                    <div class="sip-channel-row"><span class="sip-channel-icon sip-channel-icon--orange"><svg viewBox="0 0 24 24" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg></span><div><strong>Email</strong><span>Follow-up live</span></div></div>
                   </div>
                   <div class="sip-engage-score"><strong>61%</strong><span>Warm context coverage</span></div>
                 </div>
@@ -461,7 +478,7 @@
 
             <div class="engagement-model__side">
               <article><span class="engagement-model__side-icon engagement-model__side-icon--pause" aria-hidden="true"></span><p>Pause</p><h3>No retainer drag when the motion changes.</h3><span>Shift emphasis between content, DMs, email, engagement, or reply handling as launches and sales cycles change.</span></article>
-              <article><span class="engagement-model__side-icon engagement-model__side-icon--scale" aria-hidden="true"></span><p>Scale</p><h3>Add voices, accounts, and plays deliberately.</h3><span>Expand from founder-led authority into employee-generated content, SDR context, AE follow-up, and named-account coverage.</span></article>
+              <article><span class="engagement-model__side-icon engagement-model__side-icon--scale" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3H5a2 2 0 0 0-2 2v7" /><path d="M19 12v7a2 2 0 0 1-2 2h-7" /><path d="M5 19 19 5" /><path d="M5 15v4h4" /><path d="M19 9V5h-4" /></svg></span><p>Scale</p><h3>Add voices, accounts, and plays deliberately.</h3><span>Expand from founder-led authority into employee-generated content, SDR context, AE follow-up, and named-account coverage.</span></article>
               <article><span class="engagement-model__side-icon engagement-model__side-icon--calibrate" aria-hidden="true"></span><p>Weekly calibration</p><h3>Every week feeds the next move.</h3><span>Buyer replies reviewed. Posts tuned. Outbound plays reprioritized.</span></article>
             </div>
           </div>

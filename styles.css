@@ -20,6 +20,8 @@
   --dur-fast: 160ms;
   --dur-med: 260ms;
   --dur-slow: 560ms;
+  --dropdown-open-distance: 10px;
+  --dropdown-stagger: 52ms;
   --reveal-dur: 640ms;
   --reveal-distance: 20px;
   --reveal-stagger: 70ms;
@@ -302,7 +304,7 @@ summary {
 
 .t-dropdown {
   transform-origin: top left;
-  transform: scale(var(--dropdown-pre-scale));
+  transform: translate3d(0, calc(-1 * var(--dropdown-open-distance)), 0) scale(var(--dropdown-pre-scale));
   opacity: 0;
   pointer-events: none;
   transition:
@@ -317,12 +319,12 @@ summary {
 .t-dropdown[data-origin="bottom-right"]  { transform-origin: bottom right; }
 
 .t-dropdown.is-open {
-  transform: scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
   opacity: 1;
   pointer-events: auto;
 }
 .t-dropdown.is-closing {
-  transform: scale(var(--dropdown-closing-scale));
+  transform: translate3d(0, calc(-1 * var(--dropdown-open-distance)), 0) scale(var(--dropdown-closing-scale));
   opacity: 0;
   pointer-events: none;
   transition:
@@ -332,6 +334,8 @@ summary {
 
 @media (prefers-reduced-motion: reduce) {
   .t-dropdown { transition: none !important; }
+  .sip-nav__menu .sip-nav__links a,
+  .sip-nav__menu .sip-nav__cta { transition: none !important; }
 }
 
 .sip-btn {
@@ -3862,6 +3866,7 @@ summary {
       0 26px 70px rgba(3, 5, 18, 0.26);
     -webkit-backdrop-filter: blur(24px) saturate(170%);
     backdrop-filter: blur(24px) saturate(170%);
+    overflow: hidden;
   }
 
   .sip-nav[data-theme="light"] .sip-nav__menu {
@@ -3889,6 +3894,11 @@ summary {
     padding: 0 13px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.07);
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      transform var(--dur-med) var(--ease-out),
+      opacity var(--dur-med) var(--ease-out);
   }
 
   .sip-nav[data-theme="light"] .sip-nav__menu .sip-nav__links a {
@@ -3900,6 +3910,35 @@ summary {
     width: 100%;
     min-height: 44px;
     margin-top: 4px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+      transform var(--dur-med) var(--ease-out),
+      opacity var(--dur-med) var(--ease-out);
+  }
+
+  .sip-nav__menu.is-open .sip-nav__links a {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sip-nav__menu.is-open .sip-nav__links a:nth-child(1) { transition-delay: var(--dropdown-stagger); }
+  .sip-nav__menu.is-open .sip-nav__links a:nth-child(2) { transition-delay: calc(var(--dropdown-stagger) + var(--dropdown-stagger)); }
+  .sip-nav__menu.is-open .sip-nav__links a:nth-child(3) { transition-delay: calc(var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger)); }
+  .sip-nav__menu.is-open .sip-nav__links a:nth-child(4) { transition-delay: calc(var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger)); }
+
+  .sip-nav__menu.is-open .sip-nav__cta {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger) + var(--dropdown-stagger));
+  }
+
+  .sip-nav__menu:not(.is-open):not(.is-closing) .sip-nav__links,
+  .sip-nav__menu:not(.is-open):not(.is-closing) .sip-nav__cta,
+  .sip-nav__menu.is-closing .sip-nav__links a,
+  .sip-nav__menu.is-closing .sip-nav__cta {
+    opacity: 0;
+    transform: translateY(8px);
   }
 
   .sip-hero__content {
@@ -3907,7 +3946,12 @@ summary {
     align-self: center;
     margin: 0;
     padding-top: 0;
-    bottom: clamp(22px, 4svh, 44px);
+    bottom: clamp(10px, 1.8svh, 20px);
+  }
+
+  .sip-hero__copy {
+    margin-top: 18px;
+    line-height: 1.55;
   }
 
   .sip-eyebrow {
@@ -3916,6 +3960,8 @@ summary {
 
   .sip-hero__actions {
     justify-content: flex-start;
+    margin-top: 26px;
+    row-gap: 10px;
   }
 
   .problem-proof__grid,
@@ -4172,13 +4218,13 @@ summary {
     width: 100%;
     max-width: calc(100vw - 28px);
     padding-top: 0;
-    bottom: clamp(26px, 6svh, 52px);
+    bottom: clamp(8px, 1.2svh, 16px);
     overflow-wrap: normal;
   }
 
   .sip-hero__title {
     font-size: clamp(36px, 9.4vw, 40px);
-    line-height: 1;
+    line-height: 1.04;
     max-width: 100%;
     overflow-wrap: normal;
     word-break: normal;
@@ -4191,7 +4237,8 @@ summary {
   .sip-hero__copy {
     max-width: 100%;
     font-size: 16px;
-    line-height: 1.48;
+    margin-top: 16px;
+    line-height: 1.56;
     overflow-wrap: break-word;
   }
 

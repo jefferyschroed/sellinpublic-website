@@ -1,0 +1,53 @@
+packet_id: ""
+status: "briefing"
+working_title: ""
+slug: ""
+owner: ""
+reviewers: []
+created_at: ""
+updated_at: ""
+
+audience:
+  primary_buyer: ""
+  secondary_buyers: []
+  company_context: ""
+  pain: ""
+
+business_goal: ""
+sales_use_case: ""
+cta: ""
+
+search_intent:
+  stage: ""
+  primary_query: ""
+  aeo_question: ""
+  primary_keyword: ""
+  secondary_keywords: []
+  related_questions: []
+
+entity_targets: []
+angle: ""
+sell_in_public_pov: ""
+word_count_target: ""
+
+must_include: []
+must_avoid: []
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+  required_sources: []
+
+internal_links: []
+external_research_targets: []
+
+approval:
+  strategy_gate: false
+  source_gate: false
+  outline_gate: false
+  qa_gate: false
+  publish_gate: false
+

@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-19-employee-generated-content-vs-employee-advocacy",
+  "slug": "employee-generated-content-vs-employee-advocacy",
+  "generated_at": "2026-06-19T03:09:14.274Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/employee-generated-content-vs-employee-advocacy/index.html",
+      "bytes": 37047,
+      "changed": true
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 9353,
+      "post_count": 2,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 842,
+      "post_count": 2,
+      "changed": true
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 1613,
+      "post_count": 2,
+      "changed": true
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

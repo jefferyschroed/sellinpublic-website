@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "packet_id": "2026-06-19-employee-generated-content-vs-employee-advocacy",
+  "generated_at": "2026-06-19T00:00:00.000Z",
+  "run_date": "2026-06-19",
+  "rule": "Discovery inputs may shape topic, structure, FAQs, internal routing, and source gaps, but cannot support factual claims.",
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "source_manifests": [],
+  "excluded_sources": [
+    {
+      "source_id": "disc-001",
+      "source_type": "topic_map_input",
+      "name": "Topic map planning record",
+      "path": "docs/seo-aeo/topic-map.yaml",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "primary_query",
+        "secondary_query",
+        "related_question",
+        "h2_or_faq_direction",
+        "internal_link_routing",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Planning and discovery record, not factual evidence"
+    },
+    {
+      "source_id": "disc-002",
+      "source_type": "query_export",
+      "name": "Keyword or query export inputs",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "primary_query",
+        "secondary_query",
+        "related_question",
+        "h2_or_faq_direction",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Query demand inputs are not factual sources"
+    },
+    {
+      "source_id": "disc-003",
+      "source_type": "trend_input",
+      "name": "Trend and demand observations",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "angle",
+        "related_question",
+        "h2_or_faq_direction",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Trend inputs can shape prioritization but cannot verify claims"
+    },
+    {
+      "source_id": "disc-004",
+      "source_type": "ai_prompt_output",
+      "name": "AI prompt outputs or answer-engine summaries",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "question_framing",
+        "coverage_gap",
+        "draft_briefing"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "AI-generated text is not attributable factual evidence"
+    },
+    {
+      "source_id": "disc-005",
+      "source_type": "reddit_or_forum",
+      "name": "Reddit, forums, social comments, and community threads",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "audience_language",
+        "objection_discovery",
+        "faq_direction"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Forum and social discussion sources are banned as evidence by source policy"
+    },
+    {
+      "source_id": "disc-006",
+      "source_type": "autocomplete_or_paa",
+      "name": "Autocomplete and People Also Ask observations",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "related_question",
+        "faq_direction",
+        "heading_direction"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Search feature observations indicate question patterns only"
+    }
+  ],
+  "excluded_query_ids": [],
+  "excluded_cluster_ids": [],
+  "validation_rules": {
+    "citations_json_must_not_reference_excluded_source_ids": true,
+    "claims_ledger_must_not_reference_excluded_source_ids": true,
+    "draft_must_not_use_excluded_source_ids_in_cite_markers": true,
+    "article_blocks_must_not_reference_excluded_raw_paths": true
+  }
+}

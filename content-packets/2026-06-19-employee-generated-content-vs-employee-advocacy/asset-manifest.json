@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "packet_id": "2026-06-19-employee-generated-content-vs-employee-advocacy",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "path": "public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-generated.png",
+      "source_path": "public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-source.svg",
+      "type": "image/png",
+      "width": 1600,
+      "height": 700,
+      "alt": "Isometric comparison between employee advocacy and employee-generated content systems",
+      "caption": "Employee advocacy helps a company message travel. Employee-generated content turns real employee expertise into public learning.",
+      "generation_method": "Built-in image generation was attempted first; repo-local SVG source was rendered to PNG when no built-in filesystem artifact was exposed.",
+      "aspect_ratio": "16:7"
+    }
+  ]
+}

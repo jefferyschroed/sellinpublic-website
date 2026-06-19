@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://dsmn8.com/blog/what-is-employee-generated-content/",
+    "title": "What Is Employee-Generated Content? The Ultimate Guide",
+    "publisher": "DSMN8",
+    "author": "Lewis Gray",
+    "published_date": "2025-08-19; updated 2026-05-08",
+    "accessed_date": "2026-06-19",
+    "source_type": "company_guide",
+    "reliability": "B",
+    "notes": "Used carefully for market definition of employee-generated content and example formats. Vendor source, so not used for independent performance claims."
+  },
+  {
+    "id": "src-002",
+    "url": "https://sproutsocial.com/insights/employee-influencers/",
+    "title": "Employee-generated content is the next big thing for brands",
+    "publisher": "Sprout Social",
+    "author": "Aubree Schaefer",
+    "published_date": "2026-02-11",
+    "accessed_date": "2026-06-19",
+    "source_type": "company_research_article",
+    "reliability": "B",
+    "notes": "Used for current EGC framing around employee influencers, guardrails, employee collaboration, and B2B applicability. Company source; performance implications should be treated cautiously."
+  },
+  {
+    "id": "src-003",
+    "url": "https://business.linkedin.com/content/dam/me/business/en-us/elevate/Resources/pdf/official-guide-to-employee-advocacy-ebook.pdf",
+    "title": "The Official Guide to Employee Advocacy",
+    "publisher": "LinkedIn",
+    "author": "",
+    "published_date": "2016",
+    "accessed_date": "2026-06-19",
+    "source_type": "platform_guide_pdf",
+    "reliability": "A",
+    "notes": "Used for LinkedIn's canonical employee advocacy definition and program framing. Older source; pair with current LinkedIn Help source for product-status caveats."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a6836874",
+    "title": "My Company tab and Employee Advocacy tab is no longer available",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2025",
+    "accessed_date": "2026-06-19",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used to avoid outdated claims about LinkedIn's native Employee Advocacy tab. LinkedIn says the My Company tab, Employee Advocacy tab, and curator admin role began being discontinued in November 2024."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf",
+    "title": "2025 Edelman-LinkedIn B2B Thought Leadership Impact Report",
+    "publisher": "Edelman and LinkedIn",
+    "author": "",
+    "published_date": "2025-07",
+    "accessed_date": "2026-06-19",
+    "source_type": "research_report_pdf",
+    "reliability": "A",
+    "notes": "Used for hidden-buyer behavior, receptiveness to thought leadership, and the role of high-quality expertise in B2B buying groups. Does not directly prove EGC program performance."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+    "title": "B2B Buying: How Top CSOs and CMOs Optimize the Journey",
+    "publisher": "Gartner",
+    "author": "",
+    "published_date": "",
+    "accessed_date": "2026-06-19",
+    "source_type": "research_article",
+    "reliability": "A",
+    "notes": "Used for B2B buying journey context: nonlinear buying tasks, multiple stakeholders, and the need for digital content that builds confidence and supports buying jobs."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How to Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Margarita Loktionova",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-19",
+    "source_type": "platform_research_article",
+    "reliability": "B",
+    "notes": "Used for LinkedIn/founder/team-led expertise and AI-search visibility guidance. LinkedIn/Semrush analysis should be treated as platform research, not neutral academic evidence."
+  },
+  {
+    "id": "src-008",
+    "url": "https://news.linkedin.com/2026/how-b2b-brands-can-drive-impact-with-creators-and-stronger-creat",
+    "title": "Helping Brands Deliver Impact With Creators and Stronger Creative",
+    "publisher": "LinkedIn Pressroom",
+    "author": "LinkedIn Corporate Communications",
+    "published_date": "2026-06-10",
+    "accessed_date": "2026-06-19",
+    "source_type": "platform_product_news",
+    "reliability": "A",
+    "notes": "Used as current platform context for B2B creator partnerships and trusted professional voices. Adjacent to EGC; do not conflate external creator programs with employee-generated content."
+  },
+  {
+    "id": "src-009",
+    "url": "analytics/ai_citation_log.csv",
+    "title": "Sell In Public AI Citation Log",
+    "publisher": "Sell In Public",
+    "author": "Codex",
+    "published_date": "2026-06-18",
+    "accessed_date": "2026-06-19",
+    "source_type": "internal_observation_log",
+    "reliability": "B",
+    "notes": "Used only for local SERP/AEO observations about what answer engines and search appeared to cite for the comparison query. Not used as factual evidence about EGC or employee advocacy."
+  },
+  {
+    "id": "src-010",
+    "url": "content-packets/2026-06-19-employee-generated-content-vs-employee-advocacy/sme-notes.md",
+    "title": "Sell In Public SME Notes For EGC vs Advocacy",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder and Codex",
+    "published_date": "2026-06-19",
+    "accessed_date": "2026-06-19",
+    "source_type": "internal_sme_notes",
+    "reliability": "B",
+    "notes": "Used for Sell In Public operating guidance, measurement POV, and editorial distinctions that are intentionally framed as POV rather than external research findings."
+  }
+]

@@ -1,0 +1,85 @@
+schema_version: "1.0"
+packet_id: "2026-06-19-employee-generated-content-vs-employee-advocacy"
+slug: "employee-generated-content-vs-employee-advocacy"
+status: "intake_ready"
+created_at: "2026-06-19"
+updated_at: "2026-06-19"
+
+strategic_asset_decision: "post"
+asset_decision: "post"
+topic_id: "topic-egc-vs-advocacy"
+pillar_id: "pillar-employee-generated-content"
+source_readiness: "ready"
+standalone_rationale: "The topic has comparison intent, a distinct primary keyword, a topic-map score of 86, and a clear buyer decision: whether the team needs original employee expertise, employee message amplification, or a hybrid operating model."
+discovery_sources_excluded_from_evidence: true
+
+candidate_source:
+  path: "docs/seo-aeo/topic-map.yaml"
+  candidate_id: "topic-egc-vs-advocacy"
+  row_number: 0
+
+candidate:
+  topic: "Employee-generated content vs employee advocacy"
+  canonical_topic: "Employee-Generated Content vs Employee Advocacy"
+  intent: "comparison"
+  aeo_question: "How is employee-generated content different from employee advocacy?"
+  primary_keyword: "employee-generated content vs employee advocacy"
+  topic_id: "topic-egc-vs-advocacy"
+  pillar_id: "pillar-employee-generated-content"
+  parent_topic: "topic-egc-definition"
+  topic_score_guess: 86
+  topic_score_source: "docs/seo-aeo/topic-map.yaml"
+  score_band: "80-100:create_or_refresh"
+  authority_match: "topic-map.yaml:topic_id"
+  evidence_use: "approved_sources_and_sme_notes"
+
+decisions:
+  strategic_asset_decision: "post"
+  scaffold_asset_decision: "post"
+  recommended_asset: "outline_packet"
+  topic_decision: "create_or_refresh_packet"
+  coverage_status: "published-for-review"
+  coverage_role: "supporting_post"
+  source_readiness: "ready"
+  packet_intake_status: "intake_ready"
+  query_run_status: "handoff_ready"
+
+gates:
+  current_gate_reasons: []
+  current_required_before_packet: []
+  resolved_gate_history:
+    - reason: "topic_map_identifies_post_candidate"
+      required_before_packet: "Confirm standalone rationale, internal links, source readiness, and discovery evidence boundary."
+      resolved_by_artifact: "brief.yaml"
+      resolved_at: "2026-06-19"
+
+discovery_lineage:
+  query_run_id: ""
+  query_run_dir: ""
+  brief_handoff_path: ""
+  source_manifest_path: ""
+  normalized_queries_path: ""
+  query_clusters_path: ""
+  discovery_exclusions_path: "discovery-exclusions.json"
+  derived_from:
+    - "docs/seo-aeo/topic-map.yaml"
+    - "content-packets/2026-06-17-employee-generated-content-infrastructure/brief.yaml"
+    - "content-packets/2026-06-17-employee-generated-content-infrastructure/outline.md"
+
+evidence_boundary:
+  discovery_inputs_visible_to_agents: true
+  discovery_inputs_citable: false
+  citations_must_come_from: "citations.json or approved SME notes only"
+  discovery_only_inputs_excluded_from_factual_evidence:
+    - "query exports"
+    - "trend inputs"
+    - "AI prompt outputs"
+    - "Reddit"
+    - "autocomplete"
+    - "People Also Ask"
+    - "SERP observations"
+
+internal_links:
+  required:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/"

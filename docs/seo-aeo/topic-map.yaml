@@ -1,5 +1,5 @@
 version: 1
-updated_at: "2026-06-17"
+updated_at: "2026-06-19"
 owner: "Sell In Public editorial"
 rule: "Questions become posts, H2s, FAQs, tables, or refresh tasks based on intent depth and authority value."
 
@@ -28,7 +28,7 @@ pillars:
         notes: "First category reference page. Use as the hub for definition, examples, measurement, and checklist sections."
       - id: "topic-egc-vs-advocacy"
         title: "Employee-generated content vs employee advocacy"
-        status: "planned"
+        status: "published-for-review"
         target_asset: "post"
         score: 86
         decision: "create_or_refresh_packet"
@@ -39,8 +39,9 @@ pillars:
         parent_topic: "topic-egc-definition"
         internal_links:
           - "employee-generated-content-infrastructure"
-        source_readiness: "needs_source_refresh"
-        notes: "Should include a comparison table, examples, governance model, and when each approach fits."
+          - "https://sellinpublic.co/blog/"
+        source_readiness: "ready"
+        notes: "Published as the first foundation comparison page. Collect owner revisions before using this pattern for posts 2-20."
       - id: "topic-egc-examples"
         title: "Employee-generated content examples from B2B companies"
         status: "planned"

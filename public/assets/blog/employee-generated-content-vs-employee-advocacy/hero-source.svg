@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 1600 1600" role="img" aria-label="Isometric comparison between employee advocacy and employee-generated content systems">
+  <defs>
+    <linearGradient id="heroBg" x1="160" y1="450" x2="1440" y2="1150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#dbeee9"/>
+      <stop offset="0.42" stop-color="#f4dbcd"/>
+      <stop offset="1" stop-color="#ffc178"/>
+    </linearGradient>
+    <linearGradient id="panelLeft" x1="250" y1="600" x2="720" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8ed" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#efe1d5" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="panelRight" x1="880" y1="590" x2="1370" y2="940" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8ed" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#f5d2be" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#5d4539" flood-opacity="0.22"/>
+    </filter>
+    <filter id="paperShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#5d4539" flood-opacity="0.18"/>
+    </filter>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="2.2" fill="#ffffff" opacity="0.44"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1600" fill="#f3eeee"/>
+  <g transform="translate(0 450)">
+    <rect x="0" y="0" width="1600" height="700" rx="32" fill="url(#heroBg)"/>
+    <rect x="0" y="0" width="1600" height="700" rx="32" fill="url(#dots)" opacity="0.45"/>
+    <path d="M0 164 C230 136 380 168 560 148 C748 126 864 68 1052 86 C1242 104 1412 162 1600 124 L1600 700 L0 700 Z" fill="#ffffff" opacity="0.18"/>
+    <path d="M74 522 C266 470 446 536 629 487 C761 451 840 390 1020 412 C1200 434 1377 538 1529 482" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.45"/>
+    <path d="M155 388 C368 336 482 403 640 359 C797 315 908 249 1085 282 C1242 312 1350 377 1502 337" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.34"/>
+
+    <g filter="url(#softShadow)">
+      <path d="M222 294 L548 124 L838 286 L507 467 Z" fill="url(#panelLeft)" stroke="#fff6eb" stroke-width="2"/>
+      <path d="M788 292 L1128 114 L1414 284 L1076 476 Z" fill="url(#panelRight)" stroke="#fff6eb" stroke-width="2"/>
+      <path d="M610 364 L795 266 L980 366 L795 474 Z" fill="#f7efe5" stroke="#fff6eb" stroke-width="2" opacity="0.96"/>
+    </g>
+
+    <g opacity="0.86" stroke-linecap="round" fill="none">
+      <path d="M470 240 C542 242 622 274 690 329" stroke="#bf6a5b" stroke-width="7"/>
+      <path d="M1118 238 C1038 242 957 280 890 338" stroke="#bf6a5b" stroke-width="7"/>
+      <path d="M504 356 C613 372 688 404 752 449" stroke="#4f8b83" stroke-width="5"/>
+      <path d="M1091 357 C986 378 908 410 838 451" stroke="#4f8b83" stroke-width="5"/>
+    </g>
+
+    <g filter="url(#paperShadow)">
+      <path d="M326 276 L420 225 L520 282 L424 337 Z" fill="#fdf5e8"/>
+      <path d="M376 320 L478 264 L590 328 L485 390 Z" fill="#f9e2ce"/>
+      <path d="M275 348 L372 296 L471 354 L372 409 Z" fill="#e9f2ed"/>
+      <path d="M997 270 L1090 220 L1190 276 L1096 333 Z" fill="#fdf5e8"/>
+      <path d="M1110 319 L1211 263 L1324 326 L1220 388 Z" fill="#f8dcc8"/>
+      <path d="M907 352 L1007 296 L1115 357 L1010 418 Z" fill="#e6f0eb"/>
+    </g>
+
+    <g fill="#3d312d" opacity="0.88">
+      <circle cx="424" cy="224" r="18"/>
+      <path d="M401 249 C420 229 448 229 467 249 L460 306 C443 320 424 322 407 307 Z"/>
+      <circle cx="538" cy="285" r="18"/>
+      <path d="M515 310 C535 290 563 290 582 310 L574 366 C557 381 538 382 522 367 Z"/>
+      <circle cx="347" cy="348" r="18"/>
+      <path d="M324 372 C344 353 371 353 390 372 L383 429 C366 443 347 444 331 430 Z"/>
+      <circle cx="1094" cy="219" r="18"/>
+      <path d="M1071 244 C1090 224 1118 224 1137 244 L1130 301 C1113 315 1094 317 1078 302 Z"/>
+      <circle cx="1215" cy="281" r="18"/>
+      <path d="M1192 306 C1211 286 1239 286 1258 306 L1251 363 C1234 377 1215 379 1199 364 Z"/>
+      <circle cx="1002" cy="352" r="18"/>
+      <path d="M979 377 C999 357 1027 357 1046 377 L1038 433 C1021 448 1002 449 986 434 Z"/>
+    </g>
+
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M427 180 L596 274 L739 197" stroke="#ffffff" stroke-width="5" opacity="0.75"/>
+      <path d="M1100 176 L933 274 L850 229" stroke="#ffffff" stroke-width="5" opacity="0.75"/>
+      <path d="M739 197 L785 222 L850 229" stroke="#ffffff" stroke-width="5" opacity="0.75"/>
+      <circle cx="739" cy="197" r="18" fill="#f07f65" stroke="#ffffff" stroke-width="5"/>
+      <circle cx="850" cy="229" r="18" fill="#54a099" stroke="#ffffff" stroke-width="5"/>
+      <circle cx="785" cy="222" r="28" fill="#fff7ec" stroke="#ffffff" stroke-width="5"/>
+      <path d="M775 222 L783 231 L800 211" stroke="#c96d5a" stroke-width="6"/>
+    </g>
+
+    <g filter="url(#paperShadow)">
+      <path d="M670 385 L748 342 L829 388 L750 435 Z" fill="#fff7ec"/>
+      <path d="M723 436 L802 392 L885 439 L803 487 Z" fill="#f4d7c6"/>
+      <path d="M793 344 L872 301 L954 347 L874 394 Z" fill="#e7f1ed"/>
+      <path d="M712 375 L773 342" stroke="#c37a62" stroke-width="6" stroke-linecap="round"/>
+      <path d="M765 423 L830 386" stroke="#4f8b83" stroke-width="6" stroke-linecap="round"/>
+      <path d="M836 335 L900 300" stroke="#b9825f" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <g opacity="0.78">
+      <path d="M242 512 L506 658" stroke="#684b3f" stroke-width="2" opacity="0.16"/>
+      <path d="M566 520 L820 663" stroke="#684b3f" stroke-width="2" opacity="0.16"/>
+      <path d="M1050 520 L1314 665" stroke="#684b3f" stroke-width="2" opacity="0.16"/>
+      <path d="M804 524 L1042 655" stroke="#684b3f" stroke-width="2" opacity="0.16"/>
+      <circle cx="507" cy="468" r="7" fill="#c66f5e"/>
+      <circle cx="1076" cy="476" r="7" fill="#4f8b83"/>
+      <circle cx="795" cy="474" r="9" fill="#f0a15f"/>
+    </g>
+  </g>
+</svg>

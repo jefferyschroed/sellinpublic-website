@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sellinpublic.co/schemas/discovery-source-manifest.schema.json",
+  "title": "Discovery Source Manifest",
+  "description": "Manifest for daily trend and query discovery inputs. These sources are discovery inputs only and cannot support factual claims in public content.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_date",
+    "created_at",
+    "rule",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9-]+$"
+    },
+    "run_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owner": {
+      "type": "string"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/source"
+      }
+    }
+  },
+  "$defs": {
+    "sourceType": {
+      "type": "string",
+      "enum": [
+        "reddit_manual_capture",
+        "reddit_api_export",
+        "answer_the_public_export",
+        "gsc_emerging_query_export",
+        "bing_webmaster_query_export",
+        "google_trends_api_export",
+        "google_trends_csv_export",
+        "public_source_trend_export",
+        "manual_ai_prompt_export",
+        "manual_serp_observation",
+        "manual_topic_seed",
+        "other_query_tool_export"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "source_type",
+        "name",
+        "captured_by",
+        "captured_at",
+        "surface",
+        "country",
+        "language",
+        "path",
+        "evidence_use",
+        "allowed_public_use",
+        "collection_method",
+        "sanitization_status",
+        "license_or_terms_note",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*-[0-9]{3,}$"
+        },
+        "source_type": {
+          "$ref": "#/$defs/sourceType"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "captured_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "captured_at": {
+          "type": "string"
+        },
+        "surface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "country": {
+          "type": "string",
+          "minLength": 2
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^research/trend-intelligence/.+"
+        },
+        "evidence_use": {
+          "type": "string",
+          "const": "discovery_only"
+        },
+        "allowed_public_use": {
+          "type": "string",
+          "enum": [
+            "none",
+            "topic_direction",
+            "section_direction",
+            "refresh_direction"
+          ]
+        },
+        "collection_method": {
+          "type": "string",
+          "enum": [
+            "manual_capture",
+            "manual_export",
+            "api_export",
+            "approved_connector_export",
+            "read_only_export",
+            "public_feed_capture"
+          ]
+        },
+        "sanitization_status": {
+          "type": "string",
+          "enum": [
+            "raw_unreviewed",
+            "sanitized",
+            "redacted",
+            "aggregate_only",
+            "not_applicable"
+          ]
+        },
+        "license_or_terms_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "demand_validation_status": {
+          "type": "string",
+          "enum": [
+            "not_reviewed",
+            "partially_reviewed",
+            "validated"
+          ]
+        },
+        "validation_source": {
+          "type": "string"
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "enum": [
+                  "reddit_manual_capture",
+                  "reddit_api_export",
+                  "manual_ai_prompt_export"
+                ]
+              }
+            },
+            "required": [
+              "source_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "allowed_public_use": {
+                "const": "none"
+              },
+              "evidence_use": {
+                "const": "discovery_only"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "const": "other_query_tool_export"
+              },
+              "demand_validation_status": {
+                "const": "validated"
+              }
+            },
+            "required": [
+              "source_type",
+              "demand_validation_status"
+            ]
+          },
+          "then": {
+            "required": [
+              "validation_source",
+              "reviewed_by"
+            ],
+            "properties": {
+              "validation_source": {
+                "minLength": 1
+              },
+              "reviewed_by": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "employee-generated-content-infrastructure",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero_image",
+      "path": "public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
+      "public_url": "/public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
+      "width": 1600,
+      "height": 700,
+      "alt": "Cinematic signal routes and glass panels representing employee-generated content infrastructure",
+      "notes": "Post-specific landscape hero. Must keep natural aspect ratio."
+    },
+    {
+      "id": "operating-loop",
+      "type": "article_media",
+      "path": "public/assets/blog/employee-generated-content-infrastructure/operating-loop.png",
+      "public_url": "/public/assets/blog/employee-generated-content-infrastructure/operating-loop.png",
+      "width": 1100,
+      "height": 620,
+      "alt": "Abstract operating loop diagram showing employee expertise flowing into reusable public content",
+      "notes": "Article media under the examples section. Must keep natural aspect ratio."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+duplicate_id,canonical_query_id,duplicate_query_id,match_type,match_confidence,merge_decision,reason,reviewer,reviewed_at
+dup-0001,dq-0007,dq-0052,canonical_query_key,high,merge,Same canonical query key: do you turn employee expertise into useful linkedin posts,automation,2026-06-19T00:22:44.001Z
+dup-0002,dq-0007,dq-0053,canonical_query_key,high,merge,Same canonical query key: do you turn employee expertise into useful linkedin posts,automation,2026-06-19T00:22:44.001Z
+dup-0003,dq-0018,dq-0054,canonical_query_key,high,merge,Same canonical query key: introducing search generative ai performance reports in search console,automation,2026-06-19T00:22:44.001Z
+dup-0004,dq-0019,dq-0055,canonical_query_key,high,merge,Same canonical query key: new resource optimizing generative ai in google search,automation,2026-06-19T00:22:44.001Z
+dup-0005,dq-0047,dq-0056,canonical_query_key,high,merge,Same canonical query key: ai agent plain-english guide,automation,2026-06-19T00:22:44.001Z
+dup-0006,dq-0048,dq-0057,canonical_query_key,high,merge,Same canonical query key: 10 seo trends i ve seen firsthand in 2026 data,automation,2026-06-19T00:22:44.001Z
+dup-0007,dq-0020,dq-0058,canonical_query_key,high,merge,Same canonical query key: 11 ways automate seo agent,automation,2026-06-19T00:22:44.001Z
+dup-0008,dq-0021,dq-0059,canonical_query_key,high,merge,Same canonical query key: i use my ai marketing assistant after 200 hours,automation,2026-06-19T00:22:44.001Z
+dup-0009,dq-0022,dq-0060,canonical_query_key,high,merge,Same canonical query key: we analyzed 137k sites 97 llms txt files never get read,automation,2026-06-19T00:22:44.001Z
+dup-0010,dq-0023,dq-0061,canonical_query_key,high,merge,Same canonical query key: level-up seo tactician search visibility leader,automation,2026-06-19T00:22:44.001Z
+dup-0011,dq-0024,dq-0062,canonical_query_key,high,merge,Same canonical query key: 9 vibe coding examples ai apps you can use right now grow your website,automation,2026-06-19T00:22:44.001Z
+dup-0012,dq-0049,dq-0063,canonical_query_key,high,merge,Same canonical query key: why category entry points belong in every ai search strategy,automation,2026-06-19T00:22:44.001Z
+dup-0013,dq-0025,dq-0064,canonical_query_key,high,merge,Same canonical query key: ai sentiment analysis marketer s guide,automation,2026-06-19T00:22:44.001Z
+dup-0014,dq-0026,dq-0065,canonical_query_key,high,merge,Same canonical query key: bot traffic now exceeds traffic human users,automation,2026-06-19T00:22:44.001Z
+dup-0015,dq-0027,dq-0066,canonical_query_key,high,merge,Same canonical query key: 12 seo writing tips earn visibility 2026,automation,2026-06-19T00:22:44.001Z
+dup-0016,dq-0028,dq-0067,canonical_query_key,high,merge,Same canonical query key: rtcamp closed ai perception gap costing them enterprise deals,automation,2026-06-19T00:22:44.001Z
+dup-0017,dq-0029,dq-0068,canonical_query_key,high,merge,Same canonical query key: why 62 ai citations don t lead brand mentions study,automation,2026-06-19T00:22:44.001Z
+dup-0018,dq-0030,dq-0069,canonical_query_key,high,merge,Same canonical query key: decide which ai search prompts track,automation,2026-06-19T00:22:44.001Z
+dup-0019,dq-0031,dq-0070,canonical_query_key,high,merge,Same canonical query key: google s ai search optimization guide do next,automation,2026-06-19T00:22:44.001Z
+dup-0020,dq-0041,dq-0071,canonical_query_key,high,merge,Same canonical query key: rank in ai search results expert practices,automation,2026-06-19T00:22:44.001Z
+dup-0021,dq-0032,dq-0072,canonical_query_key,high,merge,Same canonical query key: get indexed by chatgpt 2026,automation,2026-06-19T00:22:44.001Z
+dup-0022,dq-0033,dq-0073,canonical_query_key,high,merge,Same canonical query key: faqs aeo structure answers that rank in answer engines,automation,2026-06-19T00:22:44.001Z
+dup-0023,dq-0034,dq-0074,canonical_query_key,high,merge,Same canonical query key: schema markup aeo implement it boost answer engine visibility in 2026,automation,2026-06-19T00:22:44.001Z
+dup-0024,dq-0035,dq-0075,canonical_query_key,high,merge,Same canonical query key: keyword research aeo guide winning answer engine traffic in 2026,automation,2026-06-19T00:22:44.001Z
+dup-0025,dq-0036,dq-0076,canonical_query_key,high,merge,Same canonical query key: on-page content formats answer engines actually favor new research,automation,2026-06-19T00:22:44.001Z
+dup-0026,dq-0042,dq-0077,canonical_query_key,high,merge,Same canonical query key: 6 ai prospecting tools our picks 2026,automation,2026-06-19T00:22:44.001Z
+dup-0027,dq-0043,dq-0078,canonical_query_key,high,merge,Same canonical query key: sales outreach tools that integrate your crm our favorite picks 2026,automation,2026-06-19T00:22:44.001Z
+dup-0028,dq-0044,dq-0079,canonical_query_key,high,merge,Same canonical query key: future ai in customer relationship management s coming next,automation,2026-06-19T00:22:44.001Z
+dup-0029,dq-0045,dq-0080,canonical_query_key,high,merge,Same canonical query key: real ai crm use cases driving revenue growth in 2025,automation,2026-06-19T00:22:44.001Z
+dup-0030,dq-0046,dq-0081,canonical_query_key,high,merge,Same canonical query key: 5 ai crms real estate agents 2026 roundup,automation,2026-06-19T00:22:44.001Z
+dup-0031,dq-0050,dq-0082,canonical_query_key,high,merge,Same canonical query key: prove incremental marketing impact linkedin s new tools,automation,2026-06-19T00:22:44.001Z
+dup-0032,dq-0037,dq-0083,canonical_query_key,high,merge,Same canonical query key: multiplier effect linkedin ads boosts search content pipeline,automation,2026-06-19T00:22:44.001Z
+dup-0033,dq-0038,dq-0084,canonical_query_key,high,merge,Same canonical query key: fear messing up hidden emotion driving b2b decisions,automation,2026-06-19T00:22:44.001Z
+dup-0034,dq-0039,dq-0085,canonical_query_key,high,merge,Same canonical query key: principles buyability why strong deals stall separates vendors who get chosen,automation,2026-06-19T00:22:44.001Z
+dup-0035,dq-0040,dq-0086,canonical_query_key,high,merge,Same canonical query key: grow your ai search visibility linkedin content,automation,2026-06-19T00:22:44.001Z

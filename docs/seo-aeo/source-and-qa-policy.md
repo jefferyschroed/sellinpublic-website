@@ -70,7 +70,8 @@ Required specificity:
 
 - Name the buyer, workflow, channel, tool, metric, or decision being discussed.
 - Include concrete examples, operating details, or source-backed distinctions.
-- Tie recommendations back to Sell In Public's POV: employee-led GTM, LinkedIn-first distribution, content-to-outbound systems, and pipeline creation.
+- Tie recommendations back to the reader's practical decision: what to do, what to avoid, which example proves the point, and what source supports the claim.
+- Keep Sell In Public's point of view present through editorial judgment, examples, and structure. Commercial CTAs are allowed when they are clearly separated from the evidence and analysis.
 
 ## AEO/Page Architecture Checklist
 
@@ -105,6 +106,7 @@ Do not publish until all items pass.
 - Evidence grades are recorded.
 - No Reddit, forums, or generic listicles used as evidence.
 - Genericness audit passed.
+- Editorial value audit passed: the main article body is useful, specific, and not feature-heavy.
 - Article has a clear audience, intent, and point of view.
 - Primary query is answered directly near the top.
 - Headings are specific, useful, and non-repetitive.
@@ -113,5 +115,4 @@ Do not publish until all items pass.
 - Canonical URL is set.
 - Images have descriptive alt text when meaningful.
 - No placeholder copy, fake stats, invented examples, or unverifiable claims.
-- Final read confirms the page sounds like Sell In Public, not a generic SEO article.
-
+- Final read confirms the page sounds like a useful Sell In Public field note, not a generic SEO article.

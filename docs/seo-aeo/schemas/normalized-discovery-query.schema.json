@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sellinpublic.co/schemas/normalized-discovery-query.schema.json",
+  "title": "Normalized Discovery Query Records",
+  "description": "Row model for normalized-discovery-queries.csv. Convert CSV rows to objects before validation.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "run_date",
+    "rows"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9-]+$"
+    },
+    "run_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/row"
+      }
+    }
+  },
+  "$defs": {
+    "sourceType": {
+      "type": "string",
+      "enum": [
+        "reddit_manual_capture",
+        "reddit_api_export",
+        "answer_the_public_export",
+        "gsc_emerging_query_export",
+        "bing_webmaster_query_export",
+        "google_trends_api_export",
+        "google_trends_csv_export",
+        "public_source_trend_export",
+        "manual_ai_prompt_export",
+        "manual_serp_observation",
+        "manual_topic_seed",
+        "other_query_tool_export"
+      ]
+    },
+    "metric": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^$|^-?[0-9]+(\\.[0-9]+)?%?$"
+        }
+      ]
+    },
+    "row": {
+      "type": "object",
+      "required": [
+        "query_id",
+        "source_id",
+        "source_type",
+        "source_record_id",
+        "query",
+        "normalized_query",
+        "canonical_query_key",
+        "intent",
+        "funnel_stage",
+        "audience",
+        "pillar_id",
+        "topic_id",
+        "surface",
+        "country",
+        "language",
+        "observed_at",
+        "confidence",
+        "evidence_use",
+        "allowed_public_use",
+        "raw_path",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "query_id": {
+          "type": "string",
+          "pattern": "^q-[a-z0-9-]+$"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*-[0-9]{3,}$"
+        },
+        "source_type": {
+          "$ref": "#/$defs/sourceType"
+        },
+        "source_record_id": {
+          "type": "string"
+        },
+        "query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normalized_query": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_query_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intent": {
+          "type": "string",
+          "enum": [
+            "definition",
+            "comparison",
+            "how_to",
+            "examples",
+            "measurement",
+            "objection",
+            "vendor_evaluation",
+            "case_study",
+            "aeo_strategy",
+            "refresh_signal",
+            "other"
+          ]
+        },
+        "funnel_stage": {
+          "type": "string",
+          "enum": [
+            "unaware",
+            "problem-aware",
+            "solution-aware",
+            "vendor-aware",
+            "customer",
+            "unknown"
+          ]
+        },
+        "audience": {
+          "type": "string"
+        },
+        "pillar_id": {
+          "type": "string"
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "surface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "country": {
+          "type": "string",
+          "minLength": 2
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "observed_at": {
+          "type": "string"
+        },
+        "page_url": {
+          "type": "string"
+        },
+        "device": {
+          "type": "string"
+        },
+        "volume": {
+          "$ref": "#/$defs/metric"
+        },
+        "difficulty": {
+          "$ref": "#/$defs/metric"
+        },
+        "impressions": {
+          "$ref": "#/$defs/metric"
+        },
+        "clicks": {
+          "$ref": "#/$defs/metric"
+        },
+        "ctr": {
+          "$ref": "#/$defs/metric"
+        },
+        "avg_position": {
+          "$ref": "#/$defs/metric"
+        },
+        "trend_delta": {
+          "$ref": "#/$defs/metric"
+        },
+        "trend_window": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence_use": {
+          "type": "string",
+          "const": "discovery_only"
+        },
+        "allowed_public_use": {
+          "type": "string",
+          "enum": [
+            "none",
+            "topic_direction",
+            "section_direction",
+            "refresh_direction"
+          ]
+        },
+        "raw_path": {
+          "type": "string",
+          "pattern": "^research/trend-intelligence/.+"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_type": {
+                "enum": [
+                  "reddit_manual_capture",
+                  "reddit_api_export",
+                  "manual_ai_prompt_export"
+                ]
+              }
+            },
+            "required": [
+              "source_type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "allowed_public_use": {
+                "const": "none"
+              },
+              "evidence_use": {
+                "const": "discovery_only"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,7 +1,16 @@
 .DS_Store
 *.log
+.env
 .netlify/
 node_modules/
+secrets/
+config/seo-aeo.config.json
+automation-runs/
+.codex/
+
+# Local manual import source files.
+imports/**/*.csv
+analytics/*.csv
 
 # Local design and QA artifacts.
 design.md
@@ -10,3 +19,18 @@ redesign-targets/
 research/
 sections/
 worker-notes/
+
+!research/
+research/*
+!research/query-intelligence/
+!research/query-intelligence/**
+research/query-intelligence/**/raw/**
+!research/trend-intelligence/
+!research/trend-intelligence/**
+research/trend-intelligence/**/raw/**
+!research/daily-content-plan/
+!research/daily-content-plan/**
+research/daily-content-plan/**
+!research/source-checks/
+!research/source-checks/**
+research/source-checks/**/*.csv

@@ -25,6 +25,18 @@ search_intent:
   secondary_keywords: []
   related_questions: []
 
+topic_map:
+  pillar_id: ""
+  pillar_name: ""
+  topic_id: ""
+  topic_score: 0
+  topic_decision: ""
+  coverage_role: ""
+  parent_topic: ""
+  target_asset: ""
+  source_readiness: ""
+  internal_link_targets: []
+
 entity_targets: []
 angle: ""
 sell_in_public_pov: ""
@@ -50,4 +62,3 @@ approval:
   outline_gate: false
   qa_gate: false
   publish_gate: false
-

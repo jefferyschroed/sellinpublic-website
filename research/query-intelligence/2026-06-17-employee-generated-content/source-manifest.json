@@ -1,0 +1,39 @@
+{
+  "run_id": "2026-06-17-employee-generated-content",
+  "created_at": "2026-06-17",
+  "seed_topic": "employee-generated content",
+  "status": "starter-run",
+  "rule": "Discovery inputs only. Do not cite these sources as factual evidence in public articles.",
+  "sources": [
+    {
+      "source_id": "qi-001",
+      "source_type": "manual_topic_seed",
+      "name": "Sell In Public seed questions",
+      "captured_by": "Sell In Public editorial",
+      "captured_at": "2026-06-17",
+      "path": "research/query-intelligence/2026-06-17-employee-generated-content/raw/seed-questions.md",
+      "evidence_use": "discovery_only",
+      "notes": "Seeded from strategy discussion and current first blog. Replace or supplement with approved exports during future runs."
+    },
+    {
+      "source_id": "qi-002",
+      "source_type": "manual_serp_observation",
+      "name": "Manual SERP and AEO observation placeholder",
+      "captured_by": "Sell In Public editorial",
+      "captured_at": "",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "notes": "Add approved export or manual observation file before using this source in a packet handoff."
+    },
+    {
+      "source_id": "qi-003",
+      "source_type": "approved_ai_prompt_export",
+      "name": "Approved sanitized AI prompt export placeholder",
+      "captured_by": "",
+      "captured_at": "",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "notes": "Use only approved sanitized exports. Do not automate unofficial ChatGPT network scraping."
+    }
+  ]
+}

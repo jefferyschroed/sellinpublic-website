@@ -1,0 +1,33 @@
+schema_version: "1.0"
+run_id: "2026-06-18-daily-discovery"
+created_at: "2026-06-18"
+handoff_status: "ready"
+rule: "Packet owners must still validate topic score, source readiness, and SME gaps. Discovery data is not factual evidence."
+
+recommended_packets:
+  - candidate_id: "candidate-001"
+    cluster_id: "cluster-004-topic-turn-employee-expertise-into-p"
+    recommended_title: "How do you turn employee expertise into useful LinkedIn posts"
+    slug_candidate: "how-do-you-turn-employee-expertise-into-useful-linkedin-posts"
+    primary_query: "How do you turn employee expertise into useful LinkedIn posts?"
+    secondary_queries: []
+    aeo_question: "How do you turn employee expertise into useful LinkedIn posts?"
+    pillar_id: "pillar-content-operations"
+    topic_id: "topic-turn-employee-expertise-into-posts"
+    recommended_asset: "section"
+    decision: "map_as_section"
+    cluster_confidence: "medium"
+    discovery_sources:
+      - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
+      - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
+    excluded_sources_for_evidence:
+      - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
+      - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
+    source_gaps:
+      - "Find approved factual sources before drafting any public claims."
+    sme_questions:
+      - "What internal examples or buyer language should be validated before this becomes a post or section?"
+    internal_links:
+      - "https://sellinpublic.co/blog/"
+    reason_to_create_or_refresh: "Multi-source discovery signal is ready for topic/source review."
+    reason_to_wait: ""

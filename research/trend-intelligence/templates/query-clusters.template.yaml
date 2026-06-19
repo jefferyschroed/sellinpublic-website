@@ -1,0 +1,28 @@
+schema_version: "1.0"
+run_id: "2026-01-01-daily-discovery"
+updated_at: "2026-01-01"
+rule: "Cluster by semantic intent. Discovery data is not factual evidence."
+
+clusters:
+  - cluster_id: "cluster-example"
+    label: "Example buyer question"
+    intent: "how_to"
+    pillar_id: ""
+    topic_id: ""
+    representative_query: "example buyer question"
+    canonical_query_ids:
+      - "q-example"
+    source_ids:
+      - "src-001"
+    source_types:
+      - "answer_the_public_export"
+    cluster_confidence: "low"
+    recommended_asset: "monitor_only"
+    topic_score:
+    decision: "monitor"
+    source_readiness: "needs_source_discovery"
+    evidence_use: "discovery_only"
+    excluded_sources_for_evidence: []
+    source_gaps: []
+    sme_questions: []
+    notes: "Replace with daily clusters. Reddit-only and AI-prompt-only clusters require validation before packet handoff."

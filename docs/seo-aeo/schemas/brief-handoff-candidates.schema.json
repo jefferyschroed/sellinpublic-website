@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sellinpublic.co/schemas/brief-handoff-candidates.schema.json",
+  "title": "Brief Handoff Candidates",
+  "description": "Daily discovery candidates that may feed topic triage after source and SME review.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "created_at",
+    "handoff_status",
+    "rule",
+    "candidates"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}-[a-z0-9-]+$"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "handoff_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ready_for_topic_triage",
+        "blocked",
+        "empty"
+      ]
+    },
+    "rule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    }
+  },
+  "$defs": {
+    "candidate": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "cluster_id",
+        "recommended_title",
+        "slug_candidate",
+        "primary_query",
+        "secondary_queries",
+        "aeo_question",
+        "pillar_id",
+        "topic_id",
+        "recommended_asset",
+        "decision",
+        "cluster_confidence",
+        "discovery_sources",
+        "excluded_sources_for_evidence",
+        "source_gaps",
+        "sme_questions",
+        "internal_links",
+        "reason_to_create_or_refresh",
+        "reason_to_wait"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "pattern": "^candidate-[a-z0-9-]+$"
+        },
+        "cluster_id": {
+          "type": "string",
+          "pattern": "^cluster-[a-z0-9-]+$"
+        },
+        "recommended_title": {
+          "type": "string"
+        },
+        "slug_candidate": {
+          "type": "string"
+        },
+        "primary_query": {
+          "type": "string"
+        },
+        "secondary_queries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aeo_question": {
+          "type": "string"
+        },
+        "pillar_id": {
+          "type": "string"
+        },
+        "topic_id": {
+          "type": "string"
+        },
+        "recommended_asset": {
+          "type": "string"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "create_packet",
+            "refresh_packet",
+            "map_as_section",
+            "map_as_faq",
+            "monitor",
+            "reject"
+          ]
+        },
+        "cluster_confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "discovery_sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded_sources_for_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_gaps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sme_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "internal_links": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reason_to_create_or_refresh": {
+          "type": "string"
+        },
+        "reason_to_wait": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

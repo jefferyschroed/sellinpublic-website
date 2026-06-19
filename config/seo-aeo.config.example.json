@@ -1,0 +1,217 @@
+{
+  "site": {
+    "origin": "https://sellinpublic.co",
+    "searchConsoleSiteUrl": "sc-domain:sellinpublic.co",
+    "timezone": "America/Los_Angeles"
+  },
+  "google": {
+    "ga4PropertyId": "542210968",
+    "ga4MeasurementId": "G-QCYHK55RCG",
+    "credentialMode": "oauth",
+    "serviceAccountJsonPath": "secrets/google-service-account.json",
+    "oauthCredentialJsonPath": "secrets/google-oauth.json"
+  },
+  "bing": {
+    "webmasterSiteUrl": "https://sellinpublic.co",
+    "webmasterApiKey": ""
+  },
+  "reddit": {
+    "enabled": false,
+    "userAgent": "",
+    "subreddits": [],
+    "queries": []
+  },
+  "trendDiscovery": {
+    "dailyTopicLimit": 25,
+    "minRedditScore": 5,
+    "discoveryOnly": true
+  },
+  "googleTrendsRss": {
+    "enabled": false,
+    "outputDir": "imports/trends",
+    "endpoint": "https://trends.google.com/trending/rss?geo=US",
+    "dailyItemLimit": 25,
+    "perSourceLimit": 25,
+    "timeoutMs": 10000,
+    "surface": "google_trends_rss",
+    "country": "US",
+    "language": "en",
+    "trendWindow": "google_trends_rss_daily",
+    "allowedPublicUse": "topic_direction",
+    "userAgent": "SellInPublicGoogleTrendsRSS/1.0 (discovery-only RSS fetcher)",
+    "includeKeywords": [
+      "employee-generated content",
+      "employee advocacy",
+      "AI search",
+      "AEO",
+      "answer engine",
+      "GTM",
+      "LinkedIn content",
+      "social selling"
+    ],
+    "includePatterns": [
+      "\\b(LLM visibility|generative AI|sales content|founder content)\\b"
+    ],
+    "excludeKeywords": [
+      "coupon",
+      "celebrity",
+      "sports",
+      "lottery",
+      "weather"
+    ],
+    "excludePatterns": [
+      "\\b(NFL|NBA|MLB|NHL|World Cup|TV schedule|streaming)\\b"
+    ],
+    "sources": [
+      {
+        "id": "google-trends-rss-us",
+        "name": "Google Trends Daily Search Trends RSS - US",
+        "enabled": false,
+        "allow": false,
+        "endpoint": "https://trends.google.com/trending/rss?geo=US",
+        "surface": "google_trends_rss",
+        "country": "US",
+        "language": "en",
+        "dailyLimit": 25,
+        "includeKeywords": [
+          "employee-generated content",
+          "AI search",
+          "LinkedIn content"
+        ],
+        "includePatterns": [
+          "\\b(AEO|answer engine|GTM)\\b"
+        ],
+        "excludeKeywords": [
+          "unrelated consumer trend"
+        ],
+        "excludePatterns": [
+          "\\boff-topic\\b"
+        ],
+        "notes": "Disabled placeholder for the official Google Trends RSS endpoint. Rows are discovery-only source leads, not validated demand or factual evidence."
+      }
+    ]
+  },
+  "publicTrendSources": {
+    "enabled": false,
+    "outputDir": "imports/trends",
+    "dailyItemLimit": 25,
+    "perSourceLimit": 10,
+    "timeoutMs": 10000,
+    "allowedPublicUse": "topic_direction",
+    "userAgent": "SellInPublicTrendDiscovery/1.0 (discovery-only public feed fetcher)",
+    "includeKeywords": [
+      "employee-generated content",
+      "employee advocacy",
+      "AI search",
+      "AEO",
+      "GTM",
+      "LinkedIn content"
+    ],
+    "includePatterns": [
+      "\\b(answer engine|LLM visibility|generative AI)\\b"
+    ],
+    "excludeKeywords": [
+      "coupon",
+      "celebrity",
+      "sports"
+    ],
+    "excludePatterns": [
+      "\\b(job listings?|webinar replay)\\b"
+    ],
+    "sources": [
+      {
+        "id": "example-public-rss",
+        "name": "Example public RSS or Atom feed",
+        "enabled": false,
+        "allow": false,
+        "url": "https://example.com/feed.xml",
+        "format": "auto",
+        "surface": "public_feed",
+        "country": "US",
+        "language": "en",
+        "dailyLimit": 10,
+        "allowedPublicUse": "topic_direction",
+        "includeKeywords": [
+          "employee-generated content",
+          "AI search"
+        ],
+        "includePatterns": [
+          "\\b(AEO|GTM)\\b"
+        ],
+        "excludeKeywords": [
+          "unrelated product news"
+        ],
+        "excludePatterns": [
+          "\\boff-topic\\b"
+        ],
+        "notes": "Disabled placeholder. Enable only approved public RSS, Atom, or JSON feeds. Headlines are discovery only, never factual evidence."
+      }
+    ]
+  },
+  "publishGovernor": {
+    "maxPostsPerDay": 3,
+    "allowMultiPostGeneration": false,
+    "maxPostsPerPillarPerDay": 2,
+    "coverageRoleDailyLimits": {
+      "hub": 1,
+      "spoke": 3,
+      "case_study": 1,
+      "refresh": 2
+    },
+    "minimumTopicScore": 80,
+    "allowedSourceReadiness": [
+      "ready"
+    ],
+    "allowedTargetAssets": [
+      "post"
+    ],
+    "eligibleStatuses": [
+      "approved",
+      "approved_with_notes",
+      "ready",
+      "ready_to_publish",
+      "publish_ready"
+    ],
+    "blockedStatuses": [
+      "draft",
+      "planned",
+      "rejected",
+      "parked",
+      "published",
+      "published_draft"
+    ],
+    "blockingTopicDecisions": [
+      "resolve_gap_first",
+      "map_as_h2_faq_or_section",
+      "monitor",
+      "park",
+      "merge",
+      "retire"
+    ],
+    "requiredApprovalGates": [
+      "strategy_gate",
+      "source_gate",
+      "outline_gate",
+      "qa_gate",
+      "publish_gate"
+    ],
+    "approvedContentDecisionStatuses": [
+      "approved",
+      "accepted",
+      "owner_approved",
+      "completed"
+    ],
+    "blockingContentDecisions": [
+      "merge",
+      "retire",
+      "park"
+    ],
+    "requireQueryHandoffReady": true,
+    "allowedQueryRunStatuses": [
+      "handoff_ready"
+    ],
+    "requireApprovedContentDecision": false,
+    "blockOnFailedDailyReport": true,
+    "allowRepublish": false
+  }
+}

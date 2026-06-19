@@ -4,8 +4,9 @@ canonical_url: ""
 meta_description: ""
 og_title: ""
 og_description: ""
-og_image: ""
-author: ""
+og_image: "https://sellinpublic.co/public/assets/blog/[slug]/hero-generated.png"
+author: "Jeffery Schroeder"
+author_url: "https://www.linkedin.com/in/jeffery-schroeder-957b98337/"
 publish_date: ""
 updated_date: ""
 category: ""
@@ -14,7 +15,12 @@ excerpt: ""
 robots: "index,follow"
 schema_type: "Article"
 internal_links: []
+topic_map:
+  pillar_id: ""
+  topic_id: ""
+  coverage_role: ""
+  parent_topic: ""
+  related_topics: []
 cta:
   label: ""
   url: ""
-

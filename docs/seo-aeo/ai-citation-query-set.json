@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "query_set_id": "sellinpublic-weekly-ai-citation",
+  "query_set_version": "2026-06-18",
+  "status": "active",
+  "effective_start_date": "2026-06-18",
+  "cadence": "weekly_thursday",
+  "timezone": "America/Los_Angeles",
+  "default_country": "US",
+  "default_language": "en",
+  "surfaces": [
+    {
+      "surface_id": "google_search",
+      "label": "Google Search manual SERP observation",
+      "active": true
+    },
+    {
+      "surface_id": "chatgpt",
+      "label": "ChatGPT answer observation",
+      "active": true
+    },
+    {
+      "surface_id": "perplexity",
+      "label": "Perplexity answer observation",
+      "active": true
+    },
+    {
+      "surface_id": "gemini",
+      "label": "Gemini answer observation",
+      "active": true
+    },
+    {
+      "surface_id": "google_ai_overview",
+      "label": "Google AI Overview observation",
+      "active": true
+    },
+    {
+      "surface_id": "bing_copilot",
+      "label": "Bing Copilot observation",
+      "active": true
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "aiq-egc-definition",
+      "query": "what is employee-generated content",
+      "intent": "definition",
+      "pillar_id": "pillar-employee-generated-content",
+      "topic_id": "topic-egc-definition",
+      "target_slug": "employee-generated-content-infrastructure",
+      "target_page_url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+      "priority": "core",
+      "active": true,
+      "effective_start_date": "2026-06-18"
+    },
+    {
+      "query_id": "aiq-egc-vs-advocacy",
+      "query": "employee-generated content vs employee advocacy",
+      "intent": "comparison",
+      "pillar_id": "pillar-employee-generated-content",
+      "topic_id": "topic-egc-vs-advocacy",
+      "target_slug": "employee-generated-content-infrastructure",
+      "target_page_url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+      "priority": "core",
+      "active": true,
+      "effective_start_date": "2026-06-18"
+    },
+    {
+      "query_id": "aiq-egc-examples-b2b",
+      "query": "employee-generated content examples b2b",
+      "intent": "examples",
+      "pillar_id": "pillar-examples-case-studies",
+      "topic_id": "topic-egc-examples",
+      "target_slug": "employee-generated-content-infrastructure",
+      "target_page_url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+      "priority": "core",
+      "active": true,
+      "effective_start_date": "2026-06-18"
+    },
+    {
+      "query_id": "aiq-egc-measurement",
+      "query": "measure employee-generated content beyond impressions",
+      "intent": "measurement",
+      "pillar_id": "pillar-measurement-learning",
+      "topic_id": "topic-measure-egc-beyond-impressions",
+      "target_slug": "employee-generated-content-infrastructure",
+      "target_page_url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+      "priority": "core",
+      "active": true,
+      "effective_start_date": "2026-06-18"
+    }
+  ],
+  "rule": "This fixed query set is for comparable AI/search citation monitoring only. It does not validate demand and does not provide factual article evidence."
+}

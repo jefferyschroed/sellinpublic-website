@@ -1,0 +1,11 @@
+{
+  "generated_at": "",
+  "run_date": "",
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [],
+  "rules": [
+    "Do not cite query exports, Reddit, autocomplete, People Also Ask, or AI prompt outputs as factual evidence.",
+    "Use discovery inputs only for language, routing, headings, FAQs, and source-gap identification.",
+    "All factual claims require approved citations, SME notes, or first-party evidence."
+  ]
+}

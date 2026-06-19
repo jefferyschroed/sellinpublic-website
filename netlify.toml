@@ -1,5 +1,6 @@
 [build]
-  publish = "."
+  command = "node scripts/seo-aeo/build-netlify-publish-dir.mjs"
+  publish = "outputs/netlify-publish"
 
 [[headers]]
   for = "/public/assets/*"

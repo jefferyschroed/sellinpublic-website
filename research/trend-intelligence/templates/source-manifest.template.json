@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "run_id": "2026-01-01-daily-discovery",
+  "run_date": "2026-01-01",
+  "created_at": "2026-01-01",
+  "rule": "Discovery inputs only. Do not cite these sources as factual evidence in public articles.",
+  "owner": "Sell In Public editorial",
+  "sources": [
+    {
+      "source_id": "src-001",
+      "source_type": "answer_the_public_export",
+      "name": "AnswerThePublic-style export for <seed>",
+      "captured_by": "Sell In Public editorial",
+      "captured_at": "2026-01-01",
+      "surface": "answer_the_public_style_export",
+      "country": "US",
+      "language": "en",
+      "path": "research/trend-intelligence/2026-01-01-daily-discovery/raw/answer-the-public-seed-2026-01-01.csv",
+      "evidence_use": "discovery_only",
+      "allowed_public_use": "topic_direction",
+      "collection_method": "manual_export",
+      "sanitization_status": "not_applicable",
+      "license_or_terms_note": "Export captured under the tool's applicable terms. Use for discovery only.",
+      "notes": "Replace this example source with actual daily inputs."
+    }
+  ]
+}

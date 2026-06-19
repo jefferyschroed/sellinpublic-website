@@ -1,0 +1,149 @@
+run_id: "2026-06-17-employee-generated-content"
+updated_at: "2026-06-17"
+rule: "Cluster by semantic intent. Query data is discovery only."
+
+clusters:
+  - cluster_id: "cluster-egc-definition"
+    label: "Define employee-generated content"
+    intent: "definition"
+    pillar_id: "pillar-employee-generated-content"
+    topic_id: "topic-egc-definition"
+    representative_query: "what is employee-generated content"
+    query_ids:
+      - "q-001"
+    recommended_asset: "post"
+    topic_score: 91
+    decision: "create_or_refresh_packet"
+    source_gaps: []
+    sme_questions:
+      - "What examples does Sell In Public see most often inside B2B teams?"
+    notes: "This is the first category hub and should stay answer-first."
+
+  - cluster_id: "cluster-egc-vs-advocacy"
+    label: "Compare employee-generated content with employee advocacy"
+    intent: "comparison"
+    pillar_id: "pillar-employee-generated-content"
+    topic_id: "topic-egc-vs-advocacy"
+    representative_query: "employee-generated content vs employee advocacy"
+    query_ids:
+      - "q-002"
+    recommended_asset: "post"
+    topic_score: 86
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "Current employee advocacy market/source examples."
+      - "A neutral definition source for employee advocacy."
+    sme_questions:
+      - "Where does employee advocacy work well, and where does it fail?"
+    notes: "Comparison table likely required."
+
+  - cluster_id: "cluster-egc-examples"
+    label: "Find examples from recognized B2B companies"
+    intent: "examples"
+    pillar_id: "pillar-employee-generated-content"
+    topic_id: "topic-egc-examples"
+    representative_query: "employee-generated content examples"
+    query_ids:
+      - "q-003"
+    recommended_asset: "post"
+    topic_score: 83
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "More direct examples from employee or company-owned sources."
+      - "Clear distinction between user-generated, community-generated, and employee-generated content."
+    sme_questions:
+      - "Which example is closest to what B2B GTM teams can copy?"
+    notes: "Use examples as operating lessons, not brand admiration."
+
+  - cluster_id: "cluster-case-study-loops"
+    label: "Study Clay, Lovable, and GitLab public content loops"
+    intent: "case_study"
+    pillar_id: "pillar-examples-case-studies"
+    topic_id: "topic-clay-lovable-gitlab"
+    representative_query: "clay lovable gitlab public content loops"
+    query_ids:
+      - "q-007"
+    recommended_asset: "post"
+    topic_score: 81
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "Direct source-backed examples for each company."
+      - "Clear classification of user, community, employee, and documentation loops."
+    sme_questions:
+      - "Which lesson from each company is most applicable to B2B GTM teams?"
+    notes: "Use this as a case-study layer below the broader examples topic."
+
+  - cluster_id: "cluster-linkedin-operations"
+    label: "Turn employee expertise into LinkedIn content"
+    intent: "how_to"
+    pillar_id: "pillar-content-operations"
+    topic_id: "topic-turn-employee-expertise-into-posts"
+    representative_query: "turn employee expertise into linkedin posts"
+    query_ids:
+      - "q-005"
+      - "q-008"
+    recommended_asset: "post_plus_sections"
+    topic_score: 84
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "SME workflow notes from Sell In Public."
+      - "Examples of raw note to finished post transformation."
+    sme_questions:
+      - "What interview prompts reliably uncover employee expertise?"
+      - "What review rules keep voice intact?"
+    notes: "May become a hub for content operations."
+
+  - cluster_id: "cluster-linkedin-content-infrastructure"
+    label: "Build LinkedIn content infrastructure for B2B sales"
+    intent: "how_to"
+    pillar_id: "pillar-linkedin-led-gtm"
+    topic_id: "topic-linkedin-content-infrastructure"
+    representative_query: "linkedin content infrastructure for b2b sales teams"
+    query_ids:
+      - "q-009"
+    recommended_asset: "post"
+    topic_score: 80
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "Source-backed LinkedIn strategy examples."
+      - "SME workflow notes for sales team usage."
+    sme_questions:
+      - "Which parts of the LinkedIn motion belong to content, comments, profiles, and reply handling?"
+    notes: "Keep separate from content operations because the pillar assignment is LinkedIn-led GTM."
+
+  - cluster_id: "cluster-measurement"
+    label: "Measure employee-generated content beyond impressions"
+    intent: "measurement"
+    pillar_id: "pillar-measurement-learning"
+    topic_id: "topic-measure-egc-beyond-impressions"
+    representative_query: "measure employee-generated content beyond impressions"
+    query_ids:
+      - "q-006"
+      - "q-010"
+    recommended_asset: "post"
+    topic_score: 82
+    decision: "create_or_refresh_packet"
+    source_gaps:
+      - "Analytics export examples."
+      - "AI citation measurement sources."
+      - "Sales-assisted content feedback examples."
+    sme_questions:
+      - "Which buyer signals matter most before booked calls?"
+    notes: "Should connect analytics artifacts to content refresh decisions."
+
+  - cluster_id: "cluster-objections"
+    label: "Who should participate"
+    intent: "objection"
+    pillar_id: "pillar-employee-generated-content"
+    topic_id: "topic-should-every-employee-post"
+    representative_query: "should every employee post on linkedin"
+    query_ids:
+      - "q-004"
+    recommended_asset: "faq"
+    topic_score: 58
+    decision: "map_as_h2_faq_or_section"
+    source_gaps:
+      - "SME guidance on participation models."
+    sme_questions:
+      - "When should an employee contribute notes instead of posting publicly?"
+    notes: "Keep as FAQ unless future query data shows deeper intent."

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "workspace": ".",
+  "automations": [
+    {
+      "id": "sell-in-public-seo-aeo-daily-pipeline",
+      "name": "Sell In Public SEO/AEO Daily Pipeline",
+      "cadence": "daily",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=DAILY;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "node scripts/seo-aeo/content-runner.mjs --date <America/Los_Angeles yyyy-mm-dd> --metrics-lookback-days 7 --metrics-lag-days 3",
+      "prompt_must_include": [
+        "daily SEO/AEO controller",
+        "node scripts/seo-aeo/content-runner.mjs --date",
+        "--metrics-lookback-days 7 --metrics-lag-days 3",
+        "owner-actions",
+        "validate the demand import pack",
+        "source-request lock",
+        "run-status",
+        "subagent queue counts",
+        "publish governor",
+        "sanitized manual Reddit capture lane",
+        "imports/reddit-manual-captures",
+        "Do not use the Reddit API",
+        "manual Reddit captures are discovery-only",
+        "Do not publish, generate, distribute, or draft blogs automatically",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    },
+    {
+      "id": "seo-aeo-weekly-topic-triage",
+      "name": "SEO/AEO Weekly Topic Triage",
+      "cadence": "weekly",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=MO;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "node scripts/seo-aeo/content-runner.mjs --date <America/Los_Angeles yyyy-mm-dd>",
+      "prompt_must_include": [
+        "node scripts/seo-aeo/content-runner.mjs --date",
+        "prioritize",
+        "SEO/AEO content topics",
+        "topic coverage",
+        "source gaps",
+        "owner-actions",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    },
+    {
+      "id": "seo-aeo-weekly-source-refresh",
+      "name": "SEO/AEO Weekly Source Refresh",
+      "cadence": "weekly",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=TU;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "node scripts/seo-aeo/check-sources.mjs --date <America/Los_Angeles yyyy-mm-dd>; then node scripts/seo-aeo/content-runner.mjs --date <America/Los_Angeles yyyy-mm-dd>",
+      "prompt_must_include": [
+        "node scripts/seo-aeo/check-sources.mjs --date",
+        "node scripts/seo-aeo/content-runner.mjs --date",
+        "source",
+        "unsupported claims",
+        "reputable original research, case studies, primary reports, and official docs only",
+        "owner-actions",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    },
+    {
+      "id": "seo-aeo-weekly-ai-citation-check",
+      "name": "SEO/AEO Weekly AI Citation Check",
+      "cadence": "weekly",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=TH;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "review docs/seo-aeo/ai-citation-query-set.json, run scripts/seo-aeo/check-ai-citation-query-set.mjs and scripts/seo-aeo/write-ai-citation-capture-pack.mjs, capture active query/surface pairs from the generated capture pack, import reviewed rows under imports/ai-citations/, then rerun the controller",
+      "prompt_must_include": [
+        "AI citation",
+        "docs/seo-aeo/ai-citation-query-set.json",
+        "check-ai-citation-query-set.mjs",
+        "write-ai-citation-capture-pack.mjs",
+        "ai-citation-capture-pack",
+        "Do not scrape or automate unofficial network scraping",
+        "imports/ai-citations",
+        "owner-actions",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    },
+    {
+      "id": "seo-aeo-weekly-performance-monitor",
+      "name": "SEO/AEO Weekly Performance Monitor",
+      "cadence": "weekly",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=WEEKLY;BYDAY=FR;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "node scripts/seo-aeo/content-runner.mjs --date <America/Los_Angeles yyyy-mm-dd>",
+      "prompt_must_include": [
+        "node scripts/seo-aeo/content-runner.mjs --date",
+        "SEO/content metrics",
+        "GA4",
+        "Search Console",
+        "Do not edit",
+        "owner-actions",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    },
+    {
+      "id": "seo-aeo-monthly-content-retro",
+      "name": "SEO/AEO Monthly Content Retro",
+      "cadence": "monthly",
+      "required": true,
+      "kind": "cron",
+      "status": "ACTIVE",
+      "rrule": "FREQ=MONTHLY;BYDAY=1FR;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "execution_environment": "local",
+      "command_contract": "review the past month of owner-actions, run-status, analytics, content decisions, and skill steward closeouts",
+      "prompt_must_include": [
+        "past month",
+        "content work",
+        "skill steward closeouts",
+        "keep, update, expand, merge, retire, or create-next",
+        "owner-actions",
+        "If live deployment is blocked",
+        "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
+        "LIVE-DEPLOY-BLOCKER-DEFERRED"
+      ]
+    }
+  ]
+}

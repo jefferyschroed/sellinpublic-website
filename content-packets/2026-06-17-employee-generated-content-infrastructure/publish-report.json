@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-17-employee-generated-content-infrastructure",
+  "slug": "employee-generated-content-infrastructure",
+  "generated_at": "2026-06-18T00:37:26.044Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/employee-generated-content-infrastructure/index.html",
+      "bytes": 30921,
+      "changed": true
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 8148,
+      "post_count": 1,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 632,
+      "post_count": 1,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 1072,
+      "post_count": 1,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

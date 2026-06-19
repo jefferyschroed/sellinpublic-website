@@ -1,0 +1,53 @@
+run_id: "2026-06-17-employee-generated-content"
+created_at: "2026-06-17"
+handoff_status: "starter"
+rule: "Packet owners must still validate topic score, source readiness, and SME gaps."
+
+recommended_packets:
+  - packet_id: "2026-06-17-employee-generated-content-infrastructure"
+    title: "What Is Employee-Generated Content?"
+    slug: "employee-generated-content-infrastructure"
+    topic_id: "topic-egc-definition"
+    pillar_id: "pillar-employee-generated-content"
+    topic_score: 91
+    recommended_asset: "post"
+    primary_query: "what is employee-generated content"
+    aeo_question: "What is employee-generated content, and how is it different from employee advocacy?"
+    secondary_queries:
+      - "employee-generated content examples"
+      - "employee-generated content vs employee advocacy"
+      - "measure employee-generated content beyond impressions"
+    related_questions:
+      - "Should every employee post on LinkedIn?"
+      - "What makes employee-generated content useful?"
+      - "How should B2B teams measure employee-generated content?"
+    source_gaps: []
+    sme_questions:
+      - "Which internal examples best show employee expertise becoming useful public content?"
+    internal_links:
+      - "https://sellinpublic.co/"
+      - "https://sellinpublic.co/blog/"
+
+future_packet_candidates:
+  - title: "Employee-Generated Content vs Employee Advocacy"
+    slug: "employee-generated-content-vs-employee-advocacy"
+    topic_id: "topic-egc-vs-advocacy"
+    topic_score: 86
+    required_before_packet:
+      - "Neutral employee advocacy definition sources."
+      - "Current employee advocacy examples."
+      - "Comparison table outline."
+  - title: "Employee-Generated Content Examples From B2B Companies"
+    slug: "employee-generated-content-examples"
+    topic_id: "topic-egc-examples"
+    topic_score: 83
+    required_before_packet:
+      - "More source-backed examples."
+      - "Clear classification of employee, user, community, and documentation examples."
+  - title: "How To Turn Employee Expertise Into Useful LinkedIn Posts"
+    slug: "turn-employee-expertise-into-linkedin-posts"
+    topic_id: "topic-turn-employee-expertise-into-posts"
+    topic_score: 84
+    required_before_packet:
+      - "SME workflow notes."
+      - "Raw note to post example."

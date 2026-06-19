@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "packet_id": "2026-06-17-employee-generated-content-infrastructure",
+  "generated_at": "2026-06-18T00:00:00.000Z",
+  "run_date": "2026-06-18",
+  "rule": "Discovery inputs may shape topic, structure, FAQs, and source gaps, but cannot support factual claims.",
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "source_manifests": [
+    "research/query-intelligence/2026-06-17-employee-generated-content/source-manifest.json"
+  ],
+  "excluded_sources": [
+    {
+      "source_id": "qi-001",
+      "source_type": "manual_topic_seed",
+      "name": "Sell In Public seed questions",
+      "path": "research/query-intelligence/2026-06-17-employee-generated-content/raw/seed-questions.md",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "primary_query",
+        "secondary_query",
+        "related_question",
+        "h2_or_faq_direction",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Discovery-only query/source input"
+    },
+    {
+      "source_id": "qi-002",
+      "source_type": "manual_serp_observation",
+      "name": "Manual SERP and AEO observation placeholder",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "primary_query",
+        "secondary_query",
+        "related_question",
+        "h2_or_faq_direction",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Discovery-only query/source input"
+    },
+    {
+      "source_id": "qi-003",
+      "source_type": "approved_ai_prompt_export",
+      "name": "Approved sanitized AI prompt export placeholder",
+      "path": "",
+      "evidence_use": "discovery_only",
+      "visible_to_agents": true,
+      "allowed_uses": [
+        "primary_query",
+        "secondary_query",
+        "related_question",
+        "h2_or_faq_direction",
+        "source_gap"
+      ],
+      "prohibited_uses": [
+        "citations_json",
+        "claims_ledger_source_ids",
+        "factual_claim_support",
+        "public_article_quote",
+        "statistic_or_benchmark_support"
+      ],
+      "exclusion_reason": "Discovery-only query/source input"
+    }
+  ],
+  "excluded_query_ids": [],
+  "excluded_cluster_ids": [],
+  "validation_rules": {
+    "citations_json_must_not_reference_excluded_source_ids": true,
+    "claims_ledger_must_not_reference_excluded_source_ids": true,
+    "draft_must_not_use_excluded_source_ids_in_cite_markers": true,
+    "article_blocks_must_not_reference_excluded_raw_paths": true
+  }
+}

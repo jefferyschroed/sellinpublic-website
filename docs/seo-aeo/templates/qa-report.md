@@ -21,6 +21,7 @@ Decision: `rejected`
 - Claims ledger complete:
 - Unsupported claims:
 - Weak sources:
+- Named examples, research, or case studies used:
 
 ## AEO Checks
 
@@ -39,11 +40,30 @@ Decision: `rejected`
 - Canonical:
 - Schema:
 
+## Foundation And CMS Checks
+
+- Shared blog CSS and JS used:
+- Stable blog shell preserved:
+- Desktop side rails start beside the intro/hero:
+- Desktop side rails remain sticky on scroll:
+- H1 uses editorial article scale, not landing-page hero scale:
+- Post-local generated hero:
+- Hero aspect ratio between 2.0:1 and 2.6:1:
+- Hero dimensions match source file:
+- Inline media preserves original aspect ratio:
+- Author is Jeffery Schroeder and links to LinkedIn:
+- Copy block uses icon-only clipboard/check button:
+- Floating Copy Page and Ask AI states work:
+- CTA links are not underlined:
+- `node scripts/check-blog-post.mjs blog/[slug]/index.html` passed:
+
 ## Brand And Voice Checks
 
-- Clear Sell In Public POV:
+- Clear editorial POV:
 - Specific buyer:
-- Pipeline/trust connection:
+- Reader value:
+- Feature-heavy language in article body:
+- Commercial CTA separated from article guidance:
 - Genericness issues:
 
 ## Required Fixes
@@ -51,5 +71,3 @@ Decision: `rejected`
 - 
 
 ## Final Notes
-
-

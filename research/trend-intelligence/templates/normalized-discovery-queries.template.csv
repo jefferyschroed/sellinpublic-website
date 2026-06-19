@@ -1,0 +1,1 @@
+query_id,source_id,source_type,source_record_id,query,normalized_query,canonical_query_key,intent,funnel_stage,audience,pillar_id,topic_id,surface,country,language,observed_at,page_url,device,volume,difficulty,impressions,clicks,ctr,avg_position,trend_delta,trend_window,confidence,evidence_use,allowed_public_use,raw_path,notes

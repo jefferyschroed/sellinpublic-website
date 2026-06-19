@@ -1,0 +1,59 @@
+schema_version: "1.0"
+packet_id: "2026-06-17-employee-generated-content-infrastructure"
+slug: "employee-generated-content-infrastructure"
+status: "intake_ready"
+created_at: "2026-06-17"
+updated_at: "2026-06-18"
+
+candidate_source:
+  path: "content-packets/2026-06-17-employee-generated-content-infrastructure/brief.yaml"
+  candidate_id: "legacy-approved-first-packet"
+  row_number: 0
+
+candidate:
+  topic: "what is employee-generated content"
+  canonical_topic: "What is employee-generated content?"
+  intent: "definition-and-strategy"
+  aeo_question: "What is employee-generated content, and how is it different from employee advocacy?"
+  topic_id: "topic-egc-definition"
+  pillar_id: "pillar-employee-generated-content"
+  parent_topic: ""
+  topic_score_guess: 91
+  topic_score_source: "topic-coverage.csv"
+  score_band: "80-100:create_or_refresh"
+  authority_match: "topic-coverage.csv:topic_id"
+  evidence_use: "approved_sources_and_sme_notes"
+
+decisions:
+  strategic_asset_decision: "post"
+  scaffold_asset_decision: "post"
+  recommended_asset: "published-draft"
+  topic_decision: "create_or_refresh_packet"
+  coverage_status: "published-draft"
+  coverage_role: "hub"
+  source_readiness: "ready"
+  packet_intake_status: "intake_ready"
+  query_run_status: "legacy_migrated_after_publish_qa"
+
+gates:
+  current_gate_reasons: []
+  current_required_before_packet: []
+  resolved_gate_history:
+    - reason: "legacy_packet_created_before_formal_intake_gate"
+      required_before_packet: "Backfill intake and discovery exclusion artifacts after source, outline, QA, and publish gates passed."
+      resolved_by_artifact: "qa-report.md"
+      resolved_at: "2026-06-18"
+
+discovery_lineage:
+  query_run_id: "2026-06-17-employee-generated-content"
+  query_run_dir: "research/query-intelligence/2026-06-17-employee-generated-content"
+  brief_handoff_path: "research/query-intelligence/2026-06-17-employee-generated-content/brief-handoff.yaml"
+  source_manifest_path: "research/query-intelligence/2026-06-17-employee-generated-content/source-manifest.json"
+  normalized_queries_path: "research/query-intelligence/2026-06-17-employee-generated-content/normalized-queries.csv"
+  query_clusters_path: "research/query-intelligence/2026-06-17-employee-generated-content/query-clusters.yaml"
+  discovery_exclusions_path: "discovery-exclusions.json"
+
+evidence_boundary:
+  discovery_inputs_visible_to_agents: true
+  discovery_inputs_citable: false
+  citations_must_come_from: "citations.json or approved SME notes only"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell In Public Blog Foundation"
+  short_description: "Maintain the static SIP blog shell"
+  default_prompt: "Use $sellinpublic-blog-foundation to implement or verify a static Sell In Public blog post foundation."

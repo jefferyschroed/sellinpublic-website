@@ -359,7 +359,14 @@ function run() {
     "--date",
     runDate,
   ]));
+  steps.push(runStep("Build unified work queue rollup", process.execPath, [
+    "scripts/seo-aeo/build-work-queue-rollup.mjs",
+    "--date",
+    runDate,
+  ]));
   steps.push(runStep("Check Skill Steward review task fixture", process.execPath, ["scripts/seo-aeo/check-skill-steward-review-tasks.mjs"]));
+  steps.push(runStep("Check Skill Steward closeout scope fixture", process.execPath, ["scripts/seo-aeo/check-skill-steward-closeout-scope.mjs"]));
+  steps.push(runStep("Check work queue rollup fixture", process.execPath, ["scripts/seo-aeo/check-work-queue-rollup.mjs"]));
   steps.push(runStep("Validate current blog foundation", process.execPath, ["scripts/blog-orchestrator.mjs", "check-all"]));
   steps.push(runStep("Check live deployment routes", process.execPath, ["scripts/seo-aeo/check-live-deployment.mjs", "--date", runDate]));
   steps.push(runStep("Write deployment readiness", process.execPath, ["scripts/seo-aeo/write-deployment-readiness.mjs", "--date", runDate]));
@@ -411,6 +418,11 @@ function run() {
     runDate,
     "--metrics-date",
     metricsDate,
+  ]));
+  steps.push(runStep("Build final unified work queue rollup", process.execPath, [
+    "scripts/seo-aeo/build-work-queue-rollup.mjs",
+    "--date",
+    runDate,
   ]));
   steps.push(runStep("Write final owner actions", process.execPath, [
     "scripts/seo-aeo/write-owner-actions.mjs",

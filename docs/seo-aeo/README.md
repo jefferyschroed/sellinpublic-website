@@ -184,6 +184,7 @@ See:
 - `topic-scoring.md`
 - `topic-coverage.csv`
 - `topic-decisions.md`
+- `foundation-topic-ramp.md`
 
 ## Query Intelligence
 

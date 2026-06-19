@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell In Public Blog QA"
+  short_description: "Audit SIP blog packets and posts"
+  default_prompt: "Use $sellinpublic-blog-qa to review a Sell In Public content packet or blog post against the SEO/AEO QA gates."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell In Public Image Style"
+  short_description: "Generate SIP cinematic isometric art"
+  default_prompt: "Use $sellinpublic-image-style to generate a golden-hour isometric blog image of a modern B2B workspace and save it to the repo."

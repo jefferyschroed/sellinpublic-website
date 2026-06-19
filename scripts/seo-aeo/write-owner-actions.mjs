@@ -96,6 +96,45 @@ function selectedTasks(dispatch) {
   }));
 }
 
+function workQueueRollup(root, runDate) {
+  const rollupPath = path.join(root, "automation-runs", runDate, "work-queue-rollup.json");
+  const rollup = readJson(rollupPath, {});
+  const safeTasks = (rollup.tasks || []).filter((task) => task.safe_to_dispatch);
+  return {
+    path: fs.existsSync(rollupPath) ? relative(root, rollupPath) : "",
+    markdown_path: fs.existsSync(path.join(root, "automation-runs", runDate, "work-queue-rollup.md"))
+      ? relative(root, path.join(root, "automation-runs", runDate, "work-queue-rollup.md"))
+      : "",
+    status: rollup.status || "missing",
+    safe_to_dispatch_count: rollup.summary?.safe_to_dispatch_count || 0,
+    requires_approval_count: rollup.summary?.requires_approval_count || 0,
+    source_request_lock_active: rollup.summary?.source_request_lock_active || false,
+    canonical_selected_count: rollup.summary?.canonical_selected_count || 0,
+    ai_citation_not_started_count: rollup.summary?.ai_citation_not_started_count || 0,
+    skill_steward_not_started_count: rollup.summary?.skill_steward_not_started_count || 0,
+    routed_gap_groups: rollup.summary?.routed_gap_groups || 0,
+    demand_gap_rows: rollup.summary?.demand_gap_rows || 0,
+    first_safe_task: safeTasks[0]
+      ? {
+          source: safeTasks[0].source || "",
+          task_id: safeTasks[0].task_id || safeTasks[0].queue_id || "",
+          prompt_path: safeTasks[0].prompt_path || "",
+          owner: safeTasks[0].owner || safeTasks[0].role || "",
+          topic: safeTasks[0].topic || "",
+        }
+      : null,
+    safe_tasks: safeTasks.slice(0, 10).map((task) => ({
+      source: task.source || "",
+      task_id: task.task_id || task.queue_id || "",
+      owner: task.owner || task.role || "",
+      topic: task.topic || "",
+      prompt_path: task.prompt_path || "",
+      next_action: task.next_action || "",
+    })),
+    rule: "Use this rollup for PM dispatch only. It never approves promotion, scaffolding, generation, publishing, analytics imports, or skill promotion.",
+  };
+}
+
 function aiCitationCapture(runStatus) {
   const querySet = runStatus.analytics?.ai_citation_query_set || {};
   const capturePack = querySet.capture_pack || {};
@@ -384,6 +423,9 @@ function ownerPrompt(report) {
       : "";
     return `Launch one subagent per prompt in ${report.subagent_dispatch.path}. Do not merge prompts. Each subagent writes only its listed artifact.${lockNote}`;
   }
+  if (Number(report.work_queue_rollup?.safe_to_dispatch_count || 0) > 0) {
+    return `Use ${report.work_queue_rollup.markdown_path || report.work_queue_rollup.path} for PM dispatch. Launch exactly one subagent per safe task; AI citation and Skill Steward tasks are report-only and do not unlock generation, publishing, analytics imports, or skill promotion.`;
+  }
   if (report.demand_acquisition?.staging_csv_path) {
     if (report.demand_acquisition.first_task_report_status === "blocked_no_reviewed_rows") {
       const reason = String(report.demand_acquisition.first_task_blocked_reason || "no reviewed demand-bearing source was available").replace(/[.]+$/, "");
@@ -476,6 +518,11 @@ function writeMarkdown(filePath, report) {
     : "- None.";
   const blockerLines = report.top_blockers.length
     ? report.top_blockers.map((blocker) => `- ${blocker.code}: ${blocker.detail}`).join("\n")
+    : "- None.";
+  const workQueueLines = report.work_queue_rollup.safe_tasks.length
+    ? report.work_queue_rollup.safe_tasks
+        .map((task, index) => `${index + 1}. \`${task.task_id}\` (${task.source}) -> \`${task.prompt_path || "n/a"}\``)
+        .join("\n")
     : "- None.";
   const action = report.next_action
     ? `- ${report.next_action.priority || ""} ${report.next_action.owner || ""}: ${report.next_action.action} - ${report.next_action.detail || ""}`
@@ -578,6 +625,22 @@ ${sourceHandoffMarkdown(report.source_handoff, report)}
 - First candidate files: ${(report.skill_steward.learning_candidate_files || []).slice(0, 5).join(", ") || "n/a"}
 - Rule: ${report.skill_steward.rule || "Review only; no automatic skill promotion."}
 
+## Unified Work Queue
+
+- Status: ${report.work_queue_rollup.status || "missing"}
+- Safe to dispatch: ${report.work_queue_rollup.safe_to_dispatch_count || 0}
+- Requires approval or routing: ${report.work_queue_rollup.requires_approval_count || 0}
+- Source-request lock active: ${report.work_queue_rollup.source_request_lock_active ? "yes" : "no"}
+- Canonical selected: ${report.work_queue_rollup.canonical_selected_count || 0}
+- AI citation not started: ${report.work_queue_rollup.ai_citation_not_started_count || 0}
+- Skill Steward not started: ${report.work_queue_rollup.skill_steward_not_started_count || 0}
+- Routed gap groups: ${report.work_queue_rollup.routed_gap_groups || 0}
+- Demand gap rows excluded: ${report.work_queue_rollup.demand_gap_rows || 0}
+- Rollup: ${report.work_queue_rollup.markdown_path || report.work_queue_rollup.path || "n/a"}
+- Rule: ${report.work_queue_rollup.rule || "PM dispatch only."}
+
+${workQueueLines}
+
 ## Ready Subagent Tasks
 
 ${taskLines}
@@ -614,6 +677,9 @@ function run() {
       next_actions: fs.existsSync(path.join(runDir, "next-actions.json")) ? relative(root, path.join(runDir, "next-actions.json")) : "",
       run_gates: fs.existsSync(path.join(runDir, "run-gates-daily.json")) ? relative(root, path.join(runDir, "run-gates-daily.json")) : "",
       subagent_dispatch: fs.existsSync(dispatchPath) ? relative(root, dispatchPath) : "",
+      work_queue_rollup: fs.existsSync(path.join(runDir, "work-queue-rollup.json"))
+        ? relative(root, path.join(runDir, "work-queue-rollup.json"))
+        : "",
     },
     next_action: nextAction,
     demand_acquisition: demandAcquisition(runStatus, nextActions),
@@ -621,6 +687,7 @@ function run() {
     ai_citation_capture: aiCitationCapture(runStatus),
     manual_reddit_capture: manualRedditCapture(runStatus),
     skill_steward: skillSteward(runStatus),
+    work_queue_rollup: workQueueRollup(root, runDate),
     source_handoff: sourceHandoff(root, runDate),
     subagent_dispatch: {
       path: fs.existsSync(dispatchPath) ? relative(root, dispatchPath) : "",

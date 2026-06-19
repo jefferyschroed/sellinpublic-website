@@ -239,7 +239,7 @@ After any subagent wave finishes, run `node scripts/seo-aeo/subagent-queue.mjs s
 
 If `automation-runs/<date>/demand-acquisition-tasks/source-request.md` is in escalation mode, it is the source-first handoff. When the active manifest has no remaining rows, the rollup may rebuild requested exports from current `topic-candidates.csv` rows instead of stale acquisition reports. Only use requests whose candidate/topic match the current plan; stale demand-import review artifacts are routing history, not source requests.
 
-The source-request lock suppresses demand acquisition/import, demand apply, packet scaffolding, generation, publishing, distribution, analytics-feedback, and content-movement work. It does not suppress safe local orchestration, gap mapping, source-gap, QA-for-gap, or skill-steward work when those tasks are explicitly selected by `subagent-dispatch/ready-batch.md`.
+The source-request lock suppresses new demand acquisition/import, packet scaffolding, generation, publishing, distribution, analytics-feedback, and content-movement work. It does not suppress the guarded promotion of already reviewed valid staging rows when the dry-run is current and the command includes `--approval-marker DEMAND-PROMOTION-APPROVED:<date>`; that approved promotion is the path that can clear the lock. It also does not suppress safe local orchestration, gap mapping, source-gap, QA-for-gap, or skill-steward work when those tasks are explicitly selected by `subagent-dispatch/ready-batch.md`.
 
 ## Weekly Run
 

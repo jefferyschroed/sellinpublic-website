@@ -18,9 +18,11 @@ recommended_packets:
     decision: "map_as_section"
     cluster_confidence: "medium"
     discovery_sources:
+      - "google_trends_csv_export-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
     excluded_sources_for_evidence:
+      - "google_trends_csv_export-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
     source_gaps:

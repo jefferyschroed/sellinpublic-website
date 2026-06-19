@@ -263,7 +263,7 @@ function chooseNextUnambiguousAction(rows, existingDiscovery, projected) {
       reason: "The staged or promoted rows appear sufficient for hard query-handoff prerequisites. Rebuild discovery before packet intake.",
       command_chain: [
         "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --dry-run",
-        "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply",
+        "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<run-date>",
         "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1",
       ],
     };
@@ -320,7 +320,7 @@ function chooseNextUnambiguousAction(rows, existingDiscovery, projected) {
     ],
     command_chain_after_filling: [
       "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --dry-run",
-      "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply",
+      "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<run-date>",
       "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1",
     ],
   };

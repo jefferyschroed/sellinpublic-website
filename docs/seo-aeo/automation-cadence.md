@@ -19,7 +19,7 @@ Automation prepares analysis, drafts briefs, and monitors signals. Humans approv
 | Daily AM | Query-intelligence validation | Current-date `research/query-intelligence/<date>-daily-discovery/` validation or explicit no-current-run status | Orchestrator accepts only current clean validation before packet intake |
 | Daily AM | Topic candidate planning | `research/daily-content-plan/<date>/topic-candidates.csv` and `subagent-assignments.md` | GTM owner approves candidate packets |
 | Daily AM | Subagent dispatch planning | `automation-runs/<date>/subagent-dispatch/ready-batch.md` and prompt files | Orchestrator launches one subagent per selected task |
-| Daily PM | Packet or refresh work | Strict packet artifacts or refresh notes | Source, editorial, and publish gates remain manual |
+| Daily PM | Subagent dispatch and packet or refresh work | `automation-runs/<date>/work-queue-rollup.md`, `subagent-dispatch/ready-batch.md`, prompt files, strict packet artifacts, or refresh notes | Orchestrator launches one subagent per safe prompt; AI citation and Skill Steward tasks stay one-subagent-per-task; source, editorial, and publish gates remain manual |
 | Daily PM | Publish governor | `automation-runs/<date>/publish-plan.md` and `publish-plan.json`; refresh `run-status.json` with `node scripts/seo-aeo/write-run-status.mjs --date <date>` after standalone governor runs | Founder/GTM lead approves any `--generate-approved` write |
 | Before approved deploy | Clean publish preflight and deploy review | `automation-runs/<date>/netlify-publish-check.md`, `deployment-readiness.md`, and `deploy-review-packet.md` | Deploy owner approves only from `deploy-review-packet.md`; `deployment-readiness.md` is not approval by itself |
 | Monday AM weekly | Topic triage | Prioritized topic backlog | GTM owner approves top 1-3 topics |
@@ -71,9 +71,9 @@ node scripts/seo-aeo/import-analytics-exports.mjs --date <yyyy-mm-dd>
 node scripts/seo-aeo/content-runner.mjs --date <yyyy-mm-dd>
 ```
 
-4. Dispatch only from `automation-runs/<date>/subagent-dispatch/ready-batch.md`, one subagent per prompt file. Complete each ledger task only after its listed artifact exists. If multiple agents wrote artifacts, first run `node scripts/seo-aeo/subagent-queue.mjs sync-completions --date <yyyy-mm-dd>`, then rerun `node scripts/seo-aeo/build-subagent-dispatch.mjs --date <yyyy-mm-dd>`.
+4. Dispatch only from `automation-runs/<date>/work-queue-rollup.md` and `automation-runs/<date>/subagent-dispatch/ready-batch.md`, one subagent per safe prompt file. Complete each ledger task only after its listed artifact exists. If multiple agents wrote artifacts, first run `node scripts/seo-aeo/subagent-queue.mjs sync-completions --date <yyyy-mm-dd>`, then rerun `node scripts/seo-aeo/build-subagent-dispatch.mjs --date <yyyy-mm-dd>` and `node scripts/seo-aeo/build-work-queue-rollup.mjs --date <yyyy-mm-dd>`.
 
-If an approved packet becomes publish-ready after the daily run, run the publish governor dry-run first. Use `--generate-approved` only after human approval and only for governor-selected packets.
+If reviewed demand rows are ready after the daily run, run `run-demand-promotion.mjs --dry-run` first. Use plain `--apply` only with `--approval-marker DEMAND-PROMOTION-APPROVED:<date>`. Use `--scaffold-limit` only after the plain apply report has been reviewed and separate packet scaffolding approval exists. If an approved packet becomes publish-ready after the daily run, run the publish governor dry-run first. Use `--generate-approved` only after human approval and only for governor-selected packets.
 
 ## Recurring Automations
 
@@ -92,6 +92,7 @@ Expected active Codex automations:
 | Automation ID | Cadence | Purpose |
 |---|---|---|
 | `sell-in-public-seo-aeo-daily-pipeline` | Daily | Run the local controller, validate demand import pack, update run status, and report blockers without auto-publishing. |
+| `seo-aeo-daily-pm-subagent-dispatch` | Daily | Sync completions, check artifacts, rebuild the ready batch and unified work queue, and launch one subagent per safe selected prompt. |
 | `seo-aeo-weekly-topic-triage` | Weekly | Review topic authority and next topic candidates. |
 | `seo-aeo-weekly-source-refresh` | Weekly | Refresh source quality and unsupported-claim gaps. |
 | `seo-aeo-weekly-ai-citation-check` | Weekly | Review directional AI citation/answer visibility. |
@@ -181,7 +182,7 @@ Review `docs/seo-aeo/ai-citation-query-set.json`, run the current query-set chec
 
 Identify where Sell In Public is cited, where competitors are cited, what angle the AI answer uses, whether the answer is accurate, and which page should be improved.
 
-Return reviewed rows for `imports/ai-citations/`, then run `node scripts/seo-aeo/check-ai-citation-query-set.mjs --date <yyyy-mm-dd>` and `node scripts/seo-aeo/write-ai-citation-capture-pack.mjs --date <yyyy-mm-dd>`. Return: query ID, query-set version, query, surface, cited URLs, missing angle, accuracy risk, recommended content action, and whether each expected capture is covered.
+Return reviewed rows for `imports/ai-citations/`, then run `node scripts/seo-aeo/check-ai-citation-query-set.mjs --date <yyyy-mm-dd>` and `node scripts/seo-aeo/write-ai-citation-capture-pack.mjs --date <yyyy-mm-dd>`. Launch exactly one subagent per AI citation capture task; do not combine captures into one broad task. Return: query ID, query-set version, query, surface, cited URLs, missing angle, accuracy risk, recommended content action, and whether each expected capture is covered.
 ```
 
 ### Performance Monitoring
@@ -208,6 +209,8 @@ Prompt:
 Analyze the latest weekly SEO/content metrics.
 
 Find meaningful changes in impressions, clicks, CTR, ranking, indexed pages, conversions, and citation activity. Separate normal noise from action-worthy changes.
+
+Do not make content decisions from header-only or provisional data. Require provenance, reviewer, and evidence signatures before recursive updates.
 
 Return: wins, losses, anomalies, likely cause, recommended action, and owner.
 ```
@@ -237,6 +240,8 @@ Summarize this month's content performance and operating lessons.
 
 Group pages into keep, update, expand, merge, and retire. Identify which topics created qualified buyer signal, not just traffic.
 
+Do not make content decisions from header-only or provisional data. Require provenance, reviewer, and evidence signatures before recursive updates. Launch one report-only Skill Steward subagent per reusable process-learning candidate.
+
 Return: decisions, evidence, next-month bets, source gaps, and process improvements.
 ```
 
@@ -249,6 +254,8 @@ Return: decisions, evidence, next-month bets, source gaps, and process improveme
 - Technical gate: reviewer confirms crawlable links, title, meta description, canonical, sitemap inclusion, image alt text, mobile rendering, and analytics.
 - Publish gate: founder/GTM lead approves final page and CTA.
 - Governor gate: `node scripts/seo-aeo/publish-governor.mjs --date <date>` must select the packet before any static generation write. The default run is dry-run planning only; `--generate-approved` is reserved for packets inside the daily limits.
+- Demand promotion gate: `run-demand-promotion.mjs --apply` requires `--approval-marker DEMAND-PROMOTION-APPROVED:<date>` after dry-run review.
+- Packet scaffold gate: `--scaffold-limit` requires a prior plain apply report review and separate packet scaffolding approval.
 
 ## What Not To Automate
 
@@ -257,6 +264,7 @@ Return: decisions, evidence, next-month bets, source gaps, and process improveme
 - Do not invent quotes, customer results, benchmarks, citations, author credentials, or third-party mentions.
 - Do not create mass query-variation pages just to target AI/search fan-out.
 - Do not scrape or automate search/AI surfaces in ways that violate platform terms; use exports, APIs, and manual spot checks where needed.
+- Keep Reddit API use disabled unless it is explicitly enabled in local config; sanitized manual Reddit captures remain discovery-only.
 - Do not optimize for AI hacks over useful content.
 - Do not let AI rewrite founder/operator POV into generic SEO prose.
 - Do not use private CRM, call, or customer data in public content without explicit approval.

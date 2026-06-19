@@ -21,7 +21,7 @@ Rule: Discovery data is not factual evidence. Reddit, public feeds, Google Trend
 
 ## Summary
 
-- Normalized discovery rows: 86
+- Normalized discovery rows: 88
 - Unique source types: 4
 - Clusters: 47
 - Handoff status: ready

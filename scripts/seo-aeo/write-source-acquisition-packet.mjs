@@ -48,7 +48,7 @@ function commandSequenceFor(runDate, request) {
     dryRun,
     apply,
     `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --dry-run`,
-    `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply`,
+    `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${runDate}`,
   ];
 }
 

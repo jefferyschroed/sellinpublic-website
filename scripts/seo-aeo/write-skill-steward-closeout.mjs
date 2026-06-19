@@ -2,8 +2,11 @@
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { ensureDir, writeJsonAtomic } from "./lib/config.mjs";
 import { today } from "./lib/dates.mjs";
+
+const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 
 function arg(name, fallback = "") {
   const index = process.argv.indexOf(name);
@@ -13,7 +16,7 @@ function arg(name, fallback = "") {
 function findCandidateFiles(root, runDate) {
   const dirs = [
     path.join(root, "research", "daily-content-plan", runDate),
-    path.join(root, "automation-runs", runDate),
+    path.join(root, "automation-runs", runDate, "learning-candidates"),
   ];
   const files = [];
   const scan = (dir) => {
@@ -25,7 +28,11 @@ function findCandidateFiles(root, runDate) {
       }
       if (!entry.isFile()) continue;
       if (!/\.(md|json|ya?ml)$/i.test(entry.name)) continue;
-      if (/learning[-_ ]?candidate|skill[-_ ]?steward/i.test(entryPath)) files.push(entryPath);
+      const relativePath = path.relative(root, entryPath).split(path.sep).join("/");
+      const inLearningCandidatesDir = relativePath.startsWith(`automation-runs/${runDate}/learning-candidates/`);
+      const isSourceSkillStewardArtifact =
+        relativePath.startsWith(`research/daily-content-plan/${runDate}/`) && /(^|\/)skill-steward-[^/]+\.(md|json|ya?ml)$/i.test(relativePath);
+      if (inLearningCandidatesDir || isSourceSkillStewardArtifact) files.push(entryPath);
     }
   };
   for (const dir of dirs) {
@@ -41,7 +48,7 @@ function containsLearningCandidate(filePath) {
 }
 
 function validateCandidateFile(root, filePath) {
-  const result = spawnSync(process.execPath, ["scripts/seo-aeo/check-skill-learning.mjs", "--root", root, "--file", filePath], {
+  const result = spawnSync(process.execPath, [path.join(SCRIPT_DIR, "check-skill-learning.mjs"), "--root", root, "--file", filePath], {
     cwd: root,
     encoding: "utf8",
   });

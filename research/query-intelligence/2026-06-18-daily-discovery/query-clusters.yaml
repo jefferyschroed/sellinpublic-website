@@ -101,8 +101,11 @@ clusters:
     canonical_query_ids:
       - "dq-0052"
       - "dq-0053"
+      - "dq-0054"
+      - "dq-0055"
       - "dq-0007"
     source_ids:
+      - "google_trends_csv_export-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
     source_types:
@@ -115,6 +118,7 @@ clusters:
     source_readiness: "needs_source_discovery"
     evidence_use: "discovery_only"
     excluded_sources_for_evidence:
+      - "google_trends_csv_export-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "google-trends-2026-06-18-google-trends-topic-turn-employee-expertise-into-posts-2026-06-18"
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
     source_gaps:
@@ -355,7 +359,7 @@ clusters:
     representative_query: "introducing search generative ai performance reports in search console"
     canonical_query_ids:
       - "dq-0018"
-      - "dq-0054"
+      - "dq-0056"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-google-search-central-20260618"
@@ -384,7 +388,7 @@ clusters:
     representative_query: "a new resource for optimizing for generative ai in google search"
     canonical_query_ids:
       - "dq-0019"
-      - "dq-0055"
+      - "dq-0057"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-google-search-central-20260618"
@@ -413,7 +417,7 @@ clusters:
     representative_query: "11 ways to automate seo with agent a"
     canonical_query_ids:
       - "dq-0020"
-      - "dq-0058"
+      - "dq-0060"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -442,7 +446,7 @@ clusters:
     representative_query: "how i use my ai marketing assistant after 200 hours"
     canonical_query_ids:
       - "dq-0021"
-      - "dq-0059"
+      - "dq-0061"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -471,7 +475,7 @@ clusters:
     representative_query: "we analyzed 137k sites 97 of llms txt files never get read"
     canonical_query_ids:
       - "dq-0022"
-      - "dq-0060"
+      - "dq-0062"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -500,7 +504,7 @@ clusters:
     representative_query: "how to level-up from seo tactician to search visibility leader"
     canonical_query_ids:
       - "dq-0023"
-      - "dq-0061"
+      - "dq-0063"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -529,7 +533,7 @@ clusters:
     representative_query: "9 vibe coding examples ai apps you can use right now to grow your website"
     canonical_query_ids:
       - "dq-0024"
-      - "dq-0062"
+      - "dq-0064"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -558,7 +562,7 @@ clusters:
     representative_query: "what is ai sentiment analysis a marketer s guide"
     canonical_query_ids:
       - "dq-0025"
-      - "dq-0064"
+      - "dq-0066"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -587,7 +591,7 @@ clusters:
     representative_query: "bot traffic now exceeds traffic from human users"
     canonical_query_ids:
       - "dq-0026"
-      - "dq-0065"
+      - "dq-0067"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -616,7 +620,7 @@ clusters:
     representative_query: "12 seo writing tips to earn visibility 2026"
     canonical_query_ids:
       - "dq-0027"
-      - "dq-0066"
+      - "dq-0068"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -645,7 +649,7 @@ clusters:
     representative_query: "how rtcamp closed the ai perception gap costing them enterprise deals"
     canonical_query_ids:
       - "dq-0028"
-      - "dq-0067"
+      - "dq-0069"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -674,7 +678,7 @@ clusters:
     representative_query: "why 62 of ai citations don t lead to brand mentions study"
     canonical_query_ids:
       - "dq-0029"
-      - "dq-0068"
+      - "dq-0070"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -703,7 +707,7 @@ clusters:
     representative_query: "how to decide which ai search prompts to track"
     canonical_query_ids:
       - "dq-0030"
-      - "dq-0069"
+      - "dq-0071"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -732,7 +736,7 @@ clusters:
     representative_query: "google s ai search optimization guide what to do next"
     canonical_query_ids:
       - "dq-0031"
-      - "dq-0070"
+      - "dq-0072"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -761,7 +765,7 @@ clusters:
     representative_query: "how to get indexed by chatgpt 2026"
     canonical_query_ids:
       - "dq-0032"
-      - "dq-0072"
+      - "dq-0074"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -790,7 +794,7 @@ clusters:
     representative_query: "faqs for aeo how to structure answers that rank in answer engines"
     canonical_query_ids:
       - "dq-0033"
-      - "dq-0073"
+      - "dq-0075"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -819,7 +823,7 @@ clusters:
     representative_query: "schema markup for aeo how to implement it to boost answer engine visibility in 2026"
     canonical_query_ids:
       - "dq-0034"
-      - "dq-0074"
+      - "dq-0076"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -848,7 +852,7 @@ clusters:
     representative_query: "keyword research for aeo a guide for winning answer engine traffic in 2026"
     canonical_query_ids:
       - "dq-0035"
-      - "dq-0075"
+      - "dq-0077"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -877,7 +881,7 @@ clusters:
     representative_query: "on-page content formats answer engines actually favor new research"
     canonical_query_ids:
       - "dq-0036"
-      - "dq-0076"
+      - "dq-0078"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -906,7 +910,7 @@ clusters:
     representative_query: "the multiplier effect how linkedin ads boosts search content and pipeline"
     canonical_query_ids:
       - "dq-0037"
-      - "dq-0083"
+      - "dq-0085"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-linkedin-marketing-blog-20260618"
@@ -935,7 +939,7 @@ clusters:
     representative_query: "fear of messing up the hidden emotion driving b2b decisions"
     canonical_query_ids:
       - "dq-0038"
-      - "dq-0084"
+      - "dq-0086"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-linkedin-marketing-blog-20260618"
@@ -964,7 +968,7 @@ clusters:
     representative_query: "the principles of buyability why strong deals stall and what separates the vendors who get chosen"
     canonical_query_ids:
       - "dq-0039"
-      - "dq-0085"
+      - "dq-0087"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-linkedin-marketing-blog-20260618"
@@ -993,7 +997,7 @@ clusters:
     representative_query: "how to grow your ai search visibility with linkedin content"
     canonical_query_ids:
       - "dq-0040"
-      - "dq-0086"
+      - "dq-0088"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-linkedin-marketing-blog-20260618"
@@ -1022,7 +1026,7 @@ clusters:
     representative_query: "how to rank in ai search results expert best practices"
     canonical_query_ids:
       - "dq-0041"
-      - "dq-0071"
+      - "dq-0073"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-marketing-blog-20260618"
@@ -1051,7 +1055,7 @@ clusters:
     representative_query: "6 best ai prospecting tools our picks for 2026"
     canonical_query_ids:
       - "dq-0042"
-      - "dq-0077"
+      - "dq-0079"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-sales-blog-20260618"
@@ -1080,7 +1084,7 @@ clusters:
     representative_query: "sales outreach tools that integrate with your crm our favorite picks for 2026"
     canonical_query_ids:
       - "dq-0043"
-      - "dq-0078"
+      - "dq-0080"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-sales-blog-20260618"
@@ -1109,7 +1113,7 @@ clusters:
     representative_query: "future of ai in customer relationship management what s coming next"
     canonical_query_ids:
       - "dq-0044"
-      - "dq-0079"
+      - "dq-0081"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-sales-blog-20260618"
@@ -1138,7 +1142,7 @@ clusters:
     representative_query: "real ai crm use cases driving revenue growth in 2025"
     canonical_query_ids:
       - "dq-0045"
-      - "dq-0080"
+      - "dq-0082"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-sales-blog-20260618"
@@ -1167,7 +1171,7 @@ clusters:
     representative_query: "5 best ai crms for real estate agents the 2026 roundup"
     canonical_query_ids:
       - "dq-0046"
-      - "dq-0081"
+      - "dq-0083"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-hubspot-sales-blog-20260618"
@@ -1196,7 +1200,7 @@ clusters:
     representative_query: "what is an ai agent a plain-english guide"
     canonical_query_ids:
       - "dq-0047"
-      - "dq-0056"
+      - "dq-0058"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -1225,7 +1229,7 @@ clusters:
     representative_query: "10 seo trends i ve seen firsthand in 2026 with data"
     canonical_query_ids:
       - "dq-0048"
-      - "dq-0057"
+      - "dq-0059"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-ahrefs-blog-20260618"
@@ -1254,7 +1258,7 @@ clusters:
     representative_query: "why category entry points belong in every ai search strategy"
     canonical_query_ids:
       - "dq-0049"
-      - "dq-0063"
+      - "dq-0065"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-semrush-blog-20260618"
@@ -1283,7 +1287,7 @@ clusters:
     representative_query: "how to prove incremental marketing impact with linkedin s new tools"
     canonical_query_ids:
       - "dq-0050"
-      - "dq-0082"
+      - "dq-0084"
     source_ids:
       - "manual-topic-seed-2026-06-18-daily-plan-topic-seeds-2026-06-18"
       - "public-trends-linkedin-marketing-blog-20260618"

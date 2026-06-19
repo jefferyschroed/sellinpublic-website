@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell In Public Skill Steward"
+  short_description: "Maintain repo-local SIP skills"
+  default_prompt: "Use $sellinpublic-skill-steward to update a repo-local Sell In Public skill without touching unrelated files."

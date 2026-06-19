@@ -359,6 +359,13 @@ function run() {
   if (publishCheck.status !== "ready") blockers.push("clean_publish_check_not_ready");
   if (classified.uncategorized_changed_paths.length) blockers.push("uncategorized_changed_paths_need_review");
 
+  const liveDeploymentReady = live.status === "ready" && Number(live.blocked_count || 0) === 0;
+  const nextAction = blockers.length
+    ? "Resolve uncategorized or missing deploy paths before asking for deploy approval."
+    : liveDeploymentReady
+      ? "Live deployment already matches local route and GA4 expectations. Continue with demand promotion, packet intake, and publish gates."
+      : "Review this packet, approve the deploy slice explicitly, then use the Git-connected deploy path or clean Netlify publish directory. Rerun live checks after deploy.";
+
   const report = {
     schema_version: "1.0",
     run_date: runDate,
@@ -476,9 +483,7 @@ function run() {
     deploy_static_required: STATIC_SITE_PATHS.map((item) => pathState(root, item)),
     netlify_build_support_required: NETLIFY_BUILD_SUPPORT_PATHS.map((item) => pathState(root, item)),
     ...classified,
-    next_action: blockers.length
-      ? "Resolve uncategorized or missing deploy paths before asking for deploy approval."
-      : "Review this packet, approve the deploy slice explicitly, then use the Git-connected deploy path or clean Netlify publish directory. Rerun live checks after deploy.",
+    next_action: nextAction,
   };
 
   const jsonPath = path.join(runDir, "deploy-review-packet.json");

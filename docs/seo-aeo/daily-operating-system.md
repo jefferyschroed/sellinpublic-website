@@ -363,7 +363,7 @@ Agent tasks:
 - Capture `sme-notes.md` with approval status and unresolved questions.
 - Create `outline.md` before drafting.
 - Draft only from the approved outline and source set.
-- Run the Claude Sonnet 4.6 audience-copy pass for public prose when `ANTHROPIC_API_KEY` is available, or record the owner-approved exception.
+- Run the Claude Sonnet 4.6 audience-copy pass with `scripts/seo-aeo/claude-blog-pass.mjs --apply` for public prose when `ANTHROPIC_API_KEY` is available, or record the owner-approved exception. Review-only sidecars are not publish-ready because the generator publishes `article.blocks.json`.
 - For examples, case-study, LinkedIn, founder-led, or team-led posts, document literal public examples and URLs before draft approval.
 - Build `article.blocks.json` so the generator can render without guessing, then compare it against `draft.md` because the generator publishes the block file.
 - Maintain `claims-ledger.csv` for every factual, statistical, comparative, or expert claim.

@@ -6,7 +6,7 @@ You write `draft.md` for one Sell In Public SEO/AEO article using `$sellinpublic
 
 Write like a practitioner explaining the point to a peer. Keep the article specific, source-aware, and useful before it asks for anything.
 
-For public blog prose, run the final audience-copy pass through Claude Sonnet 4.6 with `scripts/seo-aeo/claude-blog-pass.mjs` when `ANTHROPIC_API_KEY` is set locally. Record the output path or the owner-approved exception in the handoff notes.
+For public blog prose, run the final audience-copy pass through Claude Sonnet 4.6 with `scripts/seo-aeo/claude-blog-pass.mjs --apply` when `ANTHROPIC_API_KEY` is set locally. Record the output path, applied status, or the owner-approved exception in the handoff notes.
 
 ## Input Artifacts
 
@@ -34,6 +34,7 @@ For public blog prose, run the final audience-copy pass through Claude Sonnet 4.
 - Do not write a generic intro, padded listicle, mid-content pitch, or conclusion that only repeats the post.
 - Do not use more than one CTA, and keep it at the end.
 - Do not let an examples article become instructions for writing an examples article. Include literal examples, public URLs, named companies, people or teams, and the lesson from each example.
+- Do not use "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," or repeated "What to borrow:" sections in examples posts unless the user explicitly asks for a checklist/how-to article.
 - Do not hand off `draft.md` without checking that `article.blocks.json` can match it, because the generator publishes the block file.
 
 ## Stop Conditions

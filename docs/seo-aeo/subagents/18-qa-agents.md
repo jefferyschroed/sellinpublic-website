@@ -37,8 +37,9 @@ QA does not make the packet pass. QA reports what is true, names blockers, and r
 - Do not fix defects silently while reviewing.
 - Do not accept unsupported claims, missing citation IDs, weak source quality, mismatched metadata, broken links, missing assets, or generator divergence.
 - Do not waive `$sellinpublic-seo-blog` voice rules for final article copy.
-- Do not approve public article prose without a Claude writing-pass record, model note, or owner-approved exception.
+- Do not approve public article prose without an applied Claude writing-pass record, model note, or owner-approved exception. The record must confirm `draft.md` and `article.blocks.json` were updated.
 - Do not approve examples/case-study posts that promise examples but lack inspectable public examples or a documented limitation.
+- Do not approve examples posts that read like instructions for making an examples article. Reject sections such as "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," or repeated "What to borrow:" paragraphs unless the user explicitly asked for a checklist/how-to article.
 - Do not approve blog heroes that are SVG-drawn stand-ins when the packet requires a generated PNG hero.
 - Do not publish, distribute, or alter analytics data.
 

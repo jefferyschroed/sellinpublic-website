@@ -12,7 +12,7 @@ Decision: `approved_with_notes`
 
 ## Summary
 
-The refreshed article now behaves like a literal examples page. It links to inspectable public posts and source assets from Clay, Lovable, GitLab, and Shopify Engineering, distinguishes LinkedIn posts from durable source assets, includes a comparison table, provides a copyable checklist, and keeps the commercial CTA separated from the educational body.
+The refreshed article now behaves like a literal examples page. It links to inspectable public posts and source assets from Clay, Lovable, GitLab, and Shopify Engineering, distinguishes LinkedIn posts from durable source assets, includes a comparison table focused on what each artifact shows, and keeps the commercial CTA separated from the educational body.
 
 ## Blockers
 
@@ -35,6 +35,7 @@ The refreshed article now behaves like a literal examples page. It links to insp
 - Primary query addressed: yes, `employee generated content examples`.
 - Specific examples and public URLs: yes.
 - Comparison table: yes.
+- Examples-as-instructions drift removed: yes. The final public source files no longer include "Use Examples Without Copying Them," "Copyable Example Checklist," repeated "What to borrow:" paragraphs, or "What B2B teams can borrow" table framing.
 - FAQ: yes.
 - Clear definitions: yes.
 - Source list: yes.
@@ -62,7 +63,8 @@ The refreshed article now behaves like a literal examples page. It links to insp
 
 - Claude writing pass: completed with `claude-sonnet-4-6`.
 - Output file: `content-packets/2026-06-19-employee-generated-content-examples/claude-writing-pass.md`.
-- Editorial follow-up: final packet was manually tightened after Claude because the pass linked some profiles rather than direct post URLs.
+- Applied status: `claude-writing-pass.md` records `Status: applied`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`.
+- Renderer source: final public prose is in `article.blocks.json`, which is the generator source of truth.
 
 ## Voice Checks
 

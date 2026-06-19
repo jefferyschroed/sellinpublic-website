@@ -16,7 +16,7 @@ Use an HTML-first hybrid.
 - `sitemap.xml`, `robots.txt`, and `feed.xml` must be updated when a post publishes.
 - `scripts/check-blog-post.mjs` is the structural gate for every post before it ships.
 - Netlify deploys the public site from GitHub. A local blog publish is not visible on `sellinpublic.co` until the scoped blog diff is committed and pushed to the GitHub remote.
-- Public article prose must pass through Claude Sonnet 4.6 via the local Anthropic API runner before publish, unless the packet records an owner-approved exception.
+- Public article prose must pass through Claude Sonnet 4.6 via the local Anthropic API runner before publish, unless the packet records an owner-approved exception. The applied Claude pass must write to `draft.md` and `article.blocks.json`, because `article.blocks.json` is what gets published.
 
 This keeps title tags, meta descriptions, canonical URLs, schema, headings, links, body copy, and citations available in the initial HTML. Shared CSS and JS keep the structure consistent across every post.
 
@@ -112,10 +112,10 @@ These behaviors are foundation-level and should stay consistent across posts.
 - Tie the topic back to the reader's problem through useful definitions, examples, workflows, source-backed distinctions, and clear operating advice.
 - Keep SEO and AEO structure intact: direct answer, useful headings, searchable terms, schema, citations, and FAQs where appropriate.
 - Use `$sellinpublic-seo-blog` before drafting, editing, or reviewing article copy.
-- Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/[packet]/` for the final audience-copy pass when `ANTHROPIC_API_KEY` is set locally. Record the pass output or an owner-approved exception in QA.
+- Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/[packet]/ --apply` for the final audience-copy pass when `ANTHROPIC_API_KEY` is set locally. Record the applied pass output or an owner-approved exception in QA. Review-only sidecars do not satisfy the publish gate.
 - Do not use em dashes in article copy.
 - Use contractions naturally. If the post sounds like it avoided contractions, revise it.
-- For examples posts, write a literal examples article. Include named companies, people or teams, public asset URLs, the visible lesson, and what the B2B reader can borrow. Do not write meta-guidance about how to write an examples article in place of examples.
+- For examples posts, write a literal examples article. Include named companies, people or teams, public asset URLs, the visible lesson, and the pattern each artifact reveals. Do not write meta-guidance about how to write an examples article in place of examples. Avoid "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," "what B2B teams can borrow" table headers, and repeated "What to borrow:" sections unless the user explicitly asked for a checklist/how-to post.
 - Keep `draft.md` and `article.blocks.json` aligned. The generated HTML renders `article.blocks.json`, so QA must compare both before publish.
 
 ## External Tool Autonomy
@@ -155,7 +155,7 @@ Before publishing:
 
 - Work one post at a time. Do not start drafting, packet work, generation, or publishing for the next post until the current post is fully validated, committed, and pushed for Netlify deployment.
 - Create or update the content packet.
-- Record Claude writing-pass status, model, output file, or owner-approved exception.
+- Record Claude writing-pass status, model, output file, and whether the pass was applied to `draft.md` and `article.blocks.json`, or record an owner-approved exception.
 - For examples/case-study posts, record public example URLs and how they were found.
 - Confirm each claim exists in the claims ledger.
 - Check all external source links.

@@ -1,0 +1,18 @@
+candidate_id: "2026-06-19-claude-pass-applied-source"
+date: "2026-06-19"
+source_type: "publishing"
+source_path: "content-packets/2026-06-19-employee-generated-content-examples/"
+observed_problem: "The published blog article still read like instructions for making an examples post because the generator rendered article.blocks.json while the Claude writing pass existed only as a sidecar file."
+affected_workflow: "Sell In Public SEO/AEO blog drafting, QA, packet validation, and static generation"
+target_skill: "sellinpublic-seo-blog"
+root_cause: "The process recorded that a Claude writing pass happened but did not require Claude-reviewed copy to be applied to draft.md and article.blocks.json, which is the renderer source of truth."
+evidence:
+  - "Live HTML and blog/employee-generated-content-examples/index.html contained sections such as Use Examples Without Copying Them and Copyable Example Checklist."
+  - "content-packets/2026-06-19-employee-generated-content-examples/article.blocks.json contained the same instruction-like sections."
+  - "content-packets/2026-06-19-employee-generated-content-examples/claude-writing-pass.md was a review sidecar rather than the applied source used by the renderer."
+  - "scripts/blog/article-ast.mjs builds the article AST from packet.articleBlocks, not from draft.md or claude-writing-pass.md."
+reusability_classification: "reusable_process_change"
+repeat_count: 2
+proposed_change: "Require scripts/seo-aeo/claude-blog-pass.mjs --apply for publish work, validate that claude-writing-pass.md records applied status for draft.md and article.blocks.json, and reject examples posts that drift into checklist/how-to sections unless explicitly requested."
+risk: "Low. The gate may require rerunning Claude for older packets before republish, but it prevents static HTML from rendering stale or non-audience-ready block JSON."
+reviewer: "Codex"

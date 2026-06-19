@@ -38,8 +38,8 @@ topic_map:
     - "topic-egc-vs-advocacy"
     - "topic-clay-lovable-gitlab"
 cta:
-  label: "Use The Checklist"
-  url: "#example-checklist"
+  label: "Review The Examples"
+  url: "#what-these-examples-teach"
 secondary_cta:
   label: "Read The Hub"
   url: "/blog/employee-generated-content-infrastructure/"

@@ -17,15 +17,14 @@ Good examples turn employee, founder, or team expertise into public learning. Th
 5. H2: GitLab: A Handbook Built From Team Knowledge
 6. H2: Shopify Engineering: Technical Notes From Real Systems
 7. H2: What These Examples Teach
-8. H2: Use Examples Without Copying Them
-9. H2: Copyable Example Checklist
-10. FAQ
-11. Sources
-12. CTA
+8. H2: The Pattern Across The Examples
+9. FAQ
+10. Sources
+11. CTA
 
 ## Claim Mapping
 
-- Definition and selection criteria: C001, C006, C007.
+- Definition and selection criteria: C001, C006.
 - Clay example: C002, C008.
 - Lovable example: C003, C009.
 - GitLab example: C004.

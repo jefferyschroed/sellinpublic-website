@@ -111,6 +111,83 @@ function isPlaceholderText(value) {
   return !text || /Status:\s*not started\.?/i.test(text);
 }
 
+function collectStrings(value, output = []) {
+  if (typeof value === "string") {
+    output.push(value);
+    return output;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectStrings(item, output));
+    return output;
+  }
+  if (value && typeof value === "object") {
+    Object.values(value).forEach((item) => collectStrings(item, output));
+  }
+  return output;
+}
+
+function isExamplesPacket(packet) {
+  return /\bexamples?\b/i.test(
+    [
+      packet.brief?.slug,
+      packet.brief?.working_title,
+      packet.brief?.search_intent?.primary_query,
+      packet.brief?.search_intent?.stage,
+      packet.brief?.angle,
+    ]
+      .filter(Boolean)
+      .join("\n")
+  );
+}
+
+function validateExamplesArticleIntent(packet, errors) {
+  if (!isExamplesPacket(packet) || !packet.articleBlocks?.blocks) return;
+
+  const publicText = collectStrings(packet.articleBlocks.blocks).join("\n");
+  const bannedExamplesPatterns = [
+    { label: "What to borrow:", pattern: /\bwhat to borrow\s*:/i },
+    { label: "Use Examples Without Copying", pattern: /\buse examples without copying\b/i },
+    { label: "How to Use Examples", pattern: /\bhow to use examples\b/i },
+    { label: "How to Judge the Examples", pattern: /\bhow to judge (the )?examples\b/i },
+    { label: "Copyable Example Checklist", pattern: /\bcopyable example checklist\b/i },
+    { label: "What B2B teams can borrow", pattern: /\bwhat b2b teams can borrow\b/i },
+  ];
+
+  for (const { label, pattern } of bannedExamplesPatterns) {
+    if (pattern.test(publicText)) {
+      errors.push(
+        `Examples posts must publish literal example analysis, not meta-instruction sections. Remove "${label}" from article.blocks.json.`
+      );
+    }
+  }
+}
+
+function validateClaudeWritingGate(packet, errors) {
+  const qaReport = readOptionalText(packet, "qa-report.md");
+  const hasOwnerException = /owner-approved exception/i.test(qaReport);
+  const passText = readOptionalText(packet, "claude-writing-pass.md");
+
+  if (!passText) {
+    if (!hasOwnerException) {
+      errors.push("claude-writing-pass.md is required before publish, unless qa-report.md records an owner-approved exception.");
+    }
+    return;
+  }
+
+  if (!/^Status:\s*applied\s*$/im.test(passText)) {
+    errors.push("claude-writing-pass.md must record Status: applied before publish. Review-only sidecars are not enough.");
+  }
+  if (!/^Model:\s*claude-sonnet-4-6\s*$/im.test(passText)) {
+    errors.push("claude-writing-pass.md must record Model: claude-sonnet-4-6 before publish.");
+  }
+  if (!/^Applied to draft\.md:\s*true\s*$/im.test(passText)) {
+    errors.push("claude-writing-pass.md must record Applied to draft.md: true before publish.");
+  }
+  if (!/^Applied to article\.blocks\.json:\s*true\s*$/im.test(passText)) {
+    errors.push("claude-writing-pass.md must record Applied to article.blocks.json: true before publish.");
+  }
+}
+
 function validateArticleBlocks(packet, errors, warnings) {
   const blocks = packet.articleBlocks;
   if (!blocks || typeof blocks !== "object") {
@@ -142,6 +219,7 @@ function validateArticleBlocks(packet, errors, warnings) {
   if (!hasFaq) warnings.push("article.blocks.json does not include FAQ blocks.");
   if (!hasSources) errors.push("article.blocks.json must include a sources block.");
   if (!hasCta) errors.push("article.blocks.json must include an article CTA block.");
+  validateExamplesArticleIntent(packet, errors);
 
   const requireArray = (condition, message) => {
     if (!condition) errors.push(message);
@@ -403,6 +481,7 @@ function validatePublish(packet, errors, warnings) {
   }
 
   validateArticleBlocks(packet, errors, warnings);
+  validateClaudeWritingGate(packet, errors);
 
   if (packet.assetManifest?.assets) {
     for (const asset of packet.assetManifest.assets) {

@@ -20,8 +20,8 @@ content-packets/<yyyy-mm-dd>-<slug>/
 | `citations.json` | Source registry | Source `id`, `url`, `title`, `publisher`, `author`, `published_date`, `accessed_date`, `source_type`, `reliability`, `notes` | Every cited source has a stable ID. URLs resolve. Source quality is labeled. |
 | `sme-notes.md` | Expert input | Session metadata, participants, raw notes, usable insights, quote approvals, unresolved questions | SME claims are attributable and approval-sensitive quotes are marked. |
 | `outline.md` | Approved article structure | Search promise, answer-first summary, H1, H2/H3 structure, target questions, internal links, claim IDs, CTA placement | Outline satisfies the brief before drafting starts. Major claims map to sources or SME notes. |
-| `draft.md` | Working article draft | Title, meta draft, body copy, citation markers, claim markers, FAQ section if applicable, CTA | Draft uses citation markers like `[cite:src-001]` and claim markers like `[claim:C001]`. No unsupported final claims. Public prose has passed the Claude writing gate or QA records an owner-approved exception. |
-| `article.blocks.json` | Machine-readable article AST | Version, slug, title, intro fields, `topic_map`, hero object, typed article blocks | Generator can render the static post without guessing from markdown or existing HTML. Blocks match the approved draft because this file is the rendered source of truth. |
+| `draft.md` | Working article draft | Title, meta draft, body copy, citation markers, claim markers, FAQ section if applicable, CTA | Draft uses citation markers like `[cite:src-001]` and claim markers like `[claim:C001]`. No unsupported final claims. Public prose has passed the applied Claude writing gate or QA records an owner-approved exception. |
+| `article.blocks.json` | Machine-readable article AST | Version, slug, title, intro fields, `topic_map`, hero object, typed article blocks | Generator can render the static post without guessing from markdown or existing HTML. Blocks match the approved draft because this file is the rendered source of truth, and the applied Claude writing pass wrote the final public copy here. |
 | `claims-ledger.csv` | Claim verification log | `claim_id`, `claim_text`, `draft_location`, `support_type`, `source_ids`, `confidence`, `owner`, `status`, `notes` | Every factual claim is logged. Status is one of `supported`, `needs_sme`, `needs_source`, `revised`, `removed`. |
 | `qa-report.md` | Readiness review | Summary, blockers, SEO checks, AEO checks, citation checks, brand/voice checks, originality checks, final decision | No critical blockers. QA decision is `approved`, `approved_with_notes`, or `rejected`. |
 | `publish-meta.yaml` | Publishing metadata | `title`, `slug`, `canonical_url`, `meta_description`, `og_title`, `og_description`, `og_image`, `author`, `publish_date`, `updated_date`, `category`, `tags`, `excerpt`, `robots`, `schema_type`, `internal_links` | Metadata is complete, unique, and consistent with the draft. |
@@ -54,7 +54,8 @@ A packet is ready for publish implementation only when:
 - `research.md`, `citations.json`, and `sme-notes.md` support the outline and draft.
 - `outline.md` has been approved before draft completion.
 - `draft.md` contains no unresolved TODOs, placeholder claims, or uncited factual assertions.
-- `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/` with `ANTHROPIC_API_KEY` set locally, or record an owner-approved exception in `qa-report.md`.
+- `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/ --apply` with `ANTHROPIC_API_KEY` set locally, or record an owner-approved exception in `qa-report.md`.
+- `claude-writing-pass.md` records `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`, unless QA records an owner-approved exception.
 - `article.blocks.json` exists and matches the approved outline and draft. Do not approve a packet where the Markdown draft is good but the blocks still read as instructions, notes, or a different article.
 - `claims-ledger.csv` accounts for every factual, statistical, comparative, or expert claim.
 - `qa-report.md` has no critical blockers.
@@ -110,7 +111,7 @@ Draft to QA:
 
 Draft owner provides `draft.md` plus complete `claims-ledger.csv`. QA can reject the packet for missing claim IDs, missing citations, weak source quality, or metadata gaps.
 
-Draft owner also provides the Claude writing-pass output or records why it was not available. QA must compare `draft.md` with `article.blocks.json` because the generator publishes the block file, not the Markdown draft.
+Draft owner also provides the applied Claude writing-pass output or records why it was not available. QA must compare `draft.md` with `article.blocks.json` because the generator publishes the block file, not the Markdown draft.
 
 QA to publish:
 

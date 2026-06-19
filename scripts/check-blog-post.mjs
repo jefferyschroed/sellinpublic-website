@@ -273,7 +273,9 @@ mediaFigures.forEach((figure, index) => {
   }
 });
 
-if (html.includes("data-copy-block") && html.includes("copy-button__icon--copy") && html.includes("copy-button__icon--check")) {
+if (!html.includes("data-copy-block")) {
+  pass("No copy blocks present.");
+} else if (html.includes("copy-button__icon--copy") && html.includes("copy-button__icon--check")) {
   pass("Copy block uses icon-only clipboard/check states.");
 } else {
   fail("Copy blocks must include clipboard and check icons.");

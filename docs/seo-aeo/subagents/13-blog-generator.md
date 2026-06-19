@@ -31,6 +31,7 @@ Generation should be repeatable. The packet is the input. The site output should
 - Do not hand-edit generated HTML to hide packet defects.
 - Do not edit generator scripts unless explicitly assigned by the user.
 - Do not skip strict packet validation.
+- Do not treat `claude-writing-pass.md` as sufficient unless it records `Status: applied` and confirms both `draft.md` and `article.blocks.json` were updated.
 - Do not publish if `article.blocks.json` diverges from the approved draft and metadata.
 
 ## Stop Conditions

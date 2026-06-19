@@ -21,8 +21,8 @@ business_goal: "Create the first examples spoke for the employee-generated conte
 sales_use_case: "Use when a prospect asks what good employee-generated content looks like before they understand the operating model."
 cta:
   primary:
-    label: "Use The Example Checklist"
-    url: "#example-checklist"
+    label: "Review The Examples"
+    url: "#what-these-examples-teach"
   secondary:
     label: "Read The Hub"
     url: "/blog/employee-generated-content-infrastructure/"
@@ -78,8 +78,7 @@ must_include:
   - "Direct answer to the AEO question near the top."
   - "Clear distinction between employee-generated examples and employee advocacy examples."
   - "Examples from Clay, Lovable, GitLab, and Shopify Engineering."
-  - "A table showing what each example teaches B2B teams."
-  - "A copyable checklist for judging future examples."
+  - "A table showing what each public artifact is and why it counts."
   - "Internal links to the hub, comparison post, and blog index."
   - "Sources section with approved citations only."
 must_avoid:

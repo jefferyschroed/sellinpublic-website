@@ -30,7 +30,7 @@ Subject: What employee-generated content actually means
 
 Employee-generated content is often confused with employee advocacy. The difference matters.
 
-We published a practical definition with examples from Clay, Lovable, and GitLab, plus a checklist teams can use before turning an employee idea into a post, article, video, or guide.
+We published a practical definition with examples from Clay, Lovable, GitLab, and Shopify, plus a checklist teams can use before turning an employee idea into a post, article, video, or guide.
 
 Read it here: https://sellinpublic.co/blog/employee-generated-content-infrastructure/
 

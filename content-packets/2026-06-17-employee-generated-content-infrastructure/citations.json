@@ -6,11 +6,11 @@
     "publisher": "Sprout Social",
     "author": "",
     "published_date": "2026",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "industry_report",
     "reliability": "A",
     "claims_supported": ["C001"],
-    "notes": "Used for the human-generated content priority claim. Publication metadata came from the existing packet and source title."
+    "notes": "Used only for the broader human-generated content priority signal. It is not treated as a B2B employee-generated content study."
   },
   {
     "id": "src-002",
@@ -19,7 +19,7 @@
     "publisher": "LinkedIn and Edelman",
     "author": "",
     "published_date": "",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "research_article",
     "reliability": "A",
     "claims_supported": ["C002", "C003"],
@@ -32,24 +32,11 @@
     "publisher": "Edelman and LinkedIn",
     "author": "",
     "published_date": "2025-07",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "research_report_pdf",
     "reliability": "A",
     "claims_supported": ["C004"],
-    "notes": "Used for the 71% hidden-decision-maker claim."
-  },
-  {
-    "id": "src-004",
-    "url": "https://dsmn8.com/blog/employee-linkedin-posts-2023-report/",
-    "title": "Employee LinkedIn Posts 2023 Report",
-    "publisher": "DSMN8",
-    "author": "",
-    "published_date": "2023",
-    "accessed_date": "2026-06-17",
-    "source_type": "industry_analysis",
-    "reliability": "B",
-    "claims_supported": ["C005"],
-    "notes": "Used for employee LinkedIn post sample size and participation framing."
+    "notes": "Used for the hidden-decision-maker claim about strong thought leadership showing potential value."
   },
   {
     "id": "src-005",
@@ -58,11 +45,11 @@
     "publisher": "Clay",
     "author": "",
     "published_date": "",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "company_blog",
     "reliability": "B",
     "claims_supported": ["C006", "C007"],
-    "notes": "Used for Clay's user-generated content growth loop and shareable practitioner-output example."
+    "notes": "Used as a named example of shareable practitioner output and content loops, not as independent proof of employee-generated content performance."
   },
   {
     "id": "src-006",
@@ -71,7 +58,7 @@
     "publisher": "Lovable",
     "author": "",
     "published_date": "2025-01-29",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "company_blog",
     "reliability": "B",
     "claims_supported": ["C008"],
@@ -79,16 +66,16 @@
   },
   {
     "id": "src-007",
-    "url": "https://lovable.dev/videos/Community",
-    "title": "Community Videos",
+    "url": "https://lovable.dev/videos",
+    "title": "Lovable Videos",
     "publisher": "Lovable",
     "author": "",
     "published_date": "",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "company_content_library",
     "reliability": "B",
     "claims_supported": ["C009"],
-    "notes": "Used for public examples of tutorials, showcases, and build walkthroughs."
+    "notes": "Used for public examples of tutorials, product demonstrations, user stories, and build walkthroughs."
   },
   {
     "id": "src-008",
@@ -97,7 +84,7 @@
     "publisher": "GitLab",
     "author": "",
     "published_date": "",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "company_handbook",
     "reliability": "A",
     "claims_supported": ["C010"],
@@ -106,14 +93,66 @@
   {
     "id": "src-009",
     "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
-    "title": "Sell In Public editorial POV for employee-generated content",
+    "title": "Editorial POV for employee-generated content",
     "publisher": "Sell In Public",
     "author": "Jeffery Schroeder",
     "published_date": "2026-06-17",
-    "accessed_date": "2026-06-17",
+    "accessed_date": "2026-06-19",
     "source_type": "editorial_pov",
     "reliability": "Internal",
     "claims_supported": ["C011", "C012", "C013"],
     "notes": "Used for internal definitions, measurement guidance, and editorial framing that are not presented as external statistics."
+  },
+  {
+    "id": "src-010",
+    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+    "title": "Creating helpful, reliable, people-first content",
+    "publisher": "Google Search Central",
+    "author": "",
+    "published_date": "",
+    "accessed_date": "2026-06-19",
+    "source_type": "official_guidance",
+    "reliability": "A",
+    "claims_supported": ["C014"],
+    "notes": "Used as a quality bar for first-hand expertise, original value, and reader usefulness."
+  },
+  {
+    "id": "src-011",
+    "url": "https://www.linkedin.com/business/marketing/blog/social-media-marketing/what-is-employee-advocacy-what-is-it-for-why-does-it-matter",
+    "title": "What is employee advocacy? What is it for? Why does it matter?",
+    "publisher": "LinkedIn",
+    "author": "",
+    "published_date": "",
+    "accessed_date": "2026-06-19",
+    "source_type": "category_definition",
+    "reliability": "B",
+    "claims_supported": ["C012", "C017"],
+    "notes": "Used for the employee advocacy distinction and voluntary participation framing."
+  },
+  {
+    "id": "src-012",
+    "url": "https://shopify.engineering/sharing-developer-context",
+    "title": "How we share context within Shopify Engineering",
+    "publisher": "Shopify Engineering",
+    "author": "",
+    "published_date": "",
+    "accessed_date": "2026-06-19",
+    "source_type": "company_engineering_blog",
+    "reliability": "A",
+    "claims_supported": ["C015"],
+    "notes": "Used as a first-party example of turning technical context into reusable team knowledge."
+  },
+  {
+    "id": "src-013",
+    "url": "https://shopify.engineering/building-resilient-payment-systems",
+    "title": "Building Resilient Payment Systems",
+    "publisher": "Shopify Engineering",
+    "author": "",
+    "published_date": "",
+    "accessed_date": "2026-06-19",
+    "source_type": "company_engineering_blog",
+    "reliability": "A",
+    "claims_supported": ["C016"],
+    "notes": "Used as a public field-note example where a staff developer turns years of infrastructure work into practical advice."
   }
 ]

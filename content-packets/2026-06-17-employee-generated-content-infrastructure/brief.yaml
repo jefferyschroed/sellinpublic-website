@@ -1,12 +1,12 @@
 packet_id: "2026-06-17-employee-generated-content-infrastructure"
-status: "published-draft"
+status: "published-for-review"
 working_title: "What Is Employee-Generated Content?"
 slug: "employee-generated-content-infrastructure"
 owner: "Sell In Public"
 reviewers:
   - "Sell In Public editorial"
 created_at: "2026-06-17"
-updated_at: "2026-06-17"
+updated_at: "2026-06-19"
 
 audience:
   primary_buyer: "B2B founder or GTM leader"
@@ -14,11 +14,11 @@ audience:
     - "Marketing leader"
     - "Sales leader"
     - "Content operator"
-  company_context: "Mid-market and growth-stage B2B software companies that want employee expertise to support trust, education, and pipeline."
-  pain: "The team has useful expertise in sales, product, support, and leadership, but most public content still reads like brand announcements or generic thought leadership."
+  company_context: "Mid-market and growth-stage B2B software companies that want employee expertise to support trust, education, search visibility, and pipeline."
+  pain: "The team has useful expertise in sales, product, support, engineering, and leadership, but most public content still reads like brand announcements or generic thought leadership."
 
 business_goal: "Create a source-backed reference page that can rank, be cited by answer engines, and educate readers on employee-generated content."
-sales_use_case: "Use as an educational asset when a prospect asks how employee-led public content differs from employee advocacy or founder-led posting."
+sales_use_case: "Use as an educational asset when a prospect asks what employee-generated content is, how it differs from advocacy, or what useful examples look like."
 cta:
   primary:
     label: "Use the Checklist"
@@ -38,10 +38,13 @@ search_intent:
     - "B2B thought leadership"
     - "LinkedIn employee content"
     - "human-generated content"
+    - "employee expertise content"
   related_questions:
     - "What is employee-generated content?"
     - "How is employee-generated content different from employee advocacy?"
     - "What makes employee-generated content useful?"
+    - "Who should create employee-generated content?"
+    - "How should teams review employee-generated content?"
     - "Should every employee post on LinkedIn?"
     - "How should B2B teams measure employee-generated content?"
 
@@ -70,28 +73,31 @@ entity_targets:
   - "Clay"
   - "Lovable"
   - "GitLab"
+  - "Shopify Engineering"
   - "Sprout Social"
   - "LinkedIn"
   - "Edelman"
-  - "DSMN8"
+  - "Google Search Central"
 angle: "Employee-generated content is employee expertise turned into useful public learning, not a rewritten company announcement."
 sell_in_public_pov: "The useful version starts with real work, preserves the employee's point of view, and teaches the reader something specific."
-word_count_target: "1800-2200"
+word_count_target: "1800-2400"
 
 must_include:
   - "Answer-first definition near the top."
   - "Clear distinction between employee-generated content and employee advocacy."
   - "Evidence for why human expertise matters in B2B content."
-  - "Examples from Clay, Lovable, and GitLab."
+  - "Examples from Clay, Lovable, GitLab, and Shopify."
+  - "Practical workflow for turning employee expertise into public content."
   - "Measurement guidance that looks beyond impressions."
   - "Copyable starter checklist."
-  - "Sources section with current citations preserved."
+  - "Sources section that explains why each source group is used without exposing claim-audit reasoning."
 must_avoid:
   - "Generic content marketing claims."
   - "Unsourced performance promises."
   - "Invented customer examples."
   - "Telling every employee to post on LinkedIn."
   - "Feature-heavy Sell In Public service language inside the article body."
+  - "Public copy that reads like an AI claim-audit note."
 
 source_requirements:
   min_grade: "B"
@@ -99,28 +105,36 @@ source_requirements:
     - "Reddit/forums as evidence"
     - "generic listicles"
     - "unsourced stat roundups"
+    - "AnswerThePublic, autocomplete, PAA, or ChatGPT output as factual evidence"
   required_sources:
     - "Sprout Social 2026 Social Media Content Strategy Report"
     - "LinkedIn and Edelman hidden buyer thought leadership research"
     - "Edelman and LinkedIn 2025 B2B Thought Leadership Impact Report PDF"
-    - "DSMN8 Employee LinkedIn Posts 2023 Report"
+    - "Google Search Central helpful content guidance"
+    - "LinkedIn employee advocacy guide"
     - "Clay growth marketing bets article"
     - "Lovable zero to $10M ARR in two months article"
-    - "Lovable community videos library"
+    - "Lovable videos library"
     - "GitLab Handbook"
+    - "Shopify Engineering context sharing article"
+    - "Shopify Engineering resilient payment systems article"
 
 internal_links:
   - "https://sellinpublic.co/"
   - "https://sellinpublic.co/blog/"
+  - "https://sellinpublic.co/blog/employee-generated-content-vs-employee-advocacy/"
 external_research_targets:
   - "https://sproutsocial.com/insights/data/2026-social-media-content-strategy-report/"
   - "https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers"
   - "https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf"
-  - "https://dsmn8.com/blog/employee-linkedin-posts-2023-report/"
+  - "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+  - "https://www.linkedin.com/business/marketing/blog/social-media-marketing/what-is-employee-advocacy-what-is-it-for-why-does-it-matter"
   - "https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay"
   - "https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months"
-  - "https://lovable.dev/videos/Community"
+  - "https://lovable.dev/videos"
   - "https://handbook.gitlab.com/handbook/"
+  - "https://shopify.engineering/sharing-developer-context"
+  - "https://shopify.engineering/building-resilient-payment-systems"
 
 approval:
   strategy_gate: true
@@ -133,5 +147,5 @@ packet_intake:
   status: "intake_ready"
   intake_artifact: "packet-intake.yaml"
   discovery_exclusions: "discovery-exclusions.json"
-  query_run_status: "legacy_migrated_after_publish_qa"
+  query_run_status: "handoff_ready"
   discovery_sources_excluded_from_evidence: true

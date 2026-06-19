@@ -3,7 +3,7 @@
   "slug": "employee-generated-content-infrastructure",
   "title": "What Is Employee-Generated Content?",
   "kicker": "Employee-generated content",
-  "dek": "A practical definition with evidence-backed examples from Clay, Lovable, and GitLab, plus a checklist for creating useful employee-led content from real expertise.",
+  "dek": "A practical definition with source-backed examples from Clay, Lovable, GitLab, and Shopify, plus a checklist for turning employee expertise into useful public content.",
   "topic_map": {
     "pillar_id": "pillar-employee-generated-content",
     "topic_id": "topic-egc-definition",
@@ -17,8 +17,8 @@
     ]
   },
   "publishDateLabel": "Jun 17, 2026",
-  "updatedDateLabel": "Updated Jun 17, 2026",
-  "readTime": "10 min read",
+  "updatedDateLabel": "Updated Jun 19, 2026",
+  "readTime": "11 min read",
   "hero": {
     "src": "/public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
     "alt": "Cinematic signal routes and glass panels representing employee-generated content infrastructure",
@@ -32,13 +32,14 @@
       "label": "Short answer",
       "id": "short-answer",
       "paragraphs": [
-        "Employee-generated content is original content that comes from what employees know, see, build, test, sell, support, or learn. In B2B, it often shows up as LinkedIn posts, technical walkthroughs, customer lessons, teardown notes, product demos, founder essays, internal frameworks, or public documentation.",
-        "The useful version is not a rewritten company announcement. It teaches something specific from the employee's vantage point. The reader should leave with a clearer idea, sharper question, usable example, or next step they can apply."
+        "Employee-generated content is original public content based on what employees know, see, build, test, sell, support, or learn. In B2B, it often shows up as LinkedIn posts, technical walkthroughs, customer lessons, teardown notes, product demos, founder essays, internal frameworks, or public documentation.",
+        "It differs from employee advocacy because the starting point is different. Employee advocacy starts with a company-approved message that employees help distribute. Employee-generated content starts with employee expertise, even when an editor helps shape the final piece.",
+        "The useful version is not a rewritten company announcement. It teaches something specific from the employee's vantage point, so the reader leaves with a clearer idea, a sharper question, a usable example, or a next step they can apply."
       ]
     },
     {
       "type": "paragraph",
-      "html": "The reason employee-generated content matters is simple: buyers and practitioners trust useful human perspective more than polished brand copy. Sprout Social's 2026 Social Media Content Strategy Report says consumers want brands to make <a href=\"https://sproutsocial.com/insights/data/2026-social-media-content-strategy-report/\">human-generated content their number one priority</a>, while the Edelman and LinkedIn 2025 B2B report found that <a href=\"https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers\">55% of hidden buyers use thought leadership during vendor evaluation</a>."
+      "html": "The reason employee-generated content matters is simple: buyers and practitioners are trying to judge how a company thinks before they talk to sales. LinkedIn and Edelman found that <a href=\"https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers\">55% of hidden buyers use thought leadership during vendor evaluation</a>. Sprout Social's 2026 Social Media Content Strategy Report points in the same human direction for social content, saying consumers want brands to make <a href=\"https://sproutsocial.com/insights/data/2026-social-media-content-strategy-report/\">human-generated content their top priority</a>."
     },
     {
       "type": "paragraph",
@@ -52,11 +53,11 @@
     },
     {
       "type": "paragraph",
-      "html": "B2B buying groups are full of people who influence decisions without ever becoming the primary sales contact. Edelman and LinkedIn call these people hidden buyers. Their research found that <a href=\"https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers\">63% of hidden buyers spend more than an hour per week consuming thought leadership</a>, and the <a href=\"https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf\">full report</a> says 71% of hidden decision-makers view strong thought leadership as more effective than conventional marketing or sales materials at showing potential value."
+      "html": "B2B buying groups include people who influence decisions without ever becoming the main sales contact. Edelman and LinkedIn call these people hidden buyers. Their research found that <a href=\"https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers\">63% of hidden buyers spend more than an hour per week consuming thought leadership</a>, and the <a href=\"https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf\">full report</a> says 71% of hidden decision-makers see strong thought leadership as more effective than conventional marketing or sales materials at showing potential value."
     },
     {
       "type": "paragraph",
-      "html": "Employee-generated content is useful in that environment because employees can explain the details a brand account usually flattens. A product marketer can unpack a positioning decision. An engineer can explain a technical tradeoff. A customer success lead can show the pattern behind repeated customer questions. A founder can explain why the company made a specific bet."
+      "html": "That research is useful here because strong employee-generated content behaves like practical thought leadership. It gives buyers a way to evaluate how a team thinks. A product marketer can unpack a positioning decision. An engineer can explain a technical tradeoff. A customer success lead can show the pattern behind repeated customer questions. A founder can explain why the company made a specific bet."
     },
     {
       "type": "callout",
@@ -88,7 +89,7 @@
     },
     {
       "type": "paragraph",
-      "html": "Employee advocacy is different. Advocacy usually means employees share approved company assets. Employee-generated content starts with the employee's own knowledge, even when an editor helps shape it."
+      "html": "Employee advocacy is the nearest related category, but it has a different job. LinkedIn defines employee advocacy as people promoting the company they work for, including sharing company blog posts or brand messages. Employee-generated content can support advocacy, but it should not be reduced to sharing approved assets. For the deeper comparison, read <a href=\"/blog/employee-generated-content-vs-employee-advocacy/\">employee-generated content vs employee advocacy</a>."
     },
     {
       "type": "heading",
@@ -98,7 +99,7 @@
     },
     {
       "type": "paragraph",
-      "html": "The best examples are not always labeled \"employee-generated content.\" Look for the underlying pattern: practitioners, builders, users, or team members turn real work into public learning."
+      "html": "The strongest examples do not always use the same category name. The pattern to look for is simpler: real work gets turned into public learning."
     },
     {
       "type": "heading",
@@ -108,25 +109,25 @@
     },
     {
       "type": "paragraph",
-      "html": "Clay's example is mostly user-generated and partner-generated, not purely employee-generated, but the growth loop is directly relevant. In a post on how Clay assessed growth marketing bets, the company says <a href=\"https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay\">user-generated content is one of its major growth drivers</a>. The reason is practical: users share outputs they created, gain recognition for the work, and bring more practitioners into the loop."
+      "html": "Clay shows what happens when useful work is designed to travel. In a post on how the company assessed growth marketing bets, Clay says <a href=\"https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay\">user-generated content is one of its major growth drivers</a>. The content loop works because people create useful outputs, share those outputs, gain recognition for the work, and bring more practitioners into the product's orbit."
     },
     {
       "type": "paragraph",
-      "html": "The lesson for employee-generated content is not \"ask employees to post about the product.\" It is to make useful work easier to show. If an employee builds a workflow, answers a hard customer question, spots a market pattern, or creates a template, the content should preserve the lesson inside that work."
+      "html": "The employee-generated content lesson is to start with work worth showing. If an employee builds a workflow, answers a hard customer question, spots a market pattern, or creates a useful template, the content should preserve the lesson inside that work."
     },
     {
       "type": "heading",
       "level": 3,
       "id": "lovable-example",
-      "text": "Lovable: Let The Community Learn Through Builds"
+      "text": "Lovable: Let Builds Teach The Market"
     },
     {
       "type": "paragraph",
-      "html": "Lovable's own growth story says the company went from an open-source project to <a href=\"https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months\">$10M ARR in two months</a>, with community and content playing a key role across X, TikTok, YouTube, and partnerships. Lovable also maintains a public <a href=\"https://lovable.dev/videos/Community\">community videos library</a> full of tutorials, user showcases, and build walkthroughs."
+      "html": "Lovable's growth story says the company went from an open-source project to <a href=\"https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months\">$10M ARR in two months</a>, with community and content playing a key role across X, TikTok, YouTube, and partnerships. Its public <a href=\"https://lovable.dev/videos\">video library</a> is full of tutorials, product demonstrations, user stories, and build walkthroughs."
     },
     {
       "type": "paragraph",
-      "html": "The content pattern is straightforward: show what people can build, then let the example teach. For employee-generated content, the same logic applies internally. A designer, engineer, founder, or support lead can turn real product use into content that answers \"how did this work?\" with enough detail for others to learn from it."
+      "html": "The pattern is straightforward: show what people can build, then let the example teach. A designer, engineer, founder, or support lead can use the same logic by turning real product use into content that answers \"how did this work?\" with enough detail for others to learn from it."
     },
     {
       "type": "heading",
@@ -136,11 +137,11 @@
     },
     {
       "type": "paragraph",
-      "html": "GitLab is a different kind of example. Its public handbook is not a LinkedIn program, but it shows how employee knowledge can become a durable public asset. GitLab describes the handbook as <a href=\"https://handbook.gitlab.com/handbook/\">the central repository for how the company runs</a>, with more than 2,000 pages of text and an open contribution model."
+      "html": "GitLab shows that employee-generated content does not have to be personal-brand content. Its public handbook is <a href=\"https://handbook.gitlab.com/handbook/\">the central repository for how the company runs</a>, with more than 2,000 pages of text and an open contribution model."
     },
     {
       "type": "paragraph",
-      "html": "The lesson is that employee-generated content does not have to be personal-brand content. Documentation, guides, operating principles, and decision records can also turn internal expertise into something useful for the outside world."
+      "html": "The lesson is that documentation, guides, operating principles, and decision records can turn internal expertise into something useful for the outside world. That kind of content can be just as valuable as a LinkedIn post because it gives buyers, candidates, partners, and practitioners a clearer view of how the team works."
     },
     {
       "type": "media",
@@ -158,21 +159,45 @@
     },
     {
       "type": "paragraph",
-      "html": "The strongest examples share a few traits. They are specific, grounded in work, and useful on their own."
+      "html": "Good employee-generated content is specific, grounded in work, and useful on its own. It gives the reader a usable piece of thinking, not just a more personal wrapper around a company message."
     },
     {
       "type": "list",
       "items": [
-        "They start with an observed problem, not a product feature.",
-        "They show a concrete example, workflow, teardown, or decision.",
-        "They preserve the employee's point of view instead of sanding it into brand voice.",
-        "They cite data, customer patterns, or source material when making factual claims.",
-        "They make the reader smarter by the end of the piece."
+        "It starts with an observed problem, not a product feature.",
+        "It shows a concrete example, workflow, teardown, or decision.",
+        "It preserves the employee's point of view instead of sanding it into brand voice.",
+        "It cites data, customer patterns, or source material when making factual claims.",
+        "It makes the reader smarter by the end of the piece."
       ]
     },
     {
       "type": "paragraph",
-      "html": "DSMN8 analyzed <a href=\"https://dsmn8.com/blog/employee-linkedin-posts-2023-report/\">11,107 employee LinkedIn posts from 1,903 employee advocates</a>. One useful takeaway from that analysis is that employee participation is uneven. Some people will create original content. Others may prefer commenting, sharing leadership posts, or contributing raw notes for an editor to shape."
+      "html": "Google's guidance for helpful, reliable, people-first content is a useful quality bar here. It asks whether content shows first-hand expertise, adds original value beyond sources, and leaves the reader feeling they learned enough to achieve their goal. Employee-generated content should clear that bar before it goes live."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "turn-expertise-into-content",
+      "text": "How To Turn Employee Expertise Into Useful Content"
+    },
+    {
+      "type": "paragraph",
+      "html": "The simplest workflow is to start with raw expertise, not a blank page. Pull from repeated customer questions, product decisions, implementation lessons, support patterns, sales objections, technical tradeoffs, or internal docs that already help the team work."
+    },
+    {
+      "type": "paragraph",
+      "html": "Shopify Engineering describes context sharing as a habit that helps developers understand the why, what, and how behind technical choices. A separate Shopify Engineering article on resilient payment systems shows the same idea in public: a staff developer turned lessons from years of payments infrastructure work into practical tips for other builders."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Capture the employee's raw explanation before editing it.",
+        "Choose one reader question the piece will answer.",
+        "Keep the real example, decision, tradeoff, or mistake in the final draft.",
+        "Source factual claims instead of asking the employee to carry proof alone.",
+        "Edit for clarity without flattening the employee's voice into brand voice."
+      ]
     },
     {
       "type": "heading",
@@ -195,7 +220,7 @@
     },
     {
       "type": "paragraph",
-      "html": "The goal is not to make every employee a creator. The goal is to capture the knowledge that already exists and turn the useful parts into public learning."
+      "html": "The goal is not to make every employee a creator. Some employees will publish original posts. Others will contribute notes, examples, customer questions, technical explanations, or review context. LinkedIn's employee advocacy guidance makes a similar point about voluntary participation: programs work better when people have a real reason to participate."
     },
     {
       "type": "heading",
@@ -218,32 +243,48 @@
       "items": [
         {
           "question": "What is employee-generated content?",
-          "answer": "Employee-generated content is original content based on an employee's knowledge, work, observations, or experience. In B2B, that can include LinkedIn posts, tutorials, field notes, product lessons, customer learnings, and public documentation."
+          "answer": "Employee-generated content is original public content based on an employee's knowledge, work, observations, or experience. In B2B, that can include LinkedIn posts, tutorials, field notes, product lessons, customer learnings, internal frameworks, and public documentation."
         },
         {
           "question": "How is employee-generated content different from employee advocacy?",
-          "answer": "Employee advocacy usually distributes company-approved content through employee accounts. Employee-generated content starts with the employee's own perspective or work product, even when an editor helps structure the final piece."
+          "answer": "Employee advocacy usually starts with a company-approved asset or message that employees help distribute. Employee-generated content starts with the employee's own expertise or work product, even when an editor helps structure the final piece."
         },
         {
-          "question": "What makes employee-generated content useful?",
-          "answer": "Useful employee-generated content answers a real question, shows a concrete example, and gives the reader something they can apply."
+          "question": "Who should create employee-generated content?",
+          "answer": "Start with people who have useful expertise and enough context to teach something specific: founders, sales leaders, customer success leads, product marketers, engineers, operators, and support teams. The best contributors are not always the loudest employees; they are often the people closest to recurring buyer questions."
+        },
+        {
+          "question": "How do you turn employee expertise into a LinkedIn post or article?",
+          "answer": "Start with one real question, decision, lesson, or customer pattern. Interview the employee for the raw explanation, keep the concrete example, source any factual claims, and edit for clarity without replacing the employee's point of view with brand language."
+        },
+        {
+          "question": "How should teams review employee-generated content?",
+          "answer": "Review for accuracy, confidentiality, unsupported claims, and clarity. Do not rewrite every sentence into brand voice. A good review makes the content safer and clearer while preserving the employee's reasoning and language."
+        },
+        {
+          "question": "How do you measure employee-generated content?",
+          "answer": "Use impressions as a distribution signal, not the main proof of value. Track saves, qualified comments, replies from target accounts, recurring buyer questions, profile visits, source-linked traffic, indexed pages, and AI or search visibility when the content becomes a website asset."
         },
         {
           "question": "Should every employee post on LinkedIn?",
-          "answer": "No. Some employees will be strong public creators. Others can contribute notes, examples, customer questions, or technical explanations that become content through an editor or subject-matter expert workflow."
+          "answer": "No. Some employees should publish original content. Others can contribute notes, examples, technical explanations, customer questions, or review context. A strong system makes room for different levels of participation."
         }
       ]
+    },
+    {
+      "type": "paragraph",
+      "html": "The sources below are grouped into research context, category definitions, and public examples. The research sources support why human expertise matters; the company sources show how real work can become public learning."
     },
     {
       "type": "sources",
       "id": "sources",
       "items": [
         {
-          "label": "Sprout Social 2026 Social Media Content Strategy Report",
+          "label": "Sprout Social 2026 Social Media Content Strategy Report, for the human-generated content priority",
           "url": "https://sproutsocial.com/insights/data/2026-social-media-content-strategy-report/"
         },
         {
-          "label": "LinkedIn and Edelman research on B2B thought leadership and hidden buyers",
+          "label": "LinkedIn and Edelman research on thought leadership and hidden B2B buyers",
           "url": "https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers"
         },
         {
@@ -251,11 +292,15 @@
           "url": "https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf"
         },
         {
-          "label": "DSMN8 analysis of 11,107 employee LinkedIn posts",
-          "url": "https://dsmn8.com/blog/employee-linkedin-posts-2023-report/"
+          "label": "Google Search Central guidance on helpful, people-first content",
+          "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
         },
         {
-          "label": "Clay on growth marketing bets and user-generated content loops",
+          "label": "LinkedIn guide to employee advocacy, for the advocacy distinction",
+          "url": "https://www.linkedin.com/business/marketing/blog/social-media-marketing/what-is-employee-advocacy-what-is-it-for-why-does-it-matter"
+        },
+        {
+          "label": "Clay on growth marketing bets and shareable content loops",
           "url": "https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay"
         },
         {
@@ -263,12 +308,20 @@
           "url": "https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months"
         },
         {
-          "label": "Lovable community video library",
-          "url": "https://lovable.dev/videos/Community"
+          "label": "Lovable video library, for tutorials and public build examples",
+          "url": "https://lovable.dev/videos"
         },
         {
-          "label": "The GitLab Handbook",
+          "label": "The GitLab Handbook, for public operating knowledge",
           "url": "https://handbook.gitlab.com/handbook/"
+        },
+        {
+          "label": "Shopify Engineering on sharing developer context",
+          "url": "https://shopify.engineering/sharing-developer-context"
+        },
+        {
+          "label": "Shopify Engineering field note on resilient payment systems",
+          "url": "https://shopify.engineering/building-resilient-payment-systems"
         }
       ]
     },

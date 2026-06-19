@@ -4,9 +4,9 @@ Packet: `2026-06-17-employee-generated-content-infrastructure`
 
 ## Summary
 
-This article defines employee-generated content as original public content based on employee knowledge, work, observations, and lived experience. It positions the category as different from employee advocacy because the insight starts with the employee's perspective rather than a company-approved asset.
+This article defines employee-generated content as original public content based on employee knowledge, work, observations, and experience. It positions the category as different from employee advocacy because the insight starts with the employee's perspective rather than a company-approved asset.
 
-The article should teach the reader what counts, why it matters in B2B, what good examples look like, and how to evaluate an idea before publishing it.
+The refresh tightened the source use. Adjacent sources are now integrated only when they clearly support the reader-facing argument, and public copy avoids exposing claim-audit reasoning.
 
 ## Audience Context
 
@@ -17,6 +17,7 @@ Their likely questions:
 - What is employee-generated content?
 - Is this different from employee advocacy?
 - What does it look like in real companies?
+- Who should create it?
 - Should every employee post on LinkedIn?
 - How should we measure whether this is useful?
 
@@ -30,17 +31,28 @@ The useful AEO shape for this post is:
 - Clear distinction from employee advocacy.
 - Named examples.
 - A table of content types.
+- A workflow for turning expertise into content.
 - A copyable checklist.
 - FAQ answers for common adjacent questions.
-- Source section that separates evidence from editorial POV.
+- Source section that separates research context, definitions, and examples.
 
-## Competitor And Example Notes
+## Source Notes
 
-Clay is used as a growth-loop example. Its public material describes user-generated content as one of its major growth drivers. The article uses this carefully as a related content loop, not as a pure employee-generated content claim.
+Sprout Social is used for the broader point that audiences want more human-generated content from brands. It is not presented as an employee-generated content performance study.
 
-Lovable is used as a community and build-led learning example. Its growth story and video library show how public examples and tutorials can make the product easier to understand.
+LinkedIn and Edelman are used for hidden-buyer thought leadership behavior. The article transitions into those findings as context for why useful expertise can help buyers evaluate how a company thinks.
 
-GitLab is used as a documentation-led public knowledge example. Its handbook shows that employee knowledge can become a durable public asset without depending on personal-brand posts.
+Google Search Central is used as a quality bar for first-hand expertise, original value, and reader usefulness.
+
+LinkedIn's employee advocacy guide is used to define the adjacent category and support the voluntary participation point.
+
+Clay is used as a shareable-output loop example. The article does not claim Clay is running a pure employee-generated content program.
+
+Lovable is used as a build-led learning example through its first-party growth story and video library.
+
+GitLab is used as a public documentation example that shows employee knowledge can become durable public infrastructure.
+
+Shopify Engineering is used for two practical examples: context sharing as a habit and a field-note style article based on years of payments infrastructure work.
 
 ## Entity Map
 
@@ -51,25 +63,29 @@ Primary entities:
 - B2B thought leadership.
 - LinkedIn content.
 - Human-generated content.
+- Employee expertise content.
 
 Example entities:
 
 - Clay.
 - Lovable.
 - GitLab.
+- Shopify Engineering.
 - Sprout Social.
 - LinkedIn.
 - Edelman.
-- DSMN8.
+- Google Search Central.
 
 ## Common Questions
 
 - What is employee-generated content?
 - How is employee-generated content different from employee advocacy?
-- What makes employee-generated content useful?
-- Should every employee post on LinkedIn?
+- Who should create employee-generated content?
+- How do you turn employee expertise into a LinkedIn post or article?
+- How should teams review employee-generated content?
 - How should B2B teams measure employee-generated content?
+- Should every employee post on LinkedIn?
 
 ## Source Gaps
 
-No critical source gaps remain for the current definition post. Future posts should refresh employee advocacy sources and add more first-party examples before making comparison or case-study claims.
+No critical source gaps remain for the current definition hub. Future examples and case-study posts need more first-party evidence before making broader claims about individual company strategies.

@@ -3,7 +3,7 @@ packet_id: "2026-06-17-employee-generated-content-infrastructure"
 slug: "employee-generated-content-infrastructure"
 status: "intake_ready"
 created_at: "2026-06-17"
-updated_at: "2026-06-18"
+updated_at: "2026-06-19"
 
 candidate_source:
   path: "content-packets/2026-06-17-employee-generated-content-infrastructure/brief.yaml"
@@ -27,13 +27,13 @@ candidate:
 decisions:
   strategic_asset_decision: "post"
   scaffold_asset_decision: "post"
-  recommended_asset: "published-draft"
+  recommended_asset: "post"
   topic_decision: "create_or_refresh_packet"
-  coverage_status: "published-draft"
+  coverage_status: "published-for-review"
   coverage_role: "hub"
   source_readiness: "ready"
   packet_intake_status: "intake_ready"
-  query_run_status: "legacy_migrated_after_publish_qa"
+  query_run_status: "handoff_ready"
 
 gates:
   current_gate_reasons: []

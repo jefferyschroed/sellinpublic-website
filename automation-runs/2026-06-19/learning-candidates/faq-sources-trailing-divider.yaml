@@ -1,0 +1,17 @@
+candidate_id: "2026-06-19-faq-sources-trailing-divider"
+date: "2026-06-19"
+source_type: "qa"
+source_path: "blog/blog.css"
+observed_problem: "Blog FAQ sections left a detached divider and too much blank space below the final closed FAQ item when the next section was Sources."
+affected_workflow: "Static blog foundation CSS, visual QA, and publish readiness checks for all blog posts"
+target_skill: "sellinpublic-blog-foundation, sellinpublic-blog-qa"
+root_cause: "The shared `.blog-sources` block always added a top border, 62px top margin, and 34px top padding. When Sources immediately followed FAQ, that border visually read as an extra blank FAQ row."
+evidence:
+  - "User screenshot showed a detached horizontal line below the final FAQ question with a large blank area between the last row and the line."
+  - "Playwright measurement on `/blog/employee-generated-content-examples/` showed a 62px gap from the last FAQ detail to `.blog-sources`, with `.blog-sources` adding a 1px top border and 34px top padding."
+  - "Playwright measurement on `/blog/employee-generated-content-vs-employee-advocacy/` showed the same 62px FAQ-to-Sources gap and detached top border."
+reusability_classification: "reusable_process_change"
+repeat_count: 2
+proposed_change: "Add a foundation CSS rule for `.blog-faq + .blog-sources` that removes the faux trailing divider, tightens the handoff, and update blog foundation/QA guidance to inspect FAQ-to-Sources spacing across all posts."
+risk: "Low. The change is limited to the shared blog foundation and only affects Sources sections that immediately follow FAQ blocks."
+reviewer: "Codex"

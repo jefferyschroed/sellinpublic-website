@@ -100,6 +100,7 @@ These behaviors are foundation-level and should stay consistent across posts.
 - Floating Copy Page and Ask AI buttons are translucent by default and become opaque on hover or focus.
 - Floating buttons expand fluidly on copy success and show a check mark.
 - FAQ items open and close with the shared resize transition, including a delayed close so content does not snap shut.
+- FAQ sections should end cleanly. When Sources follows FAQ, avoid a detached top border or large blank gap that reads like an extra empty FAQ item.
 - Desktop TOC uses one shared moving indicator and smooth color/weight transitions when the active section changes.
 - CTA links inside `.blog-cta` are not underlined.
 

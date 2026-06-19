@@ -1,0 +1,18 @@
+candidate_id: "2026-06-19-faq-empty-item-publish-gate"
+date: "2026-06-19"
+source_type: "publishing"
+source_path: "blog/employee-generated-content-examples/index.html"
+observed_problem: "The published FAQ visually suggested a blank extra question slot, and the shared FAQ renderer had no guard against whitespace-only FAQ items becoming empty public rows."
+affected_workflow: "SEO/AEO article block generation, packet validation, static blog rendering, and blog QA"
+target_skill: "sellinpublic-blog-foundation, sellinpublic-blog-qa, sellinpublic-seo-blog"
+root_cause: "The packet validator only checked truthy FAQ question and answer values, the article AST passed FAQ items through without trimming or filtering, and the blog FAQ styling left a terminating border that could read like an empty additional row."
+evidence:
+  - "User reported a blank FAQ question/slot on the live Employee-Generated Content Examples post after publication."
+  - "scripts/blog/render-post.mjs maps every FAQ item directly to a details row without checking trimmed question and answer text."
+  - "scripts/blog/validate-packet.mjs checked item.question and item.answer truthiness, which does not reject whitespace-only strings."
+  - "blog/blog.css added a bottom border on the last FAQ detail, visually extending the FAQ list even when there are exactly five questions."
+reusability_classification: "reusable_process_change"
+repeat_count: 2
+proposed_change: "Reject whitespace-only FAQ items in validation and Claude output, sanitize FAQ items before rendering, remove the visual terminating border that can read as an empty row, and add FAQ non-empty checks to the blog foundation and QA SOPs."
+risk: "Low. The renderer still supports valid FAQ sections, and invalid FAQ items fail earlier before publishing."
+reviewer: "Codex"

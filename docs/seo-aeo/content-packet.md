@@ -59,6 +59,7 @@ A packet is ready for publish implementation only when:
 - `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/ --apply` with `ANTHROPIC_API_KEY` set locally, or record an owner-approved exception in `qa-report.md`.
 - `claude-writing-pass.md` records `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`, unless QA records an owner-approved exception.
 - `article.blocks.json` exists and matches the approved outline and draft. Do not approve a packet where the Markdown draft is good but the blocks still read as instructions, notes, or a different article.
+- FAQ blocks contain only complete question/answer pairs with non-empty trimmed text. Blank, whitespace-only, duplicate, or placeholder FAQ items are publish blockers.
 - `claims-ledger.csv` accounts for every factual, statistical, comparative, or expert claim.
 - `qa-report.md` has no critical blockers.
 - `publish-meta.yaml` is complete and matches the final draft.

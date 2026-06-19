@@ -148,7 +148,7 @@ Required article.blocks.json block schema:
 - heading: {"type":"heading","level":2,"id":"kebab-case-id","text":"..."} Use heading, not h2.
 - callout: {"type":"callout","label":"...","paragraphs":["..."]} Avoid callouts in examples posts unless they add source-specific analysis.
 - table: {"type":"table","headers":["..."],"rows":[["..."]]}
-- faq: {"type":"faq","id":"faq","items":[{"question":"...","answer":"..."}]}
+- faq: {"type":"faq","id":"faq","items":[{"question":"...","answer":"..."}]} Every question and answer must contain non-empty reader-facing text after trimming whitespace. Do not include placeholder, blank, duplicate, or whitespace-only FAQ items.
 - sources: {"type":"sources","id":"sources","items":[{"label":"...","url":"..."}]}
 - cta: {"type":"cta","label":"...","heading":"...","body":"...","actions":[{"label":"...","url":"...","style":"primary"}]}
 - Do not use paragraph.text, h2, cta.text, markdown-only blocks, or raw source IDs as public copy.
@@ -252,6 +252,10 @@ function collectStrings(value, output = []) {
   return output;
 }
 
+function trimmedText(value) {
+  return String(value ?? "").trim();
+}
+
 function isExamplesPacket(packetDir) {
   const brief = readRequired(path.join(packetDir, "brief.yaml"));
   const outline = readRequired(path.join(packetDir, "outline.md"));
@@ -320,9 +324,20 @@ function validateArticleBlockShape(articleBlocks) {
         break;
       case "faq":
         requireArray(Array.isArray(block.items) && block.items.length, `${prefix} faq requires items.`);
-        block.items?.forEach((item, itemIndex) => {
-          if (!item.question || !item.answer) errors.push(`${prefix} faq item ${itemIndex + 1} requires question and answer.`);
-        });
+        {
+          const seenQuestions = new Set();
+          block.items?.forEach((item, itemIndex) => {
+            const question = trimmedText(item?.question);
+            if (!question || !trimmedText(item?.answer)) {
+              errors.push(`${prefix} faq item ${itemIndex + 1} requires non-empty question and answer text.`);
+            }
+            const key = question.toLowerCase();
+            if (key && seenQuestions.has(key)) {
+              errors.push(`${prefix} faq item ${itemIndex + 1} duplicates an earlier question.`);
+            }
+            if (key) seenQuestions.add(key);
+          });
+        }
         break;
       case "sources":
         requireArray(Array.isArray(block.items) && block.items.length, `${prefix} sources requires items.`);

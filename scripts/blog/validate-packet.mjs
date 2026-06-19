@@ -76,6 +76,10 @@ function hasValue(value) {
   return value !== undefined && value !== null && String(value).trim() !== "";
 }
 
+function trimmedText(value) {
+  return String(value ?? "").trim();
+}
+
 function collectClaimMarkers(source) {
   return Array.from(source.matchAll(/\[claim:([A-Za-z0-9_-]+)\]/g)).map((match) => match[1]);
 }
@@ -280,9 +284,20 @@ function validateArticleBlocks(packet, errors, warnings) {
         break;
       case "faq":
         requireArray(Array.isArray(block.items) && block.items.length, `${prefix} faq requires items.`);
-        block.items?.forEach((item, itemIndex) => {
-          if (!item.question || !item.answer) errors.push(`${prefix} faq item ${itemIndex + 1} requires question and answer.`);
-        });
+        {
+          const seenQuestions = new Set();
+          block.items?.forEach((item, itemIndex) => {
+            const question = trimmedText(item?.question);
+            if (!question || !trimmedText(item?.answer)) {
+              errors.push(`${prefix} faq item ${itemIndex + 1} requires non-empty question and answer text.`);
+            }
+            const key = question.toLowerCase();
+            if (key && seenQuestions.has(key)) {
+              errors.push(`${prefix} faq item ${itemIndex + 1} duplicates an earlier question.`);
+            }
+            if (key) seenQuestions.add(key);
+          });
+        }
         break;
       case "sources":
         requireArray(Array.isArray(block.items) && block.items.length, `${prefix} sources requires items.`);

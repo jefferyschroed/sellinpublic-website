@@ -616,7 +616,7 @@ html {
 }
 
 .blog-faq details:last-child {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.1);
+  border-bottom: 0;
 }
 
 .blog-faq summary {

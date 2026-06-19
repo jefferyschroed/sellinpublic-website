@@ -6,13 +6,16 @@ const DEFAULT_MODEL = "claude-sonnet-4-6";
 const DEFAULT_SKILL_PATH = "/Users/jeff/.codex/skills/sellinpublic-seo-blog/SKILL.md";
 
 function usage() {
-  return `Usage: node scripts/seo-aeo/claude-blog-pass.mjs --packet <content-packet-dir> [--out <path>] [--model claude-sonnet-4-6] [--apply]
+  return `Usage: node scripts/seo-aeo/claude-blog-pass.mjs --packet <content-packet-dir> [--out <path>] [--model claude-sonnet-4-6] [--apply] [--from-scratch]
 
 Runs the final audience-copy pass for a Sell In Public blog packet through Claude.
 Requires ANTHROPIC_API_KEY in the local environment. Never pass the key as an argument.
 
 Use --apply for publish work. It writes Claude's replacement draft.md and
-article.blocks.json directly, then records an applied writing-pass audit.`;
+article.blocks.json directly, then records an applied writing-pass audit.
+
+Use --from-scratch when the current public copy is contaminated. It preserves
+metadata and source files but omits the current draft/body from the prompt.`;
 }
 
 function readArgs(argv) {
@@ -22,6 +25,7 @@ function readArgs(argv) {
     model: process.env.ANTHROPIC_BLOG_MODEL || DEFAULT_MODEL,
     skillPath: process.env.SEO_WRITING_SKILL_PATH || DEFAULT_SKILL_PATH,
     apply: false,
+    fromScratch: false,
     help: false,
   };
 
@@ -43,6 +47,8 @@ function readArgs(argv) {
       index += 1;
     } else if (value === "--apply") {
       args.apply = true;
+    } else if (value === "--from-scratch") {
+      args.fromScratch = true;
     } else {
       throw new Error(`Unknown argument: ${value}`);
     }
@@ -60,12 +66,43 @@ function readOptional(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
 }
 
-function buildPrompt(packetDir, skillText, { apply = false } = {}) {
+function parseJson(filePath) {
+  return JSON.parse(readRequired(filePath));
+}
+
+function publicStructureSummary(packetDir) {
+  const currentBlocks = parseJson(path.join(packetDir, "article.blocks.json"));
+  const { blocks: _blocks, ...metadata } = currentBlocks;
+  return JSON.stringify(metadata, null, 2);
+}
+
+function existingCopyInputs(packetDir, fromScratch) {
+  if (fromScratch) {
+    return `CURRENT PUBLIC COPY:
+<<<CURRENT_PUBLIC_COPY
+Omitted intentionally. Rewrite the post from scratch. Do not reuse the current
+draft, headings, callouts, tables, FAQs, CTA body, source list wording, or article
+block sequence. Preserve only the structural metadata and source boundaries.
+CURRENT_PUBLIC_COPY`;
+  }
+
+  return `DRAFT:
+<<<DRAFT
+${readRequired(path.join(packetDir, "draft.md"))}
+DRAFT
+
+ARTICLE BLOCKS:
+<<<ARTICLE_BLOCKS
+${readRequired(path.join(packetDir, "article.blocks.json"))}
+ARTICLE_BLOCKS`;
+}
+
+function buildPrompt(packetDir, skillText, { apply = false, fromScratch = false } = {}) {
   const files = {
     brief: readRequired(path.join(packetDir, "brief.yaml")),
     outline: readRequired(path.join(packetDir, "outline.md")),
-    draft: readRequired(path.join(packetDir, "draft.md")),
-    articleBlocks: readRequired(path.join(packetDir, "article.blocks.json")),
+    publicStructure: publicStructureSummary(packetDir),
+    existingCopy: existingCopyInputs(packetDir, fromScratch),
     citations: readRequired(path.join(packetDir, "citations.json")),
     claimsLedger: readRequired(path.join(packetDir, "claims-ledger.csv")),
     qaReport: readOptional(path.join(packetDir, "qa-report.md")),
@@ -77,7 +114,19 @@ function buildPrompt(packetDir, skillText, { apply = false } = {}) {
     ? `Return only valid JSON with this exact shape:
 {
   "draft_md": "complete replacement Markdown for draft.md",
-  "article_blocks": { "version": 1, "slug": "...", "title": "...", "blocks": [] },
+  "article_blocks": {
+    "version": 1,
+    "slug": "...",
+    "title": "...",
+    "kicker": "...",
+    "dek": "...",
+    "publishDateLabel": "...",
+    "updatedDateLabel": "...",
+    "readTime": "...",
+    "topic_map": {},
+    "hero": { "src": "...", "alt": "...", "width": 0, "height": 0, "caption": "..." },
+    "blocks": []
+  },
   "audit_notes_md": "brief Markdown audit notes"
 }
 
@@ -91,6 +140,19 @@ Use the provided Sell In Public SEO writing skill as binding style guidance. Pre
 Required output:
 ${outputContract}
 
+Required article.blocks.json block schema:
+- article_blocks must preserve every top-level metadata field from PUBLIC STRUCTURAL METADATA TO PRESERVE, including kicker, dek, date labels, readTime, topic_map, and hero.
+- Use only these block types: answer, paragraph, heading, callout, table, list, media, copy_block, faq, sources, cta.
+- answer: {"type":"answer","id":"short-answer","label":"Short answer","paragraphs":["..."]}
+- paragraph: {"type":"paragraph","html":"..."} Use html, not text. Inline links are allowed as <a href="...">label</a>.
+- heading: {"type":"heading","level":2,"id":"kebab-case-id","text":"..."} Use heading, not h2.
+- callout: {"type":"callout","label":"...","paragraphs":["..."]} Avoid callouts in examples posts unless they add source-specific analysis.
+- table: {"type":"table","headers":["..."],"rows":[["..."]]}
+- faq: {"type":"faq","id":"faq","items":[{"question":"...","answer":"..."}]}
+- sources: {"type":"sources","id":"sources","items":[{"label":"...","url":"..."}]}
+- cta: {"type":"cta","label":"...","heading":"...","body":"...","actions":[{"label":"...","url":"...","style":"primary"}]}
+- Do not use paragraph.text, h2, cta.text, markdown-only blocks, or raw source IDs as public copy.
+
 Hard rules:
 - Use contractions naturally.
 - Do not use em dashes. The character U+2014 is forbidden in the Markdown draft, article block text, FAQ answers, and CTA copy. Use a period, comma, colon, or parentheses instead.
@@ -100,8 +162,11 @@ Hard rules:
 - For examples posts, the examples must be the article. Include concrete public examples and linked public posts when available.
 - For examples posts, do not include meta-instruction sections such as "Use Examples Without Copying Them," "How to Use Examples," "How to Judge the Examples," "Copyable Example Checklist," or repeated "What to borrow:" paragraphs unless the user explicitly asks for a separate checklist article.
 - For examples posts, avoid "borrow" framing in table headers or section labels. Prefer "Why it counts," "What it shows," or "Pattern it reveals."
-- For examples posts, write the synthesis as source analysis: what the public artifact is, who created it, what it shows, why it counts, and what pattern it reveals.
-- Keep source markers and claim IDs in the Markdown draft where claims are material.
+  - For examples posts, do not publish generic quality criteria, source-policy criteria, or editorial testing language as article copy. Banned examples include "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," "what makes [anything] example worth studying," "that's the bar worth holding," "helpful content guidance," "people-first content," "if the public asset could have been written by any competitor," and "How do you find examples inside your own company?"
+  - For examples posts, write the synthesis as source analysis: what the public artifact is, who created it, what it shows, why it counts, and what pattern it reveals.
+  - For examples posts, FAQs must answer definitional, channel, format, revenue-proof, or example-specific questions. Do not use FAQ questions that ask what makes an example count, good, valid, worth studying, or high quality.
+  - Keep source markers and claim IDs in the Markdown draft where claims are material. Use explicit markers like [claim:C001] and [cite:src-008]. Do not use shorthand like [C001, src-008].
+  - Do not put claim IDs, citation IDs, or markdown marker syntax in article.blocks.json. The public article blocks should contain clean reader-facing copy and links.
 
 SEO WRITING SKILL:
 <<<SEO_SKILL
@@ -118,15 +183,12 @@ OUTLINE:
 ${files.outline}
 OUTLINE
 
-DRAFT:
-<<<DRAFT
-${files.draft}
-DRAFT
+PUBLIC STRUCTURAL METADATA TO PRESERVE:
+<<<PUBLIC_STRUCTURE
+${files.publicStructure}
+PUBLIC_STRUCTURE
 
-ARTICLE BLOCKS:
-<<<ARTICLE_BLOCKS
-${files.articleBlocks}
-ARTICLE_BLOCKS
+${files.existingCopy}
 
 CITATIONS:
 <<<CITATIONS
@@ -196,6 +258,96 @@ function isExamplesPacket(packetDir) {
   return /\bexamples?\b/i.test(`${brief}\n${outline}`);
 }
 
+function validateArticleBlockShape(articleBlocks) {
+  const errors = [];
+
+  if (!Array.isArray(articleBlocks.blocks) || !articleBlocks.blocks.length) {
+    errors.push("article_blocks.blocks must be a non-empty array.");
+    return errors;
+  }
+
+  if (!articleBlocks.blocks.some((block) => block.type === "answer")) {
+    errors.push("article_blocks.blocks must include an answer block near the top.");
+  }
+
+  const requireArray = (condition, message) => {
+    if (!condition) errors.push(message);
+  };
+
+  articleBlocks.blocks.forEach((block, index) => {
+    const prefix = `article_blocks block ${index + 1}`;
+    switch (block.type) {
+      case "answer":
+        if (!block.id || !block.label || !Array.isArray(block.paragraphs) || !block.paragraphs.length) {
+          errors.push(`${prefix} answer requires id, label, and paragraphs.`);
+        }
+        break;
+      case "paragraph":
+        if (!block.html) errors.push(`${prefix} paragraph requires html.`);
+        if ("text" in block) errors.push(`${prefix} paragraph must use html, not text.`);
+        break;
+      case "heading":
+        if (![2, 3].includes(block.level) || !block.id || !block.text) {
+          errors.push(`${prefix} heading requires level 2 or 3, id, and text.`);
+        }
+        break;
+      case "callout":
+        if (!block.label || !Array.isArray(block.paragraphs) || !block.paragraphs.length) {
+          errors.push(`${prefix} callout requires label and paragraphs.`);
+        }
+        break;
+      case "table":
+        requireArray(Array.isArray(block.headers) && block.headers.length, `${prefix} table requires headers.`);
+        requireArray(Array.isArray(block.rows) && block.rows.length, `${prefix} table requires rows.`);
+        if (Array.isArray(block.rows) && Array.isArray(block.headers)) {
+          block.rows.forEach((row, rowIndex) => {
+            if (!Array.isArray(row) || row.length !== block.headers.length) {
+              errors.push(`${prefix} table row ${rowIndex + 1} must match header count.`);
+            }
+          });
+        }
+        break;
+      case "list":
+        requireArray(Array.isArray(block.items) && block.items.length, `${prefix} list requires items.`);
+        break;
+      case "media":
+        if (!block.src || !block.alt || !block.width || !block.height || !block.caption) {
+          errors.push(`${prefix} media requires src, alt, width, height, and caption.`);
+        }
+        break;
+      case "copy_block":
+        if (!block.title || !block.code) errors.push(`${prefix} copy_block requires title and code.`);
+        break;
+      case "faq":
+        requireArray(Array.isArray(block.items) && block.items.length, `${prefix} faq requires items.`);
+        block.items?.forEach((item, itemIndex) => {
+          if (!item.question || !item.answer) errors.push(`${prefix} faq item ${itemIndex + 1} requires question and answer.`);
+        });
+        break;
+      case "sources":
+        requireArray(Array.isArray(block.items) && block.items.length, `${prefix} sources requires items.`);
+        block.items?.forEach((item, itemIndex) => {
+          if (!item.label || !item.url) errors.push(`${prefix} source item ${itemIndex + 1} requires label and url.`);
+        });
+        break;
+      case "cta":
+        if (!block.label || !block.heading || !block.body || !Array.isArray(block.actions) || !block.actions.length) {
+          errors.push(`${prefix} cta requires label, heading, body, and actions.`);
+        }
+        block.actions?.forEach((action, actionIndex) => {
+          if (!action.label || !action.url || !["primary", "secondary"].includes(action.style)) {
+            errors.push(`${prefix} cta action ${actionIndex + 1} requires label, url, and primary/secondary style.`);
+          }
+        });
+        break;
+      default:
+        errors.push(`${prefix} has unsupported type: ${block.type}`);
+    }
+  });
+
+  return errors;
+}
+
 function validateAppliedPayload(payload, packetDir) {
   const errors = [];
   const currentBlocks = JSON.parse(readRequired(path.join(packetDir, "article.blocks.json")));
@@ -222,9 +374,13 @@ function validateAppliedPayload(payload, packetDir) {
   if (!articleBlocks.hero?.src || !articleBlocks.hero?.alt || !articleBlocks.hero?.width || !articleBlocks.hero?.height) {
     errors.push("article_blocks.hero must preserve src, alt, width, and height.");
   }
+  errors.push(...validateArticleBlockShape(articleBlocks));
 
   const publicText = collectStrings([payload.draft_md || "", articleBlocks.blocks || []]).join("\n");
   if (publicText.includes("—")) errors.push("Claude output contains em dashes.");
+  if (/\[[A-Z]\d{3,}\s*,\s*src-\d{3,}\]/i.test(payload.draft_md || "")) {
+    errors.push("draft_md must use [claim:C###] and [cite:src-###] markers, not shorthand [C###, src-###] markers.");
+  }
 
   if (isExamplesPacket(packetDir)) {
     const bannedExamplesPatterns = [
@@ -234,6 +390,16 @@ function validateAppliedPayload(payload, packetDir) {
       /\bhow to judge (the )?examples\b/i,
       /\bcopyable example checklist\b/i,
       /\bwhat b2b teams can borrow\b/i,
+      /\bquality test\b/i,
+      /\bquality bar\b/i,
+      /\bselection criteria\b/i,
+      /\bwhat makes an example count\b/i,
+      /\bwhat makes .{0,80}example worth studying\b/i,
+      /\bthat'?s the bar worth holding\b/i,
+      /\bhelpful content guidance\b/i,
+      /\bpeople-first content\b/i,
+      /\bcould have been written by any competitor\b/i,
+      /\bhow do you find examples inside your own company\b/i,
       /\binstructions for (how to )?(write|make|create).{0,80}examples article\b/i,
     ];
     for (const pattern of bannedExamplesPatterns) {
@@ -248,7 +414,7 @@ function validateAppliedPayload(payload, packetDir) {
   }
 }
 
-function writeAppliedOutput(payload, packetDir, outPath, model) {
+function writeAppliedOutput(payload, packetDir, outPath, model, { fromScratch = false } = {}) {
   fs.writeFileSync(path.join(packetDir, "draft.md"), `${payload.draft_md.trim()}\n`);
   fs.writeFileSync(path.join(packetDir, "article.blocks.json"), `${JSON.stringify(payload.article_blocks, null, 2)}\n`);
 
@@ -258,6 +424,7 @@ Status: applied
 Model: ${model}
 Applied to draft.md: true
 Applied to article.blocks.json: true
+From scratch: ${fromScratch ? "true" : "false"}
 Generated at: ${new Date().toISOString()}
 
 The static blog renderer publishes article.blocks.json. This pass wrote the
@@ -286,7 +453,7 @@ async function main() {
 
   const packetDir = path.resolve(args.packet);
   const skillText = readRequired(args.skillPath);
-  const prompt = buildPrompt(packetDir, skillText, { apply: args.apply });
+  const prompt = buildPrompt(packetDir, skillText, { apply: args.apply, fromScratch: args.fromScratch });
 
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
@@ -318,7 +485,7 @@ async function main() {
   if (args.apply) {
     const payload = extractJsonPayload(output);
     validateAppliedPayload(payload, packetDir);
-    writeAppliedOutput(payload, packetDir, outPath, args.model);
+    writeAppliedOutput(payload, packetDir, outPath, args.model, { fromScratch: args.fromScratch });
     console.log(`Claude writing pass applied to ${packetDir}`);
     console.log(`Claude writing pass audit written to ${outPath}`);
   } else {

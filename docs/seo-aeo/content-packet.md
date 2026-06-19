@@ -46,6 +46,8 @@ Query exports, trend inputs, Reddit data, autocomplete, People Also Ask, and AI 
 
 For examples, case-study, LinkedIn content, founder-led content, and team-led content posts, the packet must also document the real public examples used. Prefer first-party URLs and public LinkedIn profile posts from founders, executives, team leads, or practitioners. Record the example URL, author or team, role, source date when visible, capture method, and any API/tool limitations in `research.md`, `citations.json`, or `qa-report.md`.
 
+For examples posts, research and QA may use quality rubrics, helpful-content guidance, source policy, or selection criteria internally, but those rubrics should not become public article sections or callouts. The publishable article should analyze named examples, not teach the reader how to evaluate whether an example counts unless the user explicitly asked for that separate article type.
+
 ## Packet Acceptance Criteria
 
 A packet is ready for publish implementation only when:

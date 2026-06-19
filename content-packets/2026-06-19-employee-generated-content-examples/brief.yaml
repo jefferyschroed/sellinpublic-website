@@ -41,9 +41,8 @@ search_intent:
     - "employee expertise content"
   related_questions:
     - "What are good examples of employee-generated content in B2B?"
-    - "How do you tell if an employee content example is useful?"
     - "What can B2B teams learn from Clay, Lovable, GitLab, and Shopify?"
-    - "How should employee-generated content examples be measured?"
+    - "Which public posts and assets show employee, founder, or team expertise?"
 
 topic_map:
   pillar_id: "pillar-employee-generated-content"
@@ -82,6 +81,8 @@ must_include:
   - "Internal links to the hub, comparison post, and blog index."
   - "Sources section with approved citations only."
 must_avoid:
+  - "Quality-test sections, source-policy callouts, or generic criteria for judging examples."
+  - "Google helpful-content guidance as public article copy."
   - "Calling every company example employee-generated content when the source is really community, documentation, or product marketing."
   - "Unsupported claims about pipeline, conversion, or revenue."
   - "Generic content marketing advice."
@@ -97,7 +98,6 @@ source_requirements:
     - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
   required_source_types:
     - "First-party company examples."
-    - "Official guidance or primary research for quality and buyer context."
     - "Internal SME notes only for Sell In Public POV."
 
 internal_links:

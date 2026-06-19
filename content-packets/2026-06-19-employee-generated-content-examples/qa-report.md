@@ -14,6 +14,13 @@ Decision: `approved_with_notes`
 
 The refreshed article now behaves like a literal examples page. It links to inspectable public posts and source assets from Clay, Lovable, GitLab, and Shopify Engineering, distinguishes LinkedIn posts from durable source assets, includes a comparison table focused on what each artifact shows, and keeps the commercial CTA separated from the educational body.
 
+## Root Cause And Prevention
+
+- Root cause: `article.blocks.json` is the publish source, and a valid `callout` block carried internal QA/source-policy rubric language into the public article. The prior outline and claim ledger also contained example-selection language, so the writing pass had enough source material to reproduce a "Quality test" section even though the article needed literal examples.
+- Why it reached the site: the validator checked block schema and required publish artifacts, but it did not yet reject examples posts that read like evaluation criteria or instructions for making examples.
+- Prevention now in place: the SEO writing skill, blog foundation skill, blog QA skill, content packet SOP, draft subagent SOP, QA subagent SOP, `scripts/blog/validate-packet.mjs`, and `scripts/seo-aeo/claude-blog-pass.mjs` now ban public examples-post rubric language such as "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," and criteria-style FAQ questions.
+- Generator fix: `scripts/seo-aeo/claude-blog-pass.mjs` now supports `--from-scratch`, omits contaminated public copy from the prompt, requires full renderer-valid `article.blocks.json` metadata and block schemas, and rejects unsafe Claude output before writing.
+
 ## Blockers
 
 - None.
@@ -35,7 +42,7 @@ The refreshed article now behaves like a literal examples page. It links to insp
 - Primary query addressed: yes, `employee generated content examples`.
 - Specific examples and public URLs: yes.
 - Comparison table: yes.
-- Examples-as-instructions drift removed: yes. The final public source files no longer include "Use Examples Without Copying Them," "Copyable Example Checklist," repeated "What to borrow:" paragraphs, or "What B2B teams can borrow" table framing.
+- Examples-as-instructions drift removed: yes. The final public source files no longer include "Quality test," "What Makes An Example Count," "Use Examples Without Copying Them," "Copyable Example Checklist," repeated "What to borrow:" paragraphs, or "What B2B teams can borrow" table framing.
 - FAQ: yes.
 - Clear definitions: yes.
 - Source list: yes.

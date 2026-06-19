@@ -151,6 +151,16 @@ function validateExamplesArticleIntent(packet, errors) {
     { label: "How to Judge the Examples", pattern: /\bhow to judge (the )?examples\b/i },
     { label: "Copyable Example Checklist", pattern: /\bcopyable example checklist\b/i },
     { label: "What B2B teams can borrow", pattern: /\bwhat b2b teams can borrow\b/i },
+    { label: "Quality test", pattern: /\bquality test\b/i },
+    { label: "Quality bar", pattern: /\bquality bar\b/i },
+    { label: "Selection criteria", pattern: /\bselection criteria\b/i },
+    { label: "What Makes An Example Count", pattern: /\bwhat makes an example count\b/i },
+    { label: "What makes an example worth studying", pattern: /\bwhat makes .{0,80}example worth studying\b/i },
+    { label: "That's the bar worth holding", pattern: /\bthat'?s the bar worth holding\b/i },
+    { label: "Helpful content guidance", pattern: /\bhelpful content guidance\b/i },
+    { label: "People-first content", pattern: /\bpeople-first content\b/i },
+    { label: "Could have been written by any competitor", pattern: /\bcould have been written by any competitor\b/i },
+    { label: "How do you find examples inside your own company", pattern: /\bhow do you find examples inside your own company\b/i },
   ];
 
   for (const { label, pattern } of bannedExamplesPatterns) {

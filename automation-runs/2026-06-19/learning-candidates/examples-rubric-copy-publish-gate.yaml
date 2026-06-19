@@ -1,0 +1,18 @@
+candidate_id: "2026-06-19-examples-rubric-copy-publish-gate"
+date: "2026-06-19"
+source_type: "publishing"
+source_path: "content-packets/2026-06-19-employee-generated-content-examples/article.blocks.json"
+observed_problem: "Internal examples-post QA/source-policy rubric copy reached the public article because article.blocks.json accepted it as a valid callout block."
+affected_workflow: "SEO/AEO examples-post drafting, Claude audience-copy generation, packet validation, QA, and static blog publishing"
+target_skill: "sellinpublic-seo-blog, sellinpublic-blog-foundation, sellinpublic-blog-qa"
+root_cause: "The publish gate validated schema and applied-Claude status, but did not reject public examples posts that used source-policy criteria, quality-test language, or criteria-style FAQ questions instead of literal example analysis."
+evidence:
+  - "Live HTML and blog/employee-generated-content-examples/index.html contained a Quality test callout based on Google helpful-content guidance."
+  - "content-packets/2026-06-19-employee-generated-content-examples/article.blocks.json contained public rubric language even though the post promise was examples from B2B companies."
+  - "content-packets/2026-06-19-employee-generated-content-examples/claims-ledger.csv included an editorial framing claim that described examples as judged by whether they teach from real work."
+  - "scripts/blog/validate-packet.mjs did not previously reject source-policy or quality-rubric language in examples-post article blocks."
+reusability_classification: "reusable_process_change"
+repeat_count: 2
+proposed_change: "Keep rubric and helpful-content guidance in research and QA only. Reject examples-post article blocks that contain quality-test language, source-policy criteria, or criteria-style FAQ questions, and make the Claude from-scratch pass omit contaminated public copy when rewriting."
+risk: "Low. The gate is scoped to examples posts and still allows owner-approved checklist/how-to articles when explicitly requested."
+reviewer: "Codex"

@@ -35,6 +35,7 @@ For public blog prose, run the final audience-copy pass through Claude Sonnet 4.
 - Do not use more than one CTA, and keep it at the end.
 - Do not let an examples article become instructions for writing an examples article. Include literal examples, public URLs, named companies, people or teams, and the lesson from each example.
 - Do not use "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," or repeated "What to borrow:" sections in examples posts unless the user explicitly asks for a checklist/how-to article.
+- Do not publish QA rubric language in examples posts. Keep "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," "what makes [anything] example worth studying," helpful-content guidance, and "if this could have been written by any competitor" out of public article copy.
 - Do not hand off `draft.md` without checking that `article.blocks.json` can match it, because the generator publishes the block file.
 
 ## Stop Conditions

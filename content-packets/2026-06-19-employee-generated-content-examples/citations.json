@@ -78,19 +78,6 @@
     "notes": "First-party example of a technical field note that teaches from operator experience."
   },
   {
-    "id": "src-007",
-    "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
-    "title": "Creating helpful, reliable, people-first content",
-    "publisher": "Google Search Central",
-    "author": "",
-    "published_date": "",
-    "accessed_date": "2026-06-19",
-    "source_type": "official_guidance",
-    "reliability": "A",
-    "claims_supported": ["C006"],
-    "notes": "Used for the public quality bar around original value, expertise, and usefulness."
-  },
-  {
     "id": "src-008",
     "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
     "title": "What Is Employee-Generated Content?",

@@ -426,6 +426,39 @@ function hasValues(row) {
   return Object.values(row).some((value) => String(value ?? "").trim() !== "");
 }
 
+function rowHasSignal(row, table) {
+  return (table.signalFields || []).some((field) => String(pick(row, field) ?? "").trim());
+}
+
+function rowHasAnyNormalizedHeader(row, headers) {
+  const normalizedHeaders = new Set(Object.keys(row).map(normalizeHeader));
+  return headers.some((header) => normalizedHeaders.has(normalizeHeader(header)));
+}
+
+function isDiscoveryOnlySearchQueryExport(rows, table, sourceFile) {
+  if (rows.some((row) => rowHasSignal(row, table))) return false;
+
+  const discoveryHeaders = [
+    "trend_delta",
+    "trend_window",
+    "validation_source",
+    "source_url",
+    "captured_at",
+    "term",
+    "topic",
+    "source_row_count",
+  ];
+  const discoveryFile = /google[_\s-]*trends|trend[_\s-]*intelligence|answer[_\s-]*the[_\s-]*public|alsoasked|query[_\s-]*intelligence/i.test(
+    sourceFile,
+  );
+  const discoveryRows = rows.some((row) => {
+    const provenance = [row.source, row.Source, row.validation_source, row.notes, row.Notes].join(" ");
+    return rowHasAnyNormalizedHeader(row, discoveryHeaders) || /google\s*trends|answer\s*the\s*public|alsoasked/i.test(provenance);
+  });
+
+  return discoveryFile || discoveryRows;
+}
+
 function isDate(value) {
   return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
 }
@@ -549,6 +582,14 @@ function run() {
       const usableRows = rows.filter(hasValues);
       if (!usableRows.length) {
         skipped.push({ table: tableName, file: sourceFile, reason: "no data rows" });
+        continue;
+      }
+      if (tableName === "search_query_daily" && isDiscoveryOnlySearchQueryExport(usableRows, table, sourceFile)) {
+        skipped.push({
+          table: tableName,
+          file: sourceFile,
+          reason: "discovery-only query/trend export ignored; use imports/trends or research/query-intelligence for demand research",
+        });
         continue;
       }
       const normalized = usableRows.map((row) => normalizeRow(row, table, sourceFile, runDate));

@@ -53,7 +53,7 @@ function commandSequenceFor(runDate, request) {
 }
 
 function scaffoldCommandFor(runDate) {
-  return `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1`;
+  return `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${runDate}`;
 }
 
 function rawExportPath(runDate, request) {

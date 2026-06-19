@@ -125,7 +125,7 @@ function buildBrief(root, runDate) {
   const strictCommands = [
     `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --dry-run`,
     `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${runDate}`,
-    `Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1`,
+    `Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${runDate}`,
   ];
   const debugCommands = [
     `node scripts/seo-aeo/validate-demand-import-pack.mjs --date ${runDate} --fail-on-blocked --fail-on-empty-staging --fail-on-none-valid`,

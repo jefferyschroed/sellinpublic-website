@@ -288,10 +288,10 @@ node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --dry-run
 node scripts/seo-aeo/check-demand-promotion-freshness.mjs --date <yyyy-mm-dd>
 node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<yyyy-mm-dd>
 # Optional only after reviewing the promotion report and receiving packet approval:
-node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --scaffold-limit 1
+node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<yyyy-mm-dd>
 ```
 
-Use marker-approved plain `--apply` only after the dry-run report has no blocked rows and promotion is approved. Header-only staging files stay out of `imports/` and remain discovery blockers. The runner promotes only validated rows, rebuilds discovery, and validates the current handoff. Use `--scaffold-limit` only after the plain apply report has been reviewed and packet approval exists; even then, scaffolding is limited to new-post packet candidates. Refresh candidates are routed to existing packet refresh work instead of new packet scaffolding.
+Use marker-approved plain `--apply` only after the dry-run report has no blocked rows and promotion is approved. Header-only staging files stay out of `imports/` and remain discovery blockers. The runner promotes only validated rows, rebuilds discovery, and validates the current handoff. Use `--scaffold-limit` only after the plain apply report has been reviewed and packet approval exists, and include `--scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>`; even then, scaffolding is limited to new-post packet candidates. Refresh candidates are routed to existing packet refresh work instead of new packet scaffolding.
 
 If `validate-demand-import-pack.mjs` runs after the promotion dry-run, rerun `check-demand-promotion-freshness.mjs`. A stale freshness report means the promotion report is no longer decision-grade; rerun the dry-run before any apply or scaffold command.
 

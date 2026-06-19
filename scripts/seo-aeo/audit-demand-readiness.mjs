@@ -264,7 +264,7 @@ function chooseNextUnambiguousAction(rows, existingDiscovery, projected) {
       command_chain: [
         "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --dry-run",
         "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<run-date>",
-        "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1",
+        "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<run-date>",
       ],
     };
   }
@@ -321,7 +321,7 @@ function chooseNextUnambiguousAction(rows, existingDiscovery, projected) {
     command_chain_after_filling: [
       "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --dry-run",
       "node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<run-date>",
-      "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1",
+      "Optional after reviewing the promotion report and receiving packet approval: node scripts/seo-aeo/run-demand-promotion.mjs --date <run-date> --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<run-date>",
     ],
   };
 }

@@ -347,7 +347,7 @@ The promotion runner writes `automation-runs/<date>/demand-promotion-report.json
 Run scaffolded apply only after reviewing the plain apply report and receiving packet approval:
 
 ```sh
-node scripts/seo-aeo/run-demand-promotion.mjs --date 2026-06-17 --apply --scaffold-limit 1
+node scripts/seo-aeo/run-demand-promotion.mjs --date 2026-06-17 --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:2026-06-17
 ```
 
 The lower-level validator remains available for debugging and supports strict gate flags:
@@ -435,7 +435,7 @@ node scripts/seo-aeo/content-runner.mjs --date 2026-06-17 --metrics-date 2026-06
 Scaffold up to three candidate packets only after candidate review, plain demand-promotion report review when demand promotion was involved, and packet-scaffolding approval:
 
 ```sh
-node scripts/seo-aeo/content-runner.mjs --date 2026-06-17 --scaffold-limit 3
+node scripts/seo-aeo/content-runner.mjs --date 2026-06-17 --scaffold-limit 3 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:2026-06-17
 ```
 
 Demand promotion apply is guarded by live deployment state. If `automation-runs/<date>/live-deployment-check.json` or `run-status.json` shows a blocked live deployment, `run-demand-promotion.mjs --apply` stops before copying import rows or rebuilding discovery. Resolve deployment first. If the owner explicitly defers the deployment blocker, include the exact marker shown by the dry-run/report:

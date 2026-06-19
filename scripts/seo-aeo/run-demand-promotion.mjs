@@ -10,6 +10,7 @@ const ALLOWED_FLAGS = new Set([
   "--dry-run",
   "--apply",
   "--approval-marker",
+  "--scaffold-approval-marker",
   "--live-deploy-defer-marker",
   "--scaffold-limit",
   "--require-ready",
@@ -22,7 +23,7 @@ function usage() {
   # Only when live deployment is blocked and the deploy blocker is explicitly deferred:
   node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --approval-marker DEMAND-PROMOTION-APPROVED:<yyyy-mm-dd> --live-deploy-defer-marker LIVE-DEPLOY-BLOCKER-DEFERRED:<yyyy-mm-dd>
   # Optional only after plain apply report review and packet approval:
-  node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --scaffold-limit 1
+  node scripts/seo-aeo/run-demand-promotion.mjs --date <yyyy-mm-dd> --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<yyyy-mm-dd>
 
 Promotes reviewed demand-import staging rows through the existing validators, rebuilds daily
 query discovery, and optionally scaffolds packets only after a current ready handoff validates.
@@ -47,6 +48,7 @@ function parseArgs(argv) {
     scaffoldLimitProvided: false,
     requireReady: false,
     approvalMarker: "",
+    scaffoldApprovalMarker: "",
     liveDeployDeferMarker: "",
     help: false,
   };
@@ -82,6 +84,13 @@ function parseArgs(argv) {
       index += 1;
       continue;
     }
+    if (item === "--scaffold-approval-marker") {
+      const value = argv[index + 1];
+      if (!value || value.startsWith("--")) throw new Error("--scaffold-approval-marker requires a value.");
+      args.scaffoldApprovalMarker = value;
+      index += 1;
+      continue;
+    }
     if (item === "--live-deploy-defer-marker") {
       const value = argv[index + 1];
       if (!value || value.startsWith("--")) throw new Error("--live-deploy-defer-marker requires a value.");
@@ -103,6 +112,10 @@ function parseArgs(argv) {
 
 function approvalMarkerFor(runDate) {
   return `DEMAND-PROMOTION-APPROVED:${runDate}`;
+}
+
+function scaffoldApprovalMarkerFor(runDate) {
+  return `PACKET-SCAFFOLD-APPROVED:${runDate}`;
 }
 
 function liveDeployDeferMarkerFor(runDate) {
@@ -291,6 +304,7 @@ function run() {
     require_ready: args.requireReady,
     status: "running",
     approval_marker_provided: args.approvalMarker ? "yes" : "no",
+    scaffold_approval_marker_provided: args.scaffoldApprovalMarker ? "yes" : "no",
     live_deploy_defer_marker_provided: args.liveDeployDeferMarker ? "yes" : "no",
     steps: [],
     validation: null,
@@ -311,6 +325,16 @@ function run() {
       "blocked_missing_apply_approval",
       1,
       `Plain apply requires \`--approval-marker ${approvalMarkerFor(args.runDate)}\` after dry-run review.`
+    );
+  }
+
+  if (args.apply && args.scaffoldLimit > 0 && args.scaffoldApprovalMarker !== scaffoldApprovalMarkerFor(args.runDate)) {
+    finalize(
+      root,
+      report,
+      "blocked_missing_scaffold_approval",
+      1,
+      `Scaffolded apply requires \`--scaffold-approval-marker ${scaffoldApprovalMarkerFor(args.runDate)}\` after plain promotion report review and packet scaffolding approval.`
     );
   }
 
@@ -337,7 +361,7 @@ function run() {
         report,
         "blocked_scaffold_requires_plain_apply",
         1,
-        `Run plain \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${args.runDate} --apply\` first and review the resulting ready handoff report before using --scaffold-limit.`
+        `Run plain \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${args.runDate} --apply --approval-marker ${approvalMarkerFor(args.runDate)}\` first and review the resulting ready handoff report before using --scaffold-limit.`
       );
     }
     report.plain_promotion_proof = {
@@ -519,7 +543,7 @@ function run() {
     ready ? "applied_discovery_rebuilt_handoff_ready" : "applied_discovery_rebuilt_handoff_draft",
     0,
     ready
-      ? `Ready handoff exists. Run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${args.runDate} --apply --scaffold-limit 1\` only if packet scaffolding is approved.`
+      ? `Ready handoff exists. Run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${args.runDate} --apply --scaffold-limit 1 --scaffold-approval-marker ${scaffoldApprovalMarkerFor(args.runDate)}\` only if packet scaffolding is approved.`
       : "Demand was promoted and discovery rebuilt, but the handoff is not ready. Keep resolving source diversity, topic authority, and validated demand gaps."
   );
 }

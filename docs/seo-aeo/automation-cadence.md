@@ -73,7 +73,7 @@ node scripts/seo-aeo/content-runner.mjs --date <yyyy-mm-dd>
 
 4. Dispatch only from `automation-runs/<date>/work-queue-rollup.md` and `automation-runs/<date>/subagent-dispatch/ready-batch.md`, one subagent per safe prompt file. Complete each ledger task only after its listed artifact exists. If multiple agents wrote artifacts, first run `node scripts/seo-aeo/subagent-queue.mjs sync-completions --date <yyyy-mm-dd>`, then rerun `node scripts/seo-aeo/build-subagent-dispatch.mjs --date <yyyy-mm-dd>` and `node scripts/seo-aeo/build-work-queue-rollup.mjs --date <yyyy-mm-dd>`.
 
-If reviewed demand rows are ready after the daily run, run `run-demand-promotion.mjs --dry-run` first. Use plain `--apply` only with `--approval-marker DEMAND-PROMOTION-APPROVED:<date>`. Use `--scaffold-limit` only after the plain apply report has been reviewed and separate packet scaffolding approval exists. If an approved packet becomes publish-ready after the daily run, run the publish governor dry-run first. Use `--generate-approved` only after human approval and only for governor-selected packets.
+If reviewed demand rows are ready after the daily run, run `run-demand-promotion.mjs --dry-run` first. Use plain `--apply` only with `--approval-marker DEMAND-PROMOTION-APPROVED:<date>`. Use `--scaffold-limit` only after the plain apply report has been reviewed and separate packet scaffolding approval exists, and include `--scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>`. If an approved packet becomes publish-ready after the daily run, run the publish governor dry-run first. Use `--generate-approved` only after human approval and only for governor-selected packets.
 
 ## Recurring Automations
 
@@ -255,7 +255,7 @@ Return: decisions, evidence, next-month bets, source gaps, and process improveme
 - Publish gate: founder/GTM lead approves final page and CTA.
 - Governor gate: `node scripts/seo-aeo/publish-governor.mjs --date <date>` must select the packet before any static generation write. The default run is dry-run planning only; `--generate-approved` is reserved for packets inside the daily limits.
 - Demand promotion gate: `run-demand-promotion.mjs --apply` requires `--approval-marker DEMAND-PROMOTION-APPROVED:<date>` after dry-run review.
-- Packet scaffold gate: `--scaffold-limit` requires a prior plain apply report review and separate packet scaffolding approval.
+- Packet scaffold gate: `--scaffold-limit` requires a prior plain apply report review, separate packet scaffolding approval, and `--scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>`.
 
 ## What Not To Automate
 

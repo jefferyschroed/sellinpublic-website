@@ -142,8 +142,8 @@ This folder is staging only. The CSVs here are header-only drafts and are not im
 4. Normalize it into the matching header-only draft CSV with \`node scripts/seo-aeo/stage-reviewed-demand-export.mjs --date ${report.run_date} --candidate <candidate_id> --type <recommended_import_type> --source-file <raw-export.csv> --source-name <tool> --validation-source <export/source id> --reviewed-by <name> --dry-run\`. For Google Search Console, Bing Webmaster, and Google Trends imports, omit third-party validation flags unless the source-specific instructions ask for them.
 5. Rerun the same command with \`--apply\` only after confirming the normalized rows are real reviewed demand rows.
 6. Run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${report.run_date} --dry-run\`.
-7. If dry-run passes and promotion is approved, run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${report.run_date} --apply\`.
-8. Review the promotion report. Run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${report.run_date} --apply --scaffold-limit 1\` only after packet scaffolding is separately approved.
+7. If dry-run passes and promotion is approved, run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${report.run_date} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${report.run_date}\`.
+8. Review the promotion report. Run \`node scripts/seo-aeo/run-demand-promotion.mjs --date ${report.run_date} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${report.run_date}\` only after packet scaffolding is separately approved.
 
 ## Blocked Exact-Query Policy
 

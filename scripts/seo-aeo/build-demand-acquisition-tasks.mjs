@@ -329,9 +329,9 @@ The orchestrator will run:
 
 \`\`\`sh
 node scripts/seo-aeo/run-demand-promotion.mjs --date ${task.run_date} --dry-run
-node scripts/seo-aeo/run-demand-promotion.mjs --date ${task.run_date} --apply
+node scripts/seo-aeo/run-demand-promotion.mjs --date ${task.run_date} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${task.run_date}
 # Optional only after reviewing the plain promotion report and receiving packet approval:
-node scripts/seo-aeo/run-demand-promotion.mjs --date ${task.run_date} --apply --scaffold-limit 1
+node scripts/seo-aeo/run-demand-promotion.mjs --date ${task.run_date} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${task.run_date}
 \`\`\`
 `;
 }

@@ -29,7 +29,7 @@
         "manual Reddit captures are discovery-only",
         "Do not publish, generate, distribute, or draft blogs automatically",
         "Do not run demand promotion --apply without --approval-marker DEMAND-PROMOTION-APPROVED:<date>",
-        "Do not use --scaffold-limit until plain apply report review and separate packet scaffolding approval exist",
+        "Do not use --scaffold-limit until plain apply report review and separate packet scaffolding approval exist, and include --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>",
         "If live deployment is blocked",
         "Do not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution",
         "LIVE-DEPLOY-BLOCKER-DEFERRED"
@@ -58,7 +58,7 @@
         "one report-only Skill Steward subagent per task",
         "Do not combine AI citation or skill-steward tasks",
         "Do not run demand promotion --apply without --approval-marker DEMAND-PROMOTION-APPROVED:<date>",
-        "Do not use --scaffold-limit until plain apply report review and separate packet scaffolding approval exist",
+        "Do not use --scaffold-limit until plain apply report review and separate packet scaffolding approval exist, and include --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>",
         "Reddit API remains disabled unless explicitly enabled in local config",
         "Do not use unofficial answer-engine scraping",
         "owner-actions",

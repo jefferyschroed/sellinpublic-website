@@ -209,7 +209,7 @@ The single daily entrypoint is the top-level content controller:
 node scripts/seo-aeo/content-runner.mjs --date <yyyy-mm-dd>
 ```
 
-It calls the lower-level daily pipeline, writes the daily status and content-run report, builds subagent dispatch prompts, checks completed subagent handoff artifacts, and dry-runs the publish governor. It does not scaffold packets unless `--scaffold-limit <n>` is provided, and it does not write generated blog output unless `--generate-approved` is provided.
+It calls the lower-level daily pipeline, writes the daily status and content-run report, builds subagent dispatch prompts, checks completed subagent handoff artifacts, and dry-runs the publish governor. It does not scaffold packets unless `--scaffold-limit <n>` and `--scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:<date>` are provided, and it does not write generated blog output unless `--generate-approved` is provided.
 
 The lower-level daily pipeline pulls or imports available signals, rolls query/citation/distribution lanes into page-level feedback, scores performance rows, plans candidate topics, and writes subagent assignments. It runs locally and skips setup-dependent connectors until credentials exist.
 

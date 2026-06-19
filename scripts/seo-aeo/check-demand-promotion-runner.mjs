@@ -35,10 +35,27 @@ const CLI_GUARD_CASES = [
   {
     date: "2099-01-05",
     name: "scaffold requires prior plain promotion proof",
-    args: ["--date", "2099-01-05", "--apply", "--scaffold-limit", "1"],
+    args: [
+      "--date",
+      "2099-01-05",
+      "--apply",
+      "--scaffold-limit",
+      "1",
+      "--scaffold-approval-marker",
+      "PACKET-SCAFFOLD-APPROVED:2099-01-05",
+    ],
     expectExit: 1,
-    expectOutput: "Run plain `node scripts/seo-aeo/run-demand-promotion.mjs --date 2099-01-05 --apply` first",
+    expectOutput:
+      "Run plain `node scripts/seo-aeo/run-demand-promotion.mjs --date 2099-01-05 --apply --approval-marker DEMAND-PROMOTION-APPROVED:2099-01-05` first",
     expectReportStatus: "blocked_scaffold_requires_plain_apply",
+  },
+  {
+    date: "2099-01-07",
+    name: "scaffold requires packet approval marker",
+    args: ["--date", "2099-01-07", "--apply", "--scaffold-limit", "1"],
+    expectExit: 1,
+    expectOutput: "Scaffolded apply requires `--scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:2099-01-07`",
+    expectReportStatus: "blocked_missing_scaffold_approval",
   },
   {
     date: "2099-01-06",

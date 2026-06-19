@@ -313,9 +313,9 @@ The artifact must include:
 Use this command chain after reviewed staging rows are filled:
 \`\`\`sh
 node scripts/seo-aeo/run-demand-promotion.mjs --date ${row.date} --dry-run
-node scripts/seo-aeo/run-demand-promotion.mjs --date ${row.date} --apply
+node scripts/seo-aeo/run-demand-promotion.mjs --date ${row.date} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${row.date}
 # Optional only after reviewing the plain promotion report and receiving packet approval:
-node scripts/seo-aeo/run-demand-promotion.mjs --date ${row.date} --apply --scaffold-limit 1
+node scripts/seo-aeo/run-demand-promotion.mjs --date ${row.date} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${row.date}
 \`\`\`
 
 Do not draft, approve, generate, publish, or distribute a blog post.`;

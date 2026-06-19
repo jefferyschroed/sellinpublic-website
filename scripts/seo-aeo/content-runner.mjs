@@ -16,6 +16,10 @@ function hasFlag(name) {
   return process.argv.includes(name);
 }
 
+function scaffoldApprovalMarkerFor(runDate) {
+  return `PACKET-SCAFFOLD-APPROVED:${runDate}`;
+}
+
 function dailyRunnerMetricsArgs(metricsRange) {
   if (metricsRange.startDate === metricsRange.endDate) return ["--metrics-date", metricsRange.startDate];
   return ["--metrics-start", metricsRange.startDate, "--metrics-end", metricsRange.endDate];
@@ -192,6 +196,7 @@ function run() {
   const metricsRange = metricsDateRangeFromArgs(args);
   const metricsDate = dateRangeLabel(metricsRange);
   const scaffoldLimit = Number(arg("--scaffold-limit", "0"));
+  const scaffoldApprovalMarker = arg("--scaffold-approval-marker", "");
   const generateApproved = hasFlag("--generate-approved");
   const allowMultiPost = hasFlag("--allow-multi-post");
   const dryRunGenerate = !generateApproved || hasFlag("--dry-run");
@@ -209,17 +214,27 @@ function run() {
 
   const { planPath, rows: candidates } = readPlanCandidates(root, runDate);
   if (scaffoldLimit > 0 && fs.existsSync(planPath)) {
-    steps.push(
-      runStep("Scaffold candidate packets", process.execPath, [
-        "scripts/seo-aeo/scaffold-packets.mjs",
-        "--from",
-        planPath,
-        "--limit",
-        String(scaffoldLimit),
-        "--date",
-        runDate,
-      ])
-    );
+    if (scaffoldApprovalMarker !== scaffoldApprovalMarkerFor(runDate)) {
+      steps.push({
+        name: "Scaffold candidate packets",
+        command: `(blocked; missing --scaffold-approval-marker ${scaffoldApprovalMarkerFor(runDate)})`,
+        status: "failed",
+        exit_code: 1,
+        output: `--scaffold-limit requires --scaffold-approval-marker ${scaffoldApprovalMarkerFor(runDate)} after candidate review and packet scaffolding approval.`,
+      });
+    } else {
+      steps.push(
+        runStep("Scaffold candidate packets", process.execPath, [
+          "scripts/seo-aeo/scaffold-packets.mjs",
+          "--from",
+          planPath,
+          "--limit",
+          String(scaffoldLimit),
+          "--date",
+          runDate,
+        ])
+      );
+    }
   }
 
   const governorArgs = ["scripts/seo-aeo/publish-governor.mjs", "--date", runDate, "--generate-approved"];

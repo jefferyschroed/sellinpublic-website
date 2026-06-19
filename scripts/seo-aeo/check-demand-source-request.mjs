@@ -144,11 +144,13 @@ function run() {
       "source request third command should dry-run promotion."
     );
     assert(
-      request.next_commands_after_owner_input[3] === `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply`,
+      request.next_commands_after_owner_input[3] ===
+        `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${runDate}`,
       "source request fourth command should apply promotion without scaffolding."
     );
     assert(
-      request.optional_scaffold_command_after_packet_approval === `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1`,
+      request.optional_scaffold_command_after_packet_approval ===
+        `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${runDate}`,
       "source request should expose scaffolded apply only as an optional packet-approval command."
     );
     assert(request.scaffold_command_requires_approval === true, "source request should mark scaffolded apply as approval-gated.");

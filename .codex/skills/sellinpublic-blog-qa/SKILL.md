@@ -25,11 +25,13 @@ Use `$sellinpublic-seo-blog` before drafting, editing, or judging article copy v
 2. Check packet completeness before reviewing prose. Missing required packet artifacts are blockers unless the user explicitly asked for a partial review.
 3. Audit material claims against `claims-ledger.csv`, `citations.json`, source URLs, source dates, and evidence grades.
 4. Reject unsupported statistics, causal claims, rankings, broad best-practice claims, invented examples, fake quotes, placeholder citations, and banned evidence.
-5. Check genericness. Require a specific buyer, workflow, channel, decision, example, source-backed distinction, or operating mechanism.
-6. Check AEO and SEO structure: direct answer near the top, clear H1, useful H2/H3s, definitions, internal links, metadata, canonical, schema, source links, and non-padding FAQ.
-7. For HTML posts, verify the blog foundation contract: shared shell, post-specific hero, rails, TOC, author metadata, source section, CTA, sitemap/feed/index updates when publishing, and no one-off layout hacks.
-8. Report findings by severity with concrete file paths and line references when possible. Separate blockers from notes.
-9. If the same QA issue appears across multiple posts, packets, or review cycles, create a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not patch writing or foundation skills directly from QA findings.
+5. Check source integration. If a source is adjacent rather than directly on-topic, the draft must either cut it or explain its relevance in normal editorial prose. Do not allow public copy that reads like claim-audit reasoning.
+6. Check brand neutrality in informational sections. Direct answers, definitions, comparisons, and how-to body copy should not mention Sell In Public, internal operating rules, or service language unless the brand is the topic or the text is the end CTA/author context.
+7. Check genericness. Require a specific buyer, workflow, channel, decision, example, source-backed distinction, or operating mechanism.
+8. Check AEO and SEO structure: direct answer near the top, clear H1, useful H2/H3s, definitions, internal links, metadata, canonical, schema, source links, and non-padding FAQ.
+9. For HTML posts, verify the blog foundation contract: shared shell, post-specific hero, rails, TOC, author metadata, source section, CTA, sitemap/feed/index updates when publishing, and no one-off layout hacks.
+10. Report findings by severity with concrete file paths and line references when possible. Separate blockers from notes.
+11. If the same QA issue appears across multiple posts, packets, or review cycles, create a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not patch writing or foundation skills directly from QA findings.
 
 ## Publish Gate
 
@@ -39,6 +41,8 @@ Do not mark work publish-ready unless all of these pass:
 - Every material claim is sourced, qualified, rewritten, or removed.
 - Genericness and editorial value audits pass.
 - Metadata, schema, canonical, image alt text, internal links, and source links are complete.
+- Sources are integrated fluidly and no informational answer block exposes internal source reasoning.
+- Brand mentions stay out of informational body copy except for author context, brand-subject articles, or the end CTA.
 - Article body teaches before it converts and keeps commercial CTA language separated.
 - The foundation checker passes for static HTML posts:
 

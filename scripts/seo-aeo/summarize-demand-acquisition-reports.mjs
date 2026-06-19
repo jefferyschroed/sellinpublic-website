@@ -227,12 +227,12 @@ function commandSequenceFor(runDate, row) {
     dryRun,
     apply,
     `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --dry-run`,
-    `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply`,
+    `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${runDate}`,
   ];
 }
 
 function scaffoldCommandFor(runDate) {
-  return `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1`;
+  return `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --scaffold-limit 1 --scaffold-approval-marker PACKET-SCAFFOLD-APPROVED:${runDate}`;
 }
 
 function formatCommandLine(command, index) {
@@ -608,7 +608,7 @@ function buildSourceRequest(root, runDate, report) {
 	          `node scripts/seo-aeo/stage-reviewed-demand-export.mjs --date ${runDate} --candidate <candidate-id> --type <import-type> --source-file <raw-export.csv> --reviewed-by <name> --dry-run`,
 	          `node scripts/seo-aeo/stage-reviewed-demand-export.mjs --date ${runDate} --candidate <candidate-id> --type <import-type> --source-file <raw-export.csv> --reviewed-by <name> --apply`,
 	          `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --dry-run`,
-	          `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply`,
+	          `node scripts/seo-aeo/run-demand-promotion.mjs --date ${runDate} --apply --approval-marker DEMAND-PROMOTION-APPROVED:${runDate}`,
 	        ],
     optional_scaffold_command_after_packet_approval: scaffoldCommandFor(runDate),
     scaffold_command_requires_approval: true,

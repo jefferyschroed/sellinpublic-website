@@ -1,0 +1,121 @@
+packet_id: "2026-06-19-employee-generated-content-examples"
+status: "ready_to_publish"
+working_title: "Employee-Generated Content Examples From B2B Companies"
+slug: "employee-generated-content-examples"
+owner: "Sell In Public editorial"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-19"
+updated_at: "2026-06-19"
+
+audience:
+  primary_buyer: "B2B founder or GTM/revenue leader"
+  secondary_buyers:
+    - "Sales leader"
+    - "Marketing leader"
+    - "Content operator"
+  company_context: "B2B software companies trying to turn employee, founder, and team expertise into public content that buyers can use."
+  pain: "The team wants employee-generated content examples but most examples blur original expertise, company posts, employee advocacy, community content, and product marketing."
+
+business_goal: "Create the first examples spoke for the employee-generated content foundation cluster and give future posts a concrete reference page."
+sales_use_case: "Use when a prospect asks what good employee-generated content looks like before they understand the operating model."
+cta:
+  primary:
+    label: "Use The Example Checklist"
+    url: "#example-checklist"
+  secondary:
+    label: "Read The Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "examples-and-evaluation"
+  primary_query: "employee generated content examples"
+  aeo_question: "What are good examples of employee-generated content in B2B?"
+  primary_keyword: "employee generated content examples"
+  secondary_keywords:
+    - "employee-generated content"
+    - "B2B employee content examples"
+    - "LinkedIn content examples"
+    - "founder-led content"
+    - "team-led content"
+    - "employee expertise content"
+  related_questions:
+    - "What are good examples of employee-generated content in B2B?"
+    - "How do you tell if an employee content example is useful?"
+    - "What can B2B teams learn from Clay, Lovable, GitLab, and Shopify?"
+    - "How should employee-generated content examples be measured?"
+
+topic_map:
+  pillar_id: "pillar-employee-generated-content"
+  pillar_name: "Employee-Generated Content"
+  topic_id: "topic-egc-examples"
+  topic_score: 83
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"
+
+entity_targets:
+  - "Employee-generated content"
+  - "B2B content examples"
+  - "LinkedIn content"
+  - "Founder-led content"
+  - "Team-led content"
+  - "Clay"
+  - "Lovable"
+  - "GitLab"
+  - "Shopify Engineering"
+angle: "The best employee-generated content examples reveal how someone inside the company thinks, decides, builds, sells, supports, or learns."
+sell_in_public_pov: "A good example should teach the buyer something useful before it asks them to care about the company."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear distinction between employee-generated examples and employee advocacy examples."
+  - "Examples from Clay, Lovable, GitLab, and Shopify Engineering."
+  - "A table showing what each example teaches B2B teams."
+  - "A copyable checklist for judging future examples."
+  - "Internal links to the hub, comparison post, and blog index."
+  - "Sources section with approved citations only."
+must_avoid:
+  - "Calling every company example employee-generated content when the source is really community, documentation, or product marketing."
+  - "Unsupported claims about pipeline, conversion, or revenue."
+  - "Generic content marketing advice."
+  - "Discovery-only inputs as factual evidence."
+  - "Feature-heavy Sell In Public service language inside the educational body."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "First-party company examples."
+    - "Official guidance or primary research for quality and buyer context."
+    - "Internal SME notes only for Sell In Public POV."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/employee-generated-content-vs-employee-advocacy/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "slug": "employee-generated-content-examples",
+  "title": "Employee-Generated Content Examples From B2B Companies",
+  "kicker": "Employee-generated content",
+  "dek": "A practical examples page for B2B teams that want employee, founder, and team expertise to become useful public content.",
+  "publishDateLabel": "Jun 19, 2026",
+  "updatedDateLabel": "Updated Jun 19, 2026",
+  "readTime": "8 min read",
+  "topic_map": {
+    "pillar_id": "pillar-employee-generated-content",
+    "topic_id": "topic-egc-examples",
+    "coverage_role": "spoke",
+    "parent_topic": "topic-egc-definition"
+  },
+  "hero": {
+    "src": "/public/assets/blog/employee-generated-content-examples/hero-generated.png",
+    "alt": "A wide editorial workspace with connected example cards representing employee-generated content from B2B teams",
+    "width": 1600,
+    "height": 700,
+    "caption": "Good examples make the work visible: decisions, workflows, lessons, and team knowledge buyers can use."
+  },
+  "blocks": [
+    {
+      "type": "answer",
+      "id": "short-answer",
+      "label": "Short answer",
+      "paragraphs": [
+        "Good employee-generated content examples turn employee, founder, or team expertise into public learning. They reveal how someone inside the company thinks, decides, builds, sells, supports, or learns.",
+        "The best B2B examples are not employees reposting company copy. They are pieces of useful expertise that can stand on their own, whether the format is a LinkedIn post, founder essay, engineering article, support note, handbook page, or sales field note."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Most teams ask for examples because the category still feels abstract. That is fair. It is easier to approve employee-generated content when you can point to a real piece of public learning and say, \"That is the kind of work we mean.\""
+    },
+    {
+      "type": "paragraph",
+      "html": "This page looks at examples from Clay, Lovable, GitLab, and Shopify Engineering. Some are personal or team-led. Some are company-owned assets that expose team knowledge. The common thread is that they teach from the work instead of broadcasting a slogan."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-counts",
+      "text": "What Makes An Example Count"
+    },
+    {
+      "type": "paragraph",
+      "html": "An example counts when the source of insight is close to the work. A founder explaining a category shift can count. An engineer breaking down a system decision can count. A sales leader turning repeated buyer objections into a useful post can count."
+    },
+    {
+      "type": "paragraph",
+      "html": "Employee advocacy is different. Advocacy usually starts with a company-approved asset and asks employees to help it travel. Employee-generated content starts with the employee's perspective and turns it into something useful enough to stand on its own. For the longer distinction, read the <a href=\"/blog/employee-generated-content-vs-employee-advocacy/\">employee-generated content vs employee advocacy</a> comparison."
+    },
+    {
+      "type": "callout",
+      "label": "Quality test",
+      "paragraphs": [
+        "If the same post could have been written by any competitor, it is probably not a strong employee-generated content example. Useful examples carry a real decision, constraint, lesson, workflow, customer question, or technical explanation."
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "examples-worth-studying",
+      "text": "The Examples Worth Studying"
+    },
+    {
+      "type": "paragraph",
+      "html": "Clay's public writing on growth marketing bets is useful because it shows the reasoning behind a team decision, not just the result. The lesson is not to copy Clay's voice. The lesson is to publish the thinking a buyer would otherwise never see."
+    },
+    {
+      "type": "paragraph",
+      "html": "Lovable gives a different kind of example. Its public growth story and video library show how narrative, product teaching, and community-facing content can sit close together. Not every asset is employee-generated content, but the pattern is useful: buyers see how people around the product explain what is being built."
+    },
+    {
+      "type": "paragraph",
+      "html": "GitLab's public handbook is a durable example of company knowledge made public. It is not a LinkedIn post, and that is the point. Employee-generated content does not have to live only in the feed. A handbook, field note, checklist, or operating page can carry employee expertise for a long time."
+    },
+    {
+      "type": "paragraph",
+      "html": "Shopify Engineering is a strong example for technical teams. Its articles on sharing developer context and resilient payment systems show how internal technical judgment can become public education. A buyer or candidate can read the work and understand how the team thinks."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-each-example-teaches",
+      "text": "What Each Example Teaches"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Example",
+        "What the public asset shows",
+        "What B2B teams can borrow"
+      ],
+      "rows": [
+        [
+          "Clay",
+          "Growth decisions, bets, and operating logic.",
+          "Publish the reasoning behind a decision, not just the final announcement."
+        ],
+        [
+          "Lovable",
+          "Founder narrative, product teaching, videos, and community-facing proof.",
+          "Connect what the team is building to what users and buyers are learning."
+        ],
+        [
+          "GitLab",
+          "A public handbook that turns internal knowledge into a durable reference.",
+          "Do not force every insight into a feed post. Some expertise deserves a permanent page."
+        ],
+        [
+          "Shopify Engineering",
+          "Technical context, constraints, system choices, and lessons from the work.",
+          "Name the system, the constraint, the choice, and the practical lesson."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "The table also shows why examples should not be copied too literally. Clay's style works for Clay because it comes from Clay's decisions. GitLab's handbook works because GitLab has real operating detail to expose. Shopify's engineering posts work because they teach from real systems."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "use-examples-without-copying",
+      "text": "Use Examples Without Copying Them"
+    },
+    {
+      "type": "paragraph",
+      "html": "Use examples as prompts, not templates. Ask what kind of work your team is already doing that could teach the market something. Then choose the format that fits the material."
+    },
+    {
+      "type": "paragraph",
+      "html": "For a founder, that might be a category point of view. For sales, it might be a post about a buyer objection that keeps showing up. For customer success, it might be a pattern from onboarding calls. For engineering, it might be a technical choice with real constraints."
+    },
+    {
+      "type": "paragraph",
+      "html": "The <a href=\"/blog/employee-generated-content-infrastructure/\">employee-generated content hub</a> gives the broader operating model. This article is the example layer: what to look for, what to borrow, and what to avoid."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "example-checklist",
+      "text": "Copyable Example Checklist"
+    },
+    {
+      "type": "copy_block",
+      "title": "Employee-generated content example checklist",
+      "code": "Before calling something a strong example, ask:\n1. Who is the source of the insight?\n2. What work, decision, workflow, or lesson does it reveal?\n3. Could a buyer use the idea without talking to sales?\n4. Is the format right for the material: LinkedIn post, article, handbook page, checklist, video, or sales note?\n5. What claim needs a source before publication?\n6. What detail must stay private?\n7. How could sales reuse the idea in a buyer conversation?\n8. What follow-up question should this create?"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "how-to-measure",
+      "text": "How To Judge The Examples"
+    },
+    {
+      "type": "paragraph",
+      "html": "Do not judge examples by impressions alone. Impressions can tell you the asset traveled. They do not tell you whether the right buyer learned something useful."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Buyer usefulness. A useful example answers a real buyer question, objection, or decision point.",
+        "Sales reuse. A useful example gives sales a better reason to follow up than a generic check-in.",
+        "Internal learning. A useful example turns what the team already knows into a reusable asset.",
+        "Search and AI visibility. A useful example gives crawlers and answer engines a clear entity, source, and lesson to understand.",
+        "Follow-up questions. A useful example should create sharper buyer questions, not just likes."
+      ]
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "items": [
+        {
+          "question": "What are good examples of employee-generated content in B2B?",
+          "answer": "Good examples include founder essays, sales field notes, engineering breakdowns, customer-success lessons, public handbooks, and LinkedIn posts that explain a real decision or workflow. The format matters less than the source of insight."
+        },
+        {
+          "question": "Is a company blog post employee-generated content?",
+          "answer": "It can be, but only when the article carries real employee or team expertise. A company blog post that restates product messaging is not the same thing."
+        },
+        {
+          "question": "Are GitLab and Shopify examples employee-generated content or company content?",
+          "answer": "They are company-owned assets that expose employee or team knowledge. That makes them useful examples for B2B teams, even when the format is not a personal LinkedIn post."
+        },
+        {
+          "question": "Should every employee-generated content example become a LinkedIn post?",
+          "answer": "No. Some ideas are better as a post. Some are better as a checklist, article, handbook page, sales note, or webinar segment."
+        },
+        {
+          "question": "How do you find examples inside your own company?",
+          "answer": "Start with repeated buyer questions, sales objections, support patterns, implementation lessons, product decisions, and technical tradeoffs. Those are usually closer to useful expertise than a blank content prompt."
+        }
+      ]
+    },
+    {
+      "type": "sources",
+      "id": "sources",
+      "items": [
+        {
+          "label": "Clay, How We Assessed Our Growth Marketing Bets at Clay",
+          "url": "https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay"
+        },
+        {
+          "label": "Lovable, Zero to $10M ARR in 2 Months",
+          "url": "https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months"
+        },
+        {
+          "label": "Lovable, Videos",
+          "url": "https://lovable.dev/videos"
+        },
+        {
+          "label": "GitLab, The GitLab Handbook",
+          "url": "https://handbook.gitlab.com/handbook/"
+        },
+        {
+          "label": "Shopify Engineering, How we share context within Shopify Engineering",
+          "url": "https://shopify.engineering/sharing-developer-context"
+        },
+        {
+          "label": "Shopify Engineering, Building Resilient Payment Systems",
+          "url": "https://shopify.engineering/building-resilient-payment-systems"
+        },
+        {
+          "label": "Google Search Central, Creating helpful, reliable, people-first content",
+          "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "label": "Next step",
+      "heading": "Turn your team's work into examples buyers can use.",
+      "body": "Use the checklist above, then map three decisions, lessons, or customer questions your team can explain better than anyone else.",
+      "actions": [
+        {
+          "label": "Read The Hub",
+          "url": "/blog/employee-generated-content-infrastructure/",
+          "style": "primary"
+        },
+        {
+          "label": "Book A Working Session",
+          "url": "https://calendly.com/jeff-tryquicksetters/30min",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

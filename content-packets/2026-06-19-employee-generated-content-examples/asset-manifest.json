@@ -1,0 +1,14 @@
+{
+  "assets": [
+    {
+      "id": "hero",
+      "type": "image/png",
+      "path": "public/assets/blog/employee-generated-content-examples/hero-generated.png",
+      "public_url": "/public/assets/blog/employee-generated-content-examples/hero-generated.png",
+      "width": 1600,
+      "height": 700,
+      "alt": "A wide editorial workspace with connected example cards representing employee-generated content from B2B teams",
+      "notes": "Post-specific PNG hero created for the examples article."
+    }
+  ]
+}

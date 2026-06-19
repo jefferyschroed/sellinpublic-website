@@ -12,8 +12,10 @@ Use an HTML-first hybrid.
 - `blog/blog.js` owns progressive enhancement only: generated TOC, active section state, copy buttons, Copy Page, and Ask AI prompt copy.
 - `blog/index.html` is the blog landing page and should link to every published post.
 - Each post has a dedicated asset folder at `/public/assets/blog/[slug]/`.
+- Blog index and post heads must include the shared site favicon from `/public/assets/brand/hashtagiconlight.webp`; use `scripts/site-head.mjs` in generators and keep the Netlify publish check blocking favicon omissions.
 - `sitemap.xml`, `robots.txt`, and `feed.xml` must be updated when a post publishes.
 - `scripts/check-blog-post.mjs` is the structural gate for every post before it ships.
+- Netlify deploys the public site from GitHub. A local blog publish is not visible on `sellinpublic.co` until the scoped blog diff is committed and pushed to the GitHub remote.
 
 This keeps title tags, meta descriptions, canonical URLs, schema, headings, links, body copy, and citations available in the initial HTML. Shared CSS and JS keep the structure consistent across every post.
 
@@ -134,6 +136,7 @@ Follow `docs/seo-aeo/source-and-qa-policy.md`.
 
 Before publishing:
 
+- Work one post at a time. Do not start drafting, packet work, generation, or publishing for the next post until the current post is fully validated, committed, and pushed for Netlify deployment.
 - Create or update the content packet.
 - Confirm each claim exists in the claims ledger.
 - Check all external source links.
@@ -148,8 +151,12 @@ Before publishing:
 - Test copy block buttons.
 - Test Copy Page and Ask AI buttons.
 - Run `node scripts/check-blog-post.mjs blog/[slug]/index.html`.
+- Commit the scoped packet, static blog, asset, index, sitemap, feed, and process changes.
+- Push the branch to GitHub so Netlify can auto deploy the published blog changes.
 
 ## Adding The Next Post
+
+Start this sequence only after the prior post is fully done on its own.
 
 1. Duplicate `/blog/employee-generated-content-infrastructure/index.html` into `/blog/[slug]/index.html`.
 2. Replace all metadata, schema, article body, FAQ schema, and sources.
@@ -161,5 +168,6 @@ Before publishing:
 8. Update `sitemap.xml` and `feed.xml`.
 9. Run `node scripts/check-blog-post.mjs blog/[slug]/index.html`.
 10. Run local browser QA and save screenshots if the design changed.
+11. Commit and push the scoped blog diff to GitHub for Netlify deployment.
 
 Future automation can replace steps 1 through 8 with a local generator, but the committed artifact should remain static HTML.

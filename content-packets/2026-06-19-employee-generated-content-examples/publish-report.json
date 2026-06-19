@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-19-employee-generated-content-examples",
+  "slug": "employee-generated-content-examples",
+  "generated_at": "2026-06-19T06:26:51.247Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/employee-generated-content-examples/index.html",
+      "bytes": 27905,
+      "changed": true
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 10834,
+      "post_count": 3,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1040,
+      "post_count": 3,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 2098,
+      "post_count": 3,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "query-intelligence-2026-06-19",
+      "reason": "Query intelligence shaped topic routing only."
+    },
+    {
+      "source_id": "trend-intelligence-2026-06-19",
+      "reason": "Trend inputs shaped prioritization only."
+    },
+    {
+      "source_id": "answer-engine-observations",
+      "reason": "Answer-engine observations are monitoring inputs, not factual evidence."
+    }
+  ],
+  "rules": [
+    "Do not cite autocomplete, PAA, trend rows, AI answers, or query exports as factual evidence.",
+    "Use first-party company examples and approved internal SME notes for claims."
+  ]
+}

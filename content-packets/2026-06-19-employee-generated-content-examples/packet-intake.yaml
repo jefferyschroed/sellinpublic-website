@@ -1,0 +1,11 @@
+packet_id: "2026-06-19-employee-generated-content-examples"
+slug: "employee-generated-content-examples"
+status: "intake_ready"
+strategic_asset_decision: "post"
+asset_decision: "post"
+topic_id: "topic-egc-examples"
+pillar_id: "pillar-employee-generated-content"
+source_readiness: "ready"
+standalone_rationale: "Examples deserve a standalone spoke because the definition hub needs a concrete proof page and the query has enough authority value in the foundation plan."
+discovery_sources_excluded_from_evidence: true
+query_run_status: "handoff_ready"

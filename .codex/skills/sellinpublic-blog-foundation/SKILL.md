@@ -20,15 +20,17 @@ Use `$sellinpublic-seo-blog` before drafting, editing, or reviewing article copy
 ## Implementation Workflow
 
 1. Confirm the target slug, content packet, and publication status. Do not create a publishable post unless the packet has passed QA, unless the user explicitly asks for a draft or prototype.
-2. Use an existing post such as `blog/employee-generated-content-infrastructure/index.html` as the structural reference.
-3. Keep the full article body in static HTML. Do not make article content depend on JavaScript rendering.
-4. Preserve the shared shell: intro, metadata, hero, mobile TOC, left rail, center article, right TOC, CTA, floating actions, and shared footer.
-5. Put global visual changes in `blog/blog.css` and global interactions in `blog/blog.js`. Avoid per-post inline styles and one-off scripts.
-6. Use standard blocks from the foundation docs: `.blog-answer`, `.blog-callout`, `.blog-media`, `.blog-table-wrap`, `.copy-block`, `.blog-faq`, and `.blog-cta`.
-7. Store post assets under `public/assets/blog/<slug>/`. Use a post-specific landscape hero, honest `width` and `height` attributes, useful alt text, and natural image aspect ratios.
-8. When publishing, update `blog/index.html`, recent-post rail links as needed, `sitemap.xml`, and `feed.xml`.
-9. Preserve unrelated work. Keep edits scoped to the requested post or foundation files.
-10. If a repeated foundation miss appears across multiple posts, packets, or browser QA cycles, capture a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not promote skill changes without the steward gates and human approval.
+2. Work one post at a time. Do not start the next post's packet, draft, generation, or publishing work until the current post has passed QA, generated cleanly, passed validation, and been committed and pushed for Netlify deployment.
+3. Use an existing post such as `blog/employee-generated-content-infrastructure/index.html` as the structural reference.
+4. Keep the full article body in static HTML. Do not make article content depend on JavaScript rendering.
+5. Preserve the shared shell: intro, metadata, hero, mobile TOC, left rail, center article, right TOC, CTA, floating actions, and shared footer.
+6. Put global visual changes in `blog/blog.css` and global interactions in `blog/blog.js`. Avoid per-post inline styles and one-off scripts.
+7. Use standard blocks from the foundation docs: `.blog-answer`, `.blog-callout`, `.blog-media`, `.blog-table-wrap`, `.copy-block`, `.blog-faq`, and `.blog-cta`.
+8. Store post assets under `public/assets/blog/<slug>/`. Use a post-specific landscape hero, honest `width` and `height` attributes, useful alt text, and natural image aspect ratios.
+9. When publishing, update `blog/index.html`, recent-post rail links as needed, `sitemap.xml`, and `feed.xml`.
+10. Remember the deployment boundary: Netlify deploys `sellinpublic.co` from GitHub, so a local blog publish is not live until the scoped blog diff is committed and pushed to the GitHub remote.
+11. Preserve unrelated work. Keep edits scoped to the requested post or foundation files.
+12. If a repeated foundation miss appears across multiple posts, packets, or browser QA cycles, capture a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not promote skill changes without the steward gates and human approval.
 
 ## Validation
 
@@ -39,3 +41,5 @@ node scripts/check-blog-post.mjs blog/<slug>/index.html
 ```
 
 When layout, CSS, JavaScript, or interaction behavior changes, also run local browser QA on desktop and mobile. Verify the first screen, side rails, mobile TOC, copy-block buttons, floating Copy Page and Ask AI actions, FAQ transitions, source links, and responsive media.
+
+For publish requests that should be visible on the website, commit and push the scoped blog changes to GitHub after validation so Netlify can auto deploy them.

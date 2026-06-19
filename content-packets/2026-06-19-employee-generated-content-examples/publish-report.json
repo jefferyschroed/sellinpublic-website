@@ -1,17 +1,17 @@
 {
   "packet_id": "2026-06-19-employee-generated-content-examples",
   "slug": "employee-generated-content-examples",
-  "generated_at": "2026-06-19T06:26:51.247Z",
+  "generated_at": "2026-06-19T20:26:04.979Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/employee-generated-content-examples/index.html",
-      "bytes": 27905,
+      "bytes": 32206,
       "changed": true
     },
     {
       "path": "blog/index.html",
-      "bytes": 10834,
+      "bytes": 10776,
       "post_count": 3,
       "changed": true
     },
@@ -23,7 +23,7 @@
     },
     {
       "path": "feed.xml",
-      "bytes": 2098,
+      "bytes": 2122,
       "post_count": 3,
       "changed": false
     }

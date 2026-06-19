@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "company": "Clay",
+      "name": "Kareem Amin",
+      "title": "Co-founder/CEO",
+      "url": "https://www.linkedin.com/in/kareemamin/"
+    },
+    {
+      "company": "Lovable",
+      "name": "Anton Osika",
+      "title": "Co-founder",
+      "url": "https://www.linkedin.com/in/antonosika/"
+    },
+    {
+      "company": "GitLab",
+      "name": "Sid Sijbrandij",
+      "title": "Co-founder and Executive Chair",
+      "url": "https://www.linkedin.com/in/sijbrandij/"
+    },
+    {
+      "company": "Shopify",
+      "name": "Farhan Thawar",
+      "title": "VP and Head of Engineering",
+      "url": "https://www.linkedin.com/in/fnthawar/"
+    }
+  ]
+}

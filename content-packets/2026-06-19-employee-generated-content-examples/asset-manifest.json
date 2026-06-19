@@ -5,10 +5,10 @@
       "type": "image/png",
       "path": "public/assets/blog/employee-generated-content-examples/hero-generated.png",
       "public_url": "/public/assets/blog/employee-generated-content-examples/hero-generated.png",
-      "width": 1600,
-      "height": 700,
-      "alt": "A wide editorial workspace with connected example cards representing employee-generated content from B2B teams",
-      "notes": "Post-specific PNG hero created for the examples article."
+      "width": 1896,
+      "height": 830,
+      "alt": "A glassy mock social post card on a warm peach and rose mesh gradient",
+      "notes": "Post-specific PNG hero generated with built-in image_gen using the SIP liquid mesh style: one clear mock social-post card, bright white UI lines, and a restrained warm palette."
     }
   ]
 }

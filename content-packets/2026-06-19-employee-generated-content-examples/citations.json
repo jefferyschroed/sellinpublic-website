@@ -102,5 +102,57 @@
     "reliability": "Internal",
     "claims_supported": ["C001", "C007"],
     "notes": "Internal category definition and operating POV. Do not use as independent third-party evidence."
+  },
+  {
+    "id": "src-009",
+    "url": "https://www.linkedin.com/posts/kareemamin_one-of-our-biggest-differentiators-at-clay-activity-7457838747586473984-0Hm4",
+    "title": "Kareem Amin LinkedIn post on Clay narrative work",
+    "publisher": "LinkedIn",
+    "author": "Kareem Amin",
+    "published_date": "2026-05-06",
+    "accessed_date": "2026-06-19",
+    "source_type": "public_linkedin_post",
+    "reliability": "B",
+    "claims_supported": ["C008"],
+    "notes": "Captured with the Apify LinkedIn Profile Posts actor and linked directly as a public post example. Used as an example artifact, not as performance evidence."
+  },
+  {
+    "id": "src-010",
+    "url": "https://www.linkedin.com/posts/kareemamin_the-way-our-product-has-impacted-javeria-activity-7445498024610643968-2zF8",
+    "title": "Kareem Amin LinkedIn post on Javeria Shah and Clay Cup",
+    "publisher": "LinkedIn",
+    "author": "Kareem Amin",
+    "published_date": "2026-04-02",
+    "accessed_date": "2026-06-19",
+    "source_type": "public_linkedin_post",
+    "reliability": "B",
+    "claims_supported": ["C008"],
+    "notes": "Captured with the Apify LinkedIn Profile Posts actor and linked directly as a public post example. Used as an example artifact, not as performance evidence."
+  },
+  {
+    "id": "src-011",
+    "url": "https://www.linkedin.com/posts/antonosika_for-most-of-software-history-even-if-you-activity-7470097663208857600-N81o",
+    "title": "Anton Osika LinkedIn post on Lovable and the global build economy",
+    "publisher": "LinkedIn",
+    "author": "Anton Osika",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-19",
+    "source_type": "public_linkedin_post",
+    "reliability": "B",
+    "claims_supported": ["C009"],
+    "notes": "Captured with the Apify LinkedIn Profile Posts actor and linked directly as a public post example. Used as an example artifact, not as performance evidence."
+  },
+  {
+    "id": "src-012",
+    "url": "https://www.linkedin.com/posts/fnthawar_the-simple-and-elegant-systems-tend-to-be-activity-7471892411846234112-YbFc",
+    "title": "Farhan Thawar LinkedIn post on simple engineering systems",
+    "publisher": "LinkedIn",
+    "author": "Farhan Thawar",
+    "published_date": "2026-06-14",
+    "accessed_date": "2026-06-19",
+    "source_type": "public_linkedin_post",
+    "reliability": "B",
+    "claims_supported": ["C011"],
+    "notes": "Captured with the Apify LinkedIn Profile Posts actor and linked directly as a public post example. Used as a short-form heuristic example, not as the primary Shopify evidence."
   }
 ]

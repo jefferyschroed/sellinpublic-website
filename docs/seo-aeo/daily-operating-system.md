@@ -363,9 +363,12 @@ Agent tasks:
 - Capture `sme-notes.md` with approval status and unresolved questions.
 - Create `outline.md` before drafting.
 - Draft only from the approved outline and source set.
-- Build `article.blocks.json` so the generator can render without guessing.
+- Run the Claude Sonnet 4.6 audience-copy pass for public prose when `ANTHROPIC_API_KEY` is available, or record the owner-approved exception.
+- For examples, case-study, LinkedIn, founder-led, or team-led posts, document literal public examples and URLs before draft approval.
+- Build `article.blocks.json` so the generator can render without guessing, then compare it against `draft.md` because the generator publishes the block file.
 - Maintain `claims-ledger.csv` for every factual, statistical, comparative, or expert claim.
 - Prepare `publish-meta.yaml`, `distribution-pack.md`, `performance-log.csv`, `refresh-notes.md`, and `asset-manifest.json`.
+- Use a post-local generated PNG hero in the current liquid mesh style; do not use SVG-drawn blog hero stand-ins unless explicitly requested.
 
 Do not proceed when:
 
@@ -373,6 +376,8 @@ Do not proceed when:
 - Source gaps affect the main promise of the page.
 - The outline needs claims that are unsupported.
 - The draft contains placeholder stats, invented examples, or unresolved TODOs.
+- The article promises examples but lacks inspectable example URLs or documented source limitations.
+- The Claude writing pass, draft/block parity check, or generated PNG hero requirement is missing without an owner-approved exception.
 
 Handoff to Claim And QA Agent:
 

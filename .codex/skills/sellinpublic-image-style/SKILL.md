@@ -1,14 +1,12 @@
 ---
 name: sellinpublic-image-style
 description: >
-  Generate Sell In Public visual assets in the brand's cinematic omniscient
-  isometric illustration style. Use when creating or iterating blog hero images,
-  website backgrounds, social graphics, campaign visuals, or aesthetic B2B scenes
-  that should look like polished semi-realistic cartoon/animated concept art.
-  Trigger on requests for "Sell In Public image style", "SIP art style",
-  "isometric office", "aerial isometric", "omnipotent view", "golden-hour office",
-  "blog image", "background image", or any request to generate and save a
-  branded graphic image for this repo.
+  Generate Sell In Public visual assets as raster images. Use when creating or
+  iterating blog hero images, website backgrounds, social graphics, campaign
+  visuals, or branded abstract B2B visuals for this repo. Trigger on requests
+  for "Sell In Public image style", "SIP art style", "blog image", "hero image",
+  "mesh gradient", "liquid glass", "background image", or any request to
+  generate and save a branded graphic image for this repo.
 ---
 
 # Sell In Public Image Style
@@ -29,20 +27,27 @@ finals into this repo when the user wants a usable asset.
    and brand fit. Iterate once with a targeted prompt if the output misses a
    core requirement.
 6. For repo-bound assets, save the selected image under
-   `public/assets/generated/sip-art/<descriptive-slug>.png` unless the user names
-   another destination.
+   `public/assets/blog/<post-slug>/hero-generated.png` for blog heroes, or
+   `public/assets/generated/sip-art/<descriptive-slug>.png` for non-blog assets
+   unless the user names another destination.
 7. Report the saved absolute path and the final prompt used.
 
 ## Style Defaults
 
-Use the current house style unless the user overrides it:
+Use the current blog hero style unless the user overrides it:
 
-- Aerial isometric, omniscient, architectural axonometric view.
-- Golden hour sunset unless another time is requested.
-- Semi-realistic cartoon-painted digital illustration.
-- Medium-low detail density: clean surfaces, readable silhouettes, breathing room.
-- Cinematic reflections, warm individual lights, and polished material rendering.
-- No readable text, logos, watermarks, distorted anatomy, or cluttered trinkets.
+- Warm Japanese-inspired blended mesh gradient background with only a few
+  neighboring colors. Prefer coral, apricot, peach, rose, salmon, and soft
+  lavender. Avoid harsh orange/blue contrast.
+- One simple focused liquid-glass UI object that summarizes the article topic.
+  Do not make icon constellations, source-node maps, or flow-line diagrams.
+- Bright white translucent text-like lines, icons, and outlines on the glass
+  object, close to polished product-marketing glass UI examples.
+- Thin white strokes, frosted panels, soft glows, subtle grain, and calm depth.
+- Wide landscape blog composition near `1600x700`, with clean negative space and
+  no baked-in readable text.
+- No SVG-drawn substitutes for blog heroes. Use a generated PNG asset unless the
+  user explicitly asks for vector output.
 
 ## Saving Behavior
 

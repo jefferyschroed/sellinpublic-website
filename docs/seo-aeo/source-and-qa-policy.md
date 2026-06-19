@@ -11,6 +11,7 @@ Allowed evidence:
 - Primary research reports with methodology, sample size, publisher, and date.
 - Reputable original case studies with named company, context, and measurable outcome.
 - Platform documentation, official product docs, changelogs, APIs, policy pages, and first-party data.
+- Public first-party social posts from named founders, executives, team leads, or practitioners when the article is explicitly analyzing public content examples. Use the post URL as an example source, not as proof of broad performance claims.
 - Government, academic, standards-body, or credible industry research.
 - Company-owned data, customer interviews, or internal observations when clearly labeled.
 
@@ -33,6 +34,17 @@ Grade every cited source before drafting.
 - Reject: Forums, Reddit, generic listicles, unsourced stats, anonymous claims, outdated pages, or sources that cannot be traced to original evidence.
 
 Material claims require Grade A or B evidence. Grade C sources cannot support statistics, benchmarks, rankings, performance claims, or recommendations.
+
+## Public LinkedIn Example Rules
+
+Use public LinkedIn posts as example artifacts, not as statistical evidence.
+
+- Prefer direct LinkedIn post URLs, author profile URLs, visible author role/title, and public company affiliation.
+- Use approved collection paths: manual browser verification, the local Apollo/account-intel workflow for identifying profiles, or the Apify LinkedIn Profile Posts actor via `scripts/seo-aeo/fetch-linkedin-profile-posts.mjs`.
+- Default Apify settings should keep cost and privacy tight: small `maxPosts`, no comments, no reactions, and no private data.
+- Do not include scraped email addresses, private profile fields, reaction lists, or comment identities in public article copy.
+- If a LinkedIn post is blocked, unavailable, or only visible through tool output, cite the capture limitation in QA and prefer a first-party company page instead of pretending the post was manually verified.
+- Embedded posts are allowed only when they improve the reader's ability to inspect the example and the embed is public, stable, and accessible. Always keep a normal source link nearby.
 
 ## Claim Audit
 

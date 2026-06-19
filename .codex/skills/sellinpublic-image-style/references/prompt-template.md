@@ -8,75 +8,76 @@ Use case: stylized-concept
 Asset type: [blog hero / website background / social graphic / campaign visual]
 Primary request: [user's requested scene]
 
-Style reference: Use the Sell In Public Omniscient Isometric style: polished
-semi-realistic cartoon digital painting, cinematic animated background, crisp
-forms, subtle outlines, warm material rendering, high-definition 2D/3D hybrid.
+Style reference: Use the Sell In Public Liquid Mesh Hero style: a generated PNG
+with a warm Japanese-inspired blended mesh gradient background and one simple
+focused liquid-glass UI object. Use bright white text-like lines, icons, and
+outlines on the glass object, thin translucent strokes, soft glows, subtle grain,
+and calm editorial depth.
 
-Camera/composition: High aerial isometric / architectural axonometric view,
-65-75 degrees above the scene, near-orthographic perspective, entire layout
-visible like a miniature diorama. The viewer should feel omniscient, not like a
-person standing inside the scene. No eye-level horizon, no close foreground
-objects, no first-person framing.
+Composition: Wide landscape hero near 1600x700. Place one central or slightly
+off-center glass UI object that summarizes the article topic. Keep quiet negative
+space around it. No hard horizon, no real screenshots, no dense infographic
+layout, no icon constellation, no flow lines.
 
-Scene/backdrop: [environment]. If an interior, remove or visually ignore the
-ceiling so the full floorplan is readable. If relevant, include contextual
-landscape/city beyond windows or edges without letting it dominate.
+Scene/backdrop: Warm restrained mesh gradient using only a few neighboring
+colors: coral, apricot, peach, rose, salmon, and soft lavender. The background
+should feel organic and balanced, with subtle grain and soft diffusion. Avoid
+high-contrast orange/blue splits.
 
-Subjects: [people/objects/activity]. Keep people small but readable, diverse
-when groups are shown, correctly proportioned, with simplified faces and natural
-poses.
+Subject: [one liquid-glass visual metaphor for the blog topic]. Use a single
+frosted UI card, social post mockup, checklist panel, or dashboard control only
+when it clearly represents the topic. Keep the graphics simple, focused, and
+specific.
 
-Detail density: Medium-low detail. Use clean surfaces, clear negative space, and
-only essential props. Avoid dense clutter, tiny trinkets, excessive plants, busy
-shelves, and visual noise.
+Detail density: Low to medium-low. Make it polished and readable at article hero
+size. Avoid tiny trinkets, busy UI, decorative blobs, random icons, and dense
+visual noise.
 
-Lighting/mood: Golden hour sunset by default: amber, peach, coral, apricot, and
-soft violet light; long clean shadows; warm reflections; individual lamps,
-monitor glows, windows, or city lights as separate light sources.
+Lighting/mood: Soft warm glow, frosted glass, gentle refraction, optimistic but
+not cute. Modern B2B editorial, not SaaS stock art.
 
-Materials/textures: Glass reflections, warm wood, fabric partitions, metal
-frames, polished floor, soft atmospheric haze where relevant.
+Materials/textures: Frosted glass, translucent acrylic, thin white linework,
+subtle noise, soft bloom, delicate light trails.
 
-Constraints: No readable text, no logos, no watermarks, no malformed anatomy, no
-extra limbs, no flat vector style, no photoreal corporate stock-photo look.
+Constraints: Generated raster PNG style only. No logos, no watermarks, no exact
+LinkedIn UI or brand marks, no fake metrics, no SVG/vector look, no photoreal
+corporate stock-photo look, no dark single-hue palette, no orange/blue split, no
+flow lines, no icon cloud.
 ```
 
-## San Francisco Office Example
+## Blog Examples Article Prompt
 
 ```text
 Use case: stylized-concept
-Asset type: wide 16:9 blog background
-Primary request: a modern San Francisco office at golden hour sunset with a
-diverse team working at individual desks and low cubicles.
+Asset type: wide blog hero, 1600x700
+Primary request: a visual overview of employee-generated content examples from
+B2B companies.
 
-Style reference: Use the Sell In Public Omniscient Isometric style: polished
-semi-realistic cartoon digital painting, cinematic animated background, crisp
-forms, subtle outlines, warm material rendering, high-definition 2D/3D hybrid.
+Style reference: Use the Sell In Public Liquid Mesh Hero style: warm
+Japanese-inspired blended mesh gradient background, one focused liquid-glass UI
+object, bright white text-like lines and icons, thin white translucent strokes,
+soft glows, subtle grain, and calm editorial depth.
 
-Camera/composition: Strict orthographic axonometric perspective, 70-75 degrees
-top-down, ceiling removed, entire office floorplan visible like a luminous
-glass-walled architectural diorama. The viewer should feel omniscient, not like
-someone standing inside the room. No eye-level horizon and no close foreground
-furniture.
+Composition: Wide landscape hero. Put one large glassy social-post card in the
+center, like an abstract LinkedIn-style employee post without logos. Include a
+profile circle, a few bright white text-like lines, and one simple engagement row
+with three minimal white icons. No extra cards, no flow paths, no source nodes.
 
-Scene/backdrop: High-rise glass office in San Francisco. Floor-to-ceiling glass
-on two sides, skyline visible beyond the transparent perimeter: downtown towers,
-bay haze, faint bridge silhouette, and early city lights. Interior remains the
-main subject.
+Scene/backdrop: Coral, apricot, peach, rose, salmon, and soft lavender mesh
+gradient, softly blended with subtle grain. Keep the palette warm and close,
+without strong blue contrast.
 
-Subjects: 6-9 diverse workers distributed around the office, typing, writing,
-reviewing screens, standing near a desk, and quietly collaborating. Small
-stylized figures, simplified faces, correct proportions.
+Subject: A single mock employee-generated content post card that represents the
+article: employee expertise becoming a public post buyers can inspect. The card
+is frosted glass with bright white text lines, subtle profile/avatar outline, and
+simple engagement icons.
 
-Detail density: Medium-low. Clean desks, low cubicles, clear aisles, mostly open
-surfaces. Each workstation has one monitor, one lamp or screen glow, and at most
-one mug or notebook. Only two or three plants in the whole image.
+Detail density: Medium-low, polished, spacious, not an infographic.
 
-Lighting/mood: Golden hour sunset, amber and peach light through glass, long
-diagonal shadows, warm desk-lamp pools, monitor glows, reflections in glass and
-polished floor, calm focused creative mood.
+Lighting/mood: Warm frosted glass glow with gentle refraction and clean B2B
+editorial polish.
 
-Constraints: No readable text, no logos, no watermarks, no excessive desk
-clutter, no dense foliage, no eye-level interior perspective, no malformed hands,
-no extra limbs, no flat vector art, no stock-photo realism.
+Constraints: Generated raster PNG style only. No logos, no watermarks, no exact
+LinkedIn UI, no fake metrics, no people, no flat vector/SVG look, no stock-photo
+realism, no random icons, no flow lines, no blue/orange contrast.
 ```

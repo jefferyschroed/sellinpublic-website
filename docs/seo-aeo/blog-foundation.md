@@ -16,6 +16,7 @@ Use an HTML-first hybrid.
 - `sitemap.xml`, `robots.txt`, and `feed.xml` must be updated when a post publishes.
 - `scripts/check-blog-post.mjs` is the structural gate for every post before it ships.
 - Netlify deploys the public site from GitHub. A local blog publish is not visible on `sellinpublic.co` until the scoped blog diff is committed and pushed to the GitHub remote.
+- Public article prose must pass through Claude Sonnet 4.6 via the local Anthropic API runner before publish, unless the packet records an owner-approved exception.
 
 This keeps title tags, meta descriptions, canonical URLs, schema, headings, links, body copy, and citations available in the initial HTML. Shared CSS and JS keep the structure consistent across every post.
 
@@ -81,6 +82,8 @@ Every post must generate or deliberately create its own post-specific hero asset
 
 - Store post assets under `/public/assets/blog/[slug]/`.
 - Do not reuse `/public/assets/hero/` as the blog hero.
+- Use a generated PNG hero from `$sellinpublic-image-style`; do not ship SVG-drawn blog hero substitutes unless the user explicitly asks for vector output.
+- Current blog hero style: warm Japanese-inspired blended mesh gradient with one simple focused liquid-glass UI object that summarizes the article topic. Avoid random icon clouds, flow lines, and harsh orange/blue contrast.
 - Use a wide, short landscape hero ratio between `2.0:1` and `2.6:1`. The current target is close to `1600x700`.
 - Set image `width` and `height` attributes to the actual source dimensions.
 - Render the hero with natural height. Do not use forced hero heights or `object-fit: cover` on the article hero.
@@ -109,7 +112,21 @@ These behaviors are foundation-level and should stay consistent across posts.
 - Tie the topic back to the reader's problem through useful definitions, examples, workflows, source-backed distinctions, and clear operating advice.
 - Keep SEO and AEO structure intact: direct answer, useful headings, searchable terms, schema, citations, and FAQs where appropriate.
 - Use `$sellinpublic-seo-blog` before drafting, editing, or reviewing article copy.
+- Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/[packet]/` for the final audience-copy pass when `ANTHROPIC_API_KEY` is set locally. Record the pass output or an owner-approved exception in QA.
 - Do not use em dashes in article copy.
+- Use contractions naturally. If the post sounds like it avoided contractions, revise it.
+- For examples posts, write a literal examples article. Include named companies, people or teams, public asset URLs, the visible lesson, and what the B2B reader can borrow. Do not write meta-guidance about how to write an examples article in place of examples.
+- Keep `draft.md` and `article.blocks.json` aligned. The generated HTML renders `article.blocks.json`, so QA must compare both before publish.
+
+## External Tool Autonomy
+
+Use the best available approved tool when it would materially improve the post.
+
+- Use existing paid or configured services first: browser research, local Apollo/account-intel, Apify actors, analytics exports, and source-specific APIs.
+- For public LinkedIn examples, discover credible founders, executives, team leads, or practitioners with Apollo/account-intel or public sources, then fetch public profile posts with `scripts/seo-aeo/fetch-linkedin-profile-posts.mjs` when `APIFY_TOKEN` is set locally.
+- Keep cost and privacy tight: default to small limits, no reaction/comment scraping unless the article needs it, no email enrichment for content examples, and no private profile data in public copy.
+- Do not commit API keys. Use `ANTHROPIC_API_KEY`, `ANTHROPIC_BLOG_MODEL`, `APIFY_TOKEN`, and `APOLLO_API_KEY` or the account-intel project's local `.env.local`.
+- If a new free service signup would improve the post and the owner has approved that class of work for the batch, proceed only when no payment method, private personal data, or broader account permission is required. Record the signup/tool choice in the packet. Ask before paid upgrades, sensitive data sharing, or account actions outside the approved class.
 
 ## Editorial Voice Rules
 
@@ -138,6 +155,8 @@ Before publishing:
 
 - Work one post at a time. Do not start drafting, packet work, generation, or publishing for the next post until the current post is fully validated, committed, and pushed for Netlify deployment.
 - Create or update the content packet.
+- Record Claude writing-pass status, model, output file, or owner-approved exception.
+- For examples/case-study posts, record public example URLs and how they were found.
 - Confirm each claim exists in the claims ledger.
 - Check all external source links.
 - Check internal links.
@@ -160,7 +179,7 @@ Start this sequence only after the prior post is fully done on its own.
 
 1. Duplicate `/blog/employee-generated-content-infrastructure/index.html` into `/blog/[slug]/index.html`.
 2. Replace all metadata, schema, article body, FAQ schema, and sources.
-3. Generate or create a post-specific hero under `/public/assets/blog/[slug]/`.
+3. Generate a post-specific PNG hero under `/public/assets/blog/[slug]/`.
 4. Add any inline article media under `/public/assets/blog/[slug]/`.
 5. Confirm all image `width` and `height` attributes match the source files.
 6. Add the post to `/blog/index.html`.

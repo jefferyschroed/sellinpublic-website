@@ -1,0 +1,61 @@
+{
+  "fetched_at": "2026-06-19T20:07:41.334Z",
+  "actor_id": "harvestapi~linkedin-profile-posts",
+  "capture_settings": {
+    "maxPosts": 3,
+    "scrapeComments": false,
+    "scrapeReactions": false,
+    "includeQuotePosts": true,
+    "includeReposts": false
+  },
+  "selected_posts": [
+    {
+      "company": "Clay",
+      "profile_name": "Kareem Amin",
+      "profile_title": "Co-founder/CEO",
+      "profile_url": "https://www.linkedin.com/in/kareemamin/",
+      "post_url": "https://www.linkedin.com/posts/kareemamin_one-of-our-biggest-differentiators-at-clay-activity-7457838747586473984-0Hm4",
+      "posted_at": "2026-05-06T17:08:37.368Z",
+      "used_in_article": true,
+      "editorial_summary": "Founder post explaining why Clay treats content, brand, editorial, and narrative work as core company work."
+    },
+    {
+      "company": "Clay",
+      "profile_name": "Kareem Amin",
+      "profile_title": "Co-founder/CEO",
+      "profile_url": "https://www.linkedin.com/in/kareemamin/",
+      "post_url": "https://www.linkedin.com/posts/kareemamin_the-way-our-product-has-impacted-javeria-activity-7445498024610643968-2zF8",
+      "posted_at": "2026-04-02T15:50:59.731Z",
+      "used_in_article": true,
+      "editorial_summary": "Founder post turning a community/customer story into a public example of product impact."
+    },
+    {
+      "company": "Lovable",
+      "profile_name": "Anton Osika",
+      "profile_title": "Co-founder",
+      "profile_url": "https://www.linkedin.com/in/antonosika/",
+      "post_url": "https://www.linkedin.com/posts/antonosika_for-most-of-software-history-even-if-you-activity-7470097663208857600-N81o",
+      "posted_at": "2026-06-09T13:01:10.612Z",
+      "used_in_article": true,
+      "editorial_summary": "Founder post connecting Lovable usage to a market thesis about customer knowledge becoming software."
+    },
+    {
+      "company": "Shopify",
+      "profile_name": "Farhan Thawar",
+      "profile_title": "VP and Head of Engineering",
+      "profile_url": "https://www.linkedin.com/in/fnthawar/",
+      "post_url": "https://www.linkedin.com/posts/fnthawar_the-simple-and-elegant-systems-tend-to-be-activity-7471892411846234112-YbFc",
+      "posted_at": "2026-06-14T11:52:52.032Z",
+      "used_in_article": true,
+      "editorial_summary": "Short engineering heuristic used as a feed-level counterpart to Shopify Engineering's longer-form technical posts."
+    },
+    {
+      "company": "GitLab",
+      "profile_name": "Sid Sijbrandij",
+      "profile_title": "Co-founder and Executive Chair",
+      "profile_url": "https://www.linkedin.com/in/sijbrandij/",
+      "used_in_article": false,
+      "editorial_summary": "Current captured posts were not stronger professional examples than the GitLab Handbook, so the article uses the handbook as the GitLab source asset."
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "slug": "employee-generated-content-examples",
   "title": "Employee-Generated Content Examples From B2B Companies",
   "kicker": "Employee-generated content",
-  "dek": "A practical examples page for B2B teams that want employee, founder, and team expertise to become useful public content.",
+  "dek": "Real examples from Clay, Lovable, GitLab, and Shopify Engineering, with the specific posts and assets worth studying.",
   "publishDateLabel": "Jun 19, 2026",
   "updatedDateLabel": "Updated Jun 19, 2026",
   "readTime": "8 min read",
@@ -15,10 +15,10 @@
   },
   "hero": {
     "src": "/public/assets/blog/employee-generated-content-examples/hero-generated.png",
-    "alt": "A wide editorial workspace with connected example cards representing employee-generated content from B2B teams",
-    "width": 1600,
-    "height": 700,
-    "caption": "Good examples make the work visible: decisions, workflows, lessons, and team knowledge buyers can use."
+    "alt": "A glassy mock social post card on a warm peach and rose mesh gradient",
+    "width": 1896,
+    "height": 830,
+    "caption": "A strong example makes the public post inspectable: the person, the work, the asset, and the lesson a buyer can use."
   },
   "blocks": [
     {
@@ -26,17 +26,17 @@
       "id": "short-answer",
       "label": "Short answer",
       "paragraphs": [
-        "Good employee-generated content examples turn employee, founder, or team expertise into public learning. They reveal how someone inside the company thinks, decides, builds, sells, supports, or learns.",
-        "The best B2B examples are not employees reposting company copy. They are pieces of useful expertise that can stand on their own, whether the format is a LinkedIn post, founder essay, engineering article, support note, handbook page, or sales field note."
+        "Employee-generated content examples are public assets where a founder, executive, team lead, engineer, salesperson, or subject matter expert turns firsthand work into useful public learning.",
+        "Good examples include LinkedIn posts, founder essays, engineering notes, public handbooks, customer-success lessons, and team-authored articles. The test is not the format. The test is whether the content teaches from real work instead of redistributing company copy."
       ]
     },
     {
       "type": "paragraph",
-      "html": "Most teams ask for examples because the category still feels abstract. That is fair. It is easier to approve employee-generated content when you can point to a real piece of public learning and say, \"That is the kind of work we mean.\""
+      "html": "Most employee-generated content examples pages stay too abstract. They tell you to share expertise, but they do not show the actual public assets a founder, team lead, or practitioner might study."
     },
     {
       "type": "paragraph",
-      "html": "This page looks at examples from Clay, Lovable, GitLab, and Shopify Engineering. Some are personal or team-led. Some are company-owned assets that expose team knowledge. The common thread is that they teach from the work instead of broadcasting a slogan."
+      "html": "This page looks at four B2B examples: Clay, Lovable, GitLab, and Shopify Engineering. Some examples are LinkedIn posts. Some are durable company-owned assets. That mix matters because not every good employee-generated idea belongs in the feed."
     },
     {
       "type": "heading",
@@ -46,98 +46,173 @@
     },
     {
       "type": "paragraph",
-      "html": "An example counts when the source of insight is close to the work. A founder explaining a category shift can count. An engineer breaking down a system decision can count. A sales leader turning repeated buyer objections into a useful post can count."
+      "html": "The source of insight has to be close to the work. A founder explaining a category bet can count. A head of marketing explaining narrative strategy can count. An engineer explaining a system choice can count. A public handbook page can count when it exposes how a team actually works."
     },
     {
       "type": "paragraph",
-      "html": "Employee advocacy is different. Advocacy usually starts with a company-approved asset and asks employees to help it travel. Employee-generated content starts with the employee's perspective and turns it into something useful enough to stand on its own. For the longer distinction, read the <a href=\"/blog/employee-generated-content-vs-employee-advocacy/\">employee-generated content vs employee advocacy</a> comparison."
+      "html": "Employee advocacy is different. Advocacy usually starts with a company-approved asset and asks employees to help it travel. Employee-generated content starts with what the employee or team knows, then turns that into something useful enough to stand on its own. For the longer distinction, read the <a href=\"/blog/employee-generated-content-vs-employee-advocacy/\">employee-generated content vs employee advocacy</a> comparison."
     },
     {
       "type": "callout",
       "label": "Quality test",
       "paragraphs": [
-        "If the same post could have been written by any competitor, it is probably not a strong employee-generated content example. Useful examples carry a real decision, constraint, lesson, workflow, customer question, or technical explanation."
+        "Google Search Central's helpful content guidance asks publishers to create useful, reliable, people-first content with original value. That is a fair quality bar here too: if the public asset could have been written by any competitor, it is not a strong example."
       ]
     },
     {
       "type": "heading",
       "level": 2,
-      "id": "examples-worth-studying",
-      "text": "The Examples Worth Studying"
+      "id": "clay-example",
+      "text": "Clay: Founder Narrative Around GTM Category Work"
     },
     {
       "type": "paragraph",
-      "html": "Clay's public writing on growth marketing bets is useful because it shows the reasoning behind a team decision, not just the result. The lesson is not to copy Clay's voice. The lesson is to publish the thinking a buyer would otherwise never see."
+      "html": "Clay's article on growth marketing bets is useful because it shows the reasoning behind team decisions, not just the result. It gives readers a window into how the company thinks about growth channels and tradeoffs."
     },
     {
       "type": "paragraph",
-      "html": "Lovable gives a different kind of example. Its public growth story and video library show how narrative, product teaching, and community-facing content can sit close together. Not every asset is employee-generated content, but the pattern is useful: buyers see how people around the product explain what is being built."
+      "html": "The stronger employee-generated layer shows up in Kareem Amin's LinkedIn posts. In one post, Clay's co-founder/CEO explains why the company treats content, brand, editorial, and narrative work as core to the business, then points to Mishti Sharma's Head of Narratives work as the proof. In another, he turns Javeria Shah's Clay Cup story into a concrete example of the product's economic promise."
     },
     {
       "type": "paragraph",
-      "html": "GitLab's public handbook is a durable example of company knowledge made public. It is not a LinkedIn post, and that is the point. Employee-generated content does not have to live only in the feed. A handbook, field note, checklist, or operating page can carry employee expertise for a long time."
+      "html": "Posts to inspect: <a href=\"https://www.linkedin.com/posts/kareemamin_one-of-our-biggest-differentiators-at-clay-activity-7457838747586473984-0Hm4\">Kareem Amin on Clay's narrative work</a> and <a href=\"https://www.linkedin.com/posts/kareemamin_the-way-our-product-has-impacted-javeria-activity-7445498024610643968-2zF8\">Kareem Amin on Javeria Shah's Clay Cup story</a>."
     },
     {
       "type": "paragraph",
-      "html": "Shopify Engineering is a strong example for technical teams. Its articles on sharing developer context and resilient payment systems show how internal technical judgment can become public education. A buyer or candidate can read the work and understand how the team thinks."
+      "html": "What to borrow: publish the thinking behind the category, not just the company announcement. Clay's best examples work because they reveal how the company sees narrative, community, and GTM work."
     },
     {
       "type": "heading",
       "level": 2,
-      "id": "what-each-example-teaches",
-      "text": "What Each Example Teaches"
+      "id": "lovable-example",
+      "text": "Lovable: Founder Posts That Turn Usage Into A Market Thesis"
+    },
+    {
+      "type": "paragraph",
+      "html": "Lovable's public growth story and video library show how founder narrative, product teaching, and community-facing education can sit close together."
+    },
+    {
+      "type": "paragraph",
+      "html": "Anton Osika's LinkedIn posts make the pattern easier to inspect. In a June 2026 post, Lovable's co-founder connects product usage to a broader idea: people with customer knowledge and industry context can now turn ideas into products without the old software bottlenecks."
+    },
+    {
+      "type": "paragraph",
+      "html": "Post to inspect: <a href=\"https://www.linkedin.com/posts/antonosika_for-most-of-software-history-even-if-you-activity-7470097663208857600-N81o\">Anton Osika on Lovable's global build economy</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "That post is not just a company update. It is a category argument in founder voice. The useful move is that Lovable ties public product momentum to a buyer-relevant shift: who gets to build software, and what knowledge counts."
+    },
+    {
+      "type": "paragraph",
+      "html": "What to borrow: turn product evidence into a point of view buyers can repeat. Do not leave usage, community, and product education as separate assets when one clear narrative can connect them."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "gitlab-example",
+      "text": "GitLab: A Handbook Built From Team Knowledge"
+    },
+    {
+      "type": "paragraph",
+      "html": "GitLab's public handbook is a durable example of employee and company knowledge made public. This is the example that proves employee-generated content does not have to be a personal LinkedIn post."
+    },
+    {
+      "type": "paragraph",
+      "html": "The handbook works because it turns operating detail into a public reference. It covers how the company works, communicates, hires, manages, and documents decisions. A buyer, candidate, partner, or operator can inspect the company's way of working without waiting for a sales conversation."
+    },
+    {
+      "type": "paragraph",
+      "html": "The LinkedIn lesson here is restraint. A handbook page can be a better source asset than a feed post. A team member can still distribute or explain a handbook page on LinkedIn, but the durable example is the public knowledge base itself."
+    },
+    {
+      "type": "paragraph",
+      "html": "What to borrow: if your team repeats the same operational explanation every month, make the source asset permanent. Then use LinkedIn to route people to it."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "shopify-example",
+      "text": "Shopify Engineering: Technical Notes From Real Systems"
+    },
+    {
+      "type": "paragraph",
+      "html": "Shopify Engineering publishes technical articles that turn internal engineering context into public learning. The best examples name the system, the constraint, the choice, and the lesson."
+    },
+    {
+      "type": "paragraph",
+      "html": "Farhan Thawar's public LinkedIn posts are a shorter counterpart. One recent post points to a simple engineering heuristic: simple systems are often easier to design, faster to get right, and more reliable. That is not enough by itself to be a full examples asset, but it is a useful feed-level signal that matches the longer Shopify Engineering content."
+    },
+    {
+      "type": "paragraph",
+      "html": "Post to inspect: <a href=\"https://www.linkedin.com/posts/fnthawar_the-simple-and-elegant-systems-tend-to-be-activity-7471892411846234112-YbFc\">Farhan Thawar on simple engineering systems</a>."
+    },
+    {
+      "type": "paragraph",
+      "html": "What to borrow: let technical experts publish both durable explanation and short operating heuristics. The article carries the depth. The LinkedIn post carries the sharp lesson."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "what-these-examples-teach",
+      "text": "What These Examples Teach"
     },
     {
       "type": "table",
       "headers": [
         "Example",
-        "What the public asset shows",
+        "Specific public asset",
+        "What it shows",
         "What B2B teams can borrow"
       ],
       "rows": [
         [
           "Clay",
-          "Growth decisions, bets, and operating logic.",
-          "Publish the reasoning behind a decision, not just the final announcement."
+          "Kareem Amin's LinkedIn posts and Clay's growth-bets article.",
+          "Founder narrative, GTM category thinking, and community proof.",
+          "Publish the reasoning behind a decision or belief, not just the announcement."
         ],
         [
           "Lovable",
-          "Founder narrative, product teaching, videos, and community-facing proof.",
-          "Connect what the team is building to what users and buyers are learning."
+          "Anton Osika's LinkedIn post, growth story, and video library.",
+          "Founder-led market narrative tied to product usage.",
+          "Connect what users are doing to the bigger market shift your buyer cares about."
         ],
         [
           "GitLab",
-          "A public handbook that turns internal knowledge into a durable reference.",
+          "The GitLab Handbook.",
+          "Durable public operating knowledge.",
           "Do not force every insight into a feed post. Some expertise deserves a permanent page."
         ],
         [
           "Shopify Engineering",
-          "Technical context, constraints, system choices, and lessons from the work.",
+          "Shopify Engineering articles and Farhan Thawar's engineering heuristics.",
+          "Technical constraints, systems thinking, and lessons from real infrastructure.",
           "Name the system, the constraint, the choice, and the practical lesson."
         ]
       ]
     },
     {
       "type": "paragraph",
-      "html": "The table also shows why examples should not be copied too literally. Clay's style works for Clay because it comes from Clay's decisions. GitLab's handbook works because GitLab has real operating detail to expose. Shopify's engineering posts work because they teach from real systems."
+      "html": "The common thread is proximity to the work. These examples are not polished reposts of a central campaign. They make the source of expertise visible."
     },
     {
       "type": "heading",
       "level": 2,
-      "id": "use-examples-without-copying",
+      "id": "use-without-copying",
       "text": "Use Examples Without Copying Them"
     },
     {
       "type": "paragraph",
-      "html": "Use examples as prompts, not templates. Ask what kind of work your team is already doing that could teach the market something. Then choose the format that fits the material."
+      "html": "Use examples as prompts, not templates. Clay's version works because Clay has a strong point of view on narrative and GTM engineering. GitLab's version works because the company has real operating detail to expose. Shopify's version works because engineers can teach from systems they actually build."
     },
     {
       "type": "paragraph",
-      "html": "For a founder, that might be a category point of view. For sales, it might be a post about a buyer objection that keeps showing up. For customer success, it might be a pattern from onboarding calls. For engineering, it might be a technical choice with real constraints."
+      "html": "For a founder, the example might be a category point of view. For sales, it might be a post about a buyer objection that keeps showing up. For customer success, it might be a pattern from onboarding calls. For engineering, it might be a technical choice with real constraints."
     },
     {
       "type": "paragraph",
-      "html": "The <a href=\"/blog/employee-generated-content-infrastructure/\">employee-generated content hub</a> gives the broader operating model. This article is the example layer: what to look for, what to borrow, and what to avoid."
+      "html": "The <a href=\"/blog/employee-generated-content-infrastructure/\">employee-generated content hub</a> explains the broader operating model. This page is the example layer: which public assets are worth studying, what they teach, and how to adapt the pattern without copying the surface."
     },
     {
       "type": "heading",
@@ -146,29 +221,17 @@
       "text": "Copyable Example Checklist"
     },
     {
-      "type": "copy_block",
-      "title": "Employee-generated content example checklist",
-      "code": "Before calling something a strong example, ask:\n1. Who is the source of the insight?\n2. What work, decision, workflow, or lesson does it reveal?\n3. Could a buyer use the idea without talking to sales?\n4. Is the format right for the material: LinkedIn post, article, handbook page, checklist, video, or sales note?\n5. What claim needs a source before publication?\n6. What detail must stay private?\n7. How could sales reuse the idea in a buyer conversation?\n8. What follow-up question should this create?"
+      "type": "paragraph",
+      "html": "Before calling something a strong employee-generated content example, check the source, the lesson, the format, and the reuse path."
     },
     {
-      "type": "heading",
-      "level": 2,
-      "id": "how-to-measure",
-      "text": "How To Judge The Examples"
+      "type": "copy_block",
+      "title": "Employee-generated content example checklist",
+      "code": "Before calling something a strong example, ask:\n1. Who is the source of the insight?\n2. What work, decision, workflow, or lesson does it reveal?\n3. Could a buyer use the idea without talking to sales?\n4. Is the format right for the material: LinkedIn post, article, handbook page, checklist, video, or sales note?\n5. Is there a direct public URL the reader can inspect?\n6. What claim needs a source before publication?\n7. What detail must stay private?\n8. How could sales reuse the idea in a buyer conversation?\n9. What follow-up question should this create?"
     },
     {
       "type": "paragraph",
-      "html": "Do not judge examples by impressions alone. Impressions can tell you the asset traveled. They do not tell you whether the right buyer learned something useful."
-    },
-    {
-      "type": "list",
-      "items": [
-        "Buyer usefulness. A useful example answers a real buyer question, objection, or decision point.",
-        "Sales reuse. A useful example gives sales a better reason to follow up than a generic check-in.",
-        "Internal learning. A useful example turns what the team already knows into a reusable asset.",
-        "Search and AI visibility. A useful example gives crawlers and answer engines a clear entity, source, and lesson to understand.",
-        "Follow-up questions. A useful example should create sharper buyer questions, not just likes."
-      ]
+      "html": "If you cannot answer the first three questions clearly, the example is not ready yet."
     },
     {
       "type": "faq",
@@ -176,19 +239,19 @@
       "items": [
         {
           "question": "What are good examples of employee-generated content in B2B?",
-          "answer": "Good examples include founder essays, sales field notes, engineering breakdowns, customer-success lessons, public handbooks, and LinkedIn posts that explain a real decision or workflow. The format matters less than the source of insight."
+          "answer": "Good examples include founder LinkedIn posts, sales field notes, engineering breakdowns, customer-success lessons, public handbooks, and team-authored articles that explain a real decision or workflow. Clay, Lovable, GitLab, and Shopify Engineering are useful examples because each one makes a different kind of expertise public."
         },
         {
           "question": "Is a company blog post employee-generated content?",
-          "answer": "It can be, but only when the article carries real employee or team expertise. A company blog post that restates product messaging is not the same thing."
+          "answer": "It can be, but only when the article carries real employee or team expertise. A company blog post that restates product messaging is not the same thing. The test is whether a real person's knowledge shaped the content in a way a buyer can use."
         },
         {
           "question": "Are GitLab and Shopify examples employee-generated content or company content?",
-          "answer": "They are company-owned assets that expose employee or team knowledge. That makes them useful examples for B2B teams, even when the format is not a personal LinkedIn post."
+          "answer": "They are company-owned assets that expose employee or team knowledge. That makes them useful examples even when the format is not a personal LinkedIn post."
         },
         {
           "question": "Should every employee-generated content example become a LinkedIn post?",
-          "answer": "No. Some ideas are better as a post. Some are better as a checklist, article, handbook page, sales note, or webinar segment."
+          "answer": "No. Some ideas are better as a post. Some are better as a checklist, article, handbook page, sales note, or webinar segment. Let the material decide the format."
         },
         {
           "question": "How do you find examples inside your own company?",
@@ -205,12 +268,24 @@
           "url": "https://www.clay.com/blog/how-we-assessed-our-growth-marketing-bets-at-clay"
         },
         {
+          "label": "Kareem Amin, Clay narrative LinkedIn post",
+          "url": "https://www.linkedin.com/posts/kareemamin_one-of-our-biggest-differentiators-at-clay-activity-7457838747586473984-0Hm4"
+        },
+        {
+          "label": "Kareem Amin, Clay community story LinkedIn post",
+          "url": "https://www.linkedin.com/posts/kareemamin_the-way-our-product-has-impacted-javeria-activity-7445498024610643968-2zF8"
+        },
+        {
           "label": "Lovable, Zero to $10M ARR in 2 Months",
           "url": "https://lovable.dev/blog/2025-01-29-zero-to-10m-arr-in-2-months"
         },
         {
           "label": "Lovable, Videos",
           "url": "https://lovable.dev/videos"
+        },
+        {
+          "label": "Anton Osika, Lovable global build economy LinkedIn post",
+          "url": "https://www.linkedin.com/posts/antonosika_for-most-of-software-history-even-if-you-activity-7470097663208857600-N81o"
         },
         {
           "label": "GitLab, The GitLab Handbook",
@@ -225,6 +300,10 @@
           "url": "https://shopify.engineering/building-resilient-payment-systems"
         },
         {
+          "label": "Farhan Thawar, engineering heuristic LinkedIn post",
+          "url": "https://www.linkedin.com/posts/fnthawar_the-simple-and-elegant-systems-tend-to-be-activity-7471892411846234112-YbFc"
+        },
+        {
           "label": "Google Search Central, Creating helpful, reliable, people-first content",
           "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
         }
@@ -234,7 +313,7 @@
       "type": "cta",
       "label": "Next step",
       "heading": "Turn your team's work into examples buyers can use.",
-      "body": "Use the checklist above, then map three decisions, lessons, or customer questions your team can explain better than anyone else.",
+      "body": "Use the checklist above to audit three assets your team has already published, then read the hub to see how the operating model fits together.",
       "actions": [
         {
           "label": "Read The Hub",

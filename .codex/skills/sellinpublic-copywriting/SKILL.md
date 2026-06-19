@@ -282,6 +282,8 @@ Prefer "you" and "your" in copy directed at the buyer. Use "we" and
 **Contractions:**
 Use them. "We don't" reads more human than "We do not" in most contexts.
 Exception: formal documents or sections that intentionally read authoritative.
+If a draft repeatedly expands natural contractions, revise it before handoff.
+Default to how a sharp operator would actually say the sentence out loud.
 
 **Reading level:**
 Aim for Grade 6 to 8 reading level. Use simple words when a simple word

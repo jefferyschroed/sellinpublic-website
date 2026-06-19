@@ -37,6 +37,9 @@ QA does not make the packet pass. QA reports what is true, names blockers, and r
 - Do not fix defects silently while reviewing.
 - Do not accept unsupported claims, missing citation IDs, weak source quality, mismatched metadata, broken links, missing assets, or generator divergence.
 - Do not waive `$sellinpublic-seo-blog` voice rules for final article copy.
+- Do not approve public article prose without a Claude writing-pass record, model note, or owner-approved exception.
+- Do not approve examples/case-study posts that promise examples but lack inspectable public examples or a documented limitation.
+- Do not approve blog heroes that are SVG-drawn stand-ins when the packet requires a generated PNG hero.
 - Do not publish, distribute, or alter analytics data.
 
 ## Stop Conditions
@@ -44,6 +47,7 @@ QA does not make the packet pass. QA reports what is true, names blockers, and r
 - Stop if any required artifact is missing for the current gate.
 - Stop if claim markers and `claims-ledger.csv` do not reconcile.
 - Stop if final copy contains banned words, banned phrases, em dashes, generic intro patterns, unsupported claims, or a hard-sell CTA.
+- Stop if `draft.md` and `article.blocks.json` diverge in topic, examples, CTA, claims, or voice.
 - Stop if generated output cannot be verified against the approved packet.
 - Stop if index, feed, sitemap, canonical, or schema checks fail.
 

@@ -2,116 +2,105 @@
 
 ## Name
 
-Use this working name internally: **SIP Omniscient Isometric**.
+Use this working name internally: **SIP Liquid Mesh Hero**.
 
 ## Core Look
 
-Create polished semi-realistic cartoon illustrations that feel like animated film
-backgrounds or architectural dioramas. The style is not flat vector art and not
-photoreal stock imagery. It should feel crafted, cinematic, warm, and readable.
-
-## Camera
-
-Default to a high aerial isometric viewpoint:
-
-- Use strict orthographic or near-orthographic axonometric perspective.
-- Place the camera 65-75 degrees above the floor or ground plane.
-- Make the scene feel omniscient, as if viewed from above a miniature set.
-- Avoid eye-level horizons, first-person viewpoints, close foreground objects,
-  and framing that feels like someone is standing inside the room.
-- For interiors, remove or visually ignore the ceiling so the whole floorplan is
-  readable.
-
-Useful phrases:
-
-- "god's-eye office diorama"
-- "architectural axonometric cutaway"
-- "entire floorplan visible"
-- "not a person standing inside the room"
-- "no eye-level horizon"
+Create warm generated PNG blog heroes with Japanese-inspired blended mesh
+gradients and one simple focused liquid-glass UI object. The style should feel
+modern, luminous, editorial, and calm. It is not flat vector art, not a code-drawn
+SVG diagram, not a constellation of random icons, and not a photoreal stock scene.
 
 ## Composition
 
-Use a clear subject hierarchy:
+Default to a wide landscape editorial hero:
 
-1. Main environment or floorplan.
-2. Small stylized people or activity nodes.
-3. Cityscape, landscape, sky, or contextual backdrop.
-4. Individual light sources and reflections.
+- Target a wide, short composition close to `1600x700`.
+- Use one central or slightly off-center glass UI object that explains the
+  article topic at a glance.
+- Keep the graphic simple enough to read as a concept, not an infographic.
+- Leave quiet gradient space around the focal element.
+- Use soft horizon-free depth, one frosted panel or card, and a few bright white
+  text-like lines, icons, or outlines that make the object feel useful and
+  specific.
+- Do not use flow lines, dense connectors, icon clouds, random app icons, or many
+  small panels.
 
-Keep layouts organized and calm. Leave negative space between work areas. Avoid
-crowded object piles, dense foliage, or tiny visual noise.
+Useful visual motifs:
 
-## Detail Density
+- one glassy social post card
+- one glassy checklist panel
+- one glassy dashboard or control strip
+- one mock engagement row with a few simple icons
+- one large frosted card with bright white text-like lines
 
-Use medium-low density. Keep the style rich without becoming an eyesore.
+## Background And Color
+
+The background carries the mood.
 
 Prefer:
 
-- Clear desks and broad surfaces.
-- One object cluster per desk at most.
-- Two or three plants in a whole office scene.
-- A few intentional props such as monitors, lamps, notebooks, mugs, or tablets.
-- Readable aisles, room geometry, and silhouettes.
+- coral, apricot, warm peach, rose, salmon, and soft lavender
+- blended mesh gradients that feel warm, calm, and organic
+- subtle grain and diffusion
+- gentle Japanese poster-like warmth and balance
+- translucent white linework and soft glow
 
 Avoid:
 
-- Dense desk clutter.
-- Many tiny trinkets.
-- Plant walls or excessive foliage.
-- Busy shelves.
-- Tangled cables unless specifically requested.
+- dark navy/slate dominance
+- beige-only or single-hue palettes
+- harsh orange/blue contrast
+- hard corporate gradients
+- decorative orbs or bokeh blobs as standalone decoration
+- high-contrast busy backgrounds
 
-## Lighting
+## Liquid Glass Graphics
 
-Golden hour sunset is the default:
+The foreground should feel like refined glass UI, not a screenshot.
 
-- Amber, peach, coral, apricot, and soft violet light.
-- Long clean diagonal shadows.
-- Warm rim lights on people and furniture.
-- Reflections in glass and polished floors.
-- Individual desk lamps, monitor glows, windows, and city lights as small
-  separate light sources.
+Use:
 
-Blue hour is allowed only when the user requests it.
+- frosted translucent panels
+- thin white outlines
+- soft inner glow and blur
+- light refraction through glass
+- a few simple icon-like marks only when they clarify the object
+- bright white text-like lines and outlines
+- no readable text unless the user explicitly provides exact text
+
+## Blog Topic Translation
+
+Map the article topic to a simple visual concept:
+
+- Examples article: one mock social post card with a profile circle, bright white
+  content lines, and a minimal engagement row.
+- LinkedIn system article: one profile/post composer card or comment panel.
+- Founder-led content article: one large founder post card with a simple profile
+  marker and a few bright text lines.
+- Measurement article: one glass dashboard card with abstract bars or check marks
+  without fake numbers.
+
+Do not fake real LinkedIn UI, logos, company marks, or metrics.
 
 ## Rendering
 
 Use:
 
-- Semi-realistic cartoon digital painting.
-- Polished 2D/3D hybrid concept art.
-- Crisp clean forms and subtle outlines.
-- Tactile material rendering: glass, wood, fabric, metal, polished concrete.
+- Generated raster PNG output.
+- Polished glassmorphism with soft diffusion.
+- Crisp simple forms over a warm flowing mesh gradient.
 - Sophisticated saturation and contrast.
 
 Avoid:
 
+- SVG or hand-coded stand-ins for blog heroes.
 - Flat vector graphics.
 - Corporate stock-photo realism.
 - Overly glossy 3D render style.
-- Sketchy unfinished concept art.
-
-## People
-
-Represent diverse groups naturally:
-
-- Varied genders, skin tones, ages, hairstyles, body types, and clothing.
-- Small, readable figures with simplified faces.
-- Natural working poses, not stock-photo posing.
-- Correct proportions, no malformed hands, no extra limbs.
-
-## San Francisco Office Recipe
-
-For the office image family:
-
-- Modern glass-walled San Francisco office in a high-rise.
-- Floor-to-ceiling glass on two sides.
-- Ceiling removed for aerial floorplan readability.
-- Low cubicles, clean desks, glass meeting room, clear aisles.
-- Skyline outside: downtown towers, bay haze, faint bridge silhouette, early city
-  lights.
-- Interior remains the main subject; the city is context and atmosphere.
+- Cluttered trinkets.
+- Fake screenshots.
+- Random icon constellations, tangled flows, or many disconnected UI fragments.
 
 ## Universal Negative Constraints
 
@@ -119,7 +108,6 @@ Always include constraints against:
 
 - Readable text.
 - Logos and watermarks.
-- Distorted hands, faces, or extra limbs.
-- Excessive clutter.
-- Dense decorative noise.
-- Eye-level interior camera when an omniscient view is requested.
+- Fake metrics or fake interface screenshots.
+- Excessive clutter and dense decorative noise.
+- SVG/vector output when a blog hero PNG is required.

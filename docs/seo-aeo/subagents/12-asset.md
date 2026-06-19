@@ -28,6 +28,7 @@ Assets should clarify the article. They should not create visual claims the arti
 - Do not use assets without rights, approval, or a clear generation source.
 - Do not crop, blur, or darken assets so much that the subject is hard to inspect.
 - Do not create fake product screenshots, fake customer results, or misleading charts.
+- For blog heroes, use a generated PNG asset in the current `$sellinpublic-image-style` liquid mesh style. Do not create SVG-drawn substitutes unless the user explicitly asks for vector output.
 - Do not place assets outside the post-local asset path unless the site convention requires it.
 - Do not edit generator scripts or shared blog styles.
 

@@ -26,11 +26,13 @@ Use `$sellinpublic-seo-blog` before drafting, editing, or reviewing article copy
 5. Preserve the shared shell: intro, metadata, hero, mobile TOC, left rail, center article, right TOC, CTA, floating actions, and shared footer.
 6. Put global visual changes in `blog/blog.css` and global interactions in `blog/blog.js`. Avoid per-post inline styles and one-off scripts.
 7. Use standard blocks from the foundation docs: `.blog-answer`, `.blog-callout`, `.blog-media`, `.blog-table-wrap`, `.copy-block`, `.blog-faq`, and `.blog-cta`.
-8. Store post assets under `public/assets/blog/<slug>/`. Use a post-specific landscape hero, honest `width` and `height` attributes, useful alt text, and natural image aspect ratios.
-9. When publishing, update `blog/index.html`, recent-post rail links as needed, `sitemap.xml`, and `feed.xml`.
-10. Remember the deployment boundary: Netlify deploys `sellinpublic.co` from GitHub, so a local blog publish is not live until the scoped blog diff is committed and pushed to the GitHub remote.
-11. Preserve unrelated work. Keep edits scoped to the requested post or foundation files.
-12. If a repeated foundation miss appears across multiple posts, packets, or browser QA cycles, capture a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not promote skill changes without the steward gates and human approval.
+8. Run the Claude audience-copy pass for public article prose using `scripts/seo-aeo/claude-blog-pass.mjs` with `ANTHROPIC_API_KEY` set locally. Do not publish without either the pass result or an owner-approved exception recorded in QA.
+9. Store post assets under `public/assets/blog/<slug>/`. Use a generated PNG landscape hero from `$sellinpublic-image-style`, honest `width` and `height` attributes, useful alt text, and natural image aspect ratios. Do not ship SVG-drawn stand-ins for blog heroes unless the user explicitly asks for vector output.
+10. For examples, case-study, LinkedIn, founder-led, or team-led content posts, use approved tools and browser research to find literal public examples. Prefer first-party pages and public LinkedIn posts from founders, executives, team leads, or practitioners; record the URL, author role, capture method, and source limits in the packet.
+11. When publishing, update `blog/index.html`, recent-post rail links as needed, `sitemap.xml`, and `feed.xml`.
+12. Remember the deployment boundary: Netlify deploys `sellinpublic.co` from GitHub, so a local blog publish is not live until the scoped blog diff is committed and pushed to the GitHub remote.
+13. Preserve unrelated work. Keep edits scoped to the requested post or foundation files.
+14. If a repeated foundation miss appears across multiple posts, packets, or browser QA cycles, capture a learning-candidate note and hand it to `$sellinpublic-skill-steward`. Do not promote skill changes without the steward gates and human approval.
 
 ## Validation
 

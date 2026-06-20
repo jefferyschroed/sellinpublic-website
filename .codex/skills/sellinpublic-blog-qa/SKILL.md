@@ -26,7 +26,7 @@ Use `$sellinpublic-seo-blog` before drafting, editing, or judging article copy v
 3. Audit material claims against `claims-ledger.csv`, `citations.json`, source URLs, source dates, and evidence grades.
 4. Reject unsupported statistics, causal claims, rankings, broad best-practice claims, invented examples, fake quotes, placeholder citations, and banned evidence.
 5. Check source integration. If a source is adjacent rather than directly on-topic, the draft must either cut it or explain its relevance in normal editorial prose. Do not allow public copy that reads like claim-audit reasoning.
-6. Check brand neutrality in informational sections. Direct answers, definitions, comparisons, and how-to body copy should not mention Sell In Public, internal operating rules, or service language unless the brand is the topic or the text is the end CTA/author context.
+6. Check brand neutrality in informational sections. Direct answers, definitions, comparisons, and how-to body copy should not mention Sell In Public, internal operating rules, or service language unless the brand is the topic or the text is the end CTA/author context. The final separated CTA should mention Sell In Public by name and explain the managed LinkedIn content plus outbound offer for the target buyer.
 7. Check genericness. Require a specific buyer, workflow, channel, decision, example, source-backed distinction, or operating mechanism.
 8. Check AEO and SEO structure: direct answer near the top, clear H1, useful H2/H3s, definitions, internal links, metadata, canonical, schema, source links, and non-padding FAQ.
 9. Verify the Claude writing pass was applied before publish. `claude-writing-pass.md` must record `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`, unless QA records an owner-approved exception.
@@ -47,6 +47,7 @@ Do not mark work publish-ready unless all of these pass:
 - Sources are integrated fluidly and no informational answer block exposes internal source reasoning.
 - Brand mentions stay out of informational body copy except for author context, brand-subject articles, or the end CTA.
 - Article body teaches before it converts and keeps commercial CTA language separated.
+- The end CTA names Sell In Public and says what the company does: turns team expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP without the client managing the process.
 - Claude writing pass is applied to `draft.md` and `article.blocks.json`, not only saved as a sidecar, unless there is an owner-approved exception.
 - The foundation checker passes for static HTML posts:
 

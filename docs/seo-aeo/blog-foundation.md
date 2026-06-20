@@ -48,7 +48,7 @@ Every post must include:
 - Right rail generated TOC with active section state.
 - Mobile TOC disclosure.
 - Source-backed claims and a sources section.
-- Final CTA that gives the reader a clear next step such as a checklist, source review, related article, or simple commercial CTA.
+- Final CTA that gives the reader a clear next step. For Sell In Public blog posts, the separated closing CTA should usually be commercial and must name Sell In Public, explain the managed team-expertise-to-LinkedIn-content plus outbound offer, and state who it is for.
 - Visible author metadata for Jeffery Schroeder linking to `https://www.linkedin.com/in/jeffery-schroeder-957b98337/`.
 
 ## Standard Article Blocks
@@ -139,7 +139,8 @@ Sell In Public blog posts should teach first and convert second.
 - Avoid product-first phrases such as "managed system that turns," "handled replies," or "booked sales conversations" inside the article body.
 - A Calendly CTA or the standard marketing footer is allowed, but keep it clearly separated from the research and examples.
 - Use named examples, case studies, original research, statistics, and primary sources before making broad recommendations.
-- Mention Sell In Public only as the publisher, author context, or a clearly labeled point of view.
+- Mention Sell In Public only as the publisher, author context, or the clearly separated end CTA.
+- The end CTA should include a varied version of this offer: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. It should also make clear that the team does not have to write, post, or manage another marketing process, and should invite a working session around ICP, team voices, and pipeline goals.
 - Prefer "what this example teaches" over "how we solve this for you."
 
 ## Source Rules

@@ -43,3 +43,5 @@ Claude-reviewed public article directly to both packet source files.
 ## Parent Supervisor Addendum
 
 After this model pass, the parent publish supervisor found additional contrast-pivot phrasing in the article source and FAQ. The parent revised those passages in `article.blocks.json` and `draft.md`, then regenerated the final HTML and reran the publish-stage checks. The final public article passed the banned-pattern scan after those parent revisions.
+
+On June 20, 2026, the owner requested a CTA-only update after publication. The parent changed the final separated CTA so it explicitly names Sell In Public and describes the managed LinkedIn content plus outbound offer. No informational article body copy changed.

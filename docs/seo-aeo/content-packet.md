@@ -52,7 +52,7 @@ For examples posts, research and QA may use quality rubrics, helpful-content gui
 
 A packet is ready for publish implementation only when:
 
-- `brief.yaml` defines audience, intent, primary query, AEO question, CTA, and owner.
+- `brief.yaml` defines audience, intent, primary query, AEO question, CTA, and owner. For blog posts, the CTA instructions should require a varied Sell In Public closing CTA that names the company, explains the managed LinkedIn content plus outbound offer, and identifies the target buyer.
 - `research.md`, `citations.json`, and `sme-notes.md` support the outline and draft.
 - `outline.md` has been approved before draft completion.
 - `draft.md` contains no unresolved TODOs, placeholder claims, or uncited factual assertions.

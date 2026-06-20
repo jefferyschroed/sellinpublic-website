@@ -1,0 +1,17 @@
+candidate_id: "2026-06-20-blog-closing-cta-offer"
+date: "2026-06-20"
+source_type: "qa"
+source_path: "content-packets/2026-06-20-linkedin-content-infrastructure-b2b-sales/"
+observed_problem: "Blog closing CTAs were allowed to stay too generic or educational, so the final commercial block did not consistently name Sell In Public, explain the fully managed LinkedIn content plus outbound offer, or say who the offer is for."
+affected_workflow: "Sell In Public SEO/AEO blog drafting, Claude writing pass, QA, and packet scaffolding"
+target_skill: "sellinpublic-copywriting"
+root_cause: "The reusable CTA guidance only required a separated final CTA, but it did not require the closing CTA to mention Sell In Public by name, describe the managed employee-generated content and outbound system, or connect the offer to sales-team pipeline."
+evidence:
+  - "content-packets/2026-06-20-linkedin-content-infrastructure-b2b-sales/article.blocks.json used the generic heading 'Want this running for your sales team?' and body 'If you want the capture, content, review, publishing, and feedback loop set up for your team...'."
+  - "A current packet scan found multiple recent blog CTAs that did not mention Sell In Public or the managed offer, including employee-generated-content-infrastructure, employee-generated-content-examples, and employee-generated-content-vs-employee-advocacy."
+  - "The user explicitly requested a future-facing process change so every blog CTA includes a variation that names Sell In Public, explains what the company does, and states who it is for."
+reusability_classification: "reusable_process_change"
+repeat_count: 3
+proposed_change: "Update repo-local copywriting, blog foundation, draft, QA, Claude pass, and scaffold guidance so every future blog closing CTA uses a varied but explicit Sell In Public offer: managed team expertise to LinkedIn content, buyer signals or inbound leads, outbound to the right ICP, and a working-session next step."
+risk: "Low. The change is limited to the separated end CTA and preserves the rule that informational article body should teach before it converts."
+reviewer: "Codex"

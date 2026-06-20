@@ -1,31 +1,31 @@
 {
   "packet_id": "2026-06-20-linkedin-content-infrastructure-b2b-sales",
   "slug": "linkedin-content-infrastructure-b2b-sales",
-  "generated_at": "2026-06-20T21:10:36.361Z",
+  "generated_at": "2026-06-20T21:42:42.712Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/linkedin-content-infrastructure-b2b-sales/index.html",
-      "bytes": 34938,
+      "bytes": 35186,
       "changed": true
     },
     {
       "path": "blog/index.html",
       "bytes": 16754,
       "post_count": 8,
-      "changed": true
+      "changed": false
     },
     {
       "path": "sitemap.xml",
       "bytes": 2069,
       "post_count": 8,
-      "changed": true
+      "changed": false
     },
     {
       "path": "feed.xml",
       "bytes": 4750,
       "post_count": 8,
-      "changed": true
+      "changed": false
     }
   ],
   "validation": {

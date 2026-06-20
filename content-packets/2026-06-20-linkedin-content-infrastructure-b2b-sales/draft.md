@@ -175,3 +175,9 @@ Reps can participate at different levels. Some can write posts directly. Others 
 ### How should teams measure LinkedIn content for sales?
 
 Track platform signals such as impressions, reach, comments, saves, profile visits, followers, and link clicks, then add sales signals beside them. Look for target-account engagement, rep reuse, useful replies, objection language, meeting context, and topics worth turning into owned content. [claim:C005] [claim:C006] [cite:src-003] [cite:src-004]
+
+## CTA
+
+Want Sell In Public to run this for your sales team?
+
+Sell In Public turns your team's expertise into LinkedIn content, buyer signals, and inbound leads, then runs the outbound that gets it in front of the right people. You don't have to write the posts, manage publishing, or add another marketing process. Book a working session and we'll look at your ICP, who on your team should be posting, and the pipeline you want to build.

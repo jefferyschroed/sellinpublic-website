@@ -64,6 +64,7 @@ Decision: `rejected`
 - Reader value:
 - Feature-heavy language in article body:
 - Commercial CTA separated from article guidance:
+- End CTA names Sell In Public and explains the managed LinkedIn content plus outbound offer:
 - Genericness issues:
 
 ## Required Fixes

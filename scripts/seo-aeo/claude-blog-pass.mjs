@@ -153,6 +153,13 @@ Required article.blocks.json block schema:
 - cta: {"type":"cta","label":"...","heading":"...","body":"...","actions":[{"label":"...","url":"...","style":"primary"}]}
 - Do not use paragraph.text, h2, cta.text, markdown-only blocks, or raw source IDs as public copy.
 
+Closing CTA requirements:
+- The final cta block must mention Sell In Public by name.
+- The CTA must say what Sell In Public does for the reader: turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP.
+- The CTA must make clear that the client does not have to write, post, or manage another marketing process.
+- The CTA should invite a working session around ICP, who on the team should be posting, and the pipeline the reader wants to build.
+- Vary the wording by article. Do not copy the same CTA verbatim across posts.
+
 Hard rules:
 - Use contractions naturally.
 - Do not use em dashes. The character U+2014 is forbidden in the Markdown draft, article block text, FAQ answers, and CTA copy. Use a period, comma, colon, or parentheses instead.

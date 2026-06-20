@@ -25,6 +25,10 @@ For public blog prose, run the final audience-copy pass through Claude Sonnet 4.
 - Draft notes listing any unresolved claims, weak examples, or needed SME/source checks.
 - Suggested changes to `outline.md` only as review notes, not silent structure changes.
 
+## Closing CTA Requirement
+
+Every blog draft must end with a separated commercial CTA that names Sell In Public and says what the company does for the reader. Vary the wording by article, but include these ideas: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP; the client does not have to write, post, or manage another marketing process; the working session should look at ICP, team voices, and pipeline goals.
+
 ## Hard Boundaries
 
 - Do not draft before `outline.md` is approved.

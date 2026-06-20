@@ -206,6 +206,7 @@ cta:
   secondary:
     label: "Review the System"
     url: "https://sellinpublic.co/"
+  closing_blog_cta: "Write a varied end CTA that names Sell In Public, explains that we turn a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP, and makes clear the client does not have to write, post, or manage another marketing process."
 
 search_intent:
   stage: "${candidate.intent || "unknown"}"

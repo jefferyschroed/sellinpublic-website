@@ -61,3 +61,7 @@ Parent publish workflow validation results:
 - `node scripts/seo-aeo/check-netlify-publish-dir.mjs` passed.
 
 The `public-reader-qa` subcommand was not available in the clean `origin/main` publish worktree, so parent review used the static blog checker, banned-pattern scan, process-leakage scan, local route smoke, and full article read instead.
+
+## Owner CTA Update
+
+On 2026-06-20, the owner requested a more explicit closing CTA that names Sell In Public, explains the managed LinkedIn content and outbound offer, and says who it is for. Parent updated only the separated end CTA in `article.blocks.json` and `draft.md`, then regenerated the post HTML and reran publish checks. This is an owner-approved exception to rerunning the full Claude pass for a three-sentence CTA-only copy edit.

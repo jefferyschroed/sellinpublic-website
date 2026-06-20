@@ -529,6 +529,12 @@ pressure.
   "Review the System," or an email address)
 - Do not add a long paragraph of copy here. The reader has already read the page.
   Trust what came before.
+- For blog post closing CTAs, explicitly name Sell In Public and the offer. Use a
+  varied version of this structure: Sell In Public turns a B2B team's expertise
+  into LinkedIn content, buyer signals or inbound leads, then runs outbound to
+  the right ICP. Make clear the client does not have to write, post, or manage
+  another marketing process. Invite a working session around ICP, team voices,
+  and pipeline goals.
 
 ---
 

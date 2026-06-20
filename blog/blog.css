@@ -65,19 +65,6 @@ html {
   margin-bottom: 54px;
 }
 
-.blog-index .blog-title {
-  max-width: 880px;
-  font-size: clamp(46px, 6vw, 82px);
-  font-weight: 600;
-  line-height: 0.98;
-}
-
-.blog-index .blog-dek {
-  max-width: 720px;
-  margin-top: 22px;
-  font-size: clamp(18px, 2vw, 22px);
-}
-
 .blog-kicker,
 .blog-meta,
 .blog-card__meta,
@@ -787,62 +774,65 @@ html {
 }
 
 .blog-index-grid {
-  width: min(100%, 1120px);
-  margin: 0 auto 92px;
+  width: 100%;
+  margin: 0 0 92px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 22px;
+  gap: 34px;
 }
 
 .blog-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.84fr) minmax(0, 1fr);
-  gap: clamp(22px, 4vw, 42px);
-  align-items: stretch;
-  padding: 18px;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
   border: 1px solid rgba(5, 5, 5, 0.1);
-  border-radius: var(--radius-lg);
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.46);
-  box-shadow: 0 24px 70px rgba(5, 5, 5, 0.1);
+  box-shadow: 0 18px 48px rgba(5, 5, 5, 0.08);
 }
 
 .blog-card__image {
-  min-height: 330px;
-  border-radius: 14px;
+  display: block;
+  border-radius: 8px 8px 0 0;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.36);
 }
 
 .blog-card__image img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .blog-card__body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: clamp(10px, 2vw, 18px) 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: clamp(20px, 2.7vw, 28px);
 }
 
 .blog-card__body h2 {
   margin: 0;
-  max-width: 620px;
-  font-size: clamp(32px, 4vw, 52px);
-  line-height: 1.02;
+  max-width: 820px;
+  font-size: clamp(25px, 2.7vw, 34px);
+  line-height: 1.1;
   letter-spacing: 0;
 }
 
 .blog-card__body p:not(.blog-card__meta) {
-  max-width: 620px;
-  margin: 18px 0 24px;
+  max-width: 760px;
+  margin: 12px 0 20px;
   color: rgba(5, 5, 5, 0.68);
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .blog-card .sip-btn {
   align-self: flex-start;
+  min-height: 38px;
+  padding: 10px 14px;
+  font-size: 13px;
 }
 
 .blog-footer-wrap {
@@ -884,7 +874,7 @@ html {
   }
 
   .blog-card__image {
-    min-height: 260px;
+    min-height: 0;
   }
 }
 

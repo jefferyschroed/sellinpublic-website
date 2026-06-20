@@ -3,15 +3,8 @@ import path from "node:path";
 import { renderFaviconLinks } from "../site-head.mjs";
 import { renderGoogleTag } from "./google-tag.mjs";
 import { assertSafeSlug, listPacketDirs, loadPacket, writeTextAtomic } from "./packet.mjs";
+import { escapeHtml, renderBlogRail } from "./shared-shell.mjs";
 import { validatePacket } from "./validate-packet.mjs";
-
-function escapeHtml(value) {
-  return String(value ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
 
 function formatDate(value) {
   if (!value) return "";
@@ -34,8 +27,11 @@ function hasPublishedStaticPost(packet, root) {
   }
 
   const status = String(packet.brief.status || "").toLowerCase();
+  const normalizedStatus = status.replaceAll("_", "-");
   const publishableStatus =
-    status.includes("published") || status === "ready_to_publish" || status === "publish_ready";
+    normalizedStatus.includes("published") ||
+    normalizedStatus.includes("ready-to-publish") ||
+    normalizedStatus.includes("publish-ready");
 
   return (
     publishableStatus &&
@@ -131,6 +127,10 @@ export function renderBlogIndexHtml(packets) {
   const primaryImage = packets[0]?.publishMeta.og_image || "https://sellinpublic.co/public/assets/brand/hashtagiconlight.webp";
   const primaryImageAlt = packets[0]?.publishMeta.og_image_alt || "Sell In Public blog";
   const cards = renderCards(packets);
+  const latestPacket = packets[0];
+  const latestTitle = latestPacket?.articleBlocks?.title || latestPacket?.brief.working_title || "Blog home";
+  const latestHref = latestPacket?.brief.slug ? `/blog/${latestPacket.brief.slug}/` : "/blog/";
+  const rail = renderBlogRail({ recentHref: latestHref, recentTitle: latestTitle });
 
   return `<!doctype html>
 <html lang="en">
@@ -191,20 +191,26 @@ export function renderBlogIndexHtml(packets) {
       </div>
     </nav>
 
-    <main class="blog-index" id="main" data-nav-theme="light">
-      <section class="blog-intro texts-reveal" aria-labelledby="blog-index-title">
-        <p class="blog-kicker">Sell In Public Blog</p>
-        <h1 class="blog-title" id="blog-index-title">
-          Research-backed notes on employee-generated <span class="serif-italic">content.</span>
-        </h1>
-        <p class="blog-dek">
-          Definitions, examples, statistics, and practical checklists for B2B teams that want useful employee-led content from real expertise.
-        </p>
-      </section>
+    <main class="blog-shell blog-index" id="main" data-nav-theme="light">
+      <div class="blog-layout">
+        ${rail}
 
-      <section class="blog-index-grid" aria-label="Latest articles">
-        ${cards}
-      </section>
+        <div class="blog-main blog-index-main">
+          <section class="blog-intro texts-reveal" aria-labelledby="blog-index-title">
+            <p class="blog-kicker">Sell In Public Blog</p>
+            <h1 class="blog-title" id="blog-index-title">
+              Research-backed notes on employee-generated <span class="serif-italic">content.</span>
+            </h1>
+            <p class="blog-dek">
+              Definitions, examples, statistics, and practical checklists for B2B teams that want useful employee-led content from real expertise.
+            </p>
+          </section>
+
+          <section class="blog-index-grid" aria-label="Latest articles">
+            ${cards}
+          </section>
+        </div>
+      </div>
     </main>
 
     ${renderFooter()}

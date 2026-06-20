@@ -2,37 +2,38 @@
 
 ## Name
 
-Use this working name internally: **SIP Liquid Mesh Hero**.
+Use this working name internally: **SIP Flat Liquid Mesh Hero**.
 
 ## Core Look
 
-Create warm generated PNG blog heroes with Japanese-inspired blended mesh
-gradients and one simple focused liquid-glass UI object. The style should feel
-modern, luminous, editorial, and calm. It is not flat vector art, not a code-drawn
-SVG diagram, not a constellation of random icons, and not a photoreal stock scene.
+Create generated PNG blog heroes with flat head-on liquid-glass mesh graphics:
+matte translucency, simple flat UI forms, clean white linework, and softly
+blended mesh gradient backgrounds using one main color plus at most one close
+complementary color. The style should feel modern, editorial, calm, and useful
+without becoming a screenshot, infographic, glossy 3D render, or generic AI hero
+image.
 
 ## Composition
 
 Default to a wide landscape editorial hero:
 
 - Target a wide, short composition close to `1600x700`.
-- Use one central or slightly off-center glass UI object that explains the
-  article topic at a glance.
+- Use one central or slightly off-center flat liquid-glass subject that relates
+  to the article topic at a glance.
+- Present the glass/white graphic completely head-on, like a flat interface
+  viewed straight from the front.
 - Keep the graphic simple enough to read as a concept, not an infographic.
 - Leave quiet gradient space around the focal element.
-- Use soft horizon-free depth, one frosted panel or card, and a few bright white
-  text-like lines, icons, or outlines that make the object feel useful and
-  specific.
-- Do not use flow lines, dense connectors, icon clouds, random app icons, or many
-  small panels.
-
-Useful visual motifs:
-
-- one glassy social post card
-- one glassy checklist panel
-- one glassy dashboard or control strip
-- one mock engagement row with a few simple icons
-- one large frosted card with bright white text-like lines
+- Use a few white text-like lines, simple icons, or relationship marks only when
+  they make the subject more specific.
+- Keep all white outlines visually consistent in weight.
+- Avoid repeated defaults. Do not use a LinkedIn-style post card unless the
+  article content specifically makes a post, profile, or feed object the right
+  metaphor.
+- Do not use flow lines, dense connectors, scattered nodes, icon clouds, random
+  app icons, fake dashboards full of metrics, or many small panels.
+- Do not use isometric, angled, tilted, three-quarter, oblique, floating-depth,
+  or perspective UI compositions.
 
 ## Background And Color
 
@@ -40,19 +41,24 @@ The background carries the mood.
 
 Prefer:
 
-- coral, apricot, warm peach, rose, salmon, and soft lavender
-- blended mesh gradients that feel warm, calm, and organic
+- blended mesh gradients that feel calm and organic
+- one main color plus at most one close complementary mesh color
+- close color pairings such as sky/blue, turquoise/mint, lavender/periwinkle,
+  rose/coral, soft green/mint, or peach/apricot
 - subtle grain and diffusion
-- gentle Japanese poster-like warmth and balance
-- translucent white linework and soft glow
+- translucent white linework over soft color fields
 
 Avoid:
 
+- three or more background color families
+- rainbow or multi-color mesh gradients
 - dark navy/slate dominance
 - beige-only or single-hue palettes
-- harsh orange/blue contrast
+- harsh orange/blue contrast unless the article needs that tension and the blend
+  still stays soft
 - hard corporate gradients
 - decorative orbs or bokeh blobs as standalone decoration
+- hard gradient edges
 - high-contrast busy backgrounds
 
 ## Liquid Glass Graphics
@@ -61,25 +67,39 @@ The foreground should feel like refined glass UI, not a screenshot.
 
 Use:
 
-- frosted translucent panels
-- thin white outlines
-- soft inner glow and blur
-- light refraction through glass
-- a few simple icon-like marks only when they clarify the object
-- bright white text-like lines and outlines
+- matte translucent panels or shapes
+- consistent white outlines
+- simple flat liquid-glass UI surfaces
+- head-on front-facing composition only
+- a few simple icon-like marks only when they clarify the concept
+- white text-like lines and outlines with no readable words
 - no readable text unless the user explicitly provides exact text
+
+Avoid:
+
+- shiny/specular/reflection cues
+- glow, bloom, flares, light trails, or lens effects
+- glossy 3D objects
+- isometric, angled, tilted, or three-quarter UI views
+- fake product screenshots or metric-heavy dashboards
+- many disconnected UI fragments
 
 ## Blog Topic Translation
 
-Map the article topic to a simple visual concept:
+Generate the blog hero prompt after the article draft or `article.blocks.json`
+exists. Use the article itself as source context, not just the keyword.
 
-- Examples article: one mock social post card with a profile circle, bright white
-  content lines, and a minimal engagement row.
-- LinkedIn system article: one profile/post composer card or comment panel.
-- Founder-led content article: one large founder post card with a simple profile
-  marker and a few bright text lines.
-- Measurement article: one glass dashboard card with abstract bars or check marks
-  without fake numbers.
+Extract:
+
+- the main reader problem
+- the article's central relationship, contrast, or operating idea
+- one concrete object, workflow, or metaphor that appears in the article
+- the tone the hero should support
+
+Then infer one simple visual metaphor. Give the image model creative freedom
+inside the style, but keep the subject to one or two relevant elements. Do not
+maintain a fixed motif registry. Do not force every LinkedIn, founder, employee,
+measurement, or AI-search article into the same post-card pattern.
 
 Do not fake real LinkedIn UI, logos, company marks, or metrics.
 
@@ -88,19 +108,23 @@ Do not fake real LinkedIn UI, logos, company marks, or metrics.
 Use:
 
 - Generated raster PNG output.
-- Polished glassmorphism with soft diffusion.
-- Crisp simple forms over a warm flowing mesh gradient.
-- Sophisticated saturation and contrast.
+- Flat liquid-glass mesh style with matte translucency.
+- Crisp simple head-on forms over a softly blended two-color mesh gradient.
+- Sophisticated restraint, saturation, and contrast.
+- White outlines with consistent weight.
 
 Avoid:
 
 - SVG or hand-coded stand-ins for blog heroes.
 - Flat vector graphics.
 - Corporate stock-photo realism.
-- Overly glossy 3D render style.
+- Glossy 3D render style.
+- Isometric, angled, tilted, or perspective render style.
 - Cluttered trinkets.
 - Fake screenshots.
-- Random icon constellations, tangled flows, or many disconnected UI fragments.
+- Random icon constellations, tangled flows, scattered nodes, random lines, or
+  many disconnected UI fragments.
+- Generic LinkedIn-post-card defaults.
 
 ## Universal Negative Constraints
 
@@ -110,4 +134,11 @@ Always include constraints against:
 - Logos and watermarks.
 - Fake metrics or fake interface screenshots.
 - Excessive clutter and dense decorative noise.
+- Scattered nodes, random lines, icon clouds, and overcomplicated UIs.
+- Repeated default LinkedIn-post-card composition when the article does not
+  specifically require it.
+- Glow, bloom, flares, light trails, shiny/specular/reflection cues, glossy 3D
+  objects, bokeh/orbs, and hard gradient edges.
+- More than two background colors, and any angled, isometric, tilted, or
+  perspective view of the glass/white graphic.
 - SVG/vector output when a blog hero PNG is required.

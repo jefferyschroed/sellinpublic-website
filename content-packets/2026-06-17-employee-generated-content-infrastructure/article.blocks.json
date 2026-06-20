@@ -21,7 +21,7 @@
   "readTime": "11 min read",
   "hero": {
     "src": "/public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
-    "alt": "Cinematic signal routes and glass panels representing employee-generated content infrastructure",
+    "alt": "Flat head-on liquid-glass framework panel on a turquoise and mint mesh background",
     "width": 1600,
     "height": 700,
     "caption": "Employee-generated content works best when real expertise, examples, and audience questions are organized into a repeatable publishing habit."
@@ -78,13 +78,37 @@
     },
     {
       "type": "table",
-      "headers": ["Content type", "What makes it useful", "Example angle"],
+      "headers": [
+        "Content type",
+        "What makes it useful",
+        "Example angle"
+      ],
       "rows": [
-        ["Field note", "Summarizes a pattern the employee keeps seeing.", "\"Three onboarding mistakes we see in week one.\""],
-        ["Build note", "Shows a decision, tradeoff, bug, test, or workflow from real work.", "\"Why we changed this integration flow.\""],
-        ["Customer learning", "Turns recurring customer questions into reusable guidance.", "\"The question every admin asks before rollout.\""],
-        ["Teardown", "Explains why something works or fails with enough detail to learn from it.", "\"What this launch page gets right about trust.\""],
-        ["Tutorial", "Helps the reader complete a task or understand a workflow.", "\"How to connect the data source without breaking attribution.\""]
+        [
+          "Field note",
+          "Summarizes a pattern the employee keeps seeing.",
+          "\"Three onboarding mistakes we see in week one.\""
+        ],
+        [
+          "Build note",
+          "Shows a decision, tradeoff, bug, test, or workflow from real work.",
+          "\"Why we changed this integration flow.\""
+        ],
+        [
+          "Customer learning",
+          "Turns recurring customer questions into reusable guidance.",
+          "\"The question every admin asks before rollout.\""
+        ],
+        [
+          "Teardown",
+          "Explains why something works or fails with enough detail to learn from it.",
+          "\"What this launch page gets right about trust.\""
+        ],
+        [
+          "Tutorial",
+          "Helps the reader complete a task or understand a workflow.",
+          "\"How to connect the data source without breaking attribution.\""
+        ]
       ]
     },
     {

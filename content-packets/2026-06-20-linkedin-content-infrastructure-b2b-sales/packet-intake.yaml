@@ -1,0 +1,20 @@
+packet_id: "2026-06-20-linkedin-content-infrastructure-b2b-sales"
+slug: "linkedin-content-infrastructure-b2b-sales"
+status: "intake_ready"
+strategic_asset_decision: "pillar_post_candidate"
+asset_decision: "post"
+topic_id: "topic-linkedin-content-infrastructure"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "The topic is mapped as the LinkedIn-Led GTM hub and needs a standalone operational article that connects sales-team expertise, LinkedIn execution, measurement, and owned-content loops."
+discovery_sources_excluded_from_evidence: true
+query_handoff:
+  status: "handoff_ready"
+  primary_query: "how should B2B sales teams build LinkedIn content infrastructure"
+  source_note: "Discovery and topic-map inputs shaped routing only. Factual claims use current cited sources in citations.json."
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  topic_id: "topic-linkedin-content-infrastructure"
+  parent_topic: ""
+  coverage_role: "hub"
+  source_readiness: "ready"

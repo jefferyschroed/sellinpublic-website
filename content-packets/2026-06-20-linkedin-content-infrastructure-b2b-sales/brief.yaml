@@ -1,0 +1,117 @@
+packet_id: "2026-06-20-linkedin-content-infrastructure-b2b-sales"
+status: "publish-ready-child-scope"
+working_title: "LinkedIn Content Infrastructure For B2B Sales Teams"
+slug: "linkedin-content-infrastructure-b2b-sales"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, or revenue operator"
+  secondary_buyers:
+    - "Marketing leader"
+    - "Sales enablement leader"
+    - "RevOps leader"
+  company_context: "Mid-market B2B companies with active sales teams, useful field expertise, and no reliable LinkedIn operating system."
+  pain: "LinkedIn content gets treated as optional rep homework, while useful sales insight stays trapped in calls, Slack threads, Gong clips, and deal reviews."
+
+business_goal: "Create the LinkedIn-led GTM hub that connects employee-generated content, sales feedback, profile standards, commenting, measurement, and owned content repurposing."
+sales_use_case: "Use when a prospect wants LinkedIn visibility to support sales conversations but does not want random personal-brand posting or disconnected content output."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read the EGC Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "how-to"
+  primary_query: "how should B2B sales teams build LinkedIn content infrastructure"
+  aeo_question: "How should B2B sales teams build LinkedIn content infrastructure?"
+  primary_keyword: "LinkedIn content infrastructure for B2B sales teams"
+  secondary_keywords:
+    - "LinkedIn content strategy for B2B sales"
+    - "B2B LinkedIn content infrastructure"
+    - "sales team LinkedIn content system"
+    - "LinkedIn content workflow for sales teams"
+    - "employee-generated content infrastructure"
+  related_questions:
+    - "What should be included in a LinkedIn content infrastructure for sales teams?"
+    - "How do sales teams turn buyer questions into LinkedIn posts?"
+    - "How should LinkedIn content be measured beyond impressions?"
+    - "How do sales and marketing work together on LinkedIn content?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-linkedin-content-infrastructure"
+  topic_score: 80
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "hub"
+  parent_topic: ""
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/turn-employee-expertise-into-linkedin-posts/"
+    - "/blog/founder-content-vs-employee-content/"
+    - "/blog/measure-employee-generated-content-beyond-impressions/"
+    - "/blog/grow-ai-search-visibility-linkedin-content/"
+
+entity_targets:
+  - "LinkedIn"
+  - "B2B sales teams"
+  - "Employee-generated content"
+  - "Sales enablement"
+  - "Founder content"
+  - "Employee content"
+  - "LinkedIn analytics"
+  - "Content operations"
+angle: "LinkedIn only helps sales when the team builds an operating system around expertise capture, credible voices, profile readiness, review, distribution, attribution, and sales feedback."
+sell_in_public_pov: "LinkedIn should be treated as a distribution and signal layer supported by a repeatable content infrastructure, not as a pile of disconnected posts."
+word_count_target: "1700-2200"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Point-of-view capture from sales and customer conversations."
+  - "Expert selection across founder, sales leader, AE, SDR, customer success, and product voices."
+  - "Profile baseline, editorial calendar, review workflow, publishing cadence, attribution, sales feedback, and repurposing loops."
+  - "Internal links to the EGC hub, expertise-to-post workflow, founder vs employee content, measurement beyond impressions, and AI search visibility article."
+  - "Public examples from Microsoft and ClickUp LinkedIn posts, with source limits."
+  - "FAQ section with non-empty, non-duplicative reader-facing questions."
+must_avoid:
+  - "Shared index, sitemap, feed, robots, shared CSS, shared JS, scripts, automation config, or topic coverage edits in this child worktree."
+  - "Unsupported performance promises or invented customer results."
+  - "Generic content strategy advice that could apply to any channel."
+  - "Public copy that exposes QA notes, claim audit notes, or internal writing instructions."
+  - "Banned words, banned phrases, em dashes, and binary correction-pair cadence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official LinkedIn platform guidance."
+    - "Official LinkedIn analytics documentation."
+    - "Public LinkedIn posts used only as example artifacts."
+    - "Existing internal Sell In Public posts for internal links and category definitions."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

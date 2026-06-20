@@ -1,0 +1,25 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-001",
+      "label": "docs/seo-aeo/topic-coverage.csv",
+      "reason": "Topic routing and opportunity mapping only, not factual article evidence."
+    },
+    {
+      "source_id": "disc-002",
+      "label": "docs/seo-aeo/foundation-20-post-publishing-plan.md",
+      "reason": "Publishing plan and strategic rationale only, not factual article evidence."
+    },
+    {
+      "source_id": "disc-003",
+      "label": "Query intelligence exports, autocomplete, People Also Ask, trend inputs, and AI prompts",
+      "reason": "Allowed for language and routing only. Not citable as factual evidence."
+    }
+  ],
+  "rules": [
+    "Do not cite discovery-only sources for factual, statistical, causal, or comparative claims.",
+    "Use source IDs from citations.json for material claims.",
+    "Use public LinkedIn posts as examples only, not proof of broad performance."
+  ]
+}

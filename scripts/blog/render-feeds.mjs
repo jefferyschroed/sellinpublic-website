@@ -19,6 +19,8 @@ function rfcDate(date) {
 export function renderSitemapXml(packets) {
   const urls = [
     { loc: "https://sellinpublic.co/", lastmod: "2026-06-17", changefreq: "monthly", priority: "1.0" },
+    { loc: "https://sellinpublic.co/privacy/", lastmod: "2026-06-20", changefreq: "yearly", priority: "0.3" },
+    { loc: "https://sellinpublic.co/terms/", lastmod: "2026-06-20", changefreq: "yearly", priority: "0.3" },
     {
       loc: "https://sellinpublic.co/blog/",
       lastmod: packets[0]?.publishMeta.updated_date || "2026-06-17",

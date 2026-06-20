@@ -2,7 +2,7 @@
 
 ## Saved Asset
 
-- Path: `public/assets/blog/measure-employee-generated-content-beyond-impressions/hero-generated.png`
+- Path: `public/assets/blog/measure-employee-generated-content-beyond-impressions/hero-generated.webp`
 - Dimensions: `1897x829`
 - Source generated image: `/Users/jeff/.codex/generated_images/019ee2f4-16f4-7601-8da2-5f134103d6ac/ig_030eca856c00466d016a3601835eac819385db34cb336d9499.png`
 

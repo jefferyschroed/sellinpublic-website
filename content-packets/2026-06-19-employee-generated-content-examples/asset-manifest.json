@@ -3,8 +3,8 @@
     {
       "id": "hero-generated",
       "type": "hero_image",
-      "path": "public/assets/blog/employee-generated-content-examples/hero-generated.png",
-      "public_url": "/public/assets/blog/employee-generated-content-examples/hero-generated.png",
+      "path": "public/assets/blog/employee-generated-content-examples/hero-generated.webp",
+      "public_url": "/public/assets/blog/employee-generated-content-examples/hero-generated.webp",
       "width": 1896,
       "height": 830,
       "alt": "Flat head-on liquid-glass artifact tray on a lavender and periwinkle mesh background",

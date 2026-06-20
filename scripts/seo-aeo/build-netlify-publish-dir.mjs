@@ -8,6 +8,8 @@ const COPY_PATHS = [
   "index.html",
   "styles.css",
   "script.js",
+  "privacy",
+  "terms",
   "blog",
   "public",
   "feed.xml",

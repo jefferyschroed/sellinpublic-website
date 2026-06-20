@@ -226,8 +226,8 @@ export function renderPostHtml(packet) {
     <nav class="sip-nav glass-surface" aria-label="Primary navigation" data-theme="light">
       <a class="sip-brand" href="/" aria-label="Sell In Public home">
         <span class="sip-brand__logo-wrap" aria-hidden="true">
-          <img class="sip-brand__logo sip-brand__logo--light" src="/public/assets/brand/hashtagiconlight.webp" alt="" width="262" height="263" />
-          <img class="sip-brand__logo sip-brand__logo--dark" src="/public/assets/brand/hashtagicondark.webp" alt="" width="262" height="263" />
+          <img class="sip-brand__logo sip-brand__logo--light" src="/public/assets/brand/hashtagiconlight.webp" alt="Light Sell In Public hashtag logo" width="262" height="263" />
+          <img class="sip-brand__logo sip-brand__logo--dark" src="/public/assets/brand/hashtagicondark.webp" alt="Dark Sell In Public hashtag logo" width="262" height="263" />
         </span>
       </a>
       <button class="sip-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Open navigation menu" title="Open navigation menu">
@@ -324,7 +324,7 @@ export function renderPostHtml(packet) {
     <section class="final-cta-footer blog-footer-wrap" id="booking" aria-labelledby="final-cta-footer-heading" data-nav-theme="dark">
       <div class="final-cta-footer__panel">
         <div class="final-cta-footer__art" aria-hidden="true">
-          <img class="final-cta-footer__art-image" src="/public/assets/hero/hero-cloudspace-garden-draft.png" alt="" width="1672" height="941" loading="lazy" />
+          <img class="final-cta-footer__art-image" src="/public/assets/hero/hero-cloudspace-garden-draft.webp" alt="Cloud garden artwork for Sell In Public" width="1672" height="941" loading="lazy" />
           <div class="final-cta-footer__scrim"></div>
         </div>
         <div class="final-cta-footer__inner">

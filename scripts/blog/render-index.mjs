@@ -92,7 +92,7 @@ function renderFooter() {
   return `<section class="final-cta-footer blog-footer-wrap" id="booking" aria-labelledby="final-cta-footer-heading" data-nav-theme="dark">
       <div class="final-cta-footer__panel">
         <div class="final-cta-footer__art" aria-hidden="true">
-          <img class="final-cta-footer__art-image" src="/public/assets/hero/hero-cloudspace-garden-draft.png" alt="" width="1672" height="941" loading="lazy" />
+          <img class="final-cta-footer__art-image" src="/public/assets/hero/hero-cloudspace-garden-draft.webp" alt="Cloud garden artwork for Sell In Public" width="1672" height="941" loading="lazy" />
           <div class="final-cta-footer__scrim"></div>
         </div>
         <div class="final-cta-footer__inner">
@@ -140,7 +140,7 @@ export function renderBlogIndexHtml(packets) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Jeffery Schroeder" />
-    <title>Sell In Public Blog - Employee-generated content research and examples</title>
+    <title>Sell In Public Blog | Employee-Generated Content</title>
     <meta name="description" content="Research-backed notes on employee-generated content, B2B social strategy, examples, source-backed statistics, and useful editorial checklists." />
     ${renderFaviconLinks()}
     <link rel="canonical" href="https://sellinpublic.co/blog/" />
@@ -165,8 +165,8 @@ export function renderBlogIndexHtml(packets) {
     <nav class="sip-nav glass-surface" aria-label="Primary navigation" data-theme="light">
       <a class="sip-brand" href="/" aria-label="Sell In Public home">
         <span class="sip-brand__logo-wrap" aria-hidden="true">
-          <img class="sip-brand__logo sip-brand__logo--light" src="/public/assets/brand/hashtagiconlight.webp" alt="" width="262" height="263" />
-          <img class="sip-brand__logo sip-brand__logo--dark" src="/public/assets/brand/hashtagicondark.webp" alt="" width="262" height="263" />
+          <img class="sip-brand__logo sip-brand__logo--light" src="/public/assets/brand/hashtagiconlight.webp" alt="Light Sell In Public hashtag logo" width="262" height="263" />
+          <img class="sip-brand__logo sip-brand__logo--dark" src="/public/assets/brand/hashtagicondark.webp" alt="Dark Sell In Public hashtag logo" width="262" height="263" />
         </span>
       </a>
       <button class="sip-nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav-menu" aria-label="Open navigation menu" title="Open navigation menu">

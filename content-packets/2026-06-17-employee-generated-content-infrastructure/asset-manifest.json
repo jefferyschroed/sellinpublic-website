@@ -4,8 +4,8 @@
     {
       "id": "hero-generated",
       "type": "hero_image",
-      "path": "public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
-      "public_url": "/public/assets/blog/employee-generated-content-infrastructure/hero-generated.png",
+      "path": "public/assets/blog/employee-generated-content-infrastructure/hero-generated.webp",
+      "public_url": "/public/assets/blog/employee-generated-content-infrastructure/hero-generated.webp",
       "width": 1600,
       "height": 700,
       "alt": "Flat head-on liquid-glass framework panel on a turquoise and mint mesh background",

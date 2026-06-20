@@ -5,8 +5,8 @@
     {
       "id": "hero-generated",
       "type": "hero_image",
-      "path": "public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-generated.png",
-      "public_url": "/public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-generated.png",
+      "path": "public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-generated.webp",
+      "public_url": "/public/assets/blog/employee-generated-content-vs-employee-advocacy/hero-generated.webp",
       "width": 1600,
       "height": 700,
       "alt": "Two flat head-on liquid-glass workflow lanes on a pale blue and turquoise mesh background",

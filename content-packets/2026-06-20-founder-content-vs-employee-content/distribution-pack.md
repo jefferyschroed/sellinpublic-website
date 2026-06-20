@@ -26,7 +26,7 @@ Guide: https://sellinpublic.co/blog/founder-content-vs-employee-content/
 
 ## Visual
 
-Use the post-specific landscape hero at `/public/assets/blog/founder-content-vs-employee-content/hero-generated.png` after the publish gate passes.
+Use the post-specific landscape hero at `/public/assets/blog/founder-content-vs-employee-content/hero-generated.webp` after the publish gate passes.
 
 ## UTM Notes
 

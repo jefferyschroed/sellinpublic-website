@@ -102,6 +102,39 @@ const readImageDimensions = (filePath) => {
     }
   }
 
+  if (
+    buffer.length >= 30 &&
+    buffer.toString("ascii", 0, 4) === "RIFF" &&
+    buffer.toString("ascii", 8, 12) === "WEBP"
+  ) {
+    const chunkType = buffer.toString("ascii", 12, 16);
+
+    if (chunkType === "VP8X" && buffer.length >= 30) {
+      return {
+        width: 1 + buffer.readUIntLE(24, 3),
+        height: 1 + buffer.readUIntLE(27, 3),
+        format: "webp",
+      };
+    }
+
+    if (chunkType === "VP8 " && buffer.length >= 30) {
+      return {
+        width: buffer.readUInt16LE(26) & 0x3fff,
+        height: buffer.readUInt16LE(28) & 0x3fff,
+        format: "webp",
+      };
+    }
+
+    if (chunkType === "VP8L" && buffer.length >= 25) {
+      const bits = buffer.readUInt32LE(21);
+      return {
+        width: 1 + (bits & 0x3fff),
+        height: 1 + ((bits >> 14) & 0x3fff),
+        format: "webp",
+      };
+    }
+  }
+
   throw new Error(`Unsupported image format for dimension check: ${filePath}`);
 };
 

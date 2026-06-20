@@ -5,8 +5,8 @@
     {
       "id": "hero-generated",
       "type": "hero_image",
-      "path": "public/assets/blog/founder-content-vs-employee-content/hero-generated.png",
-      "public_url": "/public/assets/blog/founder-content-vs-employee-content/hero-generated.png",
+      "path": "public/assets/blog/founder-content-vs-employee-content/hero-generated.webp",
+      "public_url": "/public/assets/blog/founder-content-vs-employee-content/hero-generated.webp",
       "width": 1897,
       "height": 829,
       "alt": "Flat head-on direction marker and evidence surface on a rose and coral mesh background",

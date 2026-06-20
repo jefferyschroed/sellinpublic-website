@@ -47,7 +47,7 @@ Use when a prospect asks why employee-led LinkedIn content is different from emp
 
 ## Visual Brief
 
-Use the post-specific landscape hero at `/public/assets/blog/employee-generated-content-infrastructure/hero-generated.png` and the operating-loop image for supporting social crops if needed.
+Use the post-specific landscape hero at `/public/assets/blog/employee-generated-content-infrastructure/hero-generated.webp` and the operating-loop image for supporting social crops if needed.
 
 ## UTM Notes
 

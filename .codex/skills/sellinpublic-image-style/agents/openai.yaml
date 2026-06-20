@@ -1,4 +1,4 @@
 interface:
   display_name: "Sell In Public Image Style"
-  short_description: "Generate SIP liquid mesh PNG assets"
-  default_prompt: "Use $sellinpublic-image-style to generate a warm liquid-glass mesh-gradient blog hero and save it to the repo."
+  short_description: "Generate SIP flat liquid mesh PNG assets"
+  default_prompt: "Use $sellinpublic-image-style to generate a flat liquid-glass mesh blog hero from the finished article and save it to the repo."

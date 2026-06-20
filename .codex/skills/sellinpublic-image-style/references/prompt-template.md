@@ -1,83 +1,52 @@
 # Prompt Template
 
-Use this as a starting point. Replace bracketed fields and remove irrelevant
-lines.
+Use this after the blog article draft or `article.blocks.json` exists. Replace
+bracketed fields, keep the article excerpt concise, and remove irrelevant lines.
+Do not create a fixed motif registry; let the article content determine the
+visual metaphor.
 
 ```text
 Use case: stylized-concept
-Asset type: [blog hero / website background / social graphic / campaign visual]
-Primary request: [user's requested scene]
+Asset type: [wide blog hero / website background / social graphic / campaign visual]
+Source context from article: [3 to 8 sentences from draft.md, article.blocks.json,
+or a concise summary of the finished article. Include the main reader problem,
+central idea, and any concrete metaphor or workflow the article uses.]
 
-Style reference: Use the Sell In Public Liquid Mesh Hero style: a generated PNG
-with a warm Japanese-inspired blended mesh gradient background and one simple
-focused liquid-glass UI object. Use bright white text-like lines, icons, and
-outlines on the glass object, thin translucent strokes, soft glows, subtle grain,
-and calm editorial depth.
+Primary request: Create one simple visual metaphor inferred from the article
+source context. Use one or two relevant elements only: a simple flat
+liquid-glass UI surface, a relevant icon, or a clear relationship between two
+shapes. Do not default to a generic LinkedIn post card unless the article itself
+is specifically about a post, profile, or feed object.
+
+Style reference: Use the Sell In Public Flat Liquid Mesh Hero style: generated
+raster PNG, softly blended mesh gradient background using one main color plus at
+most one close complementary color, matte translucent liquid-glass shapes, simple
+head-on flat UI, consistent white outline weight, clean negative space, and
+subtle grain.
 
 Composition: Wide landscape hero near 1600x700. Place one central or slightly
-off-center glass UI object that summarizes the article topic. Keep quiet negative
-space around it. No hard horizon, no real screenshots, no dense infographic
-layout, no icon constellation, no flow lines.
+off-center subject with quiet space around it. Keep the graphic readable as a
+single concept, not an infographic or screenshot.
 
-Scene/backdrop: Warm restrained mesh gradient using only a few neighboring
-colors: coral, apricot, peach, rose, salmon, and soft lavender. The background
-should feel organic and balanced, with subtle grain and soft diffusion. Avoid
-high-contrast orange/blue splits.
+Scene/backdrop: Soft mesh gradient with one main color plus one close
+complementary color at most. Blend colors smoothly without hard edges. Avoid
+multi-color mesh palettes.
 
-Subject: [one liquid-glass visual metaphor for the blog topic]. Use a single
-frosted UI card, social post mockup, checklist panel, or dashboard control only
-when it clearly represents the topic. Keep the graphics simple, focused, and
-specific.
+Subject: [one article-derived metaphor]. Keep markings abstract and non-readable:
+short white lines, simple shapes, or one relevant icon only when useful. Present
+the graphic completely flat and head-on, with no angled or isometric view.
 
-Detail density: Low to medium-low. Make it polished and readable at article hero
-size. Avoid tiny trinkets, busy UI, decorative blobs, random icons, and dense
-visual noise.
+Detail density: Low. Simple, spacious, and specific. Avoid decorative filler.
 
-Lighting/mood: Soft warm glow, frosted glass, gentle refraction, optimistic but
-not cute. Modern B2B editorial, not SaaS stock art.
-
-Materials/textures: Frosted glass, translucent acrylic, thin white linework,
-subtle noise, soft bloom, delicate light trails.
-
-Constraints: Generated raster PNG style only. No logos, no watermarks, no exact
-LinkedIn UI or brand marks, no fake metrics, no SVG/vector look, no photoreal
-corporate stock-photo look, no dark single-hue palette, no orange/blue split, no
-flow lines, no icon cloud.
+Constraints: Generated raster PNG style only. No readable text, logos,
+watermarks, exact LinkedIn UI, fake metrics, scattered nodes, random lines, icon
+clouds, fake dashboards full of metrics, overcomplicated UIs, generic
+LinkedIn-post-card default, glossy 3D objects, glow, bloom, flares, light trails,
+shiny/specular/reflection cues, bokeh/orbs, hard gradient edges, SVG/vector look,
+photoreal stock-photo look, more than two background colors, angled perspective,
+isometric view, tilted panels, or three-quarter UI view.
 ```
 
-## Blog Examples Article Prompt
-
-```text
-Use case: stylized-concept
-Asset type: wide blog hero, 1600x700
-Primary request: a visual overview of employee-generated content examples from
-B2B companies.
-
-Style reference: Use the Sell In Public Liquid Mesh Hero style: warm
-Japanese-inspired blended mesh gradient background, one focused liquid-glass UI
-object, bright white text-like lines and icons, thin white translucent strokes,
-soft glows, subtle grain, and calm editorial depth.
-
-Composition: Wide landscape hero. Put one large glassy social-post card in the
-center, like an abstract LinkedIn-style employee post without logos. Include a
-profile circle, a few bright white text-like lines, and one simple engagement row
-with three minimal white icons. No extra cards, no flow paths, no source nodes.
-
-Scene/backdrop: Coral, apricot, peach, rose, salmon, and soft lavender mesh
-gradient, softly blended with subtle grain. Keep the palette warm and close,
-without strong blue contrast.
-
-Subject: A single mock employee-generated content post card that represents the
-article: employee expertise becoming a public post buyers can inspect. The card
-is frosted glass with bright white text lines, subtle profile/avatar outline, and
-simple engagement icons.
-
-Detail density: Medium-low, polished, spacious, not an infographic.
-
-Lighting/mood: Warm frosted glass glow with gentle refraction and clean B2B
-editorial polish.
-
-Constraints: Generated raster PNG style only. No logos, no watermarks, no exact
-LinkedIn UI, no fake metrics, no people, no flat vector/SVG look, no stock-photo
-realism, no random icons, no flow lines, no blue/orange contrast.
-```
+After generation, record the final prompt in `asset-manifest.json` or in
+`image-brief.md` referenced by the manifest so QA can audit the prompt against
+the finished image.

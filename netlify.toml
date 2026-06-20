@@ -12,3 +12,15 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
     Netlify-CDN-Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+[[redirects]]
+  from = "http://www.sellinpublic.co/*"
+  to = "https://sellinpublic.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.sellinpublic.co/*"
+  to = "https://sellinpublic.co/:splat"
+  status = 301
+  force = true

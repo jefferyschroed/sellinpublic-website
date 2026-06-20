@@ -1,0 +1,11 @@
+packet_id: "2026-06-20-measure-employee-generated-content-beyond-impressions"
+slug: "measure-employee-generated-content-beyond-impressions"
+status: "intake_ready"
+strategic_asset_decision: "post"
+asset_decision: "post"
+topic_id: "topic-measure-egc-beyond-impressions"
+pillar_id: "pillar-measurement-learning"
+source_readiness: "ready"
+standalone_rationale: "The measurement query deserves a standalone spoke because the employee-generated content cluster needs a practical revenue and attribution model, not only definition and examples content."
+discovery_sources_excluded_from_evidence: true
+query_run_status: "handoff_ready"

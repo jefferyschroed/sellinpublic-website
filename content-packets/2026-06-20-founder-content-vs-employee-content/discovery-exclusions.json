@@ -1,0 +1,20 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-001",
+      "label": "docs/seo-aeo/topic-coverage.csv row topic-founder-vs-employee-content",
+      "reason": "Topic routing and gap context only. Not factual evidence for public claims."
+    },
+    {
+      "source_id": "disc-002",
+      "label": "Search result snippets for founder-led content queries",
+      "reason": "Discovery only. Direct source pages or public posts must be used for evidence."
+    }
+  ],
+  "rules": [
+    "Do not cite query exports, trend inputs, AI prompt outputs, Reddit, autocomplete, or People Also Ask as factual evidence.",
+    "Public LinkedIn posts may be used as example artifacts, not as broad performance proof.",
+    "Vendor guides can support definitions and program mechanics, but not unsupported performance promises."
+  ]
+}

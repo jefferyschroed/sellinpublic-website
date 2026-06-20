@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-20-measure-employee-generated-content-beyond-impressions",
+  "slug": "measure-employee-generated-content-beyond-impressions",
+  "generated_at": "2026-06-20T18:08:56.677Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/measure-employee-generated-content-beyond-impressions/index.html",
+      "bytes": 33673,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 15541,
+      "post_count": 7,
+      "changed": false
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1865,
+      "post_count": 7,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 4246,
+      "post_count": 7,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

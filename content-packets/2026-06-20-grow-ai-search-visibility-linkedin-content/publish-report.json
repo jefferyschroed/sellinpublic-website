@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-20-grow-ai-search-visibility-linkedin-content",
+  "slug": "grow-ai-search-visibility-linkedin-content",
+  "generated_at": "2026-06-20T18:08:53.267Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/grow-ai-search-visibility-linkedin-content/index.html",
+      "bytes": 29538,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 15541,
+      "post_count": 7,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1865,
+      "post_count": 7,
+      "changed": true
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 4246,
+      "post_count": 7,
+      "changed": true
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

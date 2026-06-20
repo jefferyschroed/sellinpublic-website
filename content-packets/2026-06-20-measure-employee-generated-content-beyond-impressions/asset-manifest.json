@@ -1,0 +1,14 @@
+{
+  "assets": [
+    {
+      "id": "hero",
+      "type": "image/png",
+      "path": "public/assets/blog/measure-employee-generated-content-beyond-impressions/hero-generated.png",
+      "public_url": "/public/assets/blog/measure-employee-generated-content-beyond-impressions/hero-generated.png",
+      "width": 1897,
+      "height": 829,
+      "alt": "A frosted glass measurement dashboard on a warm peach and rose mesh gradient",
+      "notes": "Post-specific PNG hero generated with built-in image_gen using the SIP Liquid Mesh Hero style. Original generated file: /Users/jeff/.codex/generated_images/019ee2f4-16f4-7601-8da2-5f134103d6ac/ig_030eca856c00466d016a3601835eac819385db34cb336d9499.png. Final prompt saved in image-brief.md."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+packet_id: "2026-06-20-turn-employee-expertise-into-linkedin-posts"
+status: "publish-ready-child-scope"
+working_title: "How To Turn Employee Expertise Into Useful LinkedIn Posts"
+slug: "turn-employee-expertise-into-linkedin-posts"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, or revenue operator"
+  secondary_buyers:
+    - "Marketing leader"
+    - "Content operator"
+    - "Sales enablement leader"
+  company_context: "B2B companies with useful employee expertise but no reliable way to turn raw ideas into specific LinkedIn posts."
+  pain: "Useful field knowledge gets trapped in sales calls, Slack threads, product reviews, and customer conversations while LinkedIn posts drift toward generic ghostwritten personal-brand content."
+
+business_goal: "Own the workflow keyword around employee expertise capture, SME-led LinkedIn content, and employee-generated content production."
+sales_use_case: "Use when a prospect wants employees to show expertise publicly but worries the program will sound ghostwritten or generic."
+cta:
+  primary:
+    label: "Use the Capture Workflow"
+    url: "#copyable-capture-workflow"
+  secondary:
+    label: "Read the EGC Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "how-to-workflow"
+  primary_query: "turn employee expertise into LinkedIn posts"
+  aeo_question: "How can a B2B team turn employee expertise into LinkedIn posts without ghostwriting generic personal-brand content?"
+  primary_keyword: "turn employee expertise into LinkedIn posts"
+  secondary_keywords:
+    - "employee expertise LinkedIn posts"
+    - "SME-led LinkedIn content"
+    - "employee-generated content workflow"
+    - "B2B LinkedIn content workflow"
+    - "capture employee expertise"
+  related_questions:
+    - "How do you capture employee expertise for LinkedIn posts?"
+    - "How do you keep employee LinkedIn posts from sounding ghostwritten?"
+    - "What is the difference between employee-generated content and employee advocacy?"
+    - "How should teams review employee LinkedIn posts without killing voice?"
+
+topic_map:
+  pillar_id: "pillar-content-operations"
+  pillar_name: "Content Operations"
+  topic_id: "topic-turn-employee-expertise-into-posts"
+  topic_score: 84
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"
+
+entity_targets:
+  - "Employee-generated content"
+  - "Employee expertise"
+  - "Subject matter experts"
+  - "LinkedIn"
+  - "B2B teams"
+  - "Employee advocacy"
+  - "SME content capture"
+  - "Ghostwriting"
+angle: "The useful workflow is not asking employees to become creators. It is capturing specific expertise, preserving the employee's judgment, and editing the post around one buyer question."
+sell_in_public_pov: "The best employee-led LinkedIn posts start with a real work artifact or buyer question, not a prompt asking for a personal-brand opinion."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear distinction between employee-generated content and ghostwritten employee advocacy."
+  - "Practical capture-to-post workflow."
+  - "Named public examples from Microsoft and ClickUp LinkedIn posts with source limits."
+  - "Review guidance that protects accuracy and employee voice."
+  - "Measurement guidance that avoids unsupported pipeline promises."
+  - "FAQ section with non-duplicative questions."
+  - "Sources section with approved citations only."
+must_avoid:
+  - "Invented metrics, quotes, customer examples, or source claims."
+  - "Treating all ghostwriting as bad."
+  - "Claiming every employee should post."
+  - "Using LinkedIn example posts as proof of broad performance."
+  - "Generic personal-brand advice."
+  - "Shared index, sitemap, feed, CSS, JS, script, or topic-coverage edits in this child worktree."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Platform or first-party guidance for LinkedIn content and AI visibility."
+    - "Public LinkedIn posts used only as example artifacts."
+    - "Current employee advocacy or employee-led content guidance where directly relevant."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

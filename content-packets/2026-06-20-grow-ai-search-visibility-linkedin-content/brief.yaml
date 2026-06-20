@@ -1,0 +1,122 @@
+packet_id: "2026-06-20-grow-ai-search-visibility-linkedin-content"
+status: "ready_to_publish"
+working_title: "How To Grow AI Search Visibility With LinkedIn Content"
+slug: "grow-ai-search-visibility-linkedin-content"
+owner: "Sell In Public editorial"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+audience:
+  primary_buyer: "B2B founder or GTM/revenue leader"
+  secondary_buyers:
+    - "Sales leader"
+    - "Marketing leader"
+    - "Content operator"
+  company_context: "Mid-market B2B software companies that want AI search visibility without depending on social posts alone."
+  pain: "The team knows LinkedIn matters for market visibility, but they need a practical way to connect employee content, buyer questions, and crawlable owned pages."
+
+business_goal: "Claim the intersection of AI search visibility, LinkedIn content, employee-generated content, and answer-engine optimization for B2B teams."
+sales_use_case: "Use when a prospect asks whether LinkedIn content can help with AI search visibility or whether they should only invest in blog SEO."
+cta:
+  primary:
+    label: "Build The System"
+    url: "/#booking"
+  secondary:
+    label: "Read The EGC Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "how-to"
+  primary_query: "AI search visibility LinkedIn content"
+  aeo_question: "How can B2B teams use LinkedIn content to show up in AI search without pretending LinkedIn alone is the whole answer?"
+  primary_keyword: "AI search visibility LinkedIn content"
+  secondary_keywords:
+    - "LinkedIn content for AI search"
+    - "B2B AI search visibility"
+    - "answer engine optimization"
+    - "employee-generated content"
+    - "AI citations"
+    - "owned content for AI search"
+  related_questions:
+    - "Can LinkedIn content help a B2B company show up in AI search?"
+    - "What LinkedIn content gets cited by AI search tools?"
+    - "Why are LinkedIn posts not enough for AI visibility?"
+    - "How should LinkedIn posts connect to owned blog content?"
+
+topic_map:
+  pillar_id: "pillar-employee-generated-content"
+  pillar_name: "Employee-Generated Content"
+  topic_id: "topic-ai-search-visibility-linkedin-content"
+  topic_score: 86
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"
+
+entity_targets:
+  - "AI search visibility"
+  - "LinkedIn content"
+  - "Answer-engine optimization"
+  - "Employee-generated content"
+  - "B2B content strategy"
+  - "Google AI Overviews"
+  - "Google AI Mode"
+  - "Meltwater GenAI Lens"
+angle: "LinkedIn is a useful signal surface for expert B2B content, but the controlled answer surface should still live on owned, crawlable pages."
+sell_in_public_pov: "Employee LinkedIn posts work best when they feed a repeatable answer system: customer questions, employee expertise, structured owned pages, and social distribution that keeps the idea current."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear caveat that LinkedIn posts alone do not guarantee AI search visibility."
+  - "Source-backed explanation of LinkedIn as an AI-citation surface."
+  - "Google Search guidance that AI features still depend on crawlable, useful web content."
+  - "A practical operating loop for turning employee LinkedIn content into owned answer assets."
+  - "Internal links to the employee-generated content hub and advocacy comparison post."
+  - "Sources section with approved citations only."
+must_avoid:
+  - "Claims that posting on LinkedIn guarantees AI search visibility."
+  - "Invented AI-citation results, customer metrics, or examples."
+  - "Generic social media advice."
+  - "Unsupported claims about revenue, pipeline, or ranking."
+  - "Brand-heavy Sell In Public service language in the educational body."
+  - "Discovery-only inputs as factual evidence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Primary research or platform-owned research."
+    - "Official search platform documentation."
+    - "Credible caveat source for LinkedIn limits."
+    - "Internal SME notes only for Sell In Public POV."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/employee-generated-content-vs-employee-advocacy/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

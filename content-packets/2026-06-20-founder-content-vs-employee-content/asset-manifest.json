@@ -1,0 +1,19 @@
+{
+  "slug": "founder-content-vs-employee-content",
+  "generated_at": "2026-06-20T09:00:00-07:00",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "path": "public/assets/blog/founder-content-vs-employee-content/hero-generated.png",
+      "public_url": "/public/assets/blog/founder-content-vs-employee-content/hero-generated.png",
+      "width": 1897,
+      "height": 829,
+      "alt": "Frosted glass comparison panel representing founder-led and employee-generated LinkedIn content",
+      "source": "image_gen",
+      "source_path": "/Users/jeff/.codex/generated_images/019ee2f4-6c23-7e30-b6e7-877565439e09/ig_095a7fe191e246cb016a3601a1b4f88196aa4ba037f7f6b052.png",
+      "notes": "Generated with the Sell In Public Liquid Mesh Hero style and copied into the post-local asset folder."
+    }
+  ],
+  "final_prompt": "Use case: stylized-concept. Asset type: wide blog hero, 1600x700. Primary request: a visual comparison of founder-led LinkedIn content and employee-generated content for a B2B company. Style reference: Sell In Public Liquid Mesh Hero style with warm Japanese-inspired blended mesh gradient, one focused liquid-glass UI object, bright white text-like lines, thin translucent strokes, soft glows, subtle grain, and calm editorial depth. Subject: a single frosted glass comparison card with two simple profile circles, text-like lines, and a shared decision toggle/checkmark area. Constraints: no logos, watermarks, exact LinkedIn UI, readable text, fake metrics, SVG/vector look, stock-photo look, dark single-hue palette, orange/blue split, flow lines, or icon cloud."
+}

@@ -1,0 +1,30 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-001",
+      "url": "https://www.postbeyond.com/blog/employee-advocacy-on-linkedin/",
+      "reason": "Vendor guide used for discovery context only. It includes some dated and secondary claims, so it was not used to support factual claims in the article."
+    },
+    {
+      "source_id": "disc-002",
+      "url": "https://www.oktopost.com/blog/employee-advocacy-linkedin-b2b/",
+      "reason": "Vendor guide used for discovery context only. It helped confirm the measurement theme but was not used as claim evidence."
+    },
+    {
+      "source_id": "disc-003",
+      "url": "https://www.demandgenreport.com/industry-news/news-brief/linkedin-is-emerging-as-ai-search-visibility-channel-meltwater/53252/",
+      "reason": "News brief used as a lead to original LinkedIn/Meltwater research. The article cites first-party LinkedIn/Meltwater materials instead."
+    },
+    {
+      "source_id": "disc-004",
+      "url": "docs/seo-aeo/topic-coverage.csv",
+      "reason": "Repo planning record used for routing only, not factual evidence."
+    }
+  ],
+  "rules": [
+    "Discovery-only sources may shape the angle and research questions.",
+    "Discovery-only sources must not appear in citations.json, claims-ledger.csv, public source links, or draft citation markers.",
+    "Material public claims require a cited Grade A or Grade B source, or must be labeled as Sell In Public editorial POV."
+  ]
+}

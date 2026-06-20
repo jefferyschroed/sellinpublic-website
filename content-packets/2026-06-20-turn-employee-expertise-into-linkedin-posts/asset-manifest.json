@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "path": "public/assets/blog/turn-employee-expertise-into-linkedin-posts/hero-generated.png",
+      "public_url": "/public/assets/blog/turn-employee-expertise-into-linkedin-posts/hero-generated.png",
+      "width": 1897,
+      "height": 829,
+      "alt": "Frosted glass social post card showing employee expertise being shaped into a LinkedIn post",
+      "source": "/Users/jeff/.codex/generated_images/019ee2f3-6f13-7231-a8a7-2aedca443819/ig_034d3b5a701ab89e016a360152bb108193adfd20dd1088efea.png",
+      "notes": "Generated with Sell In Public Liquid Mesh Hero prompt. No readable text, logos, fake metrics, or exact LinkedIn UI."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+packet_id: "2026-06-20-measure-employee-generated-content-beyond-impressions"
+status: "ready_to_publish"
+working_title: "How To Measure Employee-Generated Content Beyond Impressions"
+slug: "measure-employee-generated-content-beyond-impressions"
+owner: "Sell In Public editorial"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+audience:
+  primary_buyer: "B2B revenue leader"
+  secondary_buyers:
+    - "Marketing leader"
+    - "RevOps leader"
+    - "Founder"
+    - "Sales leader"
+  company_context: "Mid-market B2B software companies using employee, founder, seller, and subject-matter expert content to support pipeline, credibility, and buyer education."
+  pain: "The team can see impressions and engagement, but leadership wants to know whether employee-generated content is creating buyer trust, useful conversations, pipeline influence, and search visibility."
+
+business_goal: "Own the measurement and revenue-driven B2B content keyword cluster around employee-generated content, LinkedIn content, attribution, and qualitative proof."
+sales_use_case: "Use when a prospect asks how employee-generated content will be measured without reducing the program to vanity metrics."
+cta:
+  primary:
+    label: "Copy The Measurement Board"
+    url: "#weekly-measurement-board"
+  secondary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+
+search_intent:
+  stage: "measurement-and-evaluation"
+  primary_query: "measure employee-generated content beyond impressions"
+  aeo_question: "What should B2B teams measure when employee-generated content is supposed to create revenue, pipeline influence, trust, and search visibility instead of only impressions?"
+  primary_keyword: "measure employee-generated content beyond impressions"
+  secondary_keywords:
+    - "employee-generated content metrics"
+    - "employee advocacy measurement"
+    - "LinkedIn content attribution"
+    - "B2B content pipeline influence"
+    - "AI search visibility LinkedIn"
+  related_questions:
+    - "How do you measure employee-generated content?"
+    - "What metrics matter beyond impressions?"
+    - "How should LinkedIn employee content connect to pipeline?"
+    - "How do you measure content trust and qualitative proof?"
+    - "How should B2B teams measure AI search visibility from LinkedIn content?"
+
+topic_map:
+  pillar_id: "pillar-measurement-learning"
+  pillar_name: "Measurement And Learning"
+  topic_id: "topic-measure-egc-beyond-impressions"
+  topic_score: 82
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"
+
+entity_targets:
+  - "Employee-generated content"
+  - "Employee advocacy measurement"
+  - "LinkedIn analytics"
+  - "Pipeline influence"
+  - "B2B buying journey"
+  - "Google Analytics campaign parameters"
+  - "Google Search Console Performance report"
+  - "AI search visibility"
+  - "Meltwater"
+angle: "Employee-generated content needs a measurement model that starts with the business job, then connects platform signals to buyer evidence, CRM proof, sales reuse, and search visibility without pretending every post can be tied to revenue on its own."
+sell_in_public_pov: "Impressions are useful as a reach input. They become dangerous when teams treat them as the outcome."
+word_count_target: "1700-2100"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "A practical measurement model B2B teams can use without inventing attribution certainty."
+  - "Clear distinction between reach metrics, buyer-fit signals, pipeline influence, trust proof, sales reuse, and search visibility."
+  - "Source-backed references to LinkedIn analytics, Google Analytics UTM parameters, Google Search Console, Gartner's B2B buying journey, and LinkedIn/Meltwater AI search visibility research."
+  - "Internal links to the employee-generated content hub, the employee-generated content vs employee advocacy comparison, and the blog index."
+  - "A copyable weekly measurement board."
+must_avoid:
+  - "Vanity-metric scolding."
+  - "Unsupported benchmarks, revenue claims, conversion promises, or fake attribution math."
+  - "Invented customer examples, quotes, case studies, or performance claims."
+  - "Generic content marketing advice."
+  - "Discovery-only inputs as factual evidence."
+  - "Feature-heavy Sell In Public service language inside the educational body."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Platform documentation for analytics mechanics."
+    - "Original or first-party research for AI visibility and B2B buying context."
+    - "Internal SME notes only for Sell In Public POV."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/employee-generated-content-vs-employee-advocacy/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

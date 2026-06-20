@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "grow-ai-search-visibility-linkedin-content",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-20T03:24:03.339Z",
+  "rendered_html_path": "blog/grow-ai-search-visibility-linkedin-content/index.html",
+  "rendered_html_sha256": "7e10860e678d73413c92e5ad106366e3e17b459e321618587af43089494c8bac",
+  "article_text_sha256": "7a34a3a05e8a68b477f6f554b61a93bb5a5b3fb701dd86b7b37c5d1a180f17cb",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as clean, direct B2B editorial throughout with no instruction leaks, rubric language, AI-ish filler, or internal process text visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

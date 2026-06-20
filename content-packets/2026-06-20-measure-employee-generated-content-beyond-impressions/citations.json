@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a525196/view-post-analytics-for-your-content",
+    "title": "View post analytics for your content",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "Last updated 2 weeks before access",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform documentation",
+    "reliability": "A",
+    "notes": "Current LinkedIn member post analytics documentation. Supports available post analytics categories and availability limits."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.linkedin.com/help/lms/answer/a564051",
+    "title": "Content analytics for your LinkedIn Page",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "author": "LinkedIn",
+    "published_date": "Last updated 9 months before access",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform documentation",
+    "reliability": "A",
+    "notes": "Current LinkedIn Page content analytics documentation. Supports Page-level metrics context."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/business/marketing/blog/social-media-marketing/how-to-measure-the-success-of-your-employee-advocacy-program",
+    "title": "How to Measure the Success of Your Employee Advocacy Program",
+    "publisher": "LinkedIn Marketing Solutions Blog",
+    "author": "LinkedIn",
+    "published_date": "2016",
+    "accessed_date": "2026-06-20",
+    "source_type": "first-party platform guidance",
+    "reliability": "B",
+    "notes": "Older but first-party LinkedIn guidance. Used only for measurement category precedent: content engagement, employee activation, and business outcomes."
+  },
+  {
+    "id": "src-004",
+    "url": "https://business.linkedin.com/content/dam/me/business/en-us/elevate/Resources/pdf/official-guide-to-employee-advocacy-ebook.pdf",
+    "title": "The Official Guide to Employee Advocacy",
+    "publisher": "LinkedIn",
+    "author": "LinkedIn",
+    "published_date": "2016",
+    "accessed_date": "2026-06-20",
+    "source_type": "first-party guide PDF",
+    "reliability": "B",
+    "notes": "Older official guide. Reviewed for the instruction to measure results and look beyond engagement, but not used for current product mechanics."
+  },
+  {
+    "id": "src-005",
+    "url": "https://support.google.com/analytics/answer/10917952?hl=en",
+    "title": "URL builders: Collect campaign data with custom URLs",
+    "publisher": "Google Analytics Help",
+    "author": "Google",
+    "published_date": "Current support documentation",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform documentation",
+    "reliability": "A",
+    "notes": "Supports UTM parameter advice and consistent naming."
+  },
+  {
+    "id": "src-006",
+    "url": "https://support.google.com/webmasters/answer/7576553?hl=en",
+    "title": "Performance report (Search results): Overview and basic setup",
+    "publisher": "Google Search Console Help",
+    "author": "Google",
+    "published_date": "Current support documentation",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform documentation",
+    "reliability": "A",
+    "notes": "Supports Search Console metrics and dimensions."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey",
+    "title": "The B2B Buying Journey: Key Stages and How to Optimize Them",
+    "publisher": "Gartner",
+    "author": "Gartner",
+    "published_date": "Current page, copyright 2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "industry research and guidance",
+    "reliability": "B",
+    "notes": "Supports nonlinear buying journey and buying task framing."
+  },
+  {
+    "id": "src-008",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/new-meltwater-research-shares-5-insights-from-9-million-citations",
+    "title": "AI Search & LinkedIn: 5 Takeaways from 9.5 Million Citations",
+    "publisher": "LinkedIn Marketing Solutions",
+    "author": "Chris Hackney, Chief Product Officer at Meltwater",
+    "published_date": "2026-05-21",
+    "accessed_date": "2026-06-20",
+    "source_type": "first-party research summary",
+    "reliability": "A",
+    "notes": "Supports AI visibility context for LinkedIn and individual member profiles."
+  },
+  {
+    "id": "src-009",
+    "url": "https://www.meltwater.com/en/blog/ai-search-visibility-april-may-2026",
+    "title": "AI Search Visibility Report - May 2026: The Rise of Authority Sources",
+    "publisher": "Meltwater",
+    "author": "Nathaniel Pallen",
+    "published_date": "2026-06-17",
+    "accessed_date": "2026-06-20",
+    "source_type": "original research summary",
+    "reliability": "B",
+    "notes": "Supports the broader claim that AI visibility can be tracked as citation and reputation visibility. Adjacent to the article topic."
+  },
+  {
+    "id": "src-010",
+    "url": "internal:sell-in-public-editorial-pov",
+    "title": "Sell In Public editorial POV on employee-generated content measurement",
+    "publisher": "Sell In Public",
+    "author": "Sell In Public editorial",
+    "published_date": "2026-06-20",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal editorial POV",
+    "reliability": "B",
+    "notes": "Used for interpretation and operating model recommendations. No external statistics or customer outcomes are attributed to this source."
+  }
+]

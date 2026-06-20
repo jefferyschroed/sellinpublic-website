@@ -1,0 +1,19 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "discovery-001",
+      "label": "Parent batch assignment and topic brief",
+      "reason": "Useful for scope and intent, not factual evidence for public article claims."
+    },
+    {
+      "source_id": "discovery-002",
+      "label": "Search result snippets and answer-engine prompts",
+      "reason": "Useful for routing and phrasing, not citable factual support."
+    }
+  ],
+  "rules": [
+    "Do not cite query exports, trend inputs, AI prompt outputs, autocomplete, People Also Ask, or forum/social comments as factual evidence.",
+    "Use original reports, official docs, and attributable expert commentary for material claims."
+  ]
+}

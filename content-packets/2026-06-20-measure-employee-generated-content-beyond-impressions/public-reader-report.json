@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "measure-employee-generated-content-beyond-impressions",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-20T03:24:11.646Z",
+  "rendered_html_path": "blog/measure-employee-generated-content-beyond-impressions/index.html",
+  "rendered_html_sha256": "ea65a1ca61e48f5422e3968eb1c21c87714e3cd6a714753117be6e1860efaabb",
+  "article_text_sha256": "fac7570c9807b48ab9a33447f344c8974182d21c5fb3300000dbd3d01d75b8ea",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, practical B2B measurement guide with no instruction leaks, rubric language, AI-ish filler, or internal process text visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

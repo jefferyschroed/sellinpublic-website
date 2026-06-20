@@ -1,0 +1,12 @@
+packet_id: "2026-06-20-grow-ai-search-visibility-linkedin-content"
+slug: "grow-ai-search-visibility-linkedin-content"
+status: "intake_ready"
+strategic_asset_decision: "create_spoke_post"
+asset_decision: "static_blog_post"
+topic_id: "topic-ai-search-visibility-linkedin-content"
+pillar_id: "pillar-employee-generated-content"
+source_readiness: "ready"
+standalone_rationale: "The query sits at a live intersection of LinkedIn visibility, AI search citations, employee expertise, and owned answer assets."
+discovery_sources_excluded_from_evidence: true
+query_run_status: "handoff_ready"
+notes: "Child post is intentionally scoped to packet, post, asset, and post-local reports only. Shared index, sitemap, feed, docs, and tooling are parent-owned."

@@ -1,0 +1,88 @@
+packet_id: "2026-06-20-founder-content-vs-employee-content"
+slug: "founder-content-vs-employee-content"
+status: "intake_ready"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+strategic_asset_decision: "post"
+asset_decision: "post"
+topic_id: "topic-founder-vs-employee-content"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "The topic has comparison intent, a distinct primary query, and a practical buyer decision: whether LinkedIn content should depend on the founder, employee subject-matter experts, or a hybrid operating model."
+discovery_sources_excluded_from_evidence: true
+
+candidate_source:
+  path: "docs/seo-aeo/topic-coverage.csv"
+  candidate_id: "topic-founder-vs-employee-content"
+  row_number: 7
+
+candidate:
+  topic: "Founder Content Vs Employee Content"
+  canonical_topic: "Founder Content Vs Employee Content"
+  intent: "comparison"
+  aeo_question: "When should a B2B company rely on founder-led LinkedIn content, employee-generated content, or both?"
+  primary_keyword: "founder content vs employee content"
+  topic_id: "topic-founder-vs-employee-content"
+  pillar_id: "pillar-linkedin-led-gtm"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  topic_score_guess: 72
+  topic_score_source: "docs/seo-aeo/topic-coverage.csv"
+  score_band: "70-79:resolve_gap_first"
+  authority_match: "topic-coverage.csv:topic_id"
+  evidence_use: "approved_sources_and_sme_notes"
+
+decisions:
+  strategic_asset_decision: "post"
+  scaffold_asset_decision: "post"
+  recommended_asset: "outline_packet"
+  topic_decision: "resolve_gap_first"
+  coverage_status: "mapped"
+  coverage_role: "spoke"
+  source_readiness: "ready"
+  packet_intake_status: "intake_ready"
+  query_run_status: "handoff_ready"
+
+gates:
+  current_gate_reasons: []
+  current_required_before_publish: []
+  resolved_gate_history:
+    - reason: "needs_examples"
+      required_before_packet: "Find source-backed public examples first."
+      resolved_by_artifact: "research.md; citations.json"
+      resolved_at: "2026-06-20"
+    - reason: "missing_anthropic_api_key_for_required_claude_and_public_reader_gates"
+      required_before_publish: "Set ANTHROPIC_API_KEY locally, run the applied Claude writing pass, render the post, and run model-based public-reader QA."
+      resolved_by_artifact: "claude-writing-pass.md; public-reader-report.json"
+      resolved_at: "2026-06-20"
+
+discovery_lineage:
+  query_run_id: ""
+  query_run_dir: ""
+  brief_handoff_path: ""
+  source_manifest_path: ""
+  normalized_queries_path: ""
+  query_clusters_path: ""
+  discovery_exclusions_path: "discovery-exclusions.json"
+  derived_from:
+    - "docs/seo-aeo/topic-coverage.csv"
+    - "manual web verification on 2026-06-20"
+
+evidence_boundary:
+  discovery_inputs_visible_to_agents: true
+  discovery_inputs_citable: false
+  citations_must_come_from: "citations.json or approved SME notes only"
+  discovery_only_inputs_excluded_from_factual_evidence:
+    - "query exports"
+    - "trend inputs"
+    - "AI prompt outputs"
+    - "Reddit"
+    - "autocomplete"
+    - "People Also Ask"
+    - "SERP observations"
+
+internal_links:
+  required:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"

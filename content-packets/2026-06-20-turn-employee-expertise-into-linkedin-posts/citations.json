@@ -1,0 +1,74 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How To Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Solutions",
+    "author": "LinkedIn Marketing Solutions",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform guidance",
+    "reliability": "B",
+    "notes": "Used for LinkedIn guidance on customer-question-led content, expertise, clear structure, and employee content. Platform source, not neutral independent research."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.oktopost.com/blog/employee-advocacy-linkedin-b2b/",
+    "title": "How to get your employees sharing on LinkedIn",
+    "publisher": "Oktopost",
+    "author": "Oktopost",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "vendor guide",
+    "reliability": "C",
+    "notes": "Used for context on employee advocacy workflows and company-provided sharing. Not used for statistics or broad performance proof."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/posts/heikeyoung_ive-been-working-on-employee-generated-content-activity-7376245128690278400-UgsU",
+    "title": "Public LinkedIn post about employee-generated content",
+    "publisher": "LinkedIn",
+    "author": "Heike Young",
+    "published_date": "2025",
+    "accessed_date": "2026-06-20",
+    "source_type": "public LinkedIn example artifact",
+    "reliability": "B",
+    "notes": "Used only as a public example artifact from a Microsoft employee discussing employee-generated content work and program participation."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.linkedin.com/posts/chrisclickup_we-have-15-employees-at-clickup-creating-activity-7411804623751135233-ojKW",
+    "title": "Public LinkedIn post about ClickUp employees creating LinkedIn content",
+    "publisher": "LinkedIn",
+    "author": "Chris Cunningham",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "public LinkedIn example artifact",
+    "reliability": "B",
+    "notes": "Used only as a public example artifact from ClickUp's social/content leader describing an employee creator program."
+  },
+  {
+    "id": "src-005",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+    "title": "Employee-Generated Content Infrastructure",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-17",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Used for internal linking and cluster continuity, not external factual proof."
+  },
+  {
+    "id": "src-006",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-vs-employee-advocacy/",
+    "title": "Employee-Generated Content vs Employee Advocacy",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-19",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Used to support internal definition continuity between EGC and advocacy."
+  }
+]

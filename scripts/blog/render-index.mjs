@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { renderFaviconLinks } from "../site-head.mjs";
 import { renderGoogleTag } from "./google-tag.mjs";
 import { assertSafeSlug, listPacketDirs, loadPacket, writeTextAtomic } from "./packet.mjs";
 import { validatePacket } from "./validate-packet.mjs";
@@ -22,11 +23,36 @@ function formatDate(value) {
   }).format(new Date(`${value}T09:00:00-07:00`));
 }
 
+function hasPublishedStaticPost(packet, root) {
+  const slug = packet.brief.slug;
+  if (!slug) return false;
+
+  try {
+    assertSafeSlug(slug);
+  } catch {
+    return false;
+  }
+
+  const status = String(packet.brief.status || "").toLowerCase();
+  const publishableStatus =
+    status.includes("published") || status === "ready_to_publish" || status === "publish_ready";
+
+  return (
+    publishableStatus &&
+    packet.exists("publish-meta.yaml") &&
+    Boolean(packet.publishMeta.canonical_url) &&
+    fs.existsSync(path.join(root, "blog", slug, "index.html"))
+  );
+}
+
 export function collectPublishedPackets(root = process.cwd()) {
   return listPacketDirs(root)
-    .map((packetDir) => ({ packetDir, validation: validatePacket(packetDir, root) }))
-    .filter(({ validation }) => validation.ok)
-    .map(({ packetDir }) => loadPacket(packetDir, root))
+    .map((packetDir) => {
+      const packet = loadPacket(packetDir, root);
+      return { packet, validation: validatePacket(packetDir, root) };
+    })
+    .filter(({ packet, validation }) => validation.ok || hasPublishedStaticPost(packet, root))
+    .map(({ packet }) => packet)
     .filter((packet) => {
       assertSafeSlug(packet.brief.slug);
       return packet.brief.slug && packet.publishMeta.canonical_url && packet.exists("publish-meta.yaml");
@@ -116,6 +142,7 @@ export function renderBlogIndexHtml(packets) {
     <meta name="author" content="Jeffery Schroeder" />
     <title>Sell In Public Blog - Employee-generated content research and examples</title>
     <meta name="description" content="Research-backed notes on employee-generated content, B2B social strategy, examples, source-backed statistics, and useful editorial checklists." />
+    ${renderFaviconLinks()}
     <link rel="canonical" href="https://sellinpublic.co/blog/" />
     <meta property="og:title" content="Sell In Public Blog" />
     <meta property="og:description" content="Research-backed notes on employee-generated content, B2B social strategy, examples, and useful editorial checklists." />

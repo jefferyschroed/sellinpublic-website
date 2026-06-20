@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How to Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Margarita Loktionova",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform_research_article",
+    "reliability": "B",
+    "notes": "Used for current LinkedIn guidance on customer-question-led content, employee participation, clear POV, consistent terminology, and AI visibility. Treat as platform/Semrush analysis, not neutral academic evidence."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.linkedin.com/posts/chrisclickup_we-have-15-employees-at-clickup-creating-activity-7411804623751135233-ojKW",
+    "title": "Unlock Employee-Generated Content's Hidden Potential",
+    "publisher": "LinkedIn",
+    "author": "Chris Cunningham",
+    "published_date": "2026-01",
+    "accessed_date": "2026-06-20",
+    "source_type": "public_linkedin_post_example",
+    "reliability": "B",
+    "notes": "Used as a public employee/team content example from ClickUp. Example artifact only, not broad performance proof."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/posts/heikeyoung_ive-been-working-on-employee-generated-content-activity-7376245128690278400-UgsU",
+    "title": "How I Harnessed Employee-Generated Content at Microsoft",
+    "publisher": "LinkedIn",
+    "author": "Heike Young",
+    "published_date": "2025-10",
+    "accessed_date": "2026-06-20",
+    "source_type": "public_linkedin_post_example",
+    "reliability": "B",
+    "notes": "Used as a public practitioner example of a Microsoft employee-generated content program. Self-reported artifact only."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.oktopost.com/blog/employee-advocacy-linkedin-b2b/",
+    "title": "How to Boost Employee Advocacy on LinkedIn",
+    "publisher": "Oktopost",
+    "author": "Oktopost",
+    "published_date": "",
+    "accessed_date": "2026-06-20",
+    "source_type": "vendor_guide",
+    "reliability": "C",
+    "notes": "Used only for context on employee advocacy program framing. Not used for material statistics or broad performance claims."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.linkedin.com/help/lms/answer/a1399568",
+    "title": "Thought Leader Ads",
+    "publisher": "LinkedIn Marketing Solutions Help",
+    "author": "",
+    "published_date": "Last updated 2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for current LinkedIn documentation that thought leader ads can promote member posts, including employee posts and posts from eligible connections, with author permission."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a6836874",
+    "title": "My Company Tab and Employee Advocacy Tab Is No Longer Available",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2025",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used to avoid outdated claims about the native LinkedIn Employee Advocacy tab. LinkedIn says the feature began being discontinued in November 2024 and Page admins can still reshare employee posts and notify employees."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf",
+    "title": "2025 Edelman-LinkedIn B2B Thought Leadership Impact Report",
+    "publisher": "Edelman and LinkedIn",
+    "author": "Edelman and LinkedIn",
+    "published_date": "2025-07",
+    "accessed_date": "2026-06-20",
+    "source_type": "research_report_pdf",
+    "reliability": "A",
+    "notes": "Used for B2B buyer context and thought leadership consumption/evaluation claims. Not used as direct proof of founder or employee content program performance."
+  },
+  {
+    "id": "src-008",
+    "url": "https://www.linkedin.com/posts/davegerhardt_brand-is-all-that-matters-right-now-one-activity-7465712716054343680-xuD9",
+    "title": "Why Brand Matters in a World of AI Decision Making",
+    "publisher": "LinkedIn",
+    "author": "Dave Gerhardt",
+    "published_date": "2026-05",
+    "accessed_date": "2026-06-20",
+    "source_type": "public_linkedin_post_example",
+    "reliability": "B",
+    "notes": "Used as a public founder-led content example from the owner of Exit Five. Example artifact only, not broad performance proof."
+  },
+  {
+    "id": "src-009",
+    "url": "https://sproutsocial.com/insights/employee-influencers/",
+    "title": "Employee-generated Content Is the Next Big Thing for Brands",
+    "publisher": "Sprout Social",
+    "author": "Aubree Schaefer",
+    "published_date": "2026-02-11",
+    "accessed_date": "2026-06-20",
+    "source_type": "company_research_article",
+    "reliability": "B",
+    "notes": "Used for employee-generated content program guardrails, support, and company example context. Company source, so performance implications should be treated cautiously."
+  },
+  {
+    "id": "src-010",
+    "url": "content-packets/2026-06-20-founder-content-vs-employee-content/sme-notes.md",
+    "title": "Sell In Public SME Notes for Founder Content Vs Employee Content",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder and Codex",
+    "published_date": "2026-06-20",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal_sme_notes",
+    "reliability": "B",
+    "notes": "Used for Sell In Public operating guidance and editorial distinctions that are framed as POV rather than external research findings."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "slug": "measure-employee-generated-content-beyond-impressions",
+  "mode": "offline_scan",
+  "model_provider": "",
+  "model": "",
+  "generated_at": "2026-06-20T03:05:30.622Z",
+  "rendered_html_path": "blog/measure-employee-generated-content-beyond-impressions/index.html",
+  "rendered_html_sha256": "488a66083d779616f4fca0475f70dcc1eeacc4a53a5bf14c16ae13826169421c",
+  "article_text_sha256": "114d36977b7f0a563b18c775f1308df82526ec720331a19dba20224cf3902009",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": false,
+  "summary": "Public-reader QA passed.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

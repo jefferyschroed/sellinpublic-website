@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-20-founder-content-vs-employee-content",
+  "slug": "founder-content-vs-employee-content",
+  "generated_at": "2026-06-20T18:09:03.608Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/founder-content-vs-employee-content/index.html",
+      "bytes": 31750,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 15541,
+      "post_count": 7,
+      "changed": false
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 1865,
+      "post_count": 7,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 4246,
+      "post_count": 7,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

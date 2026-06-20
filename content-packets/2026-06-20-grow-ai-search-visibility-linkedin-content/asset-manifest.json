@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "slug": "grow-ai-search-visibility-linkedin-content",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "path": "public/assets/blog/grow-ai-search-visibility-linkedin-content/hero-generated.png",
+      "public_url": "https://sellinpublic.co/public/assets/blog/grow-ai-search-visibility-linkedin-content/hero-generated.png",
+      "width": 1897,
+      "height": 829,
+      "alt": "A frosted glass professional content card on a warm rose and peach mesh gradient",
+      "notes": "Generated with image_gen using the SIP Liquid Mesh Hero style. Original generated file remains under /Users/jeff/.codex/generated_images/019ee2f2-c702-79b0-af58-0e54020cb125/."
+    }
+  ]
+}

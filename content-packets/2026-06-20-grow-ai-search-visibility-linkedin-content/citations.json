@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/new-meltwater-research-shares-5-insights-from-9-million-citations",
+    "title": "[New research] AI Search & LinkedIn: 5 Takeaways from 9.5 Million Citations",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Chris Hackney",
+    "published_date": "2026-05-21",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform-hosted research summary",
+    "reliability": "A",
+    "notes": "Summarizes Meltwater research on LinkedIn citations in AI search across six major models."
+  },
+  {
+    "id": "src-002",
+    "url": "https://learn.meltwater.com/rs/814-WJU-189/images/2026%20Meltwater%20report%20-%20How%20LinkedIn%20Content%20Wins%20AI%20Search.pdf?version=0",
+    "title": "How LinkedIn Content Wins in AI Search",
+    "publisher": "Meltwater",
+    "author": "Meltwater and LinkedIn",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "primary research report",
+    "reliability": "A",
+    "notes": "Methodology says Meltwater GenAI Lens analyzed 9.5 million AI citations across 16 B2B categories and six models."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How to Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Margarita Loktionova",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-20",
+    "source_type": "platform-hosted research and playbook",
+    "reliability": "B",
+    "notes": "Reports Semrush analysis of 89,000 unique LinkedIn URLs cited by ChatGPT Search, Google AI Mode, and Perplexity."
+  },
+  {
+    "id": "src-004",
+    "url": "https://developers.google.com/search/docs/appearance/ai-features",
+    "title": "AI Features and Your Website",
+    "publisher": "Google Search Central",
+    "author": "Google",
+    "published_date": "n.d.",
+    "accessed_date": "2026-06-20",
+    "source_type": "official platform documentation",
+    "reliability": "A",
+    "notes": "Explains AI Overviews, AI Mode, relevant links, and query fan-out from a site owner's perspective."
+  },
+  {
+    "id": "src-005",
+    "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+    "title": "Google's Guide to Optimizing for Generative AI Features on Google Search",
+    "publisher": "Google Search Central",
+    "author": "Google",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "official platform documentation",
+    "reliability": "A",
+    "notes": "States that foundational SEO best practices remain relevant and that crawlable, unique, expert-led content matters for generative AI search visibility."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.kiplinger.com/business/small-business/why-ai-search-results-are-ghosting-your-linkedin-posts",
+    "title": "Why AI Search Results Are Ghosting Your LinkedIn Posts",
+    "publisher": "Kiplinger",
+    "author": "Dave Maney",
+    "published_date": "2025-10",
+    "accessed_date": "2026-06-20",
+    "source_type": "expert caveat and commentary",
+    "reliability": "B",
+    "notes": "Useful caution that standard LinkedIn posts may lack source reputation, citation network, coherence, and depth signals."
+  },
+  {
+    "id": "src-007",
+    "url": "https://news.linkedin.com/2026/keeping-conversations-real-on-linkedin",
+    "title": "Keeping conversations real on LinkedIn",
+    "publisher": "LinkedIn Pressroom",
+    "author": "LinkedIn Corporate Communications",
+    "published_date": "2026-06-04",
+    "accessed_date": "2026-06-20",
+    "source_type": "official platform communication",
+    "reliability": "A",
+    "notes": "States that LinkedIn is taking steps against generic AI content and content with little human perspective."
+  },
+  {
+    "id": "src-008",
+    "url": "https://www.oktopost.com/blog/ai-visibility-b2b-marketing-authenticity/",
+    "title": "How AI and social media are shaping B2B authenticity and visibility",
+    "publisher": "Oktopost",
+    "author": "Oktopost",
+    "published_date": "2025",
+    "accessed_date": "2026-06-20",
+    "source_type": "industry commentary",
+    "reliability": "C",
+    "notes": "Context source for multi-surface AI visibility framing. Do not use for statistics or material performance claims."
+  },
+  {
+    "id": "src-009",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+    "title": "What Is Employee-Generated Content?",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-17",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Internal link for the employee-generated content operating model."
+  },
+  {
+    "id": "src-010",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-vs-employee-advocacy/",
+    "title": "Employee-Generated Content vs. Employee Advocacy",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026",
+    "accessed_date": "2026-06-20",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Internal link for the distinction between original employee expertise and amplification programs."
+  }
+]

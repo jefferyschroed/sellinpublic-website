@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "turn-employee-expertise-into-linkedin-posts",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-20T03:26:39.611Z",
+  "rendered_html_path": "blog/turn-employee-expertise-into-linkedin-posts/index.html",
+  "rendered_html_sha256": "f9628802e237e6ce92ca610b499ccf557f78e86de1abc8386a649b36a7a5b3b6",
+  "article_text_sha256": "2e45cb74c632344141c3b8397cb466e7a5f14be1c9e2b45353e8c74b8c79f2c8",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as clean, specific, and practitioner-facing throughout, with no instruction leaks, rubric language, AI-ish filler, or internal process text visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

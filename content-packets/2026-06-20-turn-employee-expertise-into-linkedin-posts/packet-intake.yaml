@@ -1,0 +1,13 @@
+packet_id: "2026-06-20-turn-employee-expertise-into-linkedin-posts"
+slug: "turn-employee-expertise-into-linkedin-posts"
+status: "intake_ready"
+strategic_asset_decision: "create_or_refresh_packet"
+asset_decision: "post"
+topic_id: "topic-turn-employee-expertise-into-posts"
+pillar_id: "pillar-content-operations"
+source_readiness: "ready"
+standalone_rationale: "The topic owns the operational workflow between raw employee expertise and public LinkedIn posts, which is distinct from the definition and comparison posts already in the cluster."
+discovery_sources_excluded_from_evidence: true
+notes:
+  - "Repo topic row reviewed at docs/seo-aeo/topic-coverage.csv; not edited due child scope boundary."
+  - "Model-backed writing and public-reader gates are blocked locally because ANTHROPIC_API_KEY is missing."

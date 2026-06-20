@@ -1,0 +1,128 @@
+packet_id: "2026-06-20-founder-content-vs-employee-content"
+status: "publish_ready"
+working_title: "Founder Content Vs Employee Content"
+slug: "founder-content-vs-employee-content"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-20"
+updated_at: "2026-06-20"
+
+audience:
+  primary_buyer: "B2B founder or revenue leader"
+  secondary_buyers:
+    - "Sales leader"
+    - "Marketing leader"
+    - "Content operator"
+  company_context: "B2B companies deciding whether LinkedIn content should come from the founder, subject-matter employees, or both."
+  pain: "The company wants more credible LinkedIn distribution but does not know whether the founder should carry the voice, whether employees should create, or how the two models should work together."
+
+business_goal: "Own the comparison keyword that connects founder-led content, employee-generated content, LinkedIn distribution, and operating-model decisions."
+sales_use_case: "Use when a prospect asks whether LinkedIn should be founder-led, team-led, or run as a hybrid employee-generated content system."
+cta:
+  primary:
+    label: "Use the Decision Model"
+    url: "#simple-operating-model"
+  secondary:
+    label: "Read the EGC Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "comparison-and-decision"
+  primary_query: "founder content vs employee content"
+  aeo_question: "When should a B2B company rely on founder-led LinkedIn content, employee-generated content, or both?"
+  primary_keyword: "founder content vs employee content"
+  secondary_keywords:
+    - "founder-led content"
+    - "employee-generated content"
+    - "employee content"
+    - "LinkedIn employee content"
+    - "founder LinkedIn content"
+    - "B2B LinkedIn content"
+  related_questions:
+    - "Should founder content or employee content come first?"
+    - "When does founder-led LinkedIn content work best?"
+    - "When should employees post on LinkedIn?"
+    - "Can founder-led content and employee-generated content work together?"
+    - "How should B2B teams measure founder and employee content?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-founder-vs-employee-content"
+  topic_score: 72
+  topic_decision: "resolve_gap_first"
+  coverage_role: "spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/"
+
+entity_targets:
+  - "Founder-led content"
+  - "Employee-generated content"
+  - "LinkedIn"
+  - "Thought leader ads"
+  - "Employee advocacy"
+  - "B2B thought leadership"
+  - "Dave Gerhardt"
+  - "ClickUp"
+  - "Microsoft"
+  - "Sprout Social"
+angle: "Founder-led content is best when the market needs a clear executive point of view. Employee-generated content is best when buyers need role-level proof. The strongest B2B operating model often uses the founder to set direction and employees to make the company's expertise inspectable."
+sell_in_public_pov: "The question is not which voice is more important. The question is which job the content must do: set the market stance, prove the work, distribute a company message, or connect all three."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Comparison table covering source of judgment, best use, author roles, risks, workflow, and metrics."
+  - "Named public examples for founder-led content and employee-generated content."
+  - "Clear guidance for founder-only, employee-only, and hybrid operating models."
+  - "LinkedIn platform context for employee posts, employee advocacy changes, and thought leader ads."
+  - "Measurement section that avoids unsupported pipeline promises."
+  - "FAQ section with complete, non-duplicative questions."
+  - "Sources section with approved citations only."
+  - "CTA after sources."
+must_avoid:
+  - "Treating founder-led content as automatically better than employee content."
+  - "Claiming every employee should post."
+  - "Using LinkedIn post examples as proof of broad performance."
+  - "Inventing metrics, quotes, or customer examples."
+  - "Generic personal-brand advice."
+  - "Discovery-only inputs as factual evidence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "AI-generated summaries"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Public LinkedIn posts from named founders, executives, or practitioners."
+    - "LinkedIn official guidance or help pages for platform mechanics."
+    - "Primary or reputable research on B2B thought leadership and buyer behavior."
+    - "Approved SME notes for Sell In Public POV or operating recommendations."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/employee-generated-content-vs-employee-advocacy/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "founder-content-vs-employee-content",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-20T03:23:55.547Z",
+  "rendered_html_path": "blog/founder-content-vs-employee-content/index.html",
+  "rendered_html_sha256": "e39176ea0f705a0ae76f628190f4fbb8846fc3460df045eb42730260f1d0c2fd",
+  "article_text_sha256": "0652350fc364b40b54fefa0cd654e4bd20b692c3eb6f317ce0e5e5999309926d",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, direct B2B practitioner piece with no instruction leaks, rubric language, AI filler, or internal process text visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

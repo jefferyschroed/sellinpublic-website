@@ -1,0 +1,19 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "discovery-topic-coverage",
+      "label": "docs/seo-aeo/topic-coverage.csv topic row",
+      "reason": "Used for routing and strategic context only, not factual evidence."
+    },
+    {
+      "source_id": "search-results",
+      "label": "Search result snippets and query discovery",
+      "reason": "Used for source discovery only."
+    }
+  ],
+  "rules": [
+    "Do not cite autocomplete, search snippets, query exports, or topic coverage rows as factual evidence.",
+    "Use public LinkedIn posts as example artifacts only, not as proof of broad performance."
+  ]
+}

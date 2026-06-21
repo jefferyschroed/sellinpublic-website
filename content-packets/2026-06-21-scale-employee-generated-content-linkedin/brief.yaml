@@ -1,0 +1,128 @@
+packet_id: "2026-06-21-scale-employee-generated-content-linkedin"
+status: "draft-ready-child-scope"
+working_title: "How To Scale Employee-Generated Content On LinkedIn"
+slug: "scale-employee-generated-content-linkedin"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-21"
+updated_at: "2026-06-21"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, or revenue operator"
+  secondary_buyers:
+    - "Marketing leader"
+    - "Sales enablement leader"
+    - "RevOps leader"
+  company_context: "Mid-market B2B teams with credible internal expertise and no repeatable way to turn it into LinkedIn profile posts."
+  pain: "The team wants employee-generated content on LinkedIn, but the work stalls because experts are busy, review is unclear, and sales does not know what to do with buyer response."
+
+business_goal: "Create the practical operating guide for scaling employee-generated content on LinkedIn without turning employee voices into generic brand copy."
+sales_use_case: "Use when a prospect asks how to run LinkedIn content across founders, leaders, SMEs, SDRs, and AEs with central support and sales follow-up."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read the EGC Infrastructure Guide"
+    url: "/blog/employee-generated-content-infrastructure/"
+  closing_blog_cta: "Use a short question-style heading when natural. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and says it turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
+
+search_intent:
+  stage: "how-to"
+  primary_query: "how to scale employee generated content on LinkedIn"
+  aeo_question: "How do you scale employee-generated content on LinkedIn?"
+  primary_keyword: "scale employee-generated content on LinkedIn"
+  secondary_keywords:
+    - "employee-generated content LinkedIn"
+    - "LinkedIn employee content program"
+    - "employee advocacy"
+    - "employee-generated content infrastructure"
+    - "content governance"
+    - "review workflow"
+    - "LinkedIn profile posts"
+    - "sales-led distribution"
+  related_questions:
+    - "How is employee-generated content different from employee advocacy?"
+    - "Who should post employee-generated content on LinkedIn?"
+    - "What workflow should a revenue team run each week?"
+    - "How should employee-generated content be measured?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-scale-employee-generated-content-linkedin"
+  topic_score: 82
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/turn-employee-expertise-into-linkedin-posts/"
+    - "/blog/measure-employee-generated-content-beyond-impressions/"
+    - "/blog/linkedin-employee-advocacy/"
+
+entity_targets:
+  - "LinkedIn"
+  - "employee-generated content"
+  - "employee advocacy"
+  - "founder-led content"
+  - "team expertise"
+  - "content governance"
+  - "content prompts"
+  - "review workflow"
+  - "LinkedIn profile posts"
+  - "sales-led distribution"
+  - "buyer signals"
+  - "activation rate"
+  - "cadence"
+  - "compliance"
+  - "approvals"
+  - "content repurposing"
+  - "internal SME interviews"
+angle: "Scaling employee-generated content on LinkedIn is a system design problem: choose credible people, capture expertise, turn it into profile-native posts, run a light review loop, distribute through the right team members, read buyer response, and keep the cadence small enough to sustain."
+sell_in_public_pov: "Central support should remove the operational burden from employees while preserving the person behind each post."
+word_count_target: "1900-2400"
+
+must_include:
+  - "Answer the exact AEO prompt within the first 150 words."
+  - "Explain the difference between employee-generated content and employee advocacy."
+  - "Use a concrete weekly workflow with roles, inputs, outputs, and measurement."
+  - "Use the assigned internal links naturally."
+  - "Treat Ahrefs prompt data as demand/query evidence only."
+must_avoid:
+  - "Shared index, sitemap, feed, topic coverage, shared CSS, shared JS, shared scripts, other posts, other packets, or other asset directories."
+  - "Unsupported statistics, invented examples, or broad performance promises."
+  - "Public process language, internal review labels, or source-review language in the article."
+  - "Sell In Public mentions in informational body copy except author context and the final CTA."
+  - "Banned words, banned phrases, em dashes, and binary correction-pair cadence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official LinkedIn feature and platform guidance."
+    - "Primary or co-branded B2B research with method context."
+    - "Government guidance for endorsement disclosure."
+    - "Existing internal Sell In Public posts for internal links and category definitions."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

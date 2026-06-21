@@ -1,0 +1,30 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-ahrefs-prompt",
+      "source_type": "keyword_demand",
+      "description": "Ahrefs-tracked AEO prompt: how to scale employee generated content on linkedin"
+    },
+    {
+      "source_id": "disc-ai-answer",
+      "source_type": "ai_output",
+      "description": "Any answer-engine output or AI summary observed during discovery"
+    },
+    {
+      "source_id": "disc-autocomplete-paa",
+      "source_type": "serp_language",
+      "description": "Autocomplete, People Also Ask, and related-query wording"
+    },
+    {
+      "source_id": "disc-reddit-forums",
+      "source_type": "forum_context",
+      "description": "Reddit, forums, or comment threads"
+    }
+  ],
+  "rules": [
+    "Use excluded sources only for demand language and routing.",
+    "Do not cite excluded sources as proof for platform facts, buyer behavior, statistics, or recommendations.",
+    "Every material public claim must map to a source in citations.json or to labeled Sell In Public operating judgment."
+  ]
+}

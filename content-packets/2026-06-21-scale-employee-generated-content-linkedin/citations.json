@@ -1,0 +1,98 @@
+[
+  {
+    "id": "src-linkedin-advocacy-retired",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a6836874",
+    "title": "My Company tab and Employee Advocacy tab is no longer available",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "Last updated 1 year ago, accessed 2026-06-21",
+    "accessed_date": "2026-06-21",
+    "source_type": "official_platform_help",
+    "reliability": "A",
+    "notes": "Used for current LinkedIn advocacy feature status and remaining Page admin options."
+  },
+  {
+    "id": "src-linkedin-employee-notifications",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a549372",
+    "title": "Use Employee Notifications on LinkedIn Pages",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "Last updated 2 years ago, accessed 2026-06-21",
+    "accessed_date": "2026-06-21",
+    "source_type": "official_platform_help",
+    "reliability": "A",
+    "notes": "Used for Employee Notifications behavior, limits, opt-out, and available employee actions."
+  },
+  {
+    "id": "src-linkedin-ai-search",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How to Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Margarita Loktionova",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-21",
+    "source_type": "official_linkedin_marketing_guidance",
+    "reliability": "B",
+    "notes": "Used for LinkedIn guidance on using sales and customer questions and starting with employees who have hands-on experience."
+  },
+  {
+    "id": "src-edelman-linkedin-hidden-buyers",
+    "url": "https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers",
+    "title": "How B2B Marketers Can Use Thought Leadership to Persuade Hidden Buyers",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "LinkedIn and Edelman",
+    "published_date": "2025",
+    "accessed_date": "2026-06-21",
+    "source_type": "co_branded_research_summary",
+    "reliability": "A",
+    "notes": "Used for buyer-consumption and vendor-evaluation context from the 2025 Edelman-LinkedIn thought leadership research."
+  },
+  {
+    "id": "src-ftc-endorsement",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "Federal Trade Commission",
+    "author": "FTC",
+    "published_date": "Accessed 2026-06-21",
+    "accessed_date": "2026-06-21",
+    "source_type": "government_guidance",
+    "reliability": "A",
+    "notes": "Used for employee disclosure guidance when employees mention company products on social media."
+  },
+  {
+    "id": "src-linkedin-community-policies",
+    "url": "https://www.linkedin.com/legal/professional-community-policies",
+    "title": "LinkedIn Professional Community Policies",
+    "publisher": "LinkedIn",
+    "author": "LinkedIn",
+    "published_date": "Accessed 2026-06-21",
+    "accessed_date": "2026-06-21",
+    "source_type": "official_platform_policy",
+    "reliability": "A",
+    "notes": "Used for authenticity, misleading-content, disclosure, spam, and coordinated-engagement boundaries."
+  },
+  {
+    "id": "src-sip-egc-infrastructure",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+    "title": "Employee-Generated Content Infrastructure",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal_context",
+    "reliability": "B",
+    "notes": "Used for internal topic continuity, not third-party proof."
+  },
+  {
+    "id": "src-sip-egc-advocacy-comparison",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-vs-employee-advocacy/",
+    "title": "Employee-Generated Content Vs Employee Advocacy",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal_context",
+    "reliability": "B",
+    "notes": "Used for internal topic continuity, not third-party proof."
+  }
+]

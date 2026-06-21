@@ -1,0 +1,15 @@
+{
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "image",
+      "path": "public/assets/blog/scale-employee-generated-content-linkedin/hero-generated.png",
+      "public_url": "https://sellinpublic.co/public/assets/blog/scale-employee-generated-content-linkedin/hero-generated.png",
+      "width": 1897,
+      "height": 829,
+      "alt": "Flat liquid-glass weekly content system turning team expertise into LinkedIn profile posts and buyer signals",
+      "notes": "Generated with Codex image generation and saved to the owned post asset directory.",
+      "final_prompt": "Create a 1600x700 Sell In Public blog hero image. Flat premium B2B editorial image, no text, no logos. Subject: a calm operating system for scaling employee-generated LinkedIn content. Show a central weekly planning surface with five distinct employee profile tiles, short post cards, buyer-signal dots, and outbound routing lines moving toward qualified account nodes. Style: matte glass panels, subtle depth, crisp vector-like geometry rendered as a high-quality raster image, restrained color palette with warm off-white background, graphite, muted teal, soft coral, deep green accents, and small electric blue signal points. Keep it professional, modern, and inspectable. No people photos, no typography, no letterforms, no UI text, no LinkedIn logo."
+    }
+  ]
+}

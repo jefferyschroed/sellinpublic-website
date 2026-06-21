@@ -1,0 +1,13 @@
+packet_id: "2026-06-21-scale-employee-generated-content-linkedin"
+slug: "scale-employee-generated-content-linkedin"
+status: "intake_ready"
+strategic_asset_decision: "create"
+asset_decision: "post"
+topic_id: "topic-scale-employee-generated-content-linkedin"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "The topic answers a direct how-to query that is adjacent to employee advocacy, employee-generated content infrastructure, and measurement pages, but it needs its own weekly operating model for revenue teams."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false
+query_run_status: "handoff_ready"
+notes: "Ahrefs prompt language can shape title, headings, and answer wording. It is not used as factual proof."

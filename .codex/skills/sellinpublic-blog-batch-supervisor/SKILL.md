@@ -99,6 +99,13 @@ Rules:
 - Preserve unrelated dirty work.
 - Build one complete content packet, article blocks, rendered static HTML, and post-local assets.
 - Use approved primary sources and record evidence in citations and claims.
+- Apply these anti-AIism rules in every artifact that can shape public copy, including research summaries, outlines, draft instructions, draft copy, article blocks, metadata, QA notes, distribution copy, and generator notes.
+- No em dashes (`U+2014`). Rewrite with a comma, period, colon, semicolon, or parentheses.
+- No banned words such as `unlock`, `leverage` as a verb, `supercharge`, `game-changer`, `revolutionize`, `seamless`, `robust`, `cutting-edge`, `transformative`, `elevate`, `empower`, `delve`, `holistic`, `synergy`, `frictionless`, `impactful`, `actionable`, `utilize`, `facilitate`, or `demonstrate`.
+- No filler phrases such as `in today's fast-paced world`, `in today's competitive landscape`, `now more than ever`, `it's no secret that`, `we all know that`, `the truth is`, `let's be honest`, `here's the thing`, `the reality is`, `In this article`, `By the end of this post`, `At the end of the day`, `drive results`, `move the needle`, `add value`, or `stand out from the noise`.
+- No binary correction pairs as emphasis. Banned examples: `The best system isn't complicated. It's repeatable.`, `LinkedIn is a signal surface. It's not a controlled content foundation.`, `This isn't just about visibility. It's about pipeline.`, `The goal isn't more content. It's better demand.`, `It's not just posting more. It's posting with a reason.`, and `Not only does this build trust, but it also creates demand.`
+- Rewrite binary contrasts into one concrete sentence or support them with a source, workflow, example, or operating implication. Do not replace one banned pair with another.
+- Do not pass forward public-facing rubric or process language such as `quality test`, `quality bar`, `selection criteria`, `helpful content guidance`, `people-first content`, `claim ledger`, `QA report`, or `source policy`.
 - Run the Claude writing pass. The repo scripts auto-load `ANTHROPIC_API_KEY` from ignored local env files such as `secrets/seo-aeo.env`, `.env`, `.env.local`, or `~/.codex/env/sellinpublic-website.env`. If the key is still missing, treat that as a blocker unless the parent/user explicitly approves an exception in this turn.
 - After render, run clean-context public-reader QA: node scripts/seo-aeo/public-reader-qa.mjs --packet <packet> --apply.
 - If public-reader QA flags AI-ish prose, instruction leakage, rubric leakage, source-policy leakage, or examples drift, rewrite the source artifact, rerender, rerun public-reader QA, and record root cause.

@@ -169,8 +169,11 @@ Closing CTA requirements:
 Hard rules:
 - Use contractions naturally.
 - Do not use em dashes. The character U+2014 is forbidden in the Markdown draft, article block text, FAQ answers, and CTA copy. Use a period, comma, colon, or parentheses instead.
-- Remove banned AI cadence while writing. Do not preserve binary correction pairs as emphasis. Exact bad forms include "The best system isn't complicated. It's repeatable.", "LinkedIn is a signal surface. It's not a controlled content foundation.", "This isn't just about X. It's about Y.", "It's not just X, it's Y.", and "not only X, but Y."
-- Rewrite binary correction cadence by stating the relationship directly in one natural sentence, or by giving the reader the operating implication. Do not replace it with another "X is not Y. It is Z." construction.
+- Do not use banned words: "unlock", "leverage" as a verb, "supercharge", "game-changer", "revolutionize", "seamless", "robust", "cutting-edge", "transformative", "elevate", "empower", "delve", "holistic", "synergy", "frictionless", "impactful", "actionable", "utilize", "facilitate", or "demonstrate".
+- Do not use filler phrases: "in today's fast-paced world", "in today's competitive landscape", "now more than ever", "it's no secret that", "we all know that", "the truth is", "let's be honest", "here's the thing", "the reality is", "In this article", "By the end of this post", "At the end of the day", "drive results", "move the needle", "add value", or "stand out from the noise".
+- Do not preserve binary correction pairs as emphasis. Exact bad forms include "The best system isn't complicated. It's repeatable.", "LinkedIn is a signal surface. It's not a controlled content foundation.", "This isn't just about visibility. It's about pipeline.", "The goal isn't more content. It's better demand.", "It's not just posting more. It's posting with a reason.", and "Not only does this build trust, but it also creates demand."
+- Rewrite binary correction cadence by stating the relationship directly in one natural sentence, or by giving the reader the operating implication, source support, workflow, or concrete example. Do not replace it with another "X is not Y. It is Z." construction.
+- Do not pass forward public-facing rubric or process language such as "quality test", "quality bar", "selection criteria", "helpful content guidance", "people-first content", "claim ledger", "QA report", or "source policy".
 - audit_notes_md must include an "Anti-AIism fixes" note that lists any banned phrase or binary correction cadence you removed. If none were present, say "Anti-AIism fixes: none found."
 - Write a literal article for the topic, not instructions for how to write that article.
 - Keep brand mentions out of the informational body except author/publisher context and the final CTA.
@@ -178,11 +181,11 @@ Hard rules:
 - For examples posts, the examples must be the article. Include concrete public examples and linked public posts when available.
 - For examples posts, do not include meta-instruction sections such as "Use Examples Without Copying Them," "How to Use Examples," "How to Judge the Examples," "Copyable Example Checklist," or repeated "What to borrow:" paragraphs unless the user explicitly asks for a separate checklist article.
 - For examples posts, avoid "borrow" framing in table headers or section labels. Prefer "Why it counts," "What it shows," or "Pattern it reveals."
-  - For examples posts, do not publish generic quality criteria, source-policy criteria, or editorial testing language as article copy. Banned examples include "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," "what makes [anything] example worth studying," "that's the bar worth holding," "helpful content guidance," "people-first content," "if the public asset could have been written by any competitor," and "How do you find examples inside your own company?"
-  - For examples posts, write the synthesis as source analysis: what the public artifact is, who created it, what it shows, why it counts, and what pattern it reveals.
-  - For examples posts, FAQs must answer definitional, channel, format, revenue-proof, or example-specific questions. Do not use FAQ questions that ask what makes an example count, good, valid, worth studying, or high quality.
-  - Keep source markers and claim IDs in the Markdown draft where claims are material. Use explicit markers like [claim:C001] and [cite:src-008]. Do not use shorthand like [C001, src-008].
-  - Do not put claim IDs, citation IDs, or markdown marker syntax in article.blocks.json. The public article blocks should contain clean reader-facing copy and links.
+- For examples posts, do not publish generic quality criteria, source-policy criteria, or editorial testing language as article copy. Banned examples include "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," "what makes [anything] example worth studying," "that's the bar worth holding," "helpful content guidance," "people-first content," "if the public asset could have been written by any competitor," and "How do you find examples inside your own company?"
+- For examples posts, write the synthesis as source analysis: what the public artifact is, who created it, what it shows, why it counts, and what pattern it reveals.
+- For examples posts, FAQs must answer definitional, channel, format, revenue-proof, or example-specific questions. Do not use FAQ questions that ask what makes an example count, good, valid, worth studying, or high quality.
+- Keep source markers and claim IDs in the Markdown draft where claims are material. Use explicit markers like [claim:C001] and [cite:src-008]. Do not use shorthand like [C001, src-008].
+- Do not put claim IDs, citation IDs, or markdown marker syntax in article.blocks.json. The public article blocks should contain clean reader-facing copy and links.
 
 SEO WRITING SKILL:
 <<<SEO_SKILL

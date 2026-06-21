@@ -7,6 +7,7 @@ import {
   reportPathForPacket,
   validatePublicReaderReport,
 } from "../seo-aeo/lib/public-reader-gate.mjs";
+import { scanAntiAiismsInText } from "../seo-aeo/lib/anti-aiism-scan.mjs";
 
 const REQUIRED_BRIEF_FIELDS = [
   "packet_id",
@@ -212,6 +213,35 @@ function validateClaudeWritingGate(packet, errors) {
   }
   if (!/^Applied to article\.blocks\.json:\s*true\s*$/im.test(passText)) {
     errors.push("claude-writing-pass.md must record Applied to article.blocks.json: true before publish.");
+  }
+}
+
+function validatePublicCopyAntiAiisms(packet, errors) {
+  const checks = [];
+  if (packet.exists("draft.md")) {
+    checks.push({ label: "draft.md", text: readOptionalText(packet, "draft.md") });
+  }
+  if (packet.articleBlocks?.blocks) {
+    checks.push({
+      label: "article.blocks.json",
+      text: collectStrings(packet.articleBlocks.blocks).join("\n"),
+    });
+  }
+
+  for (const check of checks) {
+    const findings = scanAntiAiismsInText(check.text, {
+      root: packet.root,
+      locator: check.label,
+      source: "packet_validation",
+      examplesPost: isExamplesPacket(packet),
+    });
+    if (!findings.length) continue;
+    errors.push(
+      `${check.label} contains blocked anti-AIism patterns: ${findings
+        .slice(0, 6)
+        .map((finding) => `${finding.rule_id || finding.category}: "${finding.quote}"`)
+        .join("; ")}`
+    );
   }
 }
 
@@ -545,6 +575,7 @@ function validatePublish(packet, errors, warnings, options = {}) {
 
   validateArticleBlocks(packet, errors, warnings);
   validateClaudeWritingGate(packet, errors);
+  validatePublicCopyAntiAiisms(packet, errors);
   validatePublicReaderGate(packet, errors, warnings, options);
 
   if (packet.assetManifest?.assets) {

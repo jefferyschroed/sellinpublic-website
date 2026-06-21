@@ -155,6 +155,14 @@ const ANALYTICS_READINESS_LABELS = [
   "performance_review_ready",
 ];
 
+const ANTI_AIISM_PROMPT_RULES = `Explicit anti-AIism rules for any text that could influence public blog copy, including rough notes, research summaries, outlines, draft instructions, metadata notes, schema notes, QA notes, distribution copy, and generator notes:
+- Do not use em dashes. The character U+2014 is forbidden. Rewrite with a comma, period, colon, semicolon, or parentheses.
+- Do not use banned words: "unlock", "leverage" as a verb, "supercharge", "game-changer", "revolutionize", "seamless", "robust", "cutting-edge", "transformative", "elevate", "empower", "delve", "holistic", "synergy", "frictionless", "impactful", "actionable", "utilize", "facilitate", or "demonstrate".
+- Do not use filler phrases: "in today's fast-paced world", "in today's competitive landscape", "now more than ever", "it's no secret that", "we all know that", "the truth is", "let's be honest", "here's the thing", "the reality is", "In this article", "By the end of this post", "At the end of the day", "drive results", "move the needle", "add value", or "stand out from the noise".
+- Do not use binary correction pairs as emphasis. Banned examples: "The best system isn't complicated. It's repeatable.", "LinkedIn is a signal surface. It's not a controlled content foundation.", "This isn't just about visibility. It's about pipeline.", "The goal isn't more content. It's better demand.", "It's not just posting more. It's posting with a reason.", and "Not only does this build trust, but it also creates demand."
+- Rewrite binary contrasts into one concrete sentence, or support the distinction with a source, workflow, example, or operating implication. Do not replace one banned pair with another.
+- Do not pass forward public-facing rubric or process language such as "quality test", "quality bar", "selection criteria", "helpful content guidance", "people-first content", "claim ledger", "QA report", or "source policy".`;
+
 function phasePlan(candidate) {
   const decision = assetDecision(candidate);
   const basePlan =
@@ -279,6 +287,8 @@ Use this role contract:
 
 ${contract}
 
+${ANTI_AIISM_PROMPT_RULES}
+
 Demand import request:
 - Candidate ID: ${row.candidate_id}
 - Topic: ${row.topic}
@@ -402,6 +412,8 @@ Write scope:
 - Staging CSV: ${task.staging_csv_path}
 - Acquisition report: ${task.report_path}
 
+${ANTI_AIISM_PROMPT_RULES}
+
 Acquire only real reviewed demand rows from the approved source. If rows are available, write the staging CSV and set the report status to staged_reviewed_rows. If the source is unavailable, empty, inaccessible, or discovery-only, leave the staging CSV header-only and set the report status to blocked_no_reviewed_rows with the exact blocker. Do not invent demand data.`;
 }
 
@@ -487,6 +499,8 @@ function taskPrompt({ role, candidate, contract, phase, gate, dependsOn, refresh
 Use this role contract:
 
 ${contract}
+
+${ANTI_AIISM_PROMPT_RULES}
 
 Candidate:
 - ID: ${candidate.candidate_id}

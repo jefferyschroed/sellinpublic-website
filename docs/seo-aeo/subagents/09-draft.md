@@ -29,6 +29,17 @@ For public blog prose, run the final audience-copy pass through Claude Sonnet 4.
 
 Every blog draft must end with one separated commercial CTA that names Sell In Public and says what the company does for the reader. Use a short heading and an exactly two-sentence body. Sentence 1 should say Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. Sentence 2 should invite a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management.
 
+## Explicit Anti-AIism Rules
+
+Any text you write that could influence public blog copy, including rough notes, research summaries, outlines, draft instructions, metadata notes, schema notes, QA notes, distribution copy, and generator notes, must obey these rules directly.
+
+- Do not use em dashes. The character U+2014 is forbidden. Rewrite with a comma, period, colon, semicolon, or parentheses.
+- Do not use banned words: `unlock`, `leverage` as a verb, `supercharge`, `game-changer`, `revolutionize`, `seamless`, `robust`, `cutting-edge`, `transformative`, `elevate`, `empower`, `delve`, `holistic`, `synergy`, `frictionless`, `impactful`, `actionable`, `utilize`, `facilitate`, or `demonstrate`.
+- Do not use filler phrases: `in today's fast-paced world`, `in today's competitive landscape`, `now more than ever`, `it's no secret that`, `we all know that`, `the truth is`, `let's be honest`, `here's the thing`, `the reality is`, `In this article`, `By the end of this post`, `At the end of the day`, `drive results`, `move the needle`, `add value`, or `stand out from the noise`.
+- Do not use binary correction pairs as emphasis. Banned examples: `The best system isn't complicated. It's repeatable.`, `LinkedIn is a signal surface. It's not a controlled content foundation.`, `This isn't just about visibility. It's about pipeline.`, `The goal isn't more content. It's better demand.`, `It's not just posting more. It's posting with a reason.`, and `Not only does this build trust, but it also creates demand.`
+- Rewrite binary contrasts into one concrete sentence, or support the distinction with a source, workflow, example, or operating implication. Do not replace one banned pair with another.
+- Do not pass forward public-facing rubric or process language such as `quality test`, `quality bar`, `selection criteria`, `helpful content guidance`, `people-first content`, `claim ledger`, `QA report`, or `source policy`.
+
 ## Hard Boundaries
 
 - Do not draft before `outline.md` is approved.

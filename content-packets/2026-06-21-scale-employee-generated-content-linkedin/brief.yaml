@@ -26,7 +26,7 @@ cta:
   secondary:
     label: "Read the EGC Infrastructure Guide"
     url: "/blog/employee-generated-content-infrastructure/"
-  closing_blog_cta: "Use a short question-style heading when natural. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and says it turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
+  closing_blog_cta: "Use a short question-style heading when natural. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and describes how it captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
 
 search_intent:
   stage: "how-to"

@@ -41,6 +41,33 @@ function hasPublishedStaticPost(packet, root) {
   );
 }
 
+function sitePathFromImage(value) {
+  const text = String(value || "");
+  if (!text) return "";
+  if (text.startsWith("http://") || text.startsWith("https://")) {
+    try {
+      return new URL(text).pathname;
+    } catch {
+      return text;
+    }
+  }
+  return text;
+}
+
+function requireCardImage({ slug, src, alt, title }) {
+  const sitePath = sitePathFromImage(src);
+  if (!sitePath.startsWith(`/public/assets/blog/${slug}/`)) {
+    throw new Error(`Blog index card image for ${slug} must live under /public/assets/blog/${slug}/.`);
+  }
+  if (!sitePath.endsWith(".webp")) {
+    throw new Error(`Blog index card image for ${slug} must use WebP.`);
+  }
+  if (!String(alt || "").trim()) {
+    throw new Error(`Blog index card image for ${title || slug} must have non-empty alt text.`);
+  }
+  return sitePath;
+}
+
 export function collectPublishedPackets(root = process.cwd()) {
   return listPacketDirs(root)
     .map((packetDir) => {
@@ -61,11 +88,18 @@ function renderCards(packets) {
     .map((packet) => {
       const title = packet.articleBlocks?.title || packet.brief.working_title;
       const hero = packet.articleBlocks?.hero || {};
+      const imageSrc = requireCardImage({
+        slug: packet.brief.slug,
+        src: hero.src || packet.publishMeta.og_image,
+        alt: hero.alt || packet.publishMeta.og_image_alt || title,
+        title,
+      });
+      const imageAlt = hero.alt || packet.publishMeta.og_image_alt || title;
       return `<article class="blog-card card-reveal">
           <a class="blog-card__image" href="/blog/${escapeHtml(packet.brief.slug)}/" aria-label="Read ${escapeHtml(title)}">
             <img
-              src="${escapeHtml(hero.src || packet.publishMeta.og_image)}"
-              alt="${escapeHtml(hero.alt || packet.publishMeta.og_image_alt || title)}"
+              src="${escapeHtml(imageSrc)}"
+              alt="${escapeHtml(imageAlt)}"
               width="${escapeHtml(hero.width || 1600)}"
               height="${escapeHtml(hero.height || 700)}"
               loading="eager"

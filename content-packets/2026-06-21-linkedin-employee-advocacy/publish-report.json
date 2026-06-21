@@ -1,35 +1,37 @@
 {
   "packet_id": "2026-06-21-linkedin-employee-advocacy",
   "slug": "linkedin-employee-advocacy",
-  "generated_at": "2026-06-21T17:57:47.512Z",
+  "generated_at": "2026-06-21T23:29:10.111Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/linkedin-employee-advocacy/index.html",
-      "bytes": 36886,
-      "changed": true
+      "bytes": 36890,
+      "changed": false
     },
     {
       "path": "blog/index.html",
-      "bytes": 18832,
-      "post_count": 9,
+      "bytes": 23666,
+      "post_count": 13,
       "changed": false
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2584,
-      "post_count": 9,
+      "bytes": 3388,
+      "post_count": 13,
       "changed": false
     },
     {
       "path": "feed.xml",
-      "bytes": 5197,
-      "post_count": 9,
+      "bytes": 7321,
+      "post_count": 13,
       "changed": false
     }
   ],
   "validation": {
     "ok": true,
-    "warnings": []
+    "warnings": [
+      "publish-meta.yaml title target is 45-58 characters when possible; found 43."
+    ]
   }
 }

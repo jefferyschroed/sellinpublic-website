@@ -21,7 +21,7 @@ Metadata should match the final draft. Schema should describe the content that e
 
 - Packet `publish-meta.yaml` with title, slug, canonical URL, meta description, OG fields, author, dates, category, tags, excerpt, robots, schema type, internal links, topic map, and CTA.
 - Schema notes for `article.blocks.json` or generator output.
-- Metadata QA notes for title length, uniqueness, query match, and claim consistency.
+- Metadata QA notes for title length, description length, uniqueness, query match, source-image agreement, and claim consistency.
 
 ## Explicit Anti-AIism Rules
 
@@ -38,6 +38,12 @@ Any text you write that could influence public blog copy, including rough notes,
 
 - Do not write metadata before the draft is stable.
 - Do not create clickbait titles or descriptions that promise claims the draft does not support.
+- Keep `publish-meta.yaml:title`, `og_title`, and `twitter_title` where present at 60 characters or fewer. Target 45-58 characters when possible.
+- Keep `meta_description` between 110 and 155 characters. Target 130-150 characters when possible.
+- Keep `og_description` and `twitter_description` at 155 characters or fewer.
+- Make descriptions match the article's actual promise. Do not introduce unsupported claims in metadata.
+- Use the WebP hero as the publishable image: `publish-meta.yaml:og_image` must point to `https://sellinpublic.co/public/assets/blog/<slug>/hero-generated.webp`.
+- Keep `publish-meta.yaml:og_image_alt` identical to `article.blocks.json.hero.alt` and the hero entry in `asset-manifest.json`.
 - Do not add schema fields that the article content does not justify.
 - Do not invent author, publish date, updated date, image path, or canonical URL.
 - Do not change site templates or generator scripts.

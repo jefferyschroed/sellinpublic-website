@@ -127,4 +127,4 @@ Measure more than posts and impressions. Track target accounts engaging, profile
 
 ## Ready To See If LinkedIn Can Become Your Top Revenue Channel?
 
-Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. Book a working session and we'll look together at whether LinkedIn can become a top revenue channel for your company.
+Sell In Public captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP. Book a working session and we'll look together at whether LinkedIn can become a top revenue channel for your company.

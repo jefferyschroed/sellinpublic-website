@@ -22,7 +22,7 @@ Assets should clarify the article. They should not create visual claims the arti
 - Packet `asset-manifest.json` with asset ID, type, path, public URL, width, height, alt text, and notes.
 - Hero image brief or selected asset note, including the article excerpt or summary used as prompt source and the final prompt.
 - Inline asset placement notes mapped to draft sections.
-- Asset QA flags for missing dimensions, weak alt text, or off-topic visuals.
+- Asset QA flags for missing dimensions, weak alt text, off-topic visuals, missing WebP conversion, missing PNG fallback, or source-field disagreement.
 
 ## Explicit Anti-AIism Rules
 
@@ -41,7 +41,11 @@ Any text you write that could influence public blog copy, including rough notes,
 - Do not crop, blur, or darken assets so much that the subject is hard to inspect.
 - Do not create fake product screenshots, fake customer results, or misleading charts.
 - For blog heroes, generate the prompt only after `draft.md` or `article.blocks.json` exists. Use the article content, or a concise article excerpt/summary, as the source context.
-- For blog heroes, use a generated PNG asset in the current `$sellinpublic-image-style` flat liquid-glass mesh style. Do not create SVG-drawn substitutes unless the user explicitly asks for vector output.
+- For blog heroes, generate the original PNG in the current `$sellinpublic-image-style` flat liquid-glass mesh style, then create `hero-generated.webp` and optimize the PNG fallback. Do not create SVG-drawn substitutes unless the user explicitly asks for vector output.
+- Use WebP as the publishable source. `article.blocks.json.hero.src`, `asset-manifest.json` path and public URL, `publish-meta.yaml:og_image`, generated post HTML, and blog index cards must point to `hero-generated.webp`.
+- Keep `hero-generated.png` in the same folder as the optimized fallback/source artifact. Do not use PNG as `hero.src`, `og_image`, or rendered blog/card image unless the owner explicitly requires it.
+- Hero alt text must be descriptive, at least 24 characters, and describe what is visibly in the image rather than stuffing keywords.
+- Keep alt fields identical across `article.blocks.json.hero.alt`, `asset-manifest.json` alt, and `publish-meta.yaml:og_image_alt`.
 - Do not select from a fixed motif registry. Infer one simple visual metaphor from the article with one or two relevant elements.
 - Do not default to repeated LinkedIn-post-card compositions unless the article itself specifically requires a post, profile, or feed object.
 - Do not use scattered nodes, random lines, icon clouds, fake dashboards full of metrics, overcomplicated UIs, glossy 3D objects, glow, bloom, flares, light trails, shiny/specular/reflection cues, bokeh/orbs, hard gradient edges, readable text, logos, watermarks, more than two background colors, angled perspective, isometric views, tilted panels, or three-quarter UI views.
@@ -58,6 +62,7 @@ The reviewer checks:
 - The visual metaphor is relevant to the article and uses only one or two elements.
 - The mesh background uses one main color plus at most one close complementary color, with no hard gradient edges.
 - The output avoids the repeated default LinkedIn-card habit and all anti-AI constraints above.
+- The original PNG has been converted to `hero-generated.webp`, the PNG fallback is optimized and retained, the WebP dimensions are recorded honestly, and the aspect ratio stays within 2.0:1 to 2.6:1.
 
 ## Stop Conditions
 
@@ -68,4 +73,4 @@ The reviewer checks:
 
 ## Handoff
 
-Hand off `asset-manifest.json`, hero path, dimensions, alt text, image brief, and final prompt to Metadata/Schema, Blog Generator, Distribution, and QA. Route visual claim concerns to Claim Ledger.
+Hand off `asset-manifest.json`, hero WebP path, PNG fallback path, dimensions, alt text, image brief, and final prompt to Metadata/Schema, Blog Generator, Distribution, and QA. Route visual claim concerns to Claim Ledger.

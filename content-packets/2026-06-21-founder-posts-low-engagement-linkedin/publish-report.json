@@ -1,35 +1,37 @@
 {
   "packet_id": "2026-06-21-founder-posts-low-engagement-linkedin",
   "slug": "founder-posts-low-engagement-linkedin",
-  "generated_at": "2026-06-21T19:00:18.827Z",
+  "generated_at": "2026-06-21T23:29:09.950Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/founder-posts-low-engagement-linkedin/index.html",
-      "bytes": 32873,
+      "bytes": 33143,
       "changed": false
     },
     {
       "path": "blog/index.html",
-      "bytes": 20048,
-      "post_count": 10,
-      "changed": true
+      "bytes": 23666,
+      "post_count": 13,
+      "changed": false
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2784,
-      "post_count": 10,
-      "changed": true
+      "bytes": 3388,
+      "post_count": 13,
+      "changed": false
     },
     {
       "path": "feed.xml",
-      "bytes": 5722,
-      "post_count": 10,
-      "changed": true
+      "bytes": 7321,
+      "post_count": 13,
+      "changed": false
     }
   ],
   "validation": {
     "ok": true,
-    "warnings": []
+    "warnings": [
+      "publish-meta.yaml title target is 45-58 characters when possible; found 59."
+    ]
   }
 }

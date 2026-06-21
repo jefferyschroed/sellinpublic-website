@@ -33,10 +33,13 @@ finals into this repo when the user wants a usable asset.
    relevance, one- or two-color background restraint, consistent white outline
    weight, density, text/logos, and brand fit. Iterate once with a targeted prompt
    if the output misses a core requirement.
-7. For repo-bound assets, save the selected image under
-   `public/assets/blog/<post-slug>/hero-generated.png` for blog heroes, or
-   `public/assets/generated/sip-art/<descriptive-slug>.png` for non-blog assets
-   unless the user names another destination.
+7. For repo-bound blog heroes, save the selected original PNG under
+   `public/assets/blog/<post-slug>/hero-generated.png`, then create
+   `public/assets/blog/<post-slug>/hero-generated.webp` and optimize the PNG
+   fallback. Use the WebP path as the publishable image source in packet
+   metadata, generated HTML, and blog index cards. For non-blog assets, save to
+   `public/assets/generated/sip-art/<descriptive-slug>.png` unless the user
+   names another destination.
 8. Record the final prompt in the packet `asset-manifest.json` notes or
    `final_prompt` field, or in a post-local `image-brief.md` referenced by the
    manifest. Report the saved absolute path and the final prompt used.
@@ -55,7 +58,7 @@ Use the current blog hero style unless the user overrides it:
   most one close complementary mesh color, subtle grain, and no hard gradient
   edges.
 - Wide landscape blog composition near `1600x700`, with clean negative space and
-  no baked-in readable text.
+  no baked-in readable text. Publish the WebP derivative, not the PNG source.
 - No glow, bloom, flares, light trails, shiny/specular/reflection cues, angled
   views, isometric views, tilted panels, perspective depth, scattered nodes,
   random lines, icon clouds, fake dashboards full of metrics, overcomplicated

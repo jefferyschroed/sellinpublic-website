@@ -47,7 +47,7 @@ Do not mark work publish-ready unless all of these pass:
 - Sources are integrated fluidly and no informational answer block exposes internal source reasoning.
 - Brand mentions stay out of informational body copy except for author context, brand-subject articles, or the end CTA.
 - Article body teaches before it converts and keeps commercial CTA language separated.
-- The end CTA names Sell In Public and says what the company does: turns team expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP. The CTA body is exactly two sentences.
+- The end CTA names Sell In Public and says what the company does: captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP. The CTA body is exactly two sentences, and the wording varies by article instead of copying a fixed template.
 - Claude writing pass is applied to `draft.md` and `article.blocks.json`, not only saved as a sidecar, unless there is an owner-approved exception.
 - The foundation checker passes for static HTML posts:
 

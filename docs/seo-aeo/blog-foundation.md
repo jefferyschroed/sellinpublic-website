@@ -38,6 +38,8 @@ The blog is static HTML, but it must behave like a CMS foundation.
 Every post must include:
 
 - Unique `<title>`, meta description, canonical, OG, Twitter, and article metadata.
+- A page title, `publish-meta.yaml:title`, `og_title`, and `twitter_title` of 60 characters or fewer. Target 45-58 characters when possible. Keep the H1 clear even when the title tag is shorter.
+- A `meta_description` between 110 and 155 characters. Target 130-150 characters when possible. Keep `og_description` and `twitter_description` at 155 characters or fewer. Descriptions must match the article's actual promise and must not introduce unsupported claims.
 - `BlogPosting` JSON-LD.
 - `BreadcrumbList` JSON-LD.
 - `FAQPage` JSON-LD when the article has FAQ content.
@@ -84,14 +86,42 @@ Every post must generate or deliberately create its own post-specific hero asset
 - Store post assets under `/public/assets/blog/[slug]/`.
 - Do not reuse `/public/assets/hero/` as the blog hero.
 - Generate the blog hero prompt after `draft.md` or `article.blocks.json` exists, using the article content or a concise finished-article excerpt/summary as source context.
-- Use a generated PNG hero from `$sellinpublic-image-style`; do not ship SVG-drawn blog hero substitutes unless the user explicitly asks for vector output.
+- Generate the original blog hero as `hero-generated.png` with `$sellinpublic-image-style`; do not ship SVG-drawn blog hero substitutes unless the user explicitly asks for vector output.
+- Create `hero-generated.webp` from the PNG and optimize the PNG fallback before publish. Use WebP as the publishable source in `article.blocks.json.hero.src`, `publish-meta.yaml:og_image`, rendered post HTML, and `blog/index.html` cards. The PNG remains only as a fallback/source artifact in the same folder.
 - Current blog hero style: flat head-on liquid-glass mesh with matte translucency, simple flat UI, consistent white outline weight, low detail density, and a restrained mesh background using one main color plus at most one close complementary color. Infer one simple article-specific visual metaphor with one or two elements; avoid fixed motif selection, random icon clouds, scattered nodes, flow lines, fake metric dashboards, repeated LinkedIn-card defaults, glow, bloom, flares, light trails, shiny/specular/reflection cues, bokeh/orbs, hard gradient edges, angled perspective, isometric views, tilted panels, readable text, and logos.
 - Record the final image prompt in `asset-manifest.json` or in an `image-brief.md` referenced by the manifest.
+- Make source fields agree before publish: `article.blocks.json.hero.src`, `asset-manifest.json` path and public URL, and `publish-meta.yaml:og_image` must all point to `hero-generated.webp`; `article.blocks.json.hero.alt`, `asset-manifest.json` alt, and `publish-meta.yaml:og_image_alt` must match.
 - Use a wide, short landscape hero ratio between `2.0:1` and `2.6:1`. The current target is close to `1600x700`.
 - Set image `width` and `height` attributes to the actual source dimensions.
+- Hero alt text must describe what is visibly in the image, be at least 24 characters, and avoid keyword stuffing.
+- No rendered blog HTML may contain missing alt text or `alt=""`, including nav logos, blog cards, hero images, footer art, and inline media.
 - Render the hero with natural height. Do not use forced hero heights or `object-fit: cover` on the article hero.
 - Render inline `.blog-media` images and videos at their natural aspect ratio: `width: auto`, `max-width: 100%`, and `height: auto`.
 - If a crop is desired, crop the source image itself and keep the HTML dimensions honest.
+
+Recommended local compression flow:
+
+```sh
+mkdir -p /tmp/sip-image-tools
+npm --prefix /tmp/sip-image-tools install sharp
+node --input-type=module - public/assets/blog/<slug>/hero-generated.png <<'NODE'
+import fs from "node:fs";
+import { createRequire } from "node:module";
+const require = createRequire("/tmp/sip-image-tools/package.json");
+const sharp = require("sharp");
+
+for (const png of process.argv.slice(2)) {
+  const webp = png.replace(/\.png$/, ".webp");
+  await sharp(png).webp({ quality: 82, effort: 6 }).toFile(webp);
+
+  const tmp = `${png}.tmp`;
+  await sharp(png)
+    .png({ palette: true, quality: 82, compressionLevel: 9, effort: 10 })
+    .toFile(tmp);
+  fs.renameSync(tmp, png);
+}
+NODE
+```
 
 ## Interaction Rules
 
@@ -144,7 +174,7 @@ Sell In Public blog posts should teach first and convert second.
 - A Calendly CTA or the standard marketing footer is allowed, but keep it clearly separated from the research and examples.
 - Use named examples, case studies, original research, statistics, and primary sources before making broad recommendations.
 - Mention Sell In Public only as the publisher, author context, or the clearly separated end CTA.
-- The end CTA should include a varied version of this offer: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. The CTA body must be exactly two sentences: one sentence for the offer and one sentence inviting a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management.
+- The end CTA should describe the offer without copying a fixed template: Sell In Public captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP. The CTA body must be exactly two sentences: one sentence for the offer and one sentence inviting a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management.
 - Prefer "what this example teaches" over "how we solve this for you."
 
 ## Source Rules
@@ -169,6 +199,9 @@ Before publishing:
 - Check all external source links.
 - Check internal links.
 - Confirm every image has useful alt text unless decorative.
+- Confirm no rendered blog HTML contains missing alt text or `alt=""`.
+- Confirm page title, metadata descriptions, OG/Twitter title and description fields meet the length limits.
+- Confirm the hero publishable source is WebP, the WebP file exists, the optimized PNG fallback exists, and image dimensions match the source file.
 - Confirm the main article body is useful and not feature-heavy.
 - Confirm the post appears on `/blog/`.
 - Update `sitemap.xml`.
@@ -178,6 +211,10 @@ Before publishing:
 - Test copy block buttons.
 - Test Copy Page and Ask AI buttons.
 - Run `node scripts/check-blog-post.mjs blog/[slug]/index.html`.
+- Run `node scripts/blog-orchestrator.mjs validate content-packets/[packet]/`.
+- Run `node scripts/blog-orchestrator.mjs generate --dry-run --require-idempotent content-packets/[packet]/`.
+- Run `node scripts/blog-orchestrator.mjs check-all`.
+- Run `rg -n 'alt=["'\"'][[:space:]]*["'\"']' blog` and treat any result as a publish blocker.
 - Commit the scoped packet, static blog, asset, index, sitemap, feed, and process changes.
 - Push the branch to GitHub so Netlify can auto deploy the published blog changes.
 
@@ -187,9 +224,9 @@ Start this sequence only after the prior post is fully done on its own.
 
 1. Duplicate `/blog/employee-generated-content-infrastructure/index.html` into `/blog/[slug]/index.html`.
 2. Replace all metadata, schema, article body, FAQ schema, and sources.
-3. Generate a post-specific PNG hero under `/public/assets/blog/[slug]/`.
+3. Generate a post-specific PNG hero under `/public/assets/blog/[slug]/`, create `hero-generated.webp`, optimize the PNG fallback, and use the WebP path in packet metadata and rendered HTML.
 4. Add any inline article media under `/public/assets/blog/[slug]/`.
-5. Confirm all image `width` and `height` attributes match the source files.
+5. Confirm all image `width` and `height` attributes match the WebP source files.
 6. Add the post to `/blog/index.html`.
 7. Add the post to the left rail recent links on published posts.
 8. Update `sitemap.xml` and `feed.xml`.

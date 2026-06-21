@@ -54,6 +54,17 @@ const REQUIRED_META_FIELDS = [
 ];
 
 const VALIDATION_STAGES = ["intake", "research", "outline", "draft", "publish"];
+const TITLE_MAX_LENGTH = 60;
+const TITLE_TARGET_MIN_LENGTH = 45;
+const TITLE_TARGET_MAX_LENGTH = 58;
+const META_DESCRIPTION_MIN_LENGTH = 110;
+const META_DESCRIPTION_MAX_LENGTH = 155;
+const META_DESCRIPTION_TARGET_MIN_LENGTH = 130;
+const META_DESCRIPTION_TARGET_MAX_LENGTH = 150;
+const SOCIAL_DESCRIPTION_MAX_LENGTH = 155;
+const HERO_ALT_MIN_LENGTH = 24;
+const HERO_RATIO_MIN = 2;
+const HERO_RATIO_MAX = 2.6;
 
 const STAGE_ARTIFACTS = {
   intake: ["brief.yaml"],
@@ -142,6 +153,90 @@ function collectStrings(value, output = []) {
     Object.values(value).forEach((item) => collectStrings(item, output));
   }
   return output;
+}
+
+function sitePathFromReference(value) {
+  const text = trimmedText(value).split("?")[0];
+  if (!text) return "";
+  if (text.startsWith("http://") || text.startsWith("https://")) {
+    try {
+      return new URL(text).pathname;
+    } catch {
+      return text;
+    }
+  }
+  return text.startsWith("/") ? text : `/${text}`;
+}
+
+function filePathFromSitePath(root, sitePath) {
+  return path.join(root, sitePath.replace(/^\//, ""));
+}
+
+function readImageDimensions(filePath) {
+  const buffer = fs.readFileSync(filePath);
+
+  if (buffer.length >= 24 && buffer.toString("ascii", 1, 4) === "PNG") {
+    return {
+      width: buffer.readUInt32BE(16),
+      height: buffer.readUInt32BE(20),
+      format: "png",
+    };
+  }
+
+  if (
+    buffer.length >= 30 &&
+    buffer.toString("ascii", 0, 4) === "RIFF" &&
+    buffer.toString("ascii", 8, 12) === "WEBP"
+  ) {
+    const chunkType = buffer.toString("ascii", 12, 16);
+
+    if (chunkType === "VP8X" && buffer.length >= 30) {
+      return {
+        width: 1 + buffer.readUIntLE(24, 3),
+        height: 1 + buffer.readUIntLE(27, 3),
+        format: "webp",
+      };
+    }
+
+    if (chunkType === "VP8 " && buffer.length >= 30) {
+      return {
+        width: buffer.readUInt16LE(26) & 0x3fff,
+        height: buffer.readUInt16LE(28) & 0x3fff,
+        format: "webp",
+      };
+    }
+
+    if (chunkType === "VP8L" && buffer.length >= 25) {
+      const bits = buffer.readUInt32LE(21);
+      return {
+        width: 1 + (bits & 0x3fff),
+        height: 1 + ((bits >> 14) & 0x3fff),
+        format: "webp",
+      };
+    }
+  }
+
+  throw new Error(`Unsupported image format for dimension check: ${filePath}`);
+}
+
+function validateMaxLength(label, value, max, errors, { required = true } = {}) {
+  if (!hasValue(value)) {
+    if (required) errors.push(`${label} is required.`);
+    return;
+  }
+  const length = trimmedText(value).length;
+  if (length > max) errors.push(`${label} must be ${max} characters or fewer, found ${length}.`);
+}
+
+function warnTargetLength(label, value, min, max, warnings) {
+  if (!hasValue(value)) return;
+  const length = trimmedText(value).length;
+  if (length < min || length > max) warnings.push(`${label} target is ${min}-${max} characters when possible; found ${length}.`);
+}
+
+function validateRangeLength(label, value, min, max, errors) {
+  const length = trimmedText(value).length;
+  if (length < min || length > max) errors.push(`${label} must be ${min}-${max} characters, found ${length}.`);
 }
 
 function isExamplesPacket(packet) {
@@ -245,6 +340,117 @@ function validatePublicCopyAntiAiisms(packet, errors) {
   }
 }
 
+function validateMetadataLengths(packet, errors, warnings) {
+  validateMaxLength("publish-meta.yaml title", packet.publishMeta.title, TITLE_MAX_LENGTH, errors);
+  warnTargetLength("publish-meta.yaml title", packet.publishMeta.title, TITLE_TARGET_MIN_LENGTH, TITLE_TARGET_MAX_LENGTH, warnings);
+  validateMaxLength("publish-meta.yaml og_title", packet.publishMeta.og_title, TITLE_MAX_LENGTH, errors);
+  warnTargetLength("publish-meta.yaml og_title", packet.publishMeta.og_title, TITLE_TARGET_MIN_LENGTH, TITLE_TARGET_MAX_LENGTH, warnings);
+  validateMaxLength("publish-meta.yaml twitter_title", packet.publishMeta.twitter_title, TITLE_MAX_LENGTH, errors, { required: false });
+  warnTargetLength("publish-meta.yaml twitter_title", packet.publishMeta.twitter_title, TITLE_TARGET_MIN_LENGTH, TITLE_TARGET_MAX_LENGTH, warnings);
+
+  validateRangeLength("publish-meta.yaml meta_description", packet.publishMeta.meta_description, META_DESCRIPTION_MIN_LENGTH, META_DESCRIPTION_MAX_LENGTH, errors);
+  warnTargetLength(
+    "publish-meta.yaml meta_description",
+    packet.publishMeta.meta_description,
+    META_DESCRIPTION_TARGET_MIN_LENGTH,
+    META_DESCRIPTION_TARGET_MAX_LENGTH,
+    warnings
+  );
+  validateMaxLength("publish-meta.yaml og_description", packet.publishMeta.og_description, SOCIAL_DESCRIPTION_MAX_LENGTH, errors);
+  validateMaxLength("publish-meta.yaml twitter_description", packet.publishMeta.twitter_description, SOCIAL_DESCRIPTION_MAX_LENGTH, errors, { required: false });
+}
+
+function findHeroAsset(packet, heroSitePath) {
+  const assets = Array.isArray(packet.assetManifest?.assets) ? packet.assetManifest.assets : [];
+  return (
+    assets.find((asset) => sitePathFromReference(asset.path) === heroSitePath) ||
+    assets.find((asset) => sitePathFromReference(asset.public_url) === heroSitePath) ||
+    assets.find((asset) => asset.id === "hero-generated") ||
+    assets.find((asset) => asset.type === "hero")
+  );
+}
+
+function validateHeroAssetContract(packet, errors) {
+  const slug = packet.brief.slug || packet.publishMeta.slug || packet.articleBlocks?.slug;
+  const hero = packet.articleBlocks?.hero;
+  if (!slug || !hero) return;
+
+  const heroSitePath = sitePathFromReference(hero.src);
+  const expectedPrefix = `/public/assets/blog/${slug}/`;
+  if (!heroSitePath.startsWith(expectedPrefix)) {
+    errors.push(`article.blocks.json hero.src must live under ${expectedPrefix}.`);
+  }
+  if (!heroSitePath.endsWith(".webp")) {
+    errors.push("article.blocks.json hero.src must use .webp as the publishable source.");
+  }
+
+  const heroAlt = trimmedText(hero.alt);
+  const ogImageAlt = trimmedText(packet.publishMeta.og_image_alt);
+  if (heroAlt.length < HERO_ALT_MIN_LENGTH) {
+    errors.push(`article.blocks.json hero.alt must be at least ${HERO_ALT_MIN_LENGTH} characters.`);
+  }
+  if (!ogImageAlt) {
+    errors.push("publish-meta.yaml og_image_alt is required.");
+  } else if (heroAlt && heroAlt !== ogImageAlt) {
+    errors.push("article.blocks.json hero.alt and publish-meta.yaml og_image_alt must match.");
+  }
+
+  const ogImageSitePath = sitePathFromReference(packet.publishMeta.og_image);
+  if (ogImageSitePath !== heroSitePath) {
+    errors.push("publish-meta.yaml og_image must point to the same WebP path as article.blocks.json hero.src.");
+  }
+  if (ogImageSitePath && !ogImageSitePath.endsWith(".webp")) {
+    errors.push("publish-meta.yaml og_image must use .webp as the publishable source.");
+  }
+
+  const heroAsset = findHeroAsset(packet, heroSitePath);
+  if (!heroAsset) {
+    errors.push("asset-manifest.json must include the hero WebP asset used by article.blocks.json.");
+  } else {
+    const assetPath = sitePathFromReference(heroAsset.path);
+    const assetPublicUrl = sitePathFromReference(heroAsset.public_url);
+    const assetAlt = trimmedText(heroAsset.alt);
+    if (assetPath !== heroSitePath) {
+      errors.push("asset-manifest.json hero path must match article.blocks.json hero.src.");
+    }
+    if (assetPublicUrl && assetPublicUrl !== heroSitePath) {
+      errors.push("asset-manifest.json hero public_url must match article.blocks.json hero.src.");
+    }
+    if (assetAlt !== heroAlt) {
+      errors.push("asset-manifest.json hero alt must match article.blocks.json hero.alt.");
+    }
+    if (Number(heroAsset.width) !== Number(hero.width) || Number(heroAsset.height) !== Number(hero.height)) {
+      errors.push("asset-manifest.json hero width and height must match article.blocks.json hero dimensions.");
+    }
+  }
+
+  const webpPath = filePathFromSitePath(packet.root, heroSitePath);
+  if (!fs.existsSync(webpPath)) {
+    errors.push(`Hero WebP file is missing: ${heroSitePath}`);
+  } else {
+    try {
+      const dimensions = readImageDimensions(webpPath);
+      const ratio = dimensions.width / dimensions.height;
+      if (dimensions.format !== "webp") {
+        errors.push(`Hero publishable asset must be WebP, found ${dimensions.format}.`);
+      }
+      if (Number(hero.width) !== dimensions.width || Number(hero.height) !== dimensions.height) {
+        errors.push(`article.blocks.json hero width/height must match source image (${dimensions.width}x${dimensions.height}).`);
+      }
+      if (ratio < HERO_RATIO_MIN || ratio > HERO_RATIO_MAX) {
+        errors.push(`Hero aspect ratio must be ${HERO_RATIO_MIN}:1 to ${HERO_RATIO_MAX}:1, found ${ratio.toFixed(2)}:1.`);
+      }
+    } catch (error) {
+      errors.push(error.message);
+    }
+  }
+
+  const pngFallbackSitePath = heroSitePath.replace(/\.webp$/i, ".png");
+  if (pngFallbackSitePath === heroSitePath || !fs.existsSync(filePathFromSitePath(packet.root, pngFallbackSitePath))) {
+    errors.push(`Optimized PNG fallback is required beside the WebP hero: ${pngFallbackSitePath}`);
+  }
+}
+
 function validateArticleBlocks(packet, errors, warnings) {
   const blocks = packet.articleBlocks;
   if (!blocks || typeof blocks !== "object") {
@@ -259,7 +465,7 @@ function validateArticleBlocks(packet, errors, warnings) {
   if (blocks.topic_map?.topic_id && packet.brief.topic_map?.topic_id && blocks.topic_map.topic_id !== packet.brief.topic_map.topic_id) {
     errors.push("article.blocks.json topic_map.topic_id must match brief.yaml.");
   }
-  if (!blocks.hero?.src || !blocks.hero?.alt || !blocks.hero?.width || !blocks.hero?.height || !blocks.hero?.caption) {
+  if (!blocks.hero?.src || !trimmedText(blocks.hero?.alt) || !blocks.hero?.width || !blocks.hero?.height || !blocks.hero?.caption) {
     errors.push("article.blocks.json hero must include src, alt, width, and height.");
   }
   if (!Array.isArray(blocks.blocks) || !blocks.blocks.length) {
@@ -318,7 +524,7 @@ function validateArticleBlocks(packet, errors, warnings) {
         requireArray(Array.isArray(block.items) && block.items.length, `${prefix} list requires items.`);
         break;
       case "media":
-        if (!block.src || !block.alt || !block.width || !block.height || !block.caption) {
+        if (!block.src || !trimmedText(block.alt) || !block.width || !block.height || !block.caption) {
           errors.push(`${prefix} media requires src, alt, width, height, and caption.`);
         }
         break;
@@ -567,6 +773,8 @@ function validatePublish(packet, errors, warnings, options = {}) {
     }
   }
 
+  validateMetadataLengths(packet, errors, warnings);
+
   for (const claim of packet.claims) {
     if (["needs_sme", "needs_source"].includes(claim.status)) {
       errors.push(`Claim ${claim.claim_id || "unknown claim"} is unresolved: ${claim.status}`);
@@ -574,6 +782,7 @@ function validatePublish(packet, errors, warnings, options = {}) {
   }
 
   validateArticleBlocks(packet, errors, warnings);
+  validateHeroAssetContract(packet, errors);
   validateClaudeWritingGate(packet, errors);
   validatePublicCopyAntiAiisms(packet, errors);
   validatePublicReaderGate(packet, errors, warnings, options);
@@ -582,7 +791,7 @@ function validatePublish(packet, errors, warnings, options = {}) {
     for (const asset of packet.assetManifest.assets) {
       const assetPath = path.join(packet.root, asset.path || "");
       if (!fs.existsSync(assetPath)) errors.push(`Asset file does not exist: ${asset.path}`);
-      if (!asset.width || !asset.height || !asset.alt) {
+      if (!asset.width || !asset.height || !trimmedText(asset.alt)) {
         errors.push(`Asset ${asset.id || asset.path} must include width, height, and alt text.`);
       }
     }

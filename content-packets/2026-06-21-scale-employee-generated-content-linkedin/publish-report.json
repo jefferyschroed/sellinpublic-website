@@ -1,35 +1,37 @@
 {
   "packet_id": "2026-06-21-scale-employee-generated-content-linkedin",
   "slug": "scale-employee-generated-content-linkedin",
-  "generated_at": "2026-06-21T22:02:55.768Z",
+  "generated_at": "2026-06-21T23:29:10.288Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/scale-employee-generated-content-linkedin/index.html",
-      "bytes": 39651,
+      "bytes": 39582,
       "changed": false
     },
     {
       "path": "blog/index.html",
-      "bytes": 23711,
+      "bytes": 23666,
       "post_count": 13,
-      "changed": true
+      "changed": false
     },
     {
       "path": "sitemap.xml",
       "bytes": 3388,
       "post_count": 13,
-      "changed": true
+      "changed": false
     },
     {
       "path": "feed.xml",
       "bytes": 7321,
       "post_count": 13,
-      "changed": true
+      "changed": false
     }
   ],
   "validation": {
     "ok": true,
-    "warnings": []
+    "warnings": [
+      "publish-meta.yaml title target is 45-58 characters when possible; found 44."
+    ]
   }
 }

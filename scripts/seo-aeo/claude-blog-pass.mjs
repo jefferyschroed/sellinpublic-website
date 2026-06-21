@@ -161,7 +161,7 @@ Closing CTA requirements:
 - The final cta block must mention Sell In Public by name.
 - Use a short question-style CTA heading when it fits the article.
 - The CTA body must be exactly two sentences.
-- Sentence 1 must say what Sell In Public does for the reader: turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP.
+- Sentence 1 must say what Sell In Public does for the reader: captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP.
 - Sentence 2 should invite a working session to see whether LinkedIn can become a top revenue channel for the company.
 - Do not add a third sentence that re-explains process management, client workload, ICP mapping, team voices, or pipeline scoping.
 - Vary the wording by article. Do not copy the same CTA verbatim across posts.

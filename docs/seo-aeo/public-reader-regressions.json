@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T00:00:00.000Z",
+  "updated_at": "2026-06-21T23:30:00.000Z",
   "patterns": [
     {
       "category": "rubric_leak",
@@ -25,6 +25,13 @@
       "scope": "examples_only",
       "source": "prior-egc-examples-root-cause",
       "added_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "category": "ai_ish",
+      "label": "Templated Sell In Public closing CTA",
+      "pattern": "Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals, and inbound leads, then runs outbound to the right ICP.",
+      "source": "public-reader-qa-curated",
+      "added_at": "2026-06-21T23:30:00.000Z"
     }
   ],
   "incidents": []

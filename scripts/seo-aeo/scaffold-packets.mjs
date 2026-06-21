@@ -206,7 +206,7 @@ cta:
   secondary:
     label: "Review the System"
     url: "https://sellinpublic.co/"
-  closing_blog_cta: "Write a varied end CTA with a short heading and an exactly two-sentence body. Sentence 1 should name Sell In Public and say we turn a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then run outbound to the right ICP. Sentence 2 should invite a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management."
+  closing_blog_cta: "Write a varied end CTA with a short heading and an exactly two-sentence body. Sentence 1 should name Sell In Public and describe how we capture team expertise, shape it into LinkedIn posts and buyer signals, and run outbound to the right ICP. Sentence 2 should invite a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management."
 
 search_intent:
   stage: "${candidate.intent || "unknown"}"

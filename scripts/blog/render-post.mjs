@@ -8,9 +8,36 @@ import { escapeHtml, renderBlogRail } from "./shared-shell.mjs";
 
 const AUTHOR_NAME = "Jeffery Schroeder";
 const AUTHOR_URL = "https://www.linkedin.com/in/jeffery-schroeder-957b98337/";
+const HERO_ALT_MIN_LENGTH = 24;
 
 function jsonLd(value) {
   return JSON.stringify(value, null, 8).replaceAll("</", "<\\/");
+}
+
+function requireImageAlt(alt, context, minLength = 1) {
+  const text = String(alt || "").trim();
+  if (text.length < minLength) {
+    throw new Error(`${context} image alt text must be at least ${minLength} characters.`);
+  }
+  return text;
+}
+
+function requireHeroSource(src, slug) {
+  const value = String(src || "");
+  if (!value.startsWith(`/public/assets/blog/${slug}/`)) {
+    throw new Error(`Hero image must live under /public/assets/blog/${slug}/.`);
+  }
+  if (!value.endsWith(".webp")) {
+    throw new Error("Hero image must use hero-generated.webp as the publishable source.");
+  }
+  return value;
+}
+
+function validateHero(hero, slug) {
+  if (!hero || typeof hero !== "object") throw new Error("article.blocks.json hero is required.");
+  requireHeroSource(hero.src, slug);
+  requireImageAlt(hero.alt, "Hero", HERO_ALT_MIN_LENGTH);
+  if (!hero.width || !hero.height) throw new Error("Hero image width and height are required.");
 }
 
 function renderCopyIcon() {
@@ -63,6 +90,7 @@ function renderBlock(block) {
             ${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join("\n            ")}
           </ul>`;
     case "media":
+      requireImageAlt(block.alt, "Blog media");
       return `<figure class="blog-media">
             <img src="${escapeHtml(block.src)}" alt="${escapeHtml(block.alt)}" width="${escapeHtml(block.width)}" height="${escapeHtml(block.height)}" loading="lazy" />
             <figcaption>${escapeHtml(block.caption)}</figcaption>
@@ -130,6 +158,7 @@ function renderFaqJsonLd(faqItems) {
 export function renderPostHtml(packet) {
   const ast = buildArticleAst(packet);
   const meta = packet.publishMeta;
+  validateHero(ast.hero, ast.slug);
   const canonical = meta.canonical_url;
   const publishedIso = `${meta.publish_date}T09:00:00-07:00`;
   const modifiedIso = `${meta.updated_date}T09:00:00-07:00`;

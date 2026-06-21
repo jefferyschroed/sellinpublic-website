@@ -21,15 +21,15 @@ content-packets/<yyyy-mm-dd>-<slug>/
 | `sme-notes.md` | Expert input | Session metadata, participants, raw notes, usable insights, quote approvals, unresolved questions | SME claims are attributable and approval-sensitive quotes are marked. |
 | `outline.md` | Approved article structure | Search promise, answer-first summary, H1, H2/H3 structure, target questions, internal links, claim IDs, CTA placement | Outline satisfies the brief before drafting starts. Major claims map to sources or SME notes. |
 | `draft.md` | Working article draft | Title, meta draft, body copy, citation markers, claim markers, FAQ section if applicable, CTA | Draft uses citation markers like `[cite:src-001]` and claim markers like `[claim:C001]`. No unsupported final claims. Public prose has passed the applied Claude writing gate or QA records an owner-approved exception. |
-| `article.blocks.json` | Machine-readable article AST | Version, slug, title, intro fields, `topic_map`, hero object, typed article blocks | Generator can render the static post without guessing from markdown or existing HTML. Blocks match the approved draft because this file is the rendered source of truth, and the applied Claude writing pass wrote the final public copy here. |
+| `article.blocks.json` | Machine-readable article AST | Version, slug, title, intro fields, `topic_map`, hero object, typed article blocks | Generator can render the static post without guessing from markdown or existing HTML. Blocks match the approved draft because this file is the rendered source of truth, and the applied Claude writing pass wrote the final public copy here. The hero source must be the post-local `hero-generated.webp`, with descriptive alt text of at least 24 characters and honest dimensions. |
 | `claims-ledger.csv` | Claim verification log | `claim_id`, `claim_text`, `draft_location`, `support_type`, `source_ids`, `confidence`, `owner`, `status`, `notes` | Every factual claim is logged. Status is one of `supported`, `needs_sme`, `needs_source`, `revised`, `removed`. |
 | `qa-report.md` | Readiness review | Summary, blockers, SEO checks, AEO checks, citation checks, brand/voice checks, originality checks, final decision | No critical blockers. QA decision is `approved`, `approved_with_notes`, or `rejected`. |
 | `public-reader-report.json` | Clean-context rendered article audit | Rendered HTML path and hash, article text hash, clean-context policy, model, pass/fail, findings, rewrites, and root-cause notes | Created after static HTML renders. Must be model-based, hash-match the current rendered post, expose only rendered public article text to the model, and have zero findings before governed publish completion. |
-| `publish-meta.yaml` | Publishing metadata | `title`, `slug`, `canonical_url`, `meta_description`, `og_title`, `og_description`, `og_image`, `author`, `publish_date`, `updated_date`, `category`, `tags`, `excerpt`, `robots`, `schema_type`, `internal_links` | Metadata is complete, unique, and consistent with the draft. |
+| `publish-meta.yaml` | Publishing metadata | `title`, `slug`, `canonical_url`, `meta_description`, `og_title`, `og_description`, `og_image`, `author`, `publish_date`, `updated_date`, `category`, `tags`, `excerpt`, `robots`, `schema_type`, `internal_links` | Metadata is complete, unique, and consistent with the draft. Title, OG title, and Twitter title are 60 characters or fewer, with a 45-58 character target when possible. `meta_description` is 110-155 characters, with a 130-150 character target when possible. OG and Twitter descriptions are 155 characters or fewer. `og_image` points to the post-local WebP hero. |
 | `distribution-pack.md` | Promotion assets | LinkedIn post options, email teaser, short social snippets, outreach angle, visual brief, UTM notes | Distribution copy matches the article's claims and CTA. |
 | `performance-log.csv` | Post-publish tracking | `date`, `url`, `channel`, `impressions`, `clicks`, `ctr`, `avg_position`, `sessions`, `conversions`, `notes`, `action` | Created before publish. Updated after indexing and promotion windows. |
 | `refresh-notes.md` | Future update record | Refresh trigger, stale claims, new sources, performance summary, edits made, next review date | Refresh rationale is documented. Updated claims return to the ledger. |
-| `asset-manifest.json` | Post asset registry | Asset ID, type, path, public URL, width, height, alt text, notes, and final prompt or linked `image-brief.md` for generated heroes | Every generated or selected asset is post-local, has honest dimensions, and records enough prompt/source context for QA to audit the image. |
+| `asset-manifest.json` | Post asset registry | Asset ID, type, path, public URL, width, height, alt text, notes, and final prompt or linked `image-brief.md` for generated heroes | Every generated or selected asset is post-local, has honest dimensions, and records enough prompt/source context for QA to audit the image. The primary hero manifest entry points to `hero-generated.webp`, while `hero-generated.png` remains in the same folder as the optimized fallback/source artifact. Hero alt text matches `article.blocks.json.hero.alt` and `publish-meta.yaml:og_image_alt`. |
 
 ## Staged Acceptance
 
@@ -60,6 +60,8 @@ A packet is ready for publish implementation only when:
 - `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/ --apply`; the script auto-loads `ANTHROPIC_API_KEY` from ignored local env files such as `secrets/seo-aeo.env`, `.env`, or `.env.local`. Record an owner-approved exception in `qa-report.md` only if the model-backed pass cannot run.
 - `claude-writing-pass.md` records `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`, unless QA records an owner-approved exception.
 - `article.blocks.json` exists and matches the approved outline and draft. Do not approve a packet where the Markdown draft is good but the blocks still read as instructions, notes, or a different article.
+- `publish-meta.yaml:title`, `og_title`, and `twitter_title` where present are 60 characters or fewer. Target 45-58 characters when possible, but do not shorten the H1 at the expense of clarity unless it also feeds the title tag.
+- `publish-meta.yaml:meta_description` is 110-155 characters, with a 130-150 character target when possible. `og_description` and `twitter_description` are 155 characters or fewer. Descriptions must match the article's actual promise and must not introduce unsupported claims.
 - The rendered static HTML has passed clean-context public-reader QA with `scripts/seo-aeo/public-reader-qa.mjs --packet content-packets/<packet>/ --apply`. The report must read only rendered public article text, not packet artifacts, and must hash-match the current `blog/<slug>/index.html`.
 - FAQ blocks contain only complete question/answer pairs with non-empty trimmed text. Blank, whitespace-only, duplicate, or placeholder FAQ items are publish blockers.
 - `claims-ledger.csv` accounts for every factual, statistical, comparative, or expert claim.
@@ -68,6 +70,8 @@ A packet is ready for publish implementation only when:
 - `distribution-pack.md` is ready for launch promotion.
 - `performance-log.csv` and `refresh-notes.md` exist before publication.
 - `asset-manifest.json` records every post asset used by the generated HTML, and generated heroes include the final prompt directly or reference an `image-brief.md` that contains it.
+- `article.blocks.json.hero.src`, `asset-manifest.json` path and public URL, and `publish-meta.yaml:og_image` all point to `hero-generated.webp`; the WebP file exists; the optimized `hero-generated.png` fallback exists; and image dimensions match the WebP source file.
+- No rendered blog HTML contains missing alt text or `alt=""`, including nav logos, blog cards, hero images, footer art, and inline media.
 
 ## Governed Generation Commands
 
@@ -82,9 +86,10 @@ Use direct generator commands for validation, dry-runs, and debugging only. The 
 
 ```sh
 node scripts/blog-orchestrator.mjs validate content-packets/<packet>/
-node scripts/blog-orchestrator.mjs generate --dry-run content-packets/<packet>/
+node scripts/blog-orchestrator.mjs generate --dry-run --require-idempotent content-packets/<packet>/
 node scripts/blog-orchestrator.mjs public-reader-qa --apply content-packets/<packet>/
 node scripts/blog-orchestrator.mjs check-all
+rg -n 'alt=["'\"'][[:space:]]*["'\"']' blog
 ```
 
 Generated output:
@@ -125,7 +130,7 @@ Publish work starts only after `qa-report.md` is approved and `publish-meta.yaml
 
 Asset to QA:
 
-Generated hero assets must be based on `draft.md`, `article.blocks.json`, or a concise finished-article excerpt/summary. QA checks the recorded prompt and image for article relevance, flat head-on liquid-glass mesh style, simplicity, one main background color plus at most one close complementary color, consistent white outline weight, and absence of repeated LinkedIn-card defaults or generic AI-image tropes.
+Generated hero assets must be based on `draft.md`, `article.blocks.json`, or a concise finished-article excerpt/summary. QA checks the recorded prompt and image for article relevance, flat head-on liquid-glass mesh style, simplicity, one main background color plus at most one close complementary color, consistent white outline weight, and absence of repeated LinkedIn-card defaults or generic AI-image tropes. Asset QA also checks that the original PNG was converted to `hero-generated.webp`, the optimized PNG fallback remains in the post asset folder, WebP is the only publishable hero source, and all hero alt fields agree.
 
 Rendered publish to final public-reader QA:
 

@@ -11,6 +11,15 @@ const AUTHOR_NAME = "Jeffery Schroeder";
 const AUTHOR_URL = "https://www.linkedin.com/in/jeffery-schroeder-957b98337/";
 const HERO_RATIO_MIN = 2;
 const HERO_RATIO_MAX = 2.6;
+const TITLE_MAX_LENGTH = 60;
+const TITLE_TARGET_MIN_LENGTH = 45;
+const TITLE_TARGET_MAX_LENGTH = 58;
+const META_DESCRIPTION_MIN_LENGTH = 110;
+const META_DESCRIPTION_MAX_LENGTH = 155;
+const META_DESCRIPTION_TARGET_MIN_LENGTH = 130;
+const META_DESCRIPTION_TARGET_MAX_LENGTH = 150;
+const SOCIAL_DESCRIPTION_MAX_LENGTH = 155;
+const HERO_ALT_MIN_LENGTH = 24;
 
 const failures = [];
 const passes = [];
@@ -55,6 +64,8 @@ const getAttr = (attrs, name) => {
   const match = attrs.match(new RegExp(`${name}\\s*=\\s*("([^"]*)"|'([^']*)'|([^\\s>]+))`, "i"));
   return decodeEntities(match?.[2] ?? match?.[3] ?? match?.[4] ?? "");
 };
+
+const hasAttr = (attrs, name) => new RegExp(`(?:^|\\s)${name}\\s*=`, "i").test(attrs);
 
 const tagAttrs = (tagName, source) =>
   Array.from(source.matchAll(new RegExp(`<${tagName}\\b([^>]*)>`, "gi"))).map((match) => match[1]);
@@ -140,6 +151,31 @@ const readImageDimensions = (filePath) => {
   throw new Error(`Unsupported image format for dimension check: ${filePath}`);
 };
 
+const firstMetaContent = ({ name, property }) => {
+  const attrs = tagAttrs("meta", html).find((item) => {
+    if (name) return getAttr(item, "name").toLowerCase() === name.toLowerCase();
+    if (property) return getAttr(item, "property").toLowerCase() === property.toLowerCase();
+    return false;
+  });
+  return attrs ? getAttr(attrs, "content") : "";
+};
+
+const assertMaxLength = (label, value, max) => {
+  const length = String(value || "").trim().length;
+  if (!length) {
+    fail(`${label} is missing.`);
+    return;
+  }
+  if (length <= max) pass(`${label} is ${length} characters.`);
+  else fail(`${label} must be ${max} characters or fewer, found ${length}.`);
+};
+
+const assertRangeLength = (label, value, min, max) => {
+  const length = String(value || "").trim().length;
+  if (length >= min && length <= max) pass(`${label} is ${length} characters.`);
+  else fail(`${label} must be ${min}-${max} characters, found ${length}.`);
+};
+
 const collectJsonLdTypes = (value, types = []) => {
   if (Array.isArray(value)) {
     value.forEach((item) => collectJsonLdTypes(item, types));
@@ -164,6 +200,28 @@ const collectJsonLdTypes = (value, types = []) => {
 const h1Count = tagAttrs("h1", html).length;
 if (h1Count === 1) pass("Exactly one H1 is present.");
 else fail(`Expected exactly one H1, found ${h1Count}.`);
+
+const titleText = stripTags(html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "");
+assertMaxLength("Rendered <title>", titleText, TITLE_MAX_LENGTH);
+if (
+  titleText.length >= TITLE_TARGET_MIN_LENGTH &&
+  titleText.length <= TITLE_TARGET_MAX_LENGTH
+) {
+  pass(`Rendered <title> is in the ${TITLE_TARGET_MIN_LENGTH}-${TITLE_TARGET_MAX_LENGTH} character target range.`);
+}
+
+const metaDescription = firstMetaContent({ name: "description" });
+assertRangeLength("Meta description", metaDescription, META_DESCRIPTION_MIN_LENGTH, META_DESCRIPTION_MAX_LENGTH);
+if (
+  metaDescription.length >= META_DESCRIPTION_TARGET_MIN_LENGTH &&
+  metaDescription.length <= META_DESCRIPTION_TARGET_MAX_LENGTH
+) {
+  pass(`Meta description is in the ${META_DESCRIPTION_TARGET_MIN_LENGTH}-${META_DESCRIPTION_TARGET_MAX_LENGTH} character target range.`);
+}
+assertMaxLength("Open Graph title", firstMetaContent({ property: "og:title" }), TITLE_MAX_LENGTH);
+assertMaxLength("Twitter title", firstMetaContent({ name: "twitter:title" }), TITLE_MAX_LENGTH);
+assertMaxLength("Open Graph description", firstMetaContent({ property: "og:description" }), SOCIAL_DESCRIPTION_MAX_LENGTH);
+assertMaxLength("Twitter description", firstMetaContent({ name: "twitter:description" }), SOCIAL_DESCRIPTION_MAX_LENGTH);
 
 if (
   measurementId &&
@@ -231,6 +289,29 @@ if (
   fail("Post must use .blog-layout with .blog-rail, .blog-main, and .blog-toc as page-level siblings.");
 }
 
+const imageAttrs = tagAttrs("img", html);
+if (!imageAttrs.length) {
+  fail("Rendered blog HTML must include images with alt text.");
+} else {
+  const badImages = imageAttrs
+    .map((attrs, index) => ({
+      index: index + 1,
+      src: getAttr(attrs, "src"),
+      missingAlt: !hasAttr(attrs, "alt"),
+      alt: getAttr(attrs, "alt").trim(),
+    }))
+    .filter((image) => image.missingAlt || !image.alt);
+  if (!badImages.length) {
+    pass("Every rendered image has non-empty alt text.");
+  } else {
+    fail(
+      `Every rendered image must have non-empty alt text. Offenders: ${badImages
+        .map((image) => `${image.src || `image ${image.index}`}${image.missingAlt ? " missing alt" : " empty alt"}`)
+        .join(", ")}.`
+    );
+  }
+}
+
 const heroFigure = html.match(/<figure\b[^>]*class=["'][^"']*\bblog-hero\b[^"']*["'][^>]*>([\s\S]*?)<\/figure>/i);
 if (!heroFigure) {
   fail("Hero figure with class blog-hero is missing.");
@@ -245,13 +326,19 @@ if (!heroFigure) {
     const widthAttr = Number(getAttr(attrs, "width"));
     const heightAttr = Number(getAttr(attrs, "height"));
 
-    if (alt.length >= 24) pass("Hero image has descriptive alt text.");
-    else fail("Hero image alt text must describe the image.");
+    if (alt.length >= HERO_ALT_MIN_LENGTH) pass("Hero image has descriptive alt text.");
+    else fail(`Hero image alt text must be at least ${HERO_ALT_MIN_LENGTH} characters.`);
 
     if (slug && src.startsWith(`/public/assets/blog/${slug}/`)) {
       pass("Hero image is post-local.");
     } else {
       fail(`Hero image must live under /public/assets/blog/${slug || "[slug]"}/.`);
+    }
+
+    if (src.endsWith(".webp")) {
+      pass("Hero image uses WebP as the publishable source.");
+    } else {
+      fail("Hero image src must use .webp as the publishable source.");
     }
 
     if (src.includes("/public/assets/hero/")) {

@@ -40,6 +40,7 @@ Any text you write that could influence public blog copy, including rough notes,
 - Do not change metadata to fit generated index output.
 - Do not approve publication if canonical, feed URL, sitemap URL, or slug disagree.
 - Do not ignore duplicate URLs or stale feed entries.
+- Do not approve publication if the blog index card uses a PNG hero, missing image file, empty alt text, or alt text that differs from the packet hero alt.
 - Do not edit scripts.
 
 ## Stop Conditions
@@ -47,6 +48,7 @@ Any text you write that could influence public blog copy, including rough notes,
 - Stop if Blog Generator has not produced or updated required output.
 - Stop if `publish-meta.yaml` is missing or not approved.
 - Stop if article title, slug, canonical URL, publish date, or excerpt differs across surfaces.
+- Stop if `blog/index.html` does not use the post-local `hero-generated.webp` path for the article card.
 - Stop if the feed or sitemap excludes the new article.
 
 ## Handoff

@@ -124,4 +124,4 @@ Post performance, profile response, relevant comments, saves, sends, target-acco
 
 ## Want this tied to sales?
 
-Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals, and inbound leads, then runs outbound to the right ICP. Book a working session to find out whether LinkedIn can become a top revenue channel for your company.
+Sell In Public captures team expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP. Book a working session to find out whether LinkedIn can become a top revenue channel for your company.

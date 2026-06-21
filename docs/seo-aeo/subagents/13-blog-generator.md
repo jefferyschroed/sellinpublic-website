@@ -44,14 +44,18 @@ Any text you write that could influence public blog copy, including rough notes,
 - Do not skip strict packet validation.
 - Do not treat `claude-writing-pass.md` as sufficient unless it records `Status: applied` and confirms both `draft.md` and `article.blocks.json` were updated.
 - Do not publish if `article.blocks.json` diverges from the approved draft and metadata.
+- Do not publish if title tags exceed 60 characters, `meta_description` is outside 110-155 characters, or OG/Twitter descriptions exceed 155 characters.
+- Do not publish if any rendered blog HTML contains missing alt text or `alt=""`.
+- Do not publish if the hero source is not the post-local `hero-generated.webp`, the WebP file is missing, the PNG fallback is missing, width and height do not match the WebP source, or the hero aspect ratio is outside 2.0:1 to 2.6:1.
 
 ## Stop Conditions
 
 - Stop if required packet artifacts are missing.
 - Stop if validation fails.
 - Stop if generated output changes claims, citations, links, schema, author, CTA, or asset references unexpectedly.
+- Stop if generated output changes WebP hero paths back to PNG or creates mismatched alt text between post HTML and index cards.
 - Stop if browser or script checks fail and the failure affects publication readiness.
 
 ## Handoff
 
-Hand off generated output, validation summary, and `publish-report.json` to Index/Feed and QA. Route packet mismatches back to the owning artifact agent before regenerating.
+Hand off generated output, validation summary, `publish-report.json`, and the output of `node scripts/blog-orchestrator.mjs generate --dry-run --require-idempotent content-packets/<packet>/` to Index/Feed and QA. Route packet mismatches back to the owning artifact agent before regenerating.

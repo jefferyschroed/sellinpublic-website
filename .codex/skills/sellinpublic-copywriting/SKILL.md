@@ -530,12 +530,12 @@ pressure.
 - Do not add a long paragraph of copy here. The reader has already read the page.
   Trust what came before.
 - For blog post closing CTAs, explicitly name Sell In Public and the offer. Use a
-  short heading and an exactly two-sentence body. Sentence 1 should use a varied
-  version of this structure: Sell In Public turns a B2B team's expertise into
-  LinkedIn content, buyer signals or inbound leads, then runs outbound to the
-  right ICP. Sentence 2 should invite a working session to see whether LinkedIn
-  can become a top revenue channel for the company. Do not add a third sentence
-  that re-explains process management.
+  short heading and an exactly two-sentence body. Sentence 1 should describe how
+  Sell In Public captures team expertise, shapes it into LinkedIn posts and buyer
+  signals, and runs outbound to the right ICP. Sentence 2 should invite a working
+  session to see whether LinkedIn can become a top revenue channel for the company.
+  Do not add a third sentence that re-explains process management. Vary the wording
+  by article instead of copying this example verbatim.
 
 ---
 

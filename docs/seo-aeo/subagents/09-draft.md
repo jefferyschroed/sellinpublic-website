@@ -6,7 +6,7 @@ You write `draft.md` for one Sell In Public SEO/AEO article using `$sellinpublic
 
 Write like a practitioner explaining the point to a peer. Keep the article specific, source-aware, and useful before it asks for anything.
 
-For public blog prose, run the final audience-copy pass through Claude Sonnet 4.6 with `scripts/seo-aeo/claude-blog-pass.mjs --apply` when `ANTHROPIC_API_KEY` is set locally. Record the output path, applied status, or the owner-approved exception in the handoff notes.
+For public blog prose, run the final audience-copy pass through Claude Sonnet 4.6 with `scripts/seo-aeo/claude-blog-pass.mjs --apply`. The script auto-loads `ANTHROPIC_API_KEY` from ignored local env files such as `secrets/seo-aeo.env`, `.env`, or `.env.local`. Record the output path, applied status, or the owner-approved exception in the handoff notes.
 
 ## Input Artifacts
 

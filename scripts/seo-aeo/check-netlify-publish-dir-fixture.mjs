@@ -5,6 +5,9 @@ import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+const GOOGLE_TAG = "G-QCYHK55RCG";
+const FAVICON_LINK = '<link rel="icon" href="/public/assets/brand/hashtagiconlight.webp" type="image/webp" sizes="any" />';
+
 function repoRoot() {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 }
@@ -82,10 +85,9 @@ function run() {
     assert(report.status === "blocked", `expected missing GA4 tags to block publish check, got ${report.status}`);
     assert(report.blockers.includes("blocked_routes"), "expected blocked routes from missing GA4 tags.");
 
-    const googleTag = "G-QCYHK55RCG";
-    fs.writeFileSync(path.join(tempRoot, "index.html"), `index ${googleTag}\n`);
-    fs.writeFileSync(path.join(tempRoot, "blog/index.html"), `blog index ${googleTag}\n`);
-    fs.writeFileSync(path.join(tempRoot, "blog/example/index.html"), `blog post ${googleTag}\n`);
+    fs.writeFileSync(path.join(tempRoot, "index.html"), `index ${GOOGLE_TAG} ${FAVICON_LINK}\n`);
+    fs.writeFileSync(path.join(tempRoot, "blog/index.html"), `blog index ${GOOGLE_TAG} ${FAVICON_LINK}\n`);
+    fs.writeFileSync(path.join(tempRoot, "blog/example/index.html"), `blog post ${GOOGLE_TAG} ${FAVICON_LINK}\n`);
     result = runBuilder(repo, tempRoot);
     output = `${result.stdout || ""}${result.stderr || ""}`.trim();
     assert(result.status === 0, `expected tagged publish build to pass. Output: ${output}`);

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { renderFaviconLinks } from "../site-head.mjs";
 import { buildArticleAst } from "./article-ast.mjs";
 import { renderGoogleTag } from "./google-tag.mjs";
 import { assertSafeSlug, safeOutputPath, writeTextAtomic } from "./packet.mjs";
@@ -179,8 +180,7 @@ export function renderPostHtml(packet) {
     <meta name="author" content="${AUTHOR_NAME}" />
     <title>${escapeHtml(meta.title)}</title>
     <meta name="description" content="${escapeHtml(meta.meta_description)}" />
-    <link rel="icon" href="/public/assets/brand/hashtagiconlight.webp" type="image/webp" sizes="any" />
-    <link rel="shortcut icon" href="/public/assets/brand/hashtagiconlight.webp" type="image/webp" />
+    ${renderFaviconLinks()}
     <link rel="canonical" href="${escapeHtml(canonical)}" />
     <meta property="og:title" content="${escapeHtml(meta.og_title)}" />
     <meta property="og:description" content="${escapeHtml(meta.og_description)}" />

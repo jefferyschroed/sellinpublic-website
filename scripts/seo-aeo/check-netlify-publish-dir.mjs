@@ -5,6 +5,7 @@ import path from "node:path";
 import { ensureDir, envOrConfig, loadConfig, writeJsonAtomic } from "./lib/config.mjs";
 import { today } from "./lib/dates.mjs";
 import { configuredMeasurementId } from "../blog/google-tag.mjs";
+import { hasSiteFavicon, SITE_FAVICON_PATH } from "../site-head.mjs";
 
 const DEFAULT_OUT_DIR = "outputs/netlify-publish";
 const FORBIDDEN_TOP_LEVEL = new Set([
@@ -95,9 +96,10 @@ function runBuild(root) {
   };
 }
 
-function routeStatus({ exists, size, ga4Required, ga4Present }) {
+function routeStatus({ exists, size, ga4Required, ga4Present, faviconRequired, faviconPresent }) {
   if (!exists || size <= 0) return "blocked_missing_output_route";
   if (ga4Required && !ga4Present) return "blocked_missing_ga4_tag";
+  if (faviconRequired && !faviconPresent) return "blocked_missing_favicon";
   return "ok";
 }
 
@@ -107,7 +109,7 @@ function writeMarkdown(filePath, report) {
       (route) =>
         `- ${route.status}: ${route.url} -> ${route.local_path} (${route.size} bytes; GA4 ${
           route.ga4_required ? (route.ga4_present ? "present" : "missing") : "not_required"
-        })`
+        }; favicon ${route.favicon_required ? (route.favicon_present ? "present" : "missing") : "not_required"})`
     )
     .join("\n");
   const forbiddenLines = report.forbidden_top_level.length
@@ -120,6 +122,7 @@ Generated at: ${report.generated_at}
 Status: ${report.status}
 Output directory: ${report.output_dir}
 GA4 Measurement ID: ${report.ga4_measurement_id || "missing"}
+Required favicon: ${report.required_favicon}
 
 ## Routes
 
@@ -167,6 +170,8 @@ function run() {
     const ga4Required = parsed.pathname === "/" || parsed.pathname.endsWith("/");
     const body = state.exists && state.size > 0 ? fs.readFileSync(localPath, "utf8") : "";
     const ga4Present = measurementId ? body.includes(measurementId) : false;
+    const faviconRequired = ga4Required;
+    const faviconPresent = hasSiteFavicon(body);
     return {
       url,
       path: parsed.pathname,
@@ -175,7 +180,9 @@ function run() {
       size: state.size,
       ga4_required: ga4Required,
       ga4_present: ga4Present,
-      status: routeStatus({ exists: state.exists, size: state.size, ga4Required, ga4Present }),
+      favicon_required: faviconRequired,
+      favicon_present: faviconPresent,
+      status: routeStatus({ exists: state.exists, size: state.size, ga4Required, ga4Present, faviconRequired, faviconPresent }),
     };
   });
   const blockedRoutes = routes.filter((route) => route.status !== "ok");
@@ -195,6 +202,7 @@ function run() {
     output_dir_safe: outputDirSafe,
     origin,
     ga4_measurement_id: measurementId,
+    required_favicon: SITE_FAVICON_PATH,
     build,
     top_level: topLevel,
     forbidden_top_level: forbiddenTopLevel,
@@ -203,7 +211,7 @@ function run() {
     blockers,
     routes,
     next_action: blockers.length
-      ? "Build the clean Netlify publish directory and fix blocked routes or GA4 tags before any approved deploy."
+      ? "Build the clean Netlify publish directory and fix blocked routes, GA4 tags, or favicons before any approved deploy."
       : "Clean Netlify publish directory is ready for a human-approved deploy path.",
   };
 

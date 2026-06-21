@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { loadPacket, writeJson } from "./blog/packet.mjs";
@@ -18,6 +19,7 @@ function usage(exitCode = 2) {
   node scripts/blog-orchestrator.mjs generate --dry-run content-packets/<packet>/
   node scripts/blog-orchestrator.mjs generate --dry-run --require-idempotent content-packets/<packet>/
   node scripts/blog-orchestrator.mjs generate content-packets/<packet>/ # governor-only write path
+  node scripts/blog-orchestrator.mjs public-reader-qa [--apply|--offline-scan] content-packets/<packet>/
   node scripts/blog-orchestrator.mjs check-all`);
   process.exit(exitCode);
 }
@@ -137,6 +139,20 @@ function runCheckAll() {
   process.exit(result.ok ? 0 : 1);
 }
 
+function runPublicReaderQa(values) {
+  rejectUnknownFlags(values, ["--apply", "--offline-scan"]);
+  const packetArg = normalizePacketArg(values);
+  const args = ["scripts/seo-aeo/public-reader-qa.mjs", "--packet", packetArg];
+  if (values.includes("--apply")) args.push("--apply");
+  if (values.includes("--offline-scan")) args.push("--offline-scan");
+  const result = spawnSync(process.execPath, args, {
+    cwd: root,
+    encoding: "utf8",
+    stdio: "inherit",
+  });
+  process.exit(result.status ?? 1);
+}
+
 if (!command) usage();
 
 switch (command) {
@@ -148,6 +164,9 @@ switch (command) {
     break;
   case "check-all":
     runCheckAll();
+    break;
+  case "public-reader-qa":
+    runPublicReaderQa(args);
     break;
   default:
     usage();

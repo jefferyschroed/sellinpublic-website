@@ -151,6 +151,7 @@
   "publishGovernor": {
     "maxPostsPerDay": 3,
     "allowMultiPostGeneration": false,
+    "requirePublicReaderQa": true,
     "maxPostsPerPillarPerDay": 2,
     "coverageRoleDailyLimits": {
       "hub": 1,

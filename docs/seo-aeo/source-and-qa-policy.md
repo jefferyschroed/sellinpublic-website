@@ -128,3 +128,22 @@ Do not publish until all items pass.
 - Images have descriptive alt text when meaningful.
 - No placeholder copy, fake stats, invented examples, or unverifiable claims.
 - Final read confirms the page sounds like a useful Sell In Public field note, not a generic SEO article.
+- Clean-context public-reader QA passed after render. The model saw only rendered public article text, the report hash matches the current HTML, and there are no AI-ish, instruction-like, rubric-like, source-policy, or internal-process findings.
+
+## Clean Public-Reader QA
+
+Run this after static HTML exists:
+
+```sh
+node scripts/seo-aeo/public-reader-qa.mjs --packet content-packets/<packet>/ --apply
+```
+
+This gate is intentionally separate from packet QA and the Claude writing pass. The reader agent must not see `brief.yaml`, `outline.md`, `draft.md`, `article.blocks.json`, `claims-ledger.csv`, `citations.json`, or `qa-report.md` before it gives a verdict. It reads the rendered public article text only.
+
+If the reader flags public copy, the process is:
+
+1. Rewrite the offending public text in the source artifact, usually `article.blocks.json` and `draft.md`.
+2. Rerender the static HTML.
+3. Rerun clean public-reader QA with a fresh model context.
+4. Inspect where the bad language entered the process.
+5. Record a regression pattern in `docs/seo-aeo/public-reader-regressions.json` so future deterministic scans catch the same leak earlier.

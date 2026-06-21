@@ -61,6 +61,7 @@ function loadExpectedAutomations(root) {
     return { manifestPath, automations: FALLBACK_EXPECTED_AUTOMATIONS, manifestFound: false };
   }
   const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  const globalPromptMustInclude = manifest.global_prompt_must_include || [];
   return {
     manifestPath,
     automations: (manifest.automations || []).map((automation) => ({
@@ -71,7 +72,7 @@ function loadExpectedAutomations(root) {
       expectedKind: automation.kind || "cron",
       expectedRrule: automation.rrule || "",
       expectedExecutionEnvironment: automation.execution_environment || "",
-      promptMustInclude: automation.prompt_must_include || [],
+      promptMustInclude: [...globalPromptMustInclude, ...(automation.prompt_must_include || [])],
       commandContract: automation.command_contract || "",
     })),
     manifestFound: true,

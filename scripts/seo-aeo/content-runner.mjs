@@ -241,6 +241,11 @@ function run() {
   if (dryRunGenerate) governorArgs.push("--dry-run");
   if (allowMultiPost) governorArgs.push("--allow-multi-post");
   steps.push(runStep("Run publish governor", process.execPath, governorArgs));
+  steps.push(runStep("Refresh deploy review packet", process.execPath, [
+    "scripts/seo-aeo/write-deploy-review-packet.mjs",
+    "--date",
+    runDate,
+  ]));
   const publishPlan = readPublishPlan(root, runDate);
   const subagentDispatch = readSubagentDispatch(root, runDate);
   const packetValidations = publishPlan

@@ -24,11 +24,12 @@ content-packets/<yyyy-mm-dd>-<slug>/
 | `article.blocks.json` | Machine-readable article AST | Version, slug, title, intro fields, `topic_map`, hero object, typed article blocks | Generator can render the static post without guessing from markdown or existing HTML. Blocks match the approved draft because this file is the rendered source of truth, and the applied Claude writing pass wrote the final public copy here. |
 | `claims-ledger.csv` | Claim verification log | `claim_id`, `claim_text`, `draft_location`, `support_type`, `source_ids`, `confidence`, `owner`, `status`, `notes` | Every factual claim is logged. Status is one of `supported`, `needs_sme`, `needs_source`, `revised`, `removed`. |
 | `qa-report.md` | Readiness review | Summary, blockers, SEO checks, AEO checks, citation checks, brand/voice checks, originality checks, final decision | No critical blockers. QA decision is `approved`, `approved_with_notes`, or `rejected`. |
+| `public-reader-report.json` | Clean-context rendered article audit | Rendered HTML path and hash, article text hash, clean-context policy, model, pass/fail, findings, rewrites, and root-cause notes | Created after static HTML renders. Must be model-based, hash-match the current rendered post, expose only rendered public article text to the model, and have zero findings before governed publish completion. |
 | `publish-meta.yaml` | Publishing metadata | `title`, `slug`, `canonical_url`, `meta_description`, `og_title`, `og_description`, `og_image`, `author`, `publish_date`, `updated_date`, `category`, `tags`, `excerpt`, `robots`, `schema_type`, `internal_links` | Metadata is complete, unique, and consistent with the draft. |
 | `distribution-pack.md` | Promotion assets | LinkedIn post options, email teaser, short social snippets, outreach angle, visual brief, UTM notes | Distribution copy matches the article's claims and CTA. |
 | `performance-log.csv` | Post-publish tracking | `date`, `url`, `channel`, `impressions`, `clicks`, `ctr`, `avg_position`, `sessions`, `conversions`, `notes`, `action` | Created before publish. Updated after indexing and promotion windows. |
 | `refresh-notes.md` | Future update record | Refresh trigger, stale claims, new sources, performance summary, edits made, next review date | Refresh rationale is documented. Updated claims return to the ledger. |
-| `asset-manifest.json` | Post asset registry | Asset ID, type, path, public URL, width, height, alt text, notes | Every generated or selected asset is post-local and has honest dimensions. |
+| `asset-manifest.json` | Post asset registry | Asset ID, type, path, public URL, width, height, alt text, notes, and final prompt or linked `image-brief.md` for generated heroes | Every generated or selected asset is post-local, has honest dimensions, and records enough prompt/source context for QA to audit the image. |
 
 ## Staged Acceptance
 
@@ -56,16 +57,17 @@ A packet is ready for publish implementation only when:
 - `research.md`, `citations.json`, and `sme-notes.md` support the outline and draft.
 - `outline.md` has been approved before draft completion.
 - `draft.md` contains no unresolved TODOs, placeholder claims, or uncited factual assertions.
-- `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/ --apply` with `ANTHROPIC_API_KEY` set locally, or record an owner-approved exception in `qa-report.md`.
+- `draft.md` and `article.blocks.json` have passed a final audience-copy review. Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/<packet>/ --apply`; the script auto-loads `ANTHROPIC_API_KEY` from ignored local env files such as `secrets/seo-aeo.env`, `.env`, or `.env.local`. Record an owner-approved exception in `qa-report.md` only if the model-backed pass cannot run.
 - `claude-writing-pass.md` records `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`, unless QA records an owner-approved exception.
 - `article.blocks.json` exists and matches the approved outline and draft. Do not approve a packet where the Markdown draft is good but the blocks still read as instructions, notes, or a different article.
+- The rendered static HTML has passed clean-context public-reader QA with `scripts/seo-aeo/public-reader-qa.mjs --packet content-packets/<packet>/ --apply`. The report must read only rendered public article text, not packet artifacts, and must hash-match the current `blog/<slug>/index.html`.
 - FAQ blocks contain only complete question/answer pairs with non-empty trimmed text. Blank, whitespace-only, duplicate, or placeholder FAQ items are publish blockers.
 - `claims-ledger.csv` accounts for every factual, statistical, comparative, or expert claim.
 - `qa-report.md` has no critical blockers.
 - `publish-meta.yaml` is complete and matches the final draft.
 - `distribution-pack.md` is ready for launch promotion.
 - `performance-log.csv` and `refresh-notes.md` exist before publication.
-- `asset-manifest.json` records every post asset used by the generated HTML.
+- `asset-manifest.json` records every post asset used by the generated HTML, and generated heroes include the final prompt directly or reference an `image-brief.md` that contains it.
 
 ## Governed Generation Commands
 
@@ -81,6 +83,7 @@ Use direct generator commands for validation, dry-runs, and debugging only. The 
 ```sh
 node scripts/blog-orchestrator.mjs validate content-packets/<packet>/
 node scripts/blog-orchestrator.mjs generate --dry-run content-packets/<packet>/
+node scripts/blog-orchestrator.mjs public-reader-qa --apply content-packets/<packet>/
 node scripts/blog-orchestrator.mjs check-all
 ```
 
@@ -119,6 +122,14 @@ Draft owner also provides the applied Claude writing-pass output or records why 
 QA to publish:
 
 Publish work starts only after `qa-report.md` is approved and `publish-meta.yaml` is complete.
+
+Asset to QA:
+
+Generated hero assets must be based on `draft.md`, `article.blocks.json`, or a concise finished-article excerpt/summary. QA checks the recorded prompt and image for article relevance, flat head-on liquid-glass mesh style, simplicity, one main background color plus at most one close complementary color, consistent white outline weight, and absence of repeated LinkedIn-card defaults or generic AI-image tropes.
+
+Rendered publish to final public-reader QA:
+
+After the static HTML exists, run clean-context public-reader QA. The reader sees only the rendered public article text. If it flags AI-ish prose, instruction leakage, rubric leakage, source-policy leakage, or examples-drift, rewrite the source artifact, rerender, rerun the reader, and record the likely root cause so the same failure becomes a regression pattern.
 
 Publish to refresh:
 

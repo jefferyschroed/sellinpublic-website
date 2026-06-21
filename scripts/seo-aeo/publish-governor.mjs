@@ -33,6 +33,7 @@ const DEFAULT_GOVERNOR = {
   requireApprovedContentDecision: false,
   blockOnFailedDailyReport: true,
   allowRepublish: false,
+  requirePublicReaderQa: true,
 };
 
 const DECISION_PRIORITY = new Map([
@@ -199,6 +200,7 @@ function loadGovernorConfig(config) {
     requireApprovedContentDecision: Boolean(raw.requireApprovedContentDecision ?? DEFAULT_GOVERNOR.requireApprovedContentDecision),
     blockOnFailedDailyReport: Boolean(raw.blockOnFailedDailyReport ?? DEFAULT_GOVERNOR.blockOnFailedDailyReport),
     allowRepublish: Boolean(raw.allowRepublish ?? DEFAULT_GOVERNOR.allowRepublish),
+    requirePublicReaderQa: Boolean(raw.requirePublicReaderQa ?? DEFAULT_GOVERNOR.requirePublicReaderQa),
   };
 }
 
@@ -629,6 +631,17 @@ function runGeneration(root, selected, dryRun, options = {}) {
     const step = runStep(root, `${dryRun ? "Dry-run generate" : "Generate"} ${packet.packet}`, args, env);
     steps.push(step);
     if (step.status === "failed") return steps;
+
+    if (!dryRun && options.requirePublicReaderQa !== false) {
+      const publicReaderStep = runStep(root, `Public reader QA ${packet.packet}`, [
+        "scripts/seo-aeo/public-reader-qa.mjs",
+        "--packet",
+        packet.packet,
+        "--apply",
+      ]);
+      steps.push(publicReaderStep);
+      if (publicReaderStep.status === "failed") return steps;
+    }
   }
 
   if (selected.length) {
@@ -743,6 +756,7 @@ function publicLimitReport(governor) {
     require_approved_content_decision: governor.requireApprovedContentDecision,
     block_on_failed_daily_report: governor.blockOnFailedDailyReport,
     allow_republish: governor.allowRepublish,
+    require_public_reader_qa: governor.requirePublicReaderQa,
   };
 }
 
@@ -781,6 +795,7 @@ function run() {
   const generationSteps = generateApproved
     ? runGeneration(root, selected, dryRunGenerate, {
         allowMultiPostGeneration: allowMultiPostFlag || governor.allowMultiPostGeneration,
+        requirePublicReaderQa: governor.requirePublicReaderQa,
       })
     : [];
   const status = reportStatus({ selected, generationSteps, generateApproved, dryRunGenerate });

@@ -1,6 +1,8 @@
 .DS_Store
 *.log
 .env
+.env.local
+.env.*.local
 .netlify/
 node_modules/
 secrets/

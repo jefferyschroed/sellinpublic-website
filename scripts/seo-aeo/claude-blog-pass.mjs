@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import fs from "node:fs";
 import path from "node:path";
+import { loadLocalEnv } from "./lib/load-local-env.mjs";
+import { scanAntiAiismsInText } from "./lib/anti-aiism-scan.mjs";
+
+loadLocalEnv();
 
 const DEFAULT_MODEL = "claude-sonnet-4-6";
 const DEFAULT_SKILL_PATH = "/Users/jeff/.codex/skills/sellinpublic-seo-blog/SKILL.md";
@@ -9,7 +13,7 @@ function usage() {
   return `Usage: node scripts/seo-aeo/claude-blog-pass.mjs --packet <content-packet-dir> [--out <path>] [--model claude-sonnet-4-6] [--apply] [--from-scratch]
 
 Runs the final audience-copy pass for a Sell In Public blog packet through Claude.
-Requires ANTHROPIC_API_KEY in the local environment. Never pass the key as an argument.
+Requires ANTHROPIC_API_KEY in the local environment or an ignored local env file. Never pass the key as an argument.
 
 Use --apply for publish work. It writes Claude's replacement draft.md and
 article.blocks.json directly, then records an applied writing-pass audit.
@@ -163,6 +167,9 @@ Closing CTA requirements:
 Hard rules:
 - Use contractions naturally.
 - Do not use em dashes. The character U+2014 is forbidden in the Markdown draft, article block text, FAQ answers, and CTA copy. Use a period, comma, colon, or parentheses instead.
+- Remove banned AI cadence while writing. Do not preserve binary correction pairs as emphasis. Exact bad forms include "The best system isn't complicated. It's repeatable.", "LinkedIn is a signal surface. It's not a controlled content foundation.", "This isn't just about X. It's about Y.", "It's not just X, it's Y.", and "not only X, but Y."
+- Rewrite binary correction cadence by stating the relationship directly in one natural sentence, or by giving the reader the operating implication. Do not replace it with another "X is not Y. It is Z." construction.
+- audit_notes_md must include an "Anti-AIism fixes" note that lists any banned phrase or binary correction cadence you removed. If none were present, say "Anti-AIism fixes: none found."
 - Write a literal article for the topic, not instructions for how to write that article.
 - Keep brand mentions out of the informational body except author/publisher context and the final CTA.
 - The article.blocks.json object is the publish source. It must contain the same final public article as the Markdown draft, not notes, instructions, or a partial outline.
@@ -404,6 +411,19 @@ function validateAppliedPayload(payload, packetDir) {
     errors.push("draft_md must use [claim:C###] and [cite:src-###] markers, not shorthand [C###, src-###] markers.");
   }
 
+  const antiAiismFindings = scanAntiAiismsInText(publicText, {
+    root: process.cwd(),
+    locator: "claude_output",
+    source: "claude_apply_validation",
+  });
+  if (antiAiismFindings.length) {
+    errors.push(
+      `Claude output still contains blocked anti-AIism patterns: ${antiAiismFindings
+        .map((finding) => `${finding.rule_id || finding.category}: "${finding.quote}"`)
+        .join("; ")}`
+    );
+  }
+
   if (isExamplesPacket(packetDir)) {
     const bannedExamplesPatterns = [
       /\bwhat to borrow\s*:/i,
@@ -470,7 +490,7 @@ async function main() {
 
   if (!args.packet) throw new Error("--packet is required.");
   if (!process.env.ANTHROPIC_API_KEY) {
-    throw new Error("ANTHROPIC_API_KEY is not set. Export it locally; do not commit or pass it as a CLI argument.");
+    throw new Error("ANTHROPIC_API_KEY is not set. Add it to a local ignored env file such as secrets/seo-aeo.env; do not commit or pass it as a CLI argument.");
   }
 
   const packetDir = path.resolve(args.packet);

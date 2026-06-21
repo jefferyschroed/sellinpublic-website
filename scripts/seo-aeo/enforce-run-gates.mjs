@@ -81,6 +81,12 @@ function publishBlockers(publishPlan, runStatus) {
   return { blockedCount, blockerCodes: Array.from(codes) };
 }
 
+function publishPlanStageReady(publishPlan, runStatus) {
+  const status = String(publishPlan.status || "").trim();
+  const selectedCount = Number(runStatus.publishing?.selected_count ?? (publishPlan.selected_packets || []).length ?? 0);
+  return selectedCount > 0 && ["ready", "generated", "dry_run_generated"].includes(status);
+}
+
 function runBlogCheck(root) {
   const result = spawnSync(process.execPath, ["scripts/blog-orchestrator.mjs", "check-all"], {
     cwd: root,
@@ -329,7 +335,7 @@ function strictDailyChecks(runDate, inputs, mode) {
   addCheck(checks, {
     mode,
     code: "publish_governor_not_blocked",
-    ok: blockedCount === 0 && publishPlan.status !== "blocked",
+    ok: publishPlanStageReady(publishPlan, runStatus),
     detail: `Publish plan status=${publishPlan.status || "missing"}; blocked_count=${blockedCount}; blockers=${blockerCodes.join(", ") || "none"}.`,
     evidence: `automation-runs/${runDate}/publish-plan.json:status`,
   });
@@ -367,7 +373,7 @@ function generateChecks(runDate, inputs, mode) {
   addCheck(checks, {
     mode,
     code: "publish_plan_not_blocked",
-    ok: blockedCount === 0 && publishPlan.status !== "blocked",
+    ok: publishPlanStageReady(publishPlan, runStatus),
     detail: `Publish plan status=${publishPlan.status || "missing"}; blocked_count=${blockedCount}; blockers=${blockerCodes.join(", ") || "none"}.`,
     evidence: `automation-runs/${runDate}/publish-plan.json:status`,
   });

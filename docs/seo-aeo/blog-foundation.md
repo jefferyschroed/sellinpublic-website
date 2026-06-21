@@ -17,6 +17,7 @@ Use an HTML-first hybrid.
 - `scripts/check-blog-post.mjs` is the structural gate for every post before it ships.
 - Netlify deploys the public site from GitHub. A local blog publish is not visible on `sellinpublic.co` until the scoped blog diff is committed and pushed to the GitHub remote.
 - Public article prose must pass through Claude Sonnet 4.6 via the local Anthropic API runner before publish, unless the packet records an owner-approved exception. The applied Claude pass must write to `draft.md` and `article.blocks.json`, because `article.blocks.json` is what gets published.
+- After static HTML renders, the post must pass clean-context public-reader QA. The reader gate sees only rendered public article text, writes `public-reader-report.json`, verifies the current rendered HTML hash, and blocks governed publish completion when public copy sounds AI-ish or exposes instructions, QA rubric language, source-policy reasoning, or internal process notes.
 
 This keeps title tags, meta descriptions, canonical URLs, schema, headings, links, body copy, and citations available in the initial HTML. Shared CSS and JS keep the structure consistent across every post.
 
@@ -82,8 +83,10 @@ Every post must generate or deliberately create its own post-specific hero asset
 
 - Store post assets under `/public/assets/blog/[slug]/`.
 - Do not reuse `/public/assets/hero/` as the blog hero.
+- Generate the blog hero prompt after `draft.md` or `article.blocks.json` exists, using the article content or a concise finished-article excerpt/summary as source context.
 - Use a generated PNG hero from `$sellinpublic-image-style`; do not ship SVG-drawn blog hero substitutes unless the user explicitly asks for vector output.
-- Current blog hero style: warm Japanese-inspired blended mesh gradient with one simple focused liquid-glass UI object that summarizes the article topic. Avoid random icon clouds, flow lines, and harsh orange/blue contrast.
+- Current blog hero style: flat head-on liquid-glass mesh with matte translucency, simple flat UI, consistent white outline weight, low detail density, and a restrained mesh background using one main color plus at most one close complementary color. Infer one simple article-specific visual metaphor with one or two elements; avoid fixed motif selection, random icon clouds, scattered nodes, flow lines, fake metric dashboards, repeated LinkedIn-card defaults, glow, bloom, flares, light trails, shiny/specular/reflection cues, bokeh/orbs, hard gradient edges, angled perspective, isometric views, tilted panels, readable text, and logos.
+- Record the final image prompt in `asset-manifest.json` or in an `image-brief.md` referenced by the manifest.
 - Use a wide, short landscape hero ratio between `2.0:1` and `2.6:1`. The current target is close to `1600x700`.
 - Set image `width` and `height` attributes to the actual source dimensions.
 - Render the hero with natural height. Do not use forced hero heights or `object-fit: cover` on the article hero.
@@ -113,12 +116,13 @@ These behaviors are foundation-level and should stay consistent across posts.
 - Tie the topic back to the reader's problem through useful definitions, examples, workflows, source-backed distinctions, and clear operating advice.
 - Keep SEO and AEO structure intact: direct answer, useful headings, searchable terms, schema, citations, and FAQs where appropriate.
 - Use `$sellinpublic-seo-blog` before drafting, editing, or reviewing article copy.
-- Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/[packet]/ --apply` for the final audience-copy pass when `ANTHROPIC_API_KEY` is set locally. Record the applied pass output or an owner-approved exception in QA. Review-only sidecars do not satisfy the publish gate.
+- Use `scripts/seo-aeo/claude-blog-pass.mjs --packet content-packets/[packet]/ --apply` for the final audience-copy pass. The script auto-loads `ANTHROPIC_API_KEY` from ignored local env files such as `secrets/seo-aeo.env`, `.env`, `.env.local`, or `~/.codex/env/sellinpublic-website.env`. Record the applied pass output or an owner-approved exception in QA. Review-only sidecars do not satisfy the publish gate.
 - FAQ items must be complete reader-facing question/answer pairs. Do not publish blank, whitespace-only, duplicate, placeholder, or visually empty FAQ rows in `article.blocks.json`, JSON-LD, or rendered HTML.
 - Do not use em dashes in article copy.
 - Use contractions naturally. If the post sounds like it avoided contractions, revise it.
 - For examples posts, write a literal examples article. Include named companies, people or teams, public asset URLs, the visible lesson, and the pattern each artifact reveals. Do not write meta-guidance about how to write an examples article in place of examples. Avoid "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," "what B2B teams can borrow" table headers, and repeated "What to borrow:" sections unless the user explicitly asked for a checklist/how-to post. Do not publish source-policy or QA rubric language such as "Quality test," "quality bar," "selection criteria," "What Makes An Example Count," "what makes [anything] example worth studying," Google helpful content guidance, or "if this could have been written by any competitor." Keep those checks in research and QA, not the public article.
 - Keep `draft.md` and `article.blocks.json` aligned. The generated HTML renders `article.blocks.json`, so QA must compare both before publish.
+- Run `scripts/seo-aeo/public-reader-qa.mjs --packet content-packets/[packet]/ --apply` after the static post renders. This is separate from the Claude writing pass: the public-reader agent gets a clean context and reads the rendered public HTML only.
 
 ## External Tool Autonomy
 
@@ -127,7 +131,7 @@ Use the best available approved tool when it would materially improve the post.
 - Use existing paid or configured services first: browser research, local Apollo/account-intel, Apify actors, analytics exports, and source-specific APIs.
 - For public LinkedIn examples, discover credible founders, executives, team leads, or practitioners with Apollo/account-intel or public sources, then fetch public profile posts with `scripts/seo-aeo/fetch-linkedin-profile-posts.mjs` when `APIFY_TOKEN` is set locally.
 - Keep cost and privacy tight: default to small limits, no reaction/comment scraping unless the article needs it, no email enrichment for content examples, and no private profile data in public copy.
-- Do not commit API keys. Use `ANTHROPIC_API_KEY`, `ANTHROPIC_BLOG_MODEL`, `APIFY_TOKEN`, and `APOLLO_API_KEY` or the account-intel project's local `.env.local`.
+- Do not commit API keys. Use ignored local env files such as `secrets/seo-aeo.env`, `.env`, `.env.local`, or the account-intel project's local `.env.local` for `ANTHROPIC_API_KEY`, `ANTHROPIC_BLOG_MODEL`, `APIFY_TOKEN`, and `APOLLO_API_KEY`.
 - If a new free service signup would improve the post and the owner has approved that class of work for the batch, proceed only when no payment method, private personal data, or broader account permission is required. Record the signup/tool choice in the packet. Ask before paid upgrades, sensitive data sharing, or account actions outside the approved class.
 
 ## Editorial Voice Rules
@@ -159,6 +163,7 @@ Before publishing:
 - Work one post at a time. Do not start drafting, packet work, generation, or publishing for the next post until the current post is fully validated, committed, and pushed for Netlify deployment.
 - Create or update the content packet.
 - Record Claude writing-pass status, model, output file, and whether the pass was applied to `draft.md` and `article.blocks.json`, or record an owner-approved exception.
+- Record `public-reader-report.json` after rendered HTML exists. The report must be model-based, hash-match the current rendered page, declare that packet/draft/QA artifacts were not visible to the model, and contain zero findings.
 - For examples/case-study posts, record public example URLs and how they were found.
 - Confirm each claim exists in the claims ledger.
 - Check all external source links.
@@ -189,7 +194,8 @@ Start this sequence only after the prior post is fully done on its own.
 7. Add the post to the left rail recent links on published posts.
 8. Update `sitemap.xml` and `feed.xml`.
 9. Run `node scripts/check-blog-post.mjs blog/[slug]/index.html`.
-10. Run local browser QA and save screenshots if the design changed.
-11. Commit and push the scoped blog diff to GitHub for Netlify deployment.
+10. Run `node scripts/blog-orchestrator.mjs public-reader-qa --apply content-packets/[packet]/` and rerun until it passes or blocks the publish.
+11. Run local browser QA and save screenshots if the design changed.
+12. Commit and push the scoped blog diff to GitHub for Netlify deployment.
 
 Future automation can replace steps 1 through 8 with a local generator, but the committed artifact should remain static HTML.

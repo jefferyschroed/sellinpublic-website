@@ -2,6 +2,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { configuredMeasurementId } from "./blog/google-tag.mjs";
+import { hasSiteFavicon, SITE_FAVICON_PATH } from "./site-head.mjs";
+import { extractPublicTextBlocks, scanAntiAiismsInBlocks } from "./seo-aeo/lib/anti-aiism-scan.mjs";
 
 const root = process.cwd();
 const input = process.argv[2];
@@ -172,6 +174,9 @@ if (
 } else {
   fail(`GA4 Google tag must be present for ${measurementId || "the configured Measurement ID"}.`);
 }
+
+if (hasSiteFavicon(html)) pass(`Site favicon points to ${SITE_FAVICON_PATH}.`);
+else fail(`Site favicon link must point to ${SITE_FAVICON_PATH}.`);
 
 const metaAuthor = tagAttrs("meta", html)
   .filter((attrs) => getAttr(attrs, "name").toLowerCase() === "author")
@@ -388,6 +393,21 @@ if (articleMatch) {
     pass("Article body passes the Sell In Public SEO blog style scan.");
   } else {
     fail(`Article body violates the Sell In Public SEO blog style scan: ${styleHits.map((hit) => hit.label).join(", ")}.`);
+  }
+
+  const antiAiismFindings = scanAntiAiismsInBlocks(extractPublicTextBlocks(articleMatch[1]), {
+    root,
+    examplesPost: /\bexamples\b/i.test(slug || ""),
+    source: "rendered_article_scan",
+  });
+  if (!antiAiismFindings.length) {
+    pass("Article body passes the deterministic anti-AIism scan.");
+  } else {
+    const summary = antiAiismFindings
+      .slice(0, 6)
+      .map((finding) => `${finding.rule_id || finding.category}: "${finding.quote}"`)
+      .join("; ");
+    fail(`Article body violates the deterministic anti-AIism scan: ${summary}.`);
   }
 }
 

@@ -1,6 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { isPathInside, loadPacket, REQUIRED_PACKET_FILES } from "./packet.mjs";
+import {
+  PUBLIC_READER_REPORT_FILE,
+  renderedPostPathForSlug,
+  reportPathForPacket,
+  validatePublicReaderReport,
+} from "../seo-aeo/lib/public-reader-gate.mjs";
 
 const REQUIRED_BRIEF_FIELDS = [
   "packet_id",
@@ -480,7 +486,29 @@ function validateDraft(packet, errors) {
   }
 }
 
-function validatePublish(packet, errors, warnings) {
+function validatePublicReaderGate(packet, errors, warnings, options = {}) {
+  const slug = packet.brief.slug || packet.publishMeta.slug || "";
+  if (!slug) return;
+
+  const reportPath = reportPathForPacket(packet);
+  const shouldValidate = options.requirePublicReaderReport || packet.exists(PUBLIC_READER_REPORT_FILE);
+  if (!shouldValidate) {
+    warnings.push(`${PUBLIC_READER_REPORT_FILE} is not present yet; governed generation will run clean public-reader QA after rendering.`);
+    return;
+  }
+
+  const result = validatePublicReaderReport({
+    root: packet.root,
+    slug,
+    postPath: renderedPostPathForSlug(packet.root, slug),
+    reportPath,
+    requireModel: true,
+  });
+  errors.push(...result.errors);
+  warnings.push(...result.warnings);
+}
+
+function validatePublish(packet, errors, warnings, options = {}) {
   for (const field of REQUIRED_META_FIELDS) {
     if (!hasValue(packet.publishMeta[field])) errors.push(`publish-meta.yaml missing required field: ${field}`);
   }
@@ -507,6 +535,7 @@ function validatePublish(packet, errors, warnings) {
 
   validateArticleBlocks(packet, errors, warnings);
   validateClaudeWritingGate(packet, errors);
+  validatePublicReaderGate(packet, errors, warnings, options);
 
   if (packet.assetManifest?.assets) {
     for (const asset of packet.assetManifest.assets) {
@@ -549,7 +578,7 @@ export function validatePacket(packetPath, root = process.cwd(), options = {}) {
     validateDraft(packet, errors);
     validateDiscoveryBoundary(packet, errors);
   }
-  if (stage === "publish") validatePublish(packet, errors, warnings);
+  if (stage === "publish") validatePublish(packet, errors, warnings, options);
 
   return { packet, errors, warnings, ok: errors.length === 0, stage };
 }

@@ -1,6 +1,14 @@
 {
   "schema_version": "1.0",
   "workspace": ".",
+  "global_prompt_must_include": [
+    "If a command fails or an expected output is missing",
+    "diagnose the failure",
+    "fix safe local code, config, or workflow issues",
+    "rerun the failed step",
+    "report only external blockers that cannot be resolved locally",
+    "route repeated process failures through Skill Steward review"
+  ],
   "automations": [
     {
       "id": "sell-in-public-seo-aeo-daily-pipeline",

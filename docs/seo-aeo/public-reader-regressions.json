@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-19T00:00:00.000Z",
+  "patterns": [
+    {
+      "category": "rubric_leak",
+      "label": "Quality test section leaked into public copy",
+      "pattern": "Quality test",
+      "scope": "examples_only",
+      "source": "prior-egc-examples-root-cause",
+      "added_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "category": "rubric_leak",
+      "label": "Quality bar language leaked into public copy",
+      "pattern": "quality bar",
+      "scope": "examples_only",
+      "source": "prior-egc-examples-root-cause",
+      "added_at": "2026-06-19T00:00:00.000Z"
+    },
+    {
+      "category": "rubric_leak",
+      "label": "Examples criteria framing leaked into public copy",
+      "pattern": "What Makes An Example Count",
+      "scope": "examples_only",
+      "source": "prior-egc-examples-root-cause",
+      "added_at": "2026-06-19T00:00:00.000Z"
+    }
+  ],
+  "incidents": []
+}

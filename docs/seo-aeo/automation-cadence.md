@@ -85,6 +85,8 @@ node scripts/seo-aeo/audit-codex-automations.mjs --date <yyyy-mm-dd>
 
 The daily controller runs this audit and writes `automation-runs/<date>/codex-automation-audit.json` and `.md`. If the audit reports `needs_update`, update the Codex automation before treating the operating system as fully wired.
 
+Every active SEO/AEO automation must include the shared self-healing contract from `config/codex-automations.json`: diagnose failed commands or missing expected outputs, fix safe local code/config/workflow issues without bypassing approval gates, rerun the failed step, report only external blockers that cannot be fixed locally, and route repeated process failures through Skill Steward review.
+
 Every active SEO/AEO automation must preserve the deployment-first guard: if live deployment is blocked, it must not run demand promotion, demand acquisition, packet scaffolding, generation, publishing, or distribution unless the owner explicitly defers that blocker with `LIVE-DEPLOY-BLOCKER-DEFERRED:<date>`. It should report the blocker and the `owner-actions.md` next step instead.
 
 Expected active Codex automations:

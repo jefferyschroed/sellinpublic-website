@@ -31,14 +31,18 @@ The packet is scoped to one LinkedIn employee advocacy article and keeps the pub
 
 ## Brand And Voice QA
 
-- Passed with notes. Informational body copy keeps Sell In Public out of the answer and uses a separated final CTA.
-- Claude writing pass is required before publish and must record applied status in `claude-writing-pass.md`.
-- Clean-context public-reader QA is required after static HTML renders.
+- Passed. Informational body copy keeps Sell In Public out of the answer and uses a separated final CTA.
+- Claude writing pass is applied in `claude-writing-pass.md`: `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`.
+- Clean-context model public-reader QA passed in `public-reader-report.json` with zero findings and zero rewrites.
 
 ## Foundation QA
 
-- Pending render. `article.blocks.json` follows the current block schema and points to a post-local hero asset under `public/assets/blog/linkedin-employee-advocacy/`.
+- Passed. Static HTML rendered to `blog/linkedin-employee-advocacy/index.html` from `article.blocks.json`.
+- Publish-stage packet validation passed for `content-packets/2026-06-21-linkedin-employee-advocacy/`.
+- `node scripts/check-blog-post.mjs blog/linkedin-employee-advocacy/index.html` passed.
+- Hero asset `public/assets/blog/linkedin-employee-advocacy/hero-generated.png` is a post-local PNG with final dimensions `1600x700`.
+- Scoped hygiene passed on owned paths.
 
 ## Final Decision
 
-Approved with notes for model gates, static render, structural checker, public-reader QA, and scoped hygiene checks.
+Approved with notes. Required model gates, static render, structural checker, publish-stage packet validation, hero dimension check, and scoped hygiene checks have passed.

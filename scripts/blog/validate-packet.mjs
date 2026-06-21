@@ -86,6 +86,13 @@ function trimmedText(value) {
   return String(value ?? "").trim();
 }
 
+function sentenceCount(value) {
+  const text = trimmedText(value).replace(/\s+/g, " ");
+  if (!text) return 0;
+  const endings = text.match(/[.!?](?:["')\]]+)?(?=\s|$)/g);
+  return endings?.length || 1;
+}
+
 function collectClaimMarkers(source) {
   return Array.from(source.matchAll(/\[claim:([A-Za-z0-9_-]+)\]/g)).map((match) => match[1]);
 }
@@ -314,6 +321,9 @@ function validateArticleBlocks(packet, errors, warnings) {
       case "cta":
         if (!block.label || !block.heading || !block.body || !Array.isArray(block.actions) || !block.actions.length) {
           errors.push(`${prefix} cta requires label, heading, body, and actions.`);
+        }
+        if (hasValue(block.body) && sentenceCount(block.body) !== 2) {
+          errors.push(`${prefix} cta body must be exactly two sentences.`);
         }
         block.actions?.forEach((action, actionIndex) => {
           if (!action.label || !action.url || !["primary", "secondary"].includes(action.style)) {

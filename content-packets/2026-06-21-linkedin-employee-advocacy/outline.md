@@ -84,4 +84,4 @@ LinkedIn Employee Advocacy For B2B Revenue Teams
 
 ## CTA Placement
 
-One final CTA after sources. Name Sell In Public and explain the managed LinkedIn content, buyer signals or inbound leads, and outbound offer without placing commercial copy inside informational sections.
+One final CTA after sources. Use a short question-style heading when it fits. The CTA body must be exactly two sentences: one sentence for the Sell In Public offer and one sentence inviting a working session. Keep the description short and do not add a third sentence that re-explains process management.

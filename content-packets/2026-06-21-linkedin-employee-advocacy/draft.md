@@ -191,6 +191,6 @@ No. The strongest programs are selective. Employees should participate when the 
 - [LinkedIn Marketing Blog, How B2B Marketers Can Use Thought Leadership to Persuade Hidden Buyers](https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers)
 - [LinkedIn Marketing Blog, How to Grow Your AI Search Visibility With LinkedIn Content](https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content)
 
-## Work with Sell In Public
+## Want this running for your team without adding another internal process?
 
-If you want this running for your team without building another internal process: Sell In Public takes your team's expertise and turns it into LinkedIn content, buyer signals, and inbound leads, then runs outbound to the right ICP. Your team doesn't write the posts, manage publishing, or coordinate the weekly loop. Book a working session and we'll map your ICP, decide which voices on your team buyers should hear from, and scope the pipeline you want LinkedIn to build.
+Sell In Public takes your team's expertise and turns it into LinkedIn content, buyer signals, and inbound leads, then runs outbound to the right ICP. Book a working session and we'll see if LinkedIn can become a top revenue channel for your company.

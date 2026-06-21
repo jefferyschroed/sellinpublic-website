@@ -33,6 +33,7 @@ The packet is scoped to one LinkedIn employee advocacy article and keeps the pub
 
 - Passed. Informational body copy keeps Sell In Public out of the answer and uses a separated final CTA.
 - Claude writing pass is applied in `claude-writing-pass.md`: `Status: applied`, `Model: claude-sonnet-4-6`, `Applied to draft.md: true`, and `Applied to article.blocks.json: true`.
+- Owner-directed CTA microcopy update on 2026-06-21 shortened the final CTA body to two sentences in `draft.md` and `article.blocks.json`.
 - Clean-context model public-reader QA passed in `public-reader-report.json` with zero findings and zero rewrites.
 
 ## Foundation QA

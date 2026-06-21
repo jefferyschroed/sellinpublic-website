@@ -10,6 +10,13 @@ Generated at: 2026-06-21T01:28:02.588Z
 The static blog renderer publishes article.blocks.json. This pass wrote the
 Claude-reviewed public article directly to both packet source files.
 
+## Owner-Directed Post-Pass CTA Update
+
+On 2026-06-21, the owner requested the final CTA body be shortened to exactly
+two sentences. The CTA microcopy was updated in `draft.md` and
+`article.blocks.json`, the static page was regenerated, and clean-context
+public-reader QA was rerun after the render.
+
 ## Audit Notes
 
 # Claude Writing Pass Audit Notes

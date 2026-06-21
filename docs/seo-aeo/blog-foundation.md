@@ -49,7 +49,7 @@ Every post must include:
 - Right rail generated TOC with active section state.
 - Mobile TOC disclosure.
 - Source-backed claims and a sources section.
-- Final CTA that gives the reader a clear next step. For Sell In Public blog posts, the separated closing CTA should usually be commercial and must name Sell In Public, explain the managed team-expertise-to-LinkedIn-content plus outbound offer, and state who it is for.
+- Final CTA that gives the reader a clear next step. For Sell In Public blog posts, the separated closing CTA should usually be commercial and must name Sell In Public, explain the managed team-expertise-to-LinkedIn-content plus outbound offer, and keep the CTA body to exactly two sentences.
 - Visible author metadata for Jeffery Schroeder linking to `https://www.linkedin.com/in/jeffery-schroeder-957b98337/`.
 
 ## Standard Article Blocks
@@ -144,7 +144,7 @@ Sell In Public blog posts should teach first and convert second.
 - A Calendly CTA or the standard marketing footer is allowed, but keep it clearly separated from the research and examples.
 - Use named examples, case studies, original research, statistics, and primary sources before making broad recommendations.
 - Mention Sell In Public only as the publisher, author context, or the clearly separated end CTA.
-- The end CTA should include a varied version of this offer: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. It should also make clear that the team does not have to write, post, or manage another marketing process, and should invite a working session around ICP, team voices, and pipeline goals.
+- The end CTA should include a varied version of this offer: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. The CTA body must be exactly two sentences: one sentence for the offer and one sentence inviting a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management.
 - Prefer "what this example teaches" over "how we solve this for you."
 
 ## Source Rules

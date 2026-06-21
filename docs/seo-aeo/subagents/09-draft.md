@@ -27,7 +27,7 @@ For public blog prose, run the final audience-copy pass through Claude Sonnet 4.
 
 ## Closing CTA Requirement
 
-Every blog draft must end with a separated commercial CTA that names Sell In Public and says what the company does for the reader. Vary the wording by article, but include these ideas: Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, and outbound to the right ICP; the client does not have to write, post, or manage another marketing process; the working session should look at ICP, team voices, and pipeline goals.
+Every blog draft must end with one separated commercial CTA that names Sell In Public and says what the company does for the reader. Use a short heading and an exactly two-sentence body. Sentence 1 should say Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals or inbound leads, then runs outbound to the right ICP. Sentence 2 should invite a working session to see whether LinkedIn can become a top revenue channel for the company. Do not add a third sentence that re-explains process management.
 
 ## Hard Boundaries
 

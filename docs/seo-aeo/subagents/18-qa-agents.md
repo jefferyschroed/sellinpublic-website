@@ -38,7 +38,7 @@ QA does not make the packet pass. QA reports what is true, names blockers, and r
 - Do not accept unsupported claims, missing citation IDs, weak source quality, mismatched metadata, broken links, missing assets, or generator divergence.
 - Do not waive `$sellinpublic-seo-blog` voice rules for final article copy.
 - Do not approve public article prose without an applied Claude writing-pass record, model note, or owner-approved exception. The record must confirm `draft.md` and `article.blocks.json` were updated.
-- Do not approve a blog packet whose final CTA fails to name Sell In Public, explain the managed LinkedIn content plus outbound offer, and connect the offer to the target B2B sales or revenue team.
+- Do not approve a blog packet whose final CTA fails to name Sell In Public, explain the managed LinkedIn content plus outbound offer, connect the offer to the target B2B sales or revenue team, or keep the CTA body to exactly two sentences.
 - Do not approve examples/case-study posts that promise examples but lack inspectable public examples or a documented limitation.
 - Do not approve examples posts that read like instructions for making, judging, or quality-testing examples. Reject sections such as "Use Examples Without Copying Them," "How to Judge the Examples," "Copyable Example Checklist," "Quality test," "quality bar," "What Makes An Example Count," "what makes [anything] example worth studying," Google helpful content guidance, or repeated "What to borrow:" paragraphs unless the user explicitly asked for a checklist/how-to article.
 - Do not approve FAQ sections with blank, whitespace-only, duplicate, placeholder, or visually empty question/answer rows in `article.blocks.json`, JSON-LD, or rendered HTML.
@@ -50,7 +50,7 @@ QA does not make the packet pass. QA reports what is true, names blockers, and r
 - Stop if any required artifact is missing for the current gate.
 - Stop if claim markers and `claims-ledger.csv` do not reconcile.
 - Stop if final copy contains banned words, banned phrases, em dashes, generic intro patterns, unsupported claims, or a hard-sell CTA.
-- Stop if the final CTA is generic and does not state the Sell In Public offer.
+- Stop if the final CTA is generic, does not state the Sell In Public offer, or has a body longer or shorter than two sentences.
 - Stop if `draft.md` and `article.blocks.json` diverge in topic, examples, CTA, claims, or voice.
 - Stop if generated output cannot be verified against the approved packet.
 - Stop if index, feed, sitemap, canonical, or schema checks fail.

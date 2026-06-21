@@ -26,6 +26,7 @@ cta:
   secondary:
     label: "Read the EGC Comparison"
     url: "/blog/employee-generated-content-vs-employee-advocacy/"
+  closing_blog_cta: "Use a short question-style heading when it fits. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and says we turn team expertise into LinkedIn content, buyer signals, and inbound leads, then run outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
 
 search_intent:
   stage: "definition-and-how-to"

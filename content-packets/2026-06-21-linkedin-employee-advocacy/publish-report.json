@@ -1,31 +1,31 @@
 {
   "packet_id": "2026-06-21-linkedin-employee-advocacy",
   "slug": "linkedin-employee-advocacy",
-  "generated_at": "2026-06-21T01:44:39.276Z",
+  "generated_at": "2026-06-21T17:57:47.512Z",
   "dry_run": false,
   "outputs": [
     {
       "path": "blog/linkedin-employee-advocacy/index.html",
-      "bytes": 37027,
-      "changed": false
+      "bytes": 36886,
+      "changed": true
     },
     {
       "path": "blog/index.html",
       "bytes": 18832,
       "post_count": 9,
-      "changed": true
+      "changed": false
     },
     {
       "path": "sitemap.xml",
       "bytes": 2584,
       "post_count": 9,
-      "changed": true
+      "changed": false
     },
     {
       "path": "feed.xml",
       "bytes": 5197,
       "post_count": 9,
-      "changed": true
+      "changed": false
     }
   ],
   "validation": {

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sell In Public Blog Batch Supervisor"
+  short_description: "Launch isolated SIP blog orchestrators"
+  default_prompt: "Use $sellinpublic-blog-batch-supervisor to split a multi-blog publishing request into isolated one-post Codex thread orchestrators."

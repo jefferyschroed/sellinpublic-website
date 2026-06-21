@@ -1,0 +1,110 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a516971",
+    "title": "Post analytics for your content",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026-06-18",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for member post analytics fields: impressions, in-network and out-of-network impressions, members reached, profile viewers, followers gained, reactions, comments, reposts, saves, sends, link visits, demographics, and availability limits."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a701208",
+    "title": "Combined post analytics",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026-06",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for portfolio-level analytics, date ranges, exports, impressions, engagements, in-network and out-of-network split, members reached, reactions, comments, reposts, saves, and sends."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a6204405",
+    "title": "Differences between a LinkedIn profile and a LinkedIn Page",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026-04",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for the distinction between profiles representing individuals and Pages representing organizations."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a564051",
+    "title": "Content analytics for your LinkedIn Page",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for Page content metrics, including impressions, engagement rate, clicks, reactions, comments, reposts, and the Page definition of engagement rate."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a523141",
+    "title": "Visibility of shared posts",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for public post visibility, including potential appearance to first-degree connections, second- or third-degree connections after network engagement, topic search results, activity pages, and public profiles."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a1339724",
+    "title": "LinkedIn relevance - Optimizing the member experience",
+    "publisher": "LinkedIn Help",
+    "author": "",
+    "published_date": "Last updated 2026",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_documentation",
+    "reliability": "A",
+    "notes": "Used for LinkedIn's statement that feed systems use profile details, viewed content, and platform interactions to surface relevant posts and reduce weak or unsafe content."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.linkedin.com/business/marketing/blog/linkedin-pages/10-content-ideas-for-your-linkedin-page",
+    "title": "15 Inspiring Content Ideas for Your LinkedIn Page",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Tequia Burt",
+    "published_date": "2024-07-05",
+    "accessed_date": "2026-06-21",
+    "source_type": "platform_guidance",
+    "reliability": "B",
+    "notes": "Used only for current LinkedIn Page content guidance that not every post should be about the company or product and that point-of-view posts can be useful."
+  },
+  {
+    "id": "src-008",
+    "url": "https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf",
+    "title": "2025 Edelman-LinkedIn B2B Thought Leadership Impact Report",
+    "publisher": "Edelman and LinkedIn",
+    "author": "Edelman and LinkedIn",
+    "published_date": "2025-07",
+    "accessed_date": "2026-06-21",
+    "source_type": "research_report_pdf",
+    "reliability": "A",
+    "notes": "Used for B2B buyer context: methodology, sample size, the definition of expertise content in the report, and findings about hidden and target buyers consuming and using expertise content. Not used as proof that founder posts will earn higher engagement."
+  },
+  {
+    "id": "src-009",
+    "url": "content-packets/2026-06-21-founder-posts-low-engagement-linkedin/sme-notes.md",
+    "title": "Sell In Public SME Notes for Founder Posts Low Engagement LinkedIn",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder and Codex",
+    "published_date": "2026-06-21",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal_sme_notes",
+    "reliability": "B",
+    "notes": "Used for Sell In Public operating guidance and interpretation, framed as POV rather than external research."
+  }
+]

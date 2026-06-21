@@ -1,0 +1,38 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-ahrefs-prompt",
+      "type": "query_prompt",
+      "description": "Ahrefs-tracked AEO prompt: Why are our founder posts getting low engagement on LinkedIn?",
+      "allowed_use": "Search intent, title, heading, and vocabulary shaping only.",
+      "excluded_use": "Do not cite or publish volume, rank, click, AI-search, or factual claims from this source."
+    },
+    {
+      "source_id": "disc-reddit",
+      "type": "forum_or_social_discussion",
+      "description": "Reddit, forum, comment, and social-discussion discovery lanes.",
+      "allowed_use": "None for this packet unless separately approved.",
+      "excluded_use": "No factual evidence, examples, claims, or public citations."
+    },
+    {
+      "source_id": "disc-ai-answers",
+      "type": "ai_answer_or_summary",
+      "description": "Any AI answer-engine output about founder LinkedIn engagement.",
+      "allowed_use": "None for factual support.",
+      "excluded_use": "No citations, no quoted claims, no evidence."
+    },
+    {
+      "source_id": "disc-generic-seo",
+      "type": "generic_listicle_or_roundup",
+      "description": "Generic LinkedIn engagement listicles, scraped-stat pages, and unsourced best-practice roundups.",
+      "allowed_use": "Discovery only if encountered.",
+      "excluded_use": "No material claims or source links."
+    }
+  ],
+  "rules": [
+    "Use LinkedIn official docs, LinkedIn-Edelman research, reputable primary research, and approved SME notes for factual claims.",
+    "Do not cite prompt, search, autocomplete, forum, or AI-answer data as evidence.",
+    "Public copy must separate sourced facts from Sell In Public interpretation."
+  ]
+}

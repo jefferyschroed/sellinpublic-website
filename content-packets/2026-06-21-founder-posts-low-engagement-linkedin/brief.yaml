@@ -1,0 +1,134 @@
+packet_id: "2026-06-21-founder-posts-low-engagement-linkedin"
+status: "publish_ready"
+working_title: "Why Founder Posts Get Low Engagement On LinkedIn"
+slug: "founder-posts-low-engagement-linkedin"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-21"
+updated_at: "2026-06-21"
+
+audience:
+  primary_buyer: "B2B founder or revenue leader"
+  secondary_buyers:
+    - "VP of Sales"
+    - "CRO"
+    - "Marketing leader"
+    - "Revenue operator"
+  company_context: "Mid-market B2B software teams whose founder posts on LinkedIn but sees weak comments, low reach, few relevant replies, or attention from the wrong audience."
+  pain: "The team is asking why founder LinkedIn posts get low engagement and what to change before asking the founder to post more often."
+
+business_goal: "Own the diagnostic search intent around founder posts low engagement LinkedIn and connect the answer to employee-generated content infrastructure, LinkedIn-led GTM, and sales-led distribution."
+sales_use_case: "Use when a prospect says the founder is posting but LinkedIn is not producing useful buyer conversations."
+cta:
+  primary:
+    label: "Run The Diagnostic"
+    url: "#diagnose-low-founder-engagement"
+  secondary:
+    label: "Read The EGC Hub"
+    url: "/blog/employee-generated-content-infrastructure/"
+
+search_intent:
+  stage: "diagnostic"
+  primary_query: "founder posts low engagement LinkedIn"
+  aeo_question: "Why are our founder posts getting low engagement on LinkedIn?"
+  primary_keyword: "founder posts low engagement LinkedIn"
+  secondary_keywords:
+    - "founder LinkedIn posts low engagement"
+    - "why LinkedIn posts get low engagement"
+    - "founder LinkedIn engagement"
+    - "LinkedIn post engagement"
+    - "B2B founder content"
+    - "LinkedIn impressions"
+    - "LinkedIn comments"
+  related_questions:
+    - "Why do founder LinkedIn posts get impressions but few comments?"
+    - "Should founder posts come from a profile or company Page?"
+    - "How should B2B teams measure founder LinkedIn engagement?"
+    - "How can employees support founder-led content without sounding scripted?"
+    - "What should a founder post when company news gets low engagement?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-founder-posts-low-engagement-linkedin"
+  topic_score: 74
+  topic_decision: "resolve_gap_first"
+  coverage_role: "spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/founder-content-vs-employee-content/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+    - "/blog/measure-employee-generated-content-beyond-impressions/"
+    - "/blog/"
+
+entity_targets:
+  - "founder-led content"
+  - "LinkedIn reach"
+  - "LinkedIn comments"
+  - "LinkedIn impressions"
+  - "LinkedIn post engagement"
+  - "dwell time"
+  - "buyer relevance"
+  - "employee-generated content"
+  - "company Page versus founder profile"
+  - "content distribution"
+  - "B2B founder content"
+  - "sales-led LinkedIn"
+angle: "Founder posts usually get low engagement because the post is built around the company instead of the buyer, has no sharp first line, lacks a founder-owned point of view, and has no distribution loop through employees, comments, profile context, or sales follow-up."
+sell_in_public_pov: "Low engagement is a diagnosis, not a verdict on the founder. The team should fix the audience, argument, comment plan, employee loop, profile context, cadence, and measurement before asking for more volume."
+word_count_target: "1700-2100"
+
+must_include:
+  - "Direct answer to the Ahrefs-tracked AEO question in the first 150 words."
+  - "H1 close to Why Founder Posts Get Low Engagement On LinkedIn."
+  - "Diagnostic causes: wrong audience, weak first line, company news with no buyer stakes, no original point of view, poor comment strategy, no employee or team distribution loop, weak profile context, inconsistent cadence, and measuring the wrong engagement."
+  - "Tie every cause to what the team should change."
+  - "Internal link to /blog/employee-generated-content-infrastructure/."
+  - "At least one relevant LinkedIn-led GTM or employee-generated content internal link."
+  - "Approved primary sources only for factual claims."
+  - "Short Sell In Public closing CTA with exactly two body sentences."
+must_avoid:
+  - "Publishing Ahrefs volume, ranking, click, or AI-search data."
+  - "Reddit, forums, generic listicles, AI answers, or unsourced stat roundups as factual evidence."
+  - "Generic advice to post more often without changing the operating system."
+  - "Unsupported performance promises."
+  - "Banned AI-ism words, phrases, em dashes, and binary correction pairs."
+  - "Process or rubric language in public copy."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "AI-generated summaries"
+    - "autocomplete, PAA, query exports, trend inputs, Ahrefs prompt data, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "LinkedIn Help or LinkedIn Marketing official guidance for analytics, visibility, feed relevance, Pages, and profiles."
+    - "LinkedIn-Edelman research if buyer expertise content claims are used."
+    - "Approved internal SME notes for Sell In Public operating guidance framed as POV."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/founder-content-vs-employee-content/"
+  - "/blog/linkedin-content-infrastructure-b2b-sales/"
+  - "/blog/measure-employee-generated-content-beyond-impressions/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

@@ -1,0 +1,22 @@
+packet_id: "2026-06-21-founder-posts-low-engagement-linkedin"
+slug: "founder-posts-low-engagement-linkedin"
+status: "intake_ready"
+strategic_asset_decision: "post"
+asset_decision: "post"
+topic_id: "topic-founder-posts-low-engagement-linkedin"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "The query has a clear diagnostic job: a B2B team wants to know why founder LinkedIn posts are not earning useful engagement and what to change. The answer can stand alone while linking back to employee-generated content infrastructure and LinkedIn-led GTM operating posts."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false
+ahrefs_prompt: "Why are our founder posts getting low engagement on LinkedIn?"
+ahrefs_prompt_use: "Demand and query-language evidence only, not factual evidence for public claims."
+required_internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/founder-content-vs-employee-content/"
+  - "/blog/linkedin-content-infrastructure-b2b-sales/"
+excluded_shared_surfaces:
+  - "blog/index.html"
+  - "sitemap.xml"
+  - "feed.xml"
+  - "docs/seo-aeo/topic-coverage.csv"

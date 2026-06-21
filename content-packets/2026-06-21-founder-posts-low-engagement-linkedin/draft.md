@@ -1,0 +1,154 @@
+# Why Founder Posts Get Low Engagement On LinkedIn
+
+Meta title: Why Founder Posts Get Low Engagement On LinkedIn | Sell In Public
+Meta description: Founder posts get low engagement on LinkedIn when they target the wrong reader, lead with company news, lack a clear point of view, or miss the team distribution loop.
+
+## Short answer
+
+Founder posts usually get low engagement on LinkedIn because the post is written for the company instead of the buyer. The usual causes are a weak first line, company news with no buyer stakes, no original point of view, thin comments, no employee distribution loop, weak profile context, inconsistent cadence, and measuring likes when the real goal is buyer relevance. [claim:C001] [claim:C002]
+
+Fix the system before asking the founder to post more. Rewrite the topic around a buyer problem, make the first line specific, add the founder's judgment, plan the comments, give employees and sellers a natural way to add context, and judge the post by relevant comments, saves, sends, profile visits, and target-account replies. [claim:C003] [claim:C004]
+
+If you need the broader operating model, start with the [employee-generated content infrastructure hub](/blog/employee-generated-content-infrastructure/). For the voice decision behind founder and team content, read [founder content vs employee content](/blog/founder-content-vs-employee-content/).
+
+## Low Engagement Usually Means The Wrong Reader
+
+Low engagement is not one problem. It can mean the right buyers never saw the post, the right buyers saw it and did not care, or the wrong people engaged while the target accounts stayed quiet.
+
+LinkedIn's member analytics separate discovery from social engagement. A founder can review impressions, in-network and out-of-network exposure, members reached, profile viewers, followers gained, reactions, comments, reposts, saves, sends, link visits, and viewer demographics. LinkedIn also says these numbers are estimates, so one post should not carry the whole diagnosis. [cite:src-001] [claim:C005]
+
+Start with the reader. If the post is aimed at investors, employees, peers, customers, and buyers all at once, the first line gets soft. A CRO does not stop for a founder's vague lesson about leadership unless it connects to a revenue problem the CRO is living with this quarter.
+
+## The First Line Has To Earn The Right Buyer
+
+A weak first line makes a founder post look like a status update. The strongest first line gives the right buyer a reason to stop because it names their problem, pressure, or decision.
+
+Compare these two directions:
+
+- "Excited to share what we learned at the conference this week."
+- "Most sales teams are still treating LinkedIn comments like applause, which is why the right buyers never enter the conversation."
+
+The second line gives a revenue leader a reason to keep reading. It names the behavior, the missed buyer outcome, and the founder's angle. The post can still mention the conference later, but the buyer stake comes first. [claim:C006]
+
+This matters because B2B buyers do consume expertise content when it helps them think. The 2025 Edelman-LinkedIn report surveyed 1,934 U.S. business executives and defines this type of content as expertise, guidance, or a unique point of view, including social media posts. In that study, 64% of hidden decision-makers and 63% of target decision-makers said they spend more than one hour per week consuming it. [cite:src-008] [claim:C007]
+
+That does not prove a founder post will perform. It does show why the post needs to read like useful judgment, not a company diary.
+
+## Company News Needs Buyer Stakes
+
+Company news gets low engagement when it asks the market to care about internal progress. Buyers do not owe attention to a launch, hire, award, funding round, podcast appearance, or event recap.
+
+The fix is not hiding company news. The fix is translating it into a buyer problem. A product launch becomes a post about the tradeoff customers kept hitting. A new VP hire becomes a post about the GTM constraint the company had to solve. A conference recap becomes a post about the pattern buyers kept repeating in private conversations.
+
+LinkedIn's own Page guidance says not every post should be about the business or product, and it points to point-of-view posts on timely or debated topics as a useful content type. That guidance is for Pages, not founder profiles, but the same warning applies: company-first posts usually need a stronger reader reason. [cite:src-007] [claim:C008]
+
+## The Founder Needs A Point Of View
+
+Founder-led content works when the founder says something the company Page cannot say as well. That might be a market read, a tradeoff, a customer pattern, a belief about how the category is changing, or a lesson from a hard decision.
+
+If the post could be published word for word by the company Page, it probably does not need the founder. LinkedIn Help draws a clear line between the two surfaces: profiles represent individuals, while Pages represent organizations. The founder profile earns its place when the post uses the founder's judgment, not just the founder's reach. [cite:src-003] [claim:C009]
+
+A few questions help surface the real point of view:
+
+- What would a buyer disagree with?
+- What would a seller send to a target account?
+- What did the founder learn that a company announcement would smooth over?
+- What phrase would a prospect repeat on a sales call?
+
+If none of those questions produce a sharp answer, the post needs more thinking before it needs more distribution.
+
+## Comments Are Part Of Distribution
+
+Many founder posts die because the team treats comments as a reaction area instead of a second layer of the post. The founder publishes, a few employees write "great post," and the thread ends.
+
+LinkedIn's visibility docs say a public post may appear to first-degree connections, to second- or third-degree connections when first-degree connections reshare, comment on, or like it, in topic search results, on the author's activity page, and on the public profile. Early relevant comments extend the distribution surface rather than just adding social proof. [cite:src-005] [claim:C010]
+
+A useful comment plan does not mean scripted praise. It means the founder and team know which ideas belong below the post before it goes live:
+
+- A sales leader adds a customer objection that sharpened the point.
+- A product lead adds the tradeoff behind the decision.
+- A customer success lead adds the implementation pattern buyers should expect.
+- A seller sends the post directly to the right account with a sentence of context, tagging no one publicly.
+
+Comments should make the post more useful for the next buyer who sees it. If they only make the author feel supported, they are not doing enough work.
+
+## The Team Loop Is Missing
+
+Founder posts get low engagement when the founder is the only distribution channel. A B2B company usually has more useful voices than one executive profile.
+
+The team loop starts before publishing. Sales shares the objections worth addressing. Customer success shares implementation friction. Product shares tradeoffs. Marketing turns those notes into a clear post. After publishing, employees add their own examples and sellers use the post in the accounts where it belongs. [claim:C011]
+
+That loop is the practical link between founder-led content and [employee-generated content infrastructure](/blog/employee-generated-content-infrastructure/). The founder can set the market stance, but employees make the company's expertise easier to inspect. The [LinkedIn content infrastructure for B2B sales](/blog/linkedin-content-infrastructure-b2b-sales/) model matters because sales needs a reason to use the post, not just a link to share. [claim:C012]
+
+Do not turn this into a comment pod. A comment pod tries to manufacture engagement. A team distribution loop gives the right people enough context to add something real.
+
+## Profile Context And Page Context Are Different
+
+Sometimes the post is fine, but the founder profile gives buyers no reason to trust the author. A buyer clicks through and sees a vague headline, no clear company context, no relevant featured material, and no recent pattern of posts on the topic.
+
+That profile context matters because LinkedIn says feed systems use profile details, viewed content, and platform interactions to surface relevant posts. The public documentation does not explain every ranking factor. The practical point is simpler: a founder who wants buyer attention needs a profile that makes the topic and role immediately clear. [cite:src-006] [claim:C013]
+
+The company Page has a different job. LinkedIn Pages represent organizations, and Page analytics use Page-specific metrics such as impressions, engagement rate, clicks, reactions, comments, and reposts. A founder profile should not be judged exactly like a Page post, and a Page post should not be expected to carry the founder's personal judgment. [cite:src-004] [claim:C014]
+
+## Diagnose Low Founder Engagement
+
+Run the diagnosis across a full set of posts, not one outlier. LinkedIn combined post analytics let members review content performance across a selected date range, compare impressions and engagements, see in-network and out-of-network exposure, review top posts, and export the data. [cite:src-002] [claim:C015]
+
+Use this checklist:
+
+1. Audience: Did the post name a real buyer, role, pain, or decision?
+2. First line: Would the target buyer stop without knowing or liking the founder?
+3. Buyer stakes: Did company news turn into a buyer lesson?
+4. Point of view: Did the founder say something a Page would not say?
+5. Comments: Did the first comments add examples, objections, or useful context?
+6. Team loop: Did employees and sellers know how to use the post without copying a script?
+7. Profile context: Does the founder profile explain why this person is credible on the topic?
+8. Cadence: Is there a recognizable pattern, or only occasional bursts?
+9. Measurement: Are you looking at buyer relevance, or only raw likes and impressions?
+
+For measurement detail, use the [guide to measuring employee-generated content beyond impressions](/blog/measure-employee-generated-content-beyond-impressions/). Impressions matter, but the better question is whether the right buyers are seeing, saving, sending, replying to, and reusing the post in sales conversations. [claim:C016]
+
+## What To Change Next Week
+
+Pick one founder post and rebuild the operating system around it.
+
+Start with a buyer problem that sales has heard in the last 30 days. Interview the founder for the tradeoff, mistake, or belief behind that problem. Write a first line that names the buyer stake. Draft the post around one idea, not five. Before publishing, ask three employees for one specific comment they could add from their role. After publishing, have sellers send the post to a small list of target accounts with a sentence explaining why it matters to that company.
+
+Then review the result. Look for relevant comments, saves, sends, profile viewers from the post, new followers in the right category, direct replies, and sales use. A post that generates fewer likes but two useful buyer conversations is a system that is improving. A post that earns peer applause and no buyer movement means the audience is still off. [claim:C017]
+
+## FAQ
+
+### Why do founder LinkedIn posts get impressions but few comments?
+
+The post may be visible without giving people a reason to answer. Comments usually need a sharper opinion, a specific buyer problem, or a clear question that a real operator can respond to without writing a generic compliment.
+
+### Should founder posts come from the founder profile or the company Page?
+
+Use the founder profile when the post depends on personal judgment, experience, or a strong point of view. Use the company Page when the message is official company information, broad brand context, hiring, product updates, or a resource that needs to live under the organization.
+
+### How often should a founder post on LinkedIn?
+
+Cadence matters only after the posts have a clear reader and point of view. For most teams, one useful founder post each week beats five posts that recycle company updates without a buyer stake.
+
+### What should employees do after the founder posts?
+
+Employees should add role-specific context, not scripted praise. Sales can add an objection from the field, product can add the tradeoff behind the idea, and customer success can add what buyers usually miss during implementation.
+
+### What is the best metric for founder LinkedIn engagement?
+
+There is no single best metric. Use impressions and reactions as surface signals, then check comments from relevant roles, saves, sends, profile visits, target-account replies, sales reuse, and whether the post creates better conversations.
+
+## Sources
+
+1. [LinkedIn Help, Post analytics for your content](https://www.linkedin.com/help/linkedin/answer/a516971). [cite:src-001]
+2. [LinkedIn Help, Combined post analytics](https://www.linkedin.com/help/linkedin/answer/a701208). [cite:src-002]
+3. [LinkedIn Help, Differences between a LinkedIn profile and a LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a6204405). [cite:src-003]
+4. [LinkedIn Help, Content analytics for your LinkedIn Page](https://www.linkedin.com/help/linkedin/answer/a564051). [cite:src-004]
+5. [LinkedIn Help, Visibility of shared posts](https://www.linkedin.com/help/linkedin/answer/a523141). [cite:src-005]
+6. [LinkedIn Help, LinkedIn relevance and member experience](https://www.linkedin.com/help/linkedin/answer/a1339724). [cite:src-006]
+7. [LinkedIn Marketing Blog, 15 Inspiring Content Ideas for Your LinkedIn Page](https://www.linkedin.com/business/marketing/blog/linkedin-pages/10-content-ideas-for-your-linkedin-page). [cite:src-007]
+8. [Edelman and LinkedIn, 2025 B2B Thought Leadership Impact Report](https://www.edelman.com/sites/g/files/aatuss191/files/2025-07/2025%20Edelman-LinkedIn%20B2B%20Thought%20Leadership%20Impact%20Report_FINAL.pdf). [cite:src-008]
+
+## Want LinkedIn To Produce Better Conversations?
+
+Sell In Public turns a B2B team's expertise into LinkedIn content, buyer signals, and inbound leads, then runs outbound to the right ICP. Book a working session to see whether LinkedIn can become one of your company's top revenue channels.

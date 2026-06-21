@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-21-founder-posts-low-engagement-linkedin",
+  "slug": "founder-posts-low-engagement-linkedin",
+  "generated_at": "2026-06-21T19:00:18.827Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/founder-posts-low-engagement-linkedin/index.html",
+      "bytes": 32873,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 20048,
+      "post_count": 10,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 2784,
+      "post_count": 10,
+      "changed": true
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 5722,
+      "post_count": 10,
+      "changed": true
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

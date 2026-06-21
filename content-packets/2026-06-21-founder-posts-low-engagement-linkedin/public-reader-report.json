@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "founder-posts-low-engagement-linkedin",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-21T18:58:11.798Z",
+  "rendered_html_path": "blog/founder-posts-low-engagement-linkedin/index.html",
+  "rendered_html_sha256": "233e4275d37a95b561a8a8cf3cd8b3dfbcf8d2529aee99f30d51ae7bee1930fd",
+  "article_text_sha256": "05e491b71776c824e7f1478faf83c75bde14da487ae722ec2a3fabd357b06184",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, specific, buyer-oriented diagnostic piece with no AI filler, instruction leaks, rubric language, or binary correction cadence that would stand out to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

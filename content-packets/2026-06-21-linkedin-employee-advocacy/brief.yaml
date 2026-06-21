@@ -1,0 +1,116 @@
+packet_id: "2026-06-21-linkedin-employee-advocacy"
+status: "publish-ready-child-scope"
+working_title: "LinkedIn Employee Advocacy For B2B Revenue Teams"
+slug: "linkedin-employee-advocacy"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-21"
+updated_at: "2026-06-21"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, or revenue operator"
+  secondary_buyers:
+    - "Marketing leader"
+    - "Sales enablement leader"
+    - "RevOps leader"
+  company_context: "Mid-market B2B companies with active revenue teams, useful employee expertise, and a weak LinkedIn participation model."
+  pain: "The company wants more credible LinkedIn reach, but employee advocacy often becomes a request for everyone to like, reshare, or paste the same brand message."
+
+business_goal: "Create the LinkedIn employee advocacy answer page for B2B revenue teams and distinguish advocacy from employee-generated content without cannibalizing the existing comparison page."
+sales_use_case: "Use when a prospect asks how to run employee advocacy on LinkedIn without flattening employee voices or creating generic brand amplification."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read the EGC Comparison"
+    url: "/blog/employee-generated-content-vs-employee-advocacy/"
+
+search_intent:
+  stage: "definition-and-how-to"
+  primary_query: "linkedin employee advocacy"
+  aeo_question: "What is LinkedIn employee advocacy, and how should a B2B revenue team run it?"
+  primary_keyword: "LinkedIn employee advocacy"
+  secondary_keywords:
+    - "what is employee advocacy"
+    - "what is an employee advocacy program"
+    - "how to launch an employee advocacy program"
+    - "how to measure employee advocacy"
+    - "employee advocacy vs employee-generated content"
+  related_questions:
+    - "What is employee advocacy?"
+    - "How do you launch an employee advocacy program?"
+    - "How should employee advocacy be measured?"
+    - "How is employee advocacy different from employee-generated content?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-linkedin-employee-advocacy"
+  topic_score: 80
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+
+entity_targets:
+  - "LinkedIn"
+  - "Employee advocacy"
+  - "Employee-generated content"
+  - "B2B revenue teams"
+  - "LinkedIn Pages"
+  - "LinkedIn Employee Notifications"
+  - "LinkedIn analytics"
+  - "Thought leadership"
+angle: "LinkedIn employee advocacy works for revenue teams when it is a voluntary participation system around relevant buyer moments, not a company-wide request to amplify generic brand copy."
+sell_in_public_pov: "Employee advocacy should coordinate distribution and participation, while employee-generated content should preserve employee expertise as original public content."
+word_count_target: "1700-2200"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear definition of LinkedIn employee advocacy."
+  - "Explicit distinction from employee-generated content."
+  - "Launch workflow for a B2B revenue team."
+  - "How to prevent generic brand amplification."
+  - "Measurement model beyond likes and impressions."
+  - "Internal links to the EGC hub, EGC comparison page, and LinkedIn content infrastructure page."
+  - "Ahrefs demand inputs used only for keyword intent and topic priority."
+must_avoid:
+  - "Shared index, sitemap, feed, topic coverage, shared CSS, shared JS, shared scripts, other posts, other packets, or other asset directories."
+  - "Unsupported statistics, invented examples, or generic vendor-listicle padding."
+  - "Public source-policy, quality-rubric, or SOP language."
+  - "Sell In Public mentions in informational body copy except author context and the final CTA."
+  - "Banned words, banned phrases, em dashes, and binary correction-pair cadence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official LinkedIn employee advocacy guidance."
+    - "Official LinkedIn feature and analytics documentation."
+    - "Primary B2B thought leadership research."
+    - "Existing internal Sell In Public posts for internal links and category definitions."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

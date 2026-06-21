@@ -1,0 +1,11 @@
+packet_id: "2026-06-21-linkedin-employee-advocacy"
+slug: "linkedin-employee-advocacy"
+status: "intake_ready"
+strategic_asset_decision: "create_or_refresh_packet"
+asset_decision: "post"
+topic_id: "topic-linkedin-employee-advocacy"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "Ahrefs demand input shows definition and launch questions around employee advocacy. Existing Sell In Public posts cover employee-generated content and a comparison page, but this post should own the LinkedIn employee advocacy operating model for revenue teams."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false

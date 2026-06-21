@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.linkedin.com/business/marketing/blog/social-media-marketing/what-is-employee-advocacy-what-is-it-for-why-does-it-matter",
+    "title": "What is Employee Advocacy and How Do Marketers Succeed At It?",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "LinkedIn Marketing Solutions",
+    "published_date": "2018",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform guidance",
+    "reliability": "B",
+    "notes": "Useful for definition and program principles. Older source, so do not use for current feature availability."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a6836874",
+    "title": "My Company tab and Employee Advocacy tab is no longer available",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "2025",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform documentation",
+    "reliability": "A",
+    "notes": "Supports current feature-status claims about discontinued advocacy surfaces and remaining admin actions."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a549372",
+    "title": "Use Employee Notifications on LinkedIn Pages",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "2024",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform documentation",
+    "reliability": "A",
+    "notes": "Supports mechanics and limits for Employee Notifications."
+  },
+  {
+    "id": "src-004",
+    "url": "https://business.linkedin.com/advertise/linkedin-pages/best-practices",
+    "title": "LinkedIn Pages Best Practices",
+    "publisher": "LinkedIn Business Solutions",
+    "author": "LinkedIn",
+    "published_date": "current",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform guidance",
+    "reliability": "A",
+    "notes": "Supports weekly practical recommendation for notifying employees of important Page posts."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.linkedin.com/help/linkedin/answer/a516971",
+    "title": "Post analytics for your content",
+    "publisher": "LinkedIn Help",
+    "author": "LinkedIn",
+    "published_date": "current",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform documentation",
+    "reliability": "A",
+    "notes": "Supports available individual post analytics and estimate caveat."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.linkedin.com/business/marketing/blog/research-and-insights/b2b-thought-leadership-influence-hidden-buyers",
+    "title": "How B2B Marketers Can Use Thought Leadership to Persuade Hidden Buyers",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "LinkedIn Marketing Solutions and Edelman",
+    "published_date": "2025",
+    "accessed_date": "2026-06-21",
+    "source_type": "primary research summary",
+    "reliability": "A",
+    "notes": "Use for B2B buying-context rationale only. Do not turn into an employee advocacy performance claim."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.linkedin.com/business/marketing/blog/ai-search/how-to-grow-your-ai-search-visibility-with-linkedin-content",
+    "title": "How to Grow Your AI Search Visibility With LinkedIn Content",
+    "publisher": "LinkedIn Marketing Blog",
+    "author": "Margarita Loktionova",
+    "published_date": "2026-06-09",
+    "accessed_date": "2026-06-21",
+    "source_type": "official platform guidance",
+    "reliability": "B",
+    "notes": "Use for operating advice around customer pain points, sales inputs, and hands-on employees. Avoid uncited Semrush statistics unless citing original study separately."
+  },
+  {
+    "id": "src-008",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+    "title": "What Is Employee-Generated Content?",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-17",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal context",
+    "reliability": "B",
+    "notes": "Use only for internal linking and category context."
+  },
+  {
+    "id": "src-009",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-vs-employee-advocacy/",
+    "title": "Employee-Generated Content vs Employee Advocacy",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-19",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal context",
+    "reliability": "B",
+    "notes": "Use for internal linking to the broader comparison."
+  },
+  {
+    "id": "src-010",
+    "url": "https://sellinpublic.co/blog/linkedin-content-infrastructure-b2b-sales/",
+    "title": "LinkedIn Content Infrastructure For B2B Sales Teams",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-20",
+    "accessed_date": "2026-06-21",
+    "source_type": "internal context",
+    "reliability": "B",
+    "notes": "Use for internal linking to the broader LinkedIn-led GTM operating model."
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "discovery-ahrefs-site-explorer",
+      "label": "Ahrefs Site Explorer sellinpublic.co US snapshot",
+      "path": "automation-runs/2026-06-20/ahrefs-smoke/organic-keywords-sellinpublic-us.json",
+      "reason": "Demand and routing input only. Not factual article evidence."
+    },
+    {
+      "source_id": "discovery-ahrefs-summary",
+      "label": "Ahrefs DR and zero-row summary",
+      "path": "automation-runs/2026-06-20/ahrefs-smoke/summary.json",
+      "reason": "Demand and site baseline input only. Not factual article evidence."
+    },
+    {
+      "source_id": "discovery-ahrefs-questions",
+      "label": "Ahrefs question ideas for seed employee advocacy",
+      "path": "automation-runs/2026-06-20/ahrefs-smoke/keyword-question-ideas.json",
+      "reason": "Keyword intent and topic prioritization only. Not factual article evidence."
+    }
+  ],
+  "rules": [
+    "Do not cite Ahrefs demand inputs as factual support for article claims.",
+    "Use approved primary or high-quality sources for factual claims.",
+    "Keep source-policy language out of public article copy."
+  ]
+}

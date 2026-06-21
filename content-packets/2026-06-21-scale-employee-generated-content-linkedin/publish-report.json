@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-21-scale-employee-generated-content-linkedin",
+  "slug": "scale-employee-generated-content-linkedin",
+  "generated_at": "2026-06-21T22:02:55.768Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/scale-employee-generated-content-linkedin/index.html",
+      "bytes": 39651,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 23711,
+      "post_count": 13,
+      "changed": true
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 3388,
+      "post_count": 13,
+      "changed": true
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 7321,
+      "post_count": 13,
+      "changed": true
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

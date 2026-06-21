@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-21-virio-vs-linkedin-content-agencies",
+  "slug": "virio-vs-linkedin-content-agencies",
+  "generated_at": "2026-06-21T22:02:55.926Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/virio-vs-linkedin-content-agencies/index.html",
+      "bytes": 32935,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 23711,
+      "post_count": 13,
+      "changed": false
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 3388,
+      "post_count": 13,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 7321,
+      "post_count": 13,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

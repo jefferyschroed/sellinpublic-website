@@ -1,0 +1,35 @@
+{
+  "packet_id": "2026-06-21-best-agency-founder-led-linkedin-content",
+  "slug": "best-agency-founder-led-linkedin-content",
+  "generated_at": "2026-06-21T22:02:56.060Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/best-agency-founder-led-linkedin-content/index.html",
+      "bytes": 31738,
+      "changed": false
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 23711,
+      "post_count": 13,
+      "changed": false
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 3388,
+      "post_count": 13,
+      "changed": false
+    },
+    {
+      "path": "feed.xml",
+      "bytes": 7321,
+      "post_count": 13,
+      "changed": false
+    }
+  ],
+  "validation": {
+    "ok": true,
+    "warnings": []
+  }
+}

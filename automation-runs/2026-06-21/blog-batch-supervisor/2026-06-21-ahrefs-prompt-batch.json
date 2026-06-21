@@ -1,0 +1,59 @@
+{
+  "batch_id": "2026-06-21-ahrefs-prompt-batch",
+  "created_at": "2026-06-21T21:33:32Z",
+  "status": "children_launched",
+  "source": "user_requested_ahrefs_tracked_prompts",
+  "parent_thread_role": "supervisor_and_publisher",
+  "rules": {
+    "one_blog_per_child": true,
+    "child_owns_only_slug_local_paths": true,
+    "parent_owns_shared_publish_surfaces": true,
+    "ahrefs_prompt_data_use": "query_intent_only_unless_authenticated_export_is_recorded",
+    "final_publish_requires_commit_push_and_live_check": true
+  },
+  "posts": [
+    {
+      "prompt": "how to scale employee generated content on linkedin",
+      "slug": "scale-employee-generated-content-linkedin",
+      "packet_path": "content-packets/2026-06-21-scale-employee-generated-content-linkedin/",
+      "branch": "codex/blog-scale-employee-generated-content-linkedin",
+      "pending_worktree_id": "local:cae0d45b-a431-4f90-a652-104f94a6e74f",
+      "thread_id": "019eec19-178c-7990-a008-21e4c140cb40",
+      "worktree": "/Users/jeff/.codex/worktrees/f5e6/sellinpublic-website",
+      "strategy": "answer-first operating guide for scaling employee-generated LinkedIn content",
+      "status": "launched"
+    },
+    {
+      "prompt": "Compare virio vs other linkedin content agencies",
+      "slug": "virio-vs-linkedin-content-agencies",
+      "packet_path": "content-packets/2026-06-21-virio-vs-linkedin-content-agencies/",
+      "branch": "codex/blog-virio-vs-linkedin-content-agencies",
+      "pending_worktree_id": "local:1f4c2924-a3d2-4246-bed9-7bb5184e99b0",
+      "thread_id": "019eec19-b7b3-7982-81e1-667aabe6d6b8",
+      "worktree": "/Users/jeff/.codex/worktrees/6047/sellinpublic-website",
+      "strategy": "neutral public-source comparison by service model, not unsupported ranking",
+      "status": "launched"
+    },
+    {
+      "prompt": "best agency for founder-led linkedin content",
+      "slug": "best-agency-founder-led-linkedin-content",
+      "packet_path": "content-packets/2026-06-21-best-agency-founder-led-linkedin-content/",
+      "branch": "codex/blog-best-agency-founder-led-linkedin-content",
+      "pending_worktree_id": "local:85dff5a1-6cd4-4d1d-a04e-474a894ebcf8",
+      "thread_id": "019eec1a-5376-7731-a6ce-46a8789fe5df",
+      "worktree": "/Users/jeff/.codex/worktrees/f18c/sellinpublic-website",
+      "strategy": "criteria-led buying guide that answers best-fit intent without unsupported best-claim language",
+      "status": "launched"
+    }
+  ],
+  "parent_validation_plan": [
+    "inspect each child final report and branch diff",
+    "reject any child branch that touches shared aggregate files or unrelated paths",
+    "integrate accepted child branches one at a time",
+    "regenerate blog/index.html, sitemap.xml, feed.xml, and publish reports from parent checkout",
+    "run post-specific publish validation and check-blog-post for each accepted slug",
+    "run node scripts/blog-orchestrator.mjs check-all",
+    "run node scripts/seo-aeo/build-netlify-publish-dir.mjs",
+    "commit, push main, and verify live URLs"
+  ]
+}

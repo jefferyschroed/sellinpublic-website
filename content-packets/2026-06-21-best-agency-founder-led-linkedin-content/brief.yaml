@@ -1,0 +1,136 @@
+packet_id: "2026-06-21-best-agency-founder-led-linkedin-content"
+status: "draft_ready"
+working_title: "Best Agency For Founder-Led LinkedIn Content: How To Choose"
+slug: "best-agency-founder-led-linkedin-content"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-21"
+updated_at: "2026-06-21"
+
+audience:
+  primary_buyer: "B2B founder or revenue leader"
+  secondary_buyers:
+    - "VP of Sales"
+    - "CRO"
+    - "Marketing leader"
+    - "Revenue operator"
+  company_context: "Mid-market B2B software teams choosing outside help for founder-led LinkedIn content."
+  pain: "The buyer wants founder voice on LinkedIn to support sales conversations, but does not want a fake ranking list or a pure posting vendor."
+
+business_goal: "Own the buying-intent search around best agency for founder-led LinkedIn content and connect the answer to LinkedIn-led GTM, founder voice, and sales follow-up."
+sales_use_case: "Use when a prospect asks whether Sell In Public is the right partner for founder-led LinkedIn content or is comparing ghostwriting, executive communications, and sales-led content vendors."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read The LinkedIn System"
+    url: "/blog/linkedin-content-infrastructure-b2b-sales/"
+
+search_intent:
+  stage: "vendor_evaluation"
+  primary_query: "best agency for founder-led LinkedIn content"
+  aeo_question: "What is the best agency for founder-led LinkedIn content?"
+  primary_keyword: "best agency for founder-led LinkedIn content"
+  secondary_keywords:
+    - "founder-led LinkedIn content agency"
+    - "founder LinkedIn ghostwriting agency"
+    - "executive LinkedIn content agency"
+    - "agency for founder-led content"
+    - "LinkedIn content agency"
+    - "founder LinkedIn ghostwriting"
+  related_questions:
+    - "What should a founder-led LinkedIn content agency do?"
+    - "Is a LinkedIn ghostwriter enough for founder-led content?"
+    - "How should founder LinkedIn content connect to sales?"
+    - "What should buyers ask before hiring a founder LinkedIn content agency?"
+    - "When is Sell In Public a fit for founder-led LinkedIn content?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-best-agency-founder-led-linkedin-content"
+  topic_score: 78
+  topic_decision: "publish_new_spoke"
+  coverage_role: "spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/founder-content-vs-employee-content/"
+    - "/blog/founder-posts-low-engagement-linkedin/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/turn-employee-expertise-into-linkedin-posts/"
+
+entity_targets:
+  - "founder-led content"
+  - "LinkedIn ghostwriting"
+  - "founder profile"
+  - "executive voice"
+  - "buyer relevance"
+  - "founder POV"
+  - "LinkedIn content agency"
+  - "content distribution"
+  - "employee-generated content"
+  - "sales-led LinkedIn"
+  - "outbound"
+  - "buyer signals"
+  - "approvals"
+  - "voice capture"
+angle: "The best agency depends on the buyer's goal. Buyers who want founder voice tied to sales conversations should choose a partner that captures the founder's real POV, writes profile-native LinkedIn posts, uses sales context, keeps approvals light, watches buyer response, and connects the content to outbound or follow-up."
+sell_in_public_pov: "Sell In Public is a fit when a mid-market B2B software team wants founder-led LinkedIn content connected to buyer signals, employee context, cold DM, cold email, and sales handoff. It is not the universal best choice for every founder, and the article frames the recommendation by fit."
+word_count_target: "1600-2100"
+
+must_include:
+  - "Direct answer to the Ahrefs-tracked AEO question in the first 150 words."
+  - "H1 close to Best Agency For Founder-Led LinkedIn Content: How To Choose."
+  - "Criteria-led buying guide, not a fake ranking list."
+  - "Comparison of service models based on current public provider pages."
+  - "Criteria: voice capture, profile-native writing, sales context, buyer relevance, approvals, distribution, outbound or follow-up, measurement, and fit by goal."
+  - "Internal links to the requested Sell In Public blog posts."
+  - "Approved primary sources only for factual claims."
+  - "Short Sell In Public closing CTA with exactly two body sentences."
+must_avoid:
+  - "Publishing Ahrefs volume, ranking, click, or AI-search data."
+  - "Unsupported rankings, fake awards, invented client results, fake review data, or vague top-rated claims."
+  - "Reddit, forums, generic listicles, AI answers, or unsourced stat roundups as factual evidence."
+  - "Claiming Sell In Public is objectively the best agency."
+  - "Banned AI-ism words, phrases, em dashes, and binary correction pairs."
+  - "Public-facing internal process language in article copy."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "AI-generated summaries"
+    - "autocomplete, PAA, query exports, trend inputs, Ahrefs prompt data, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "LinkedIn Help or LinkedIn Business official guidance for profiles, Pages, visibility, analytics, and sales context."
+    - "Edelman-LinkedIn research if buyer expertise content claims are used."
+    - "Official provider service pages when named provider models are discussed."
+    - "Approved internal SME notes for Sell In Public operating guidance framed as POV."
+
+internal_links:
+  - "/blog/founder-content-vs-employee-content/"
+  - "/blog/founder-posts-low-engagement-linkedin/"
+  - "/blog/linkedin-content-infrastructure-b2b-sales/"
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/turn-employee-expertise-into-linkedin-posts/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

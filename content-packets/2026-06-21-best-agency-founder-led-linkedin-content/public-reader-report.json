@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "best-agency-founder-led-linkedin-content",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-21T22:01:29.946Z",
+  "rendered_html_path": "blog/best-agency-founder-led-linkedin-content/index.html",
+  "rendered_html_sha256": "57323fa8752d3bfe6409281c9a2ef800388e739741ba97bdef166602a34f1ba4",
+  "article_text_sha256": "113d09f5ef9784549273e21bd9e59685affe566b4da9b216548f477bd2099ef5",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, direct buyer guide with no AI filler, instruction leaks, rubric language, binary correction pairs, or internal process text visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

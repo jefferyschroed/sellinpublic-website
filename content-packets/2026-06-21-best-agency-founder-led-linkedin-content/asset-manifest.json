@@ -1,0 +1,15 @@
+{
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "path": "public/assets/blog/best-agency-founder-led-linkedin-content/hero-generated.png",
+      "public_url": "https://sellinpublic.co/public/assets/blog/best-agency-founder-led-linkedin-content/hero-generated.png",
+      "width": 1896,
+      "height": 830,
+      "alt": "Flat liquid-glass founder profile panel connected to buyer signal and outbound cards on a calm blue and mint mesh background",
+      "notes": "Generated with Codex image generation and saved to the owned post asset directory.",
+      "final_prompt": "Create a 1600x700 Sell In Public blog hero image. Flat premium B2B editorial image, no text, no logos. Subject: choosing an agency for founder-led LinkedIn content tied to sales. Show a central founder profile card connected to a voice-capture panel, post drafts, buyer-signal nodes, account cards, and outbound follow-up paths. Include a subtle evaluation checklist/grid with abstract marks only, no readable labels. Style: matte liquid-glass panels, warm off-white background, graphite lines, muted teal, deep green, soft coral, and electric blue signal accents. Professional, spacious, inspectable, no people photos, no typography, no LinkedIn logo."
+    }
+  ]
+}

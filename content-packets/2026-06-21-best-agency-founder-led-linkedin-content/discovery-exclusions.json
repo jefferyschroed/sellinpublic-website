@@ -1,0 +1,30 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "ahrefs-prompt-data",
+      "source_type": "query_demand",
+      "reason": "Used only to route the article toward the buyer question. Not cited for volume, rank, clicks, or AI-search data."
+    },
+    {
+      "source_id": "search-result-snippets",
+      "source_type": "discovery",
+      "reason": "Used only to identify official source pages. Not cited as evidence."
+    },
+    {
+      "source_id": "generic-listicles",
+      "source_type": "excluded_web_content",
+      "reason": "Generic agency roundups and unsourced rankings are not factual evidence for this article."
+    },
+    {
+      "source_id": "forums-and-social-comments",
+      "source_type": "excluded_social_content",
+      "reason": "Forums, Reddit, comment threads, and AI answers were not used as evidence."
+    }
+  ],
+  "rules": [
+    "Do not publish Ahrefs metrics unless verified from a local artifact or authenticated source.",
+    "Do not cite rankings, awards, client results, or review claims from third-party roundups.",
+    "Use official company pages only to describe what a provider says it offers."
+  ]
+}

@@ -1,0 +1,126 @@
+packet_id: "2026-06-21-virio-vs-linkedin-content-agencies"
+status: "draft-ready-child-scope"
+working_title: "Virio Vs Other LinkedIn Content Agencies: How To Compare The Options"
+slug: "virio-vs-linkedin-content-agencies"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-21"
+updated_at: "2026-06-21"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, or revenue operator"
+  secondary_buyers:
+    - "Marketing leader"
+    - "RevOps leader"
+    - "Demand generation leader"
+  company_context: "Mid-market B2B companies comparing LinkedIn content services, employee-generated content systems, ghostwriting help, advocacy platforms, and outbound-led LinkedIn programs."
+  pain: "The buyer sees Virio and other LinkedIn content providers making different promises, but the hard decision is which operating model fits the team, sales motion, and internal workload."
+
+business_goal: "Create a neutral comparison guide that helps buyers compare Virio against categories of LinkedIn content providers without unsupported rankings or competitor claims."
+sales_use_case: "Use when a prospect asks how Virio compares with other LinkedIn content agencies, AI LinkedIn content tools, ghostwriters, employee advocacy platforms, or managed outbound services."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read the LinkedIn Infrastructure Guide"
+    url: "/blog/linkedin-content-infrastructure-b2b-sales/"
+  closing_blog_cta: "Use a short question-style heading when it fits. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and says we turn team expertise into LinkedIn content, buyer signals or inbound leads, then run outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
+
+search_intent:
+  stage: "comparison"
+  primary_query: "Virio vs other LinkedIn content agencies"
+  aeo_question: "Compare Virio vs other LinkedIn content agencies"
+  primary_keyword: "Virio vs other LinkedIn content agencies"
+  secondary_keywords:
+    - "compare Virio LinkedIn content agency"
+    - "Virio alternatives"
+    - "LinkedIn content agencies for B2B"
+    - "AI LinkedIn content"
+    - "founder-led LinkedIn content"
+    - "executive LinkedIn ghostwriting"
+    - "LinkedIn employee advocacy"
+  related_questions:
+    - "What does Virio do?"
+    - "How is Virio different from a LinkedIn ghostwriting agency?"
+    - "When should a B2B company choose an employee advocacy platform?"
+    - "When does a managed outbound service make more sense than a content agency?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-virio-vs-linkedin-content-agencies"
+  topic_score: 76
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "comparison-spoke"
+  parent_topic: "topic-linkedin-content-infrastructure"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/founder-content-vs-employee-content/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+    - "/blog/linkedin-employee-advocacy/"
+    - "/blog/founder-posts-low-engagement-linkedin/"
+
+entity_targets:
+  - "Virio"
+  - "LinkedIn content agency"
+  - "founder-led LinkedIn content"
+  - "employee-generated content"
+  - "executive LinkedIn ghostwriting"
+  - "LinkedIn employee advocacy"
+  - "AI LinkedIn content"
+  - "managed outbound"
+  - "buyer signals"
+  - "content engineer"
+  - "profile-native content"
+  - "B2B content service"
+angle: "Virio appears closest to an AI-assisted, employee-scale LinkedIn content engine for vertical SaaS and B2B teams. The right comparison is not a simple better-or-worse ranking; it is a fit decision across employee scale, founder voice, AI assistance, advocacy workflow, outbound coverage, sales handoff, measurement, and internal review load."
+sell_in_public_pov: "A B2B team should compare LinkedIn content providers by the revenue motion they operate, not by the number of posts promised."
+word_count_target: "1700-2200"
+
+must_include:
+  - "Direct answer to the AEO prompt in the short-answer block within the first 150 words."
+  - "Neutral description of Virio based on Virio's own website and public LinkedIn company page."
+  - "Comparison against AI-assisted content services, founder and executive ghostwriting agencies, employee advocacy platforms, and managed LinkedIn plus outbound services."
+  - "Decision table for buyer fit."
+  - "Internal links to the requested Sell In Public blog posts where natural."
+  - "Ahrefs prompt data treated only as demand and query language."
+must_avoid:
+  - "Shared index, sitemap, feed, topic coverage, shared CSS, shared JS, shared scripts, other posts, other packets, or other asset directories."
+  - "Unsupported rankings, invented weaknesses, client lists, pricing, outcomes, or claims that one provider is objectively better."
+  - "Random third-party listicles or competitor pages as evidence for Virio claims."
+  - "Published Ahrefs volume, rank, click, or AI-search metrics."
+  - "Sell In Public promotional language in informational body copy outside the final CTA."
+  - "Banned words, banned phrases, em dashes, and binary correction-pair cadence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "competitor pages as evidence for Virio claims"
+    - "autocomplete, PAA, query exports, trend inputs, Ahrefs prompt exports, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Virio official website."
+    - "Virio public LinkedIn company page."
+    - "Official pages for named tools, agencies, and platforms."
+    - "Primary or platform research for buyer context."
+    - "Existing Sell In Public posts for internal links and category definitions."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

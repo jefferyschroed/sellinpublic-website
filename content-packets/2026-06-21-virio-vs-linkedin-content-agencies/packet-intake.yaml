@@ -1,0 +1,12 @@
+packet_id: "2026-06-21-virio-vs-linkedin-content-agencies"
+slug: "virio-vs-linkedin-content-agencies"
+status: "intake_ready"
+strategic_asset_decision: "create_comparison_post"
+asset_decision: "static_blog_post"
+topic_id: "topic-virio-vs-linkedin-content-agencies"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+standalone_rationale: "The prompt has explicit comparison intent. A standalone page can answer how to compare Virio with categories of LinkedIn content providers without turning the article into a ranking page."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false
+notes: "Ahrefs prompt language shapes the query and wording only. No proprietary demand metrics are published."

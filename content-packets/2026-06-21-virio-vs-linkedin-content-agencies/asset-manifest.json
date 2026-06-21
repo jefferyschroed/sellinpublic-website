@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "slug": "virio-vs-linkedin-content-agencies",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "path": "public/assets/blog/virio-vs-linkedin-content-agencies/hero-generated.png",
+      "public_url": "/public/assets/blog/virio-vs-linkedin-content-agencies/hero-generated.png",
+      "width": 1896,
+      "height": 830,
+      "alt": "Flat liquid-glass comparison board showing several LinkedIn content service paths for a B2B team",
+      "notes": "Generated with Codex image generation and saved to the owned post asset directory.",
+      "final_prompt": "Create a 1600x700 Sell In Public blog hero image. Flat premium B2B editorial image, no text, no logos, no brand names. Subject: a buyer comparing several LinkedIn content provider operating models. Show a polished comparison board with five distinct paths: AI tool, founder ghostwriting, employee advocacy platform, employee content engine, and managed outbound. Use abstract icons only, no readable labels. Include decision tiles, connected buyer-signal nodes, and a central evaluation grid. Style: matte liquid-glass panels, crisp geometric shapes, warm off-white background, graphite lines, muted teal, coral, deep green, soft blue accents, restrained and professional. High-quality raster, inspectable, spacious, no typography, no LinkedIn logo, no people photos."
+    }
+  ]
+}

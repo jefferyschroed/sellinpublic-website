@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "virio-vs-linkedin-content-agencies",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-21T21:55:08.130Z",
+  "rendered_html_path": "blog/virio-vs-linkedin-content-agencies/index.html",
+  "rendered_html_sha256": "780df8892169aa5647a085dabd55fa08d45030996419deb58c515df0a1684126",
+  "article_text_sha256": "1f00ca29bb4956c46ca2ed15f6f2f0cd80153906cdccf527c4d95c137f155df5",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, specific, service-model comparison with no AI-ish filler, binary correction pairs, instruction leaks, or rubric language visible to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

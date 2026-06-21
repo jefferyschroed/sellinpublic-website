@@ -1,0 +1,36 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "disc-ahrefs-prompt",
+      "source_name": "Ahrefs tracked AEO prompt",
+      "reason": "Demand and query language only. Not factual evidence for claims."
+    },
+    {
+      "source_id": "disc-search-autocomplete",
+      "source_name": "Autocomplete and related-query surfaces",
+      "reason": "Discovery only."
+    },
+    {
+      "source_id": "disc-ai-answers",
+      "source_name": "AI answer outputs",
+      "reason": "Discovery only and not attributable factual evidence."
+    },
+    {
+      "source_id": "disc-reddit-forums",
+      "source_name": "Reddit, forums, and social comment threads",
+      "reason": "Not approved evidence for this article."
+    },
+    {
+      "source_id": "disc-listicles",
+      "source_name": "Generic agency listicles and roundups",
+      "reason": "May shape discovery but cannot support vendor claims."
+    }
+  ],
+  "rules": [
+    "Use Virio official pages for Virio claims.",
+    "Use official pages for every named provider, tool, agency, or platform.",
+    "Do not cite Ahrefs metrics or prompts as article evidence.",
+    "Do not cite generic listicles, Reddit, forums, or AI summaries as factual evidence."
+  ]
+}

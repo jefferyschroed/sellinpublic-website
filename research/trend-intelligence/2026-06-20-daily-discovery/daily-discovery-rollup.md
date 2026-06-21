@@ -1,6 +1,6 @@
 # Daily Discovery Rollup
 
-Run: `2026-06-19-daily-discovery`
+Run: `2026-06-20-daily-discovery`
 
 Rule: Discovery data is not factual evidence. Reddit, public feeds, Google Trends RSS, manual AI prompt exports, autocomplete, PAA, and query exports are discovery only unless a separate validated-demand import explicitly qualifies them for planning gates.
 
@@ -21,7 +21,7 @@ Rule: Discovery data is not factual evidence. Reddit, public feeds, Google Trend
 
 ## Summary
 
-- Normalized discovery rows: 514
+- Normalized discovery rows: 1076
 - Unique source types: 4
 - Clusters: 48
 - Handoff status: ready

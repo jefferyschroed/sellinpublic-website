@@ -1,48 +1,48 @@
 captured_at,topic,intent,source_count,max_score,evidence_use,recommended_next_action
-2026-06-19T02:03:31.747Z,what is employee-generated content,definition,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,measure employee-generated content beyond impressions,measurement,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,employee-generated content vs employee advocacy,comparison,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,How do you turn employee expertise into useful LinkedIn posts?,how_to,3,50,discovery_only,route_to_topic_cartographer_and_source_registry_before_packet
-2026-06-19T02:03:31.747Z,What are good examples of employee-generated content in B2B?,examples,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,"What can B2B teams learn from Clay, Lovable, and GitLab's public content loops?",case_study,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,How should B2B sales teams build LinkedIn content infrastructure?,how_to,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,How should teams review employee-generated content without making it generic?,how_to,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,9 ways to improve seo rankings and traffic,measurement,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,Should every employee post on LinkedIn?,objection,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,a new guide how to prove the value of b2b marketing,how_to,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,the ai perception-reality gap,other,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,How do answer engines decide which B2B content to cite?,aeo_strategy,1,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,introducing search generative ai performance reports in search console,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,a new resource for optimizing for generative ai in google search,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,11 ways to automate seo with agent a,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how i use my ai marketing assistant after 200 hours,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,we analyzed 137k sites 97 of llms txt files never get read,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to level-up from seo tactician to search visibility leader,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,9 vibe coding examples ai apps you can use right now to grow your website,examples,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,what is ai sentiment analysis a marketer s guide,definition,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,bot traffic now exceeds traffic from human users,measurement,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,12 seo writing tips to earn visibility 2026,measurement,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how rtcamp closed the ai perception gap costing them enterprise deals,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,why 62 of ai citations don t lead to brand mentions study,measurement,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to decide which ai search prompts to track,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,google s ai search optimization guide what to do next,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to get indexed by chatgpt 2026,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,faqs for aeo how to structure answers that rank in answer engines,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,schema markup for aeo how to implement it to boost answer engine visibility in 2026,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,keyword research for aeo a guide for winning answer engine traffic in 2026,measurement,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,on-page content formats answer engines actually favor new research,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,the multiplier effect how linkedin ads boosts search content and pipeline,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,fear of messing up the hidden emotion driving b2b decisions,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,the principles of buyability why strong deals stall and what separates the vendors who get chosen,vendor_evaluation,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to grow your ai search visibility with linkedin content,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to rank in ai search results expert best practices,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,6 best ai prospecting tools our picks for 2026,vendor_evaluation,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,sales outreach tools that integrate with your crm our favorite picks for 2026,vendor_evaluation,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,future of ai in customer relationship management what s coming next,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,real ai crm use cases driving revenue growth in 2025,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,5 best ai crms for real estate agents the 2026 roundup,vendor_evaluation,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,what is an ai agent a plain-english guide,definition,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,10 seo trends i ve seen firsthand in 2026 with data,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,why category entry points belong in every ai search strategy,other,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,how to prove incremental marketing impact with linkedin s new tools,how_to,2,50,discovery_only,monitor_until_stronger_signal
-2026-06-19T02:03:31.747Z,automated seo what it is and how it works in 2026,other,1,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,what is employee-generated content,definition,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,measure employee-generated content beyond impressions,measurement,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,employee-generated content vs employee advocacy,comparison,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,How do you turn employee expertise into useful LinkedIn posts?,how_to,7,50,discovery_only,route_to_topic_cartographer_and_source_registry_before_packet
+2026-06-19T06:18:16.250Z,What are good examples of employee-generated content in B2B?,examples,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,"What can B2B teams learn from Clay, Lovable, and GitLab's public content loops?",case_study,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,How should B2B sales teams build LinkedIn content infrastructure?,how_to,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,sales outreach tools that integrate with your crm our favorite picks for 2026,vendor_evaluation,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,future of ai in customer relationship management what s coming next,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,real ai crm use cases driving revenue growth in 2025,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,5 best ai crms for real estate agents the 2026 roundup,vendor_evaluation,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,what is an ai agent a plain-english guide,definition,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,10 seo trends i ve seen firsthand in 2026 with data,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,why category entry points belong in every ai search strategy,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to prove incremental marketing impact with linkedin s new tools,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,automated seo what it is and how it works in 2026,other,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,How should teams review employee-generated content without making it generic?,how_to,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,Should every employee post on LinkedIn?,objection,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,9 ways to improve seo rankings and traffic,measurement,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,a new guide how to prove the value of b2b marketing,how_to,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,the ai perception-reality gap,other,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,How do answer engines decide which B2B content to cite?,aeo_strategy,4,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,introducing search generative ai performance reports in search console,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,a new resource for optimizing for generative ai in google search,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,11 ways to automate seo with agent a,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how i use my ai marketing assistant after 200 hours,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,we analyzed 137k sites 97 of llms txt files never get read,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to level-up from seo tactician to search visibility leader,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,9 vibe coding examples ai apps you can use right now to grow your website,examples,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,what is ai sentiment analysis a marketer s guide,definition,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,bot traffic now exceeds traffic from human users,measurement,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,12 seo writing tips to earn visibility 2026,measurement,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how rtcamp closed the ai perception gap costing them enterprise deals,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,why 62 of ai citations don t lead to brand mentions study,measurement,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to decide which ai search prompts to track,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,google s ai search optimization guide what to do next,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to get indexed by chatgpt 2026,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,faqs for aeo how to structure answers that rank in answer engines,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,schema markup for aeo how to implement it to boost answer engine visibility in 2026,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,keyword research for aeo a guide for winning answer engine traffic in 2026,measurement,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,on-page content formats answer engines actually favor new research,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,the multiplier effect how linkedin ads boosts search content and pipeline,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,fear of messing up the hidden emotion driving b2b decisions,other,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,the principles of buyability why strong deals stall and what separates the vendors who get chosen,vendor_evaluation,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to grow your ai search visibility with linkedin content,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,how to rank in ai search results expert best practices,how_to,6,50,discovery_only,monitor_until_stronger_signal
+2026-06-19T06:18:16.250Z,6 best ai prospecting tools our picks for 2026,vendor_evaluation,6,50,discovery_only,monitor_until_stronger_signal

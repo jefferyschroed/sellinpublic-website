@@ -1,0 +1,20 @@
+packet_id: "2026-06-22-should-every-employee-post-on-linkedin"
+slug: "should-every-employee-post-on-linkedin"
+status: "intake_ready"
+strategic_asset_decision: "create_post"
+asset_decision: "post"
+topic_id: "topic-should-every-employee-post-linkedin"
+pillar_id: "pillar-linkedin-led-gtm"
+source_readiness: "ready"
+query_handoff_status: "handoff_ready"
+standalone_rationale: "The question maps to a practical buyer objection in employee-generated content and LinkedIn-led GTM: whether participation should be mandatory, broad, or selective."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs:
+  primary_query: "should every employee post on linkedin"
+  aeo_question: "Should every employee post on LinkedIn?"
+  publish_date: "2026-06-22"
+scope:
+  owned_packet: "content-packets/2026-06-22-should-every-employee-post-on-linkedin/"
+  owned_post: "blog/should-every-employee-post-on-linkedin/index.html"
+  owned_assets: "public/assets/blog/should-every-employee-post-on-linkedin/"
+  shared_aggregate_files_locked: true

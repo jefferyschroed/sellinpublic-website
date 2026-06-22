@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "should-every-employee-post-on-linkedin",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-22T01:46:22.122Z",
+  "rendered_html_path": "blog/should-every-employee-post-on-linkedin/index.html",
+  "rendered_html_sha256": "aa170fc6d9b03dc4c62246c6af0c30e455277fdb7971cf7f1238ea4351a30285",
+  "article_text_sha256": "1dc830bab7231ac47d96fb090cf76cf6ff8bc23ce09b24935c53bbb888e33b58",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, role-specific B2B guide with no AI filler, instruction leaks, rubric language, or binary correction cadence that would stand out to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

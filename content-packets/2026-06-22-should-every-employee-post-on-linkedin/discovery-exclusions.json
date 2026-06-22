@@ -1,0 +1,30 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source": "search autocomplete",
+      "status": "excluded_from_evidence",
+      "allowed_use": "query phrasing only"
+    },
+    {
+      "source": "People Also Ask",
+      "status": "excluded_from_evidence",
+      "allowed_use": "question discovery only"
+    },
+    {
+      "source": "AI answer outputs",
+      "status": "excluded_from_evidence",
+      "allowed_use": "none for factual support"
+    },
+    {
+      "source": "Reddit, forums, and social comment threads",
+      "status": "excluded_from_evidence",
+      "allowed_use": "none for factual support"
+    }
+  ],
+  "rules": [
+    "Use official LinkedIn documentation or primary research for factual claims.",
+    "Use internal Sell In Public posts only for category context and internal links.",
+    "Do not cite discovery-only inputs in draft.md, article.blocks.json, or the rendered post."
+  ]
+}

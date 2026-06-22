@@ -1,0 +1,26 @@
+{
+  "packet_id": "2026-06-22-should-every-employee-post-on-linkedin",
+  "slug": "should-every-employee-post-on-linkedin",
+  "status": "publish_validated_child_scope",
+  "generated_at": "2026-06-22T01:46:22.122Z",
+  "dry_run": false,
+  "outputs": [
+    {
+      "path": "blog/should-every-employee-post-on-linkedin/index.html",
+      "bytes": 34405,
+      "changed": true
+    }
+  ],
+  "validation": {
+    "claude_writing_pass": "applied",
+    "public_reader_qa": "passed",
+    "public_reader_findings": 0,
+    "publish_stage_packet_validation": "passed",
+    "check_blog_post": "passed",
+    "git_diff_check": "passed",
+    "shared_aggregate_files_written": false
+  },
+  "notes": [
+    "Rendered only the owned post HTML from article.blocks.json. Shared aggregate files were not generated in this child scope."
+  ]
+}

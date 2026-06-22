@@ -1,0 +1,115 @@
+packet_id: "2026-06-22-should-every-employee-post-on-linkedin"
+status: "publish-ready-child-scope"
+working_title: "Should Every Employee Post On LinkedIn?"
+slug: "should-every-employee-post-on-linkedin"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-22"
+updated_at: "2026-06-22"
+
+audience:
+  primary_buyer: "B2B founder, CRO, VP of Sales, RevOps leader, or marketing leader"
+  secondary_buyers:
+    - "Sales enablement leader"
+    - "Founder-led sales operator"
+    - "Demand generation leader"
+  company_context: "Mid-market B2B companies deciding whether LinkedIn participation should be company-wide, role-based, or concentrated around credible voices."
+  pain: "The company wants more credible LinkedIn participation, but mandatory posting quotas and generic reshare programs can make employee profiles sound like another company channel."
+
+business_goal: "Answer a core buyer objection inside employee-generated content: whether every employee should post on LinkedIn, and how B2B teams should decide who publishes, who participates, and who sits out."
+sales_use_case: "Use when a prospect asks whether a managed LinkedIn system requires every employee to post, or whether participation can be selective."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read the EGC Comparison"
+    url: "/blog/employee-generated-content-vs-employee-advocacy/"
+  closing_blog_cta: "Use a short question-style heading when it fits. Keep the CTA body to exactly two sentences: one sentence that names Sell In Public and says we capture team expertise, shape it into LinkedIn posts and buyer signals, and run outbound to the right ICP; one sentence that invites a working session to see whether LinkedIn can become a top revenue channel for the company."
+
+search_intent:
+  stage: "objection-answer"
+  primary_query: "should every employee post on linkedin"
+  aeo_question: "Should every employee post on LinkedIn?"
+  primary_keyword: "should every employee post on LinkedIn"
+  secondary_keywords:
+    - "should employees post on LinkedIn"
+    - "employee LinkedIn posting policy"
+    - "employee advocacy vs employee-generated content"
+    - "LinkedIn employee advocacy"
+    - "B2B LinkedIn employee posts"
+  related_questions:
+    - "Should LinkedIn posting be mandatory for employees?"
+    - "Who should post on LinkedIn at a B2B company?"
+    - "How do you get employees to post on LinkedIn?"
+    - "How is employee-generated content different from employee advocacy?"
+
+topic_map:
+  pillar_id: "pillar-linkedin-led-gtm"
+  pillar_name: "LinkedIn-Led GTM"
+  topic_id: "topic-should-every-employee-post-linkedin"
+  topic_score: 78
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-employee-generated-content"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/linkedin-employee-advocacy/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+
+entity_targets:
+  - "LinkedIn"
+  - "Employee-generated content"
+  - "Employee advocacy"
+  - "B2B sales"
+  - "Revenue teams"
+  - "LinkedIn Pages"
+  - "Employee Notifications"
+  - "Professional brand"
+angle: "Every employee should not be expected to publish original LinkedIn posts. B2B teams should build a role-based participation model where credible employees publish, adjacent employees comment or share privately, and broad advocacy stays voluntary and context-led."
+sell_in_public_pov: "Employee-generated content works when the company captures credible expertise from the people closest to the buyer problem. It should not become a company-wide quota or a generic reshare program."
+word_count_target: "1700-2200"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear distinction between original employee-generated content, employee advocacy, forced posting quotas, and generic reshare programs."
+  - "Role-based participation model for founders, executives, sales leaders, reps, subject-matter experts, and adjacent employees."
+  - "Practical workflow for deciding who should publish, comment, send privately, or sit out."
+  - "Source-backed LinkedIn participation and professional-profile context."
+  - "Internal links to EGC hub, EGC vs advocacy, LinkedIn employee advocacy, and LinkedIn content infrastructure."
+must_avoid:
+  - "Shared index, sitemap, feed, topic coverage, shared CSS, shared JS, shared scripts, other posts, other packets, or other asset directories."
+  - "Unsupported statistics, invented examples, fake quotes, or generic reshare-program advice."
+  - "Public source-policy, QA, claim-ledger, or internal process language."
+  - "Sell In Public mentions in informational body copy except author context and the final CTA."
+  - "Banned words, banned phrases, em dashes, and binary correction-pair cadence."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official LinkedIn participation, visibility, profile, notification, or analytics documentation."
+    - "Primary B2B research for buyer/professional-expertise context."
+    - "Existing internal Sell In Public posts for category distinctions and internal links."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

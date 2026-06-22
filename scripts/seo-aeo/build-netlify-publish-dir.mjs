@@ -4,7 +4,7 @@ import path from "node:path";
 import { assertNetlifyPublishConfigReady } from "./lib/netlify-publish-config.mjs";
 
 const DEFAULT_OUTPUT = "outputs/netlify-publish";
-const COPY_PATHS = [
+const STATIC_COPY_PATHS = [
   "index.html",
   "styles.css",
   "script.js",
@@ -15,7 +15,6 @@ const COPY_PATHS = [
   "feed.xml",
   "sitemap.xml",
   "robots.txt",
-  "ef8b84f315281bb097c56c3418cc2887.txt",
 ];
 const FORBIDDEN_TOP_LEVEL = new Set([
   ".codex",
@@ -58,6 +57,17 @@ function copyPath(root, outDir, relativePath) {
   return { path: relativePath, copied: true, reason: "" };
 }
 
+function indexNowKeyFiles(root) {
+  return fs
+    .readdirSync(root)
+    .filter((name) => /^[A-Za-z0-9-]{8,128}\.txt$/.test(name))
+    .filter((name) => {
+      const absolutePath = path.join(root, name);
+      if (!fs.statSync(absolutePath).isFile()) return false;
+      return fs.readFileSync(absolutePath, "utf8").trim() === path.basename(name, ".txt");
+    });
+}
+
 function listTopLevel(outDir) {
   if (!fs.existsSync(outDir)) return [];
   return fs.readdirSync(outDir).sort();
@@ -72,7 +82,8 @@ function run() {
   assertNetlifyPublishConfigReady(root);
   fs.rmSync(outDir, { recursive: true, force: true });
   fs.mkdirSync(outDir, { recursive: true });
-  const copied = COPY_PATHS.map((relativePath) => copyPath(root, outDir, relativePath));
+  const copyPaths = Array.from(new Set([...STATIC_COPY_PATHS, ...indexNowKeyFiles(root)]));
+  const copied = copyPaths.map((relativePath) => copyPath(root, outDir, relativePath));
   const topLevel = listTopLevel(outDir);
   const forbidden = topLevel.filter((name) => FORBIDDEN_TOP_LEVEL.has(name));
   if (forbidden.length) {

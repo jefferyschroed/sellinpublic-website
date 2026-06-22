@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "employee-generated-content-policy-b2b",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-22T01:49:02.989Z",
+  "rendered_html_path": "blog/employee-generated-content-policy-b2b/index.html",
+  "rendered_html_sha256": "9ee723d72ae6739160b07959a070516a8e9e4681bf77fbdafccae2ac9eda860b",
+  "article_text_sha256": "4c3059cc2bfe2ea9e5ce60e0a2fda7432d8ea27c5cd75896944e886d9d2bd124",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, practical B2B policy guide with no instruction leaks, rubric language, binary correction cadence, or AI filler detected.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

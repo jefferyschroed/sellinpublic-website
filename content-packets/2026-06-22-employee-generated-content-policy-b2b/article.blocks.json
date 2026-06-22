@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "slug": "employee-generated-content-policy-b2b",
+  "title": "Employee-Generated Content Policy For B2B Teams",
+  "kicker": "Employee-generated content",
+  "dek": "A practical policy model for B2B teams that need disclosure, confidentiality, customer-name, claims, review, and employee-voice rules.",
+  "publishDateLabel": "Jun 22, 2026",
+  "updatedDateLabel": "Updated Jun 22, 2026",
+  "readTime": "10 min read",
+  "topic_map": {
+    "pillar_id": "pillar-egc-governance",
+    "topic_id": "topic-employee-generated-content-policy-b2b",
+    "coverage_role": "spoke",
+    "parent_topic": "topic-egc-definition",
+    "related_topics": [
+      "topic-egc-infrastructure",
+      "topic-egc-vs-advocacy",
+      "topic-scale-employee-generated-content-linkedin",
+      "topic-egc-measurement"
+    ]
+  },
+  "hero": {
+    "src": "/public/assets/blog/employee-generated-content-policy-b2b/hero-generated.webp",
+    "alt": "Flat liquid-glass policy checklist with approval lanes on a soft teal mesh background",
+    "width": 1897,
+    "height": 829,
+    "caption": "A useful employee-generated content policy gives employees clear posting lanes without sanding off their expertise."
+  },
+  "blocks": [
+    {
+      "type": "answer",
+      "id": "short-answer",
+      "label": "Short answer",
+      "paragraphs": [
+        "A B2B employee-generated content policy should define who can post, what counts as personal versus company speech, when employees disclose employment or incentives, which confidential details and customer names are off-limits, how claims get sourced, which posts need review, how platform rules apply, and where employees go for help.",
+        "It should also protect employee voice and employee rights. This is an operating guide, not legal advice; have counsel and HR adapt it to your company, jurisdiction, industry, and workforce."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Most employee-generated content problems start before anyone opens LinkedIn. The team asks subject-matter experts, sellers, founders, or customer leaders to post, but nobody has agreed on the rules for disclosure, customer references, confidential information, product claims, or review."
+    },
+    {
+      "type": "paragraph",
+      "html": "A useful policy gives employees a clear field to work inside. It tells them what they can say from experience, what needs a source, what needs approval, and what should stay out of public posts."
+    },
+    {
+      "type": "paragraph",
+      "html": "For the broader operating system, start with the <a href=\"/blog/employee-generated-content-infrastructure/\">employee-generated content infrastructure guide</a>. If your team is still mixing employee-generated content with advocacy, read <a href=\"/blog/employee-generated-content-vs-employee-advocacy/\">employee-generated content vs employee advocacy</a>. If the policy question is coming up because the program is growing, use the <a href=\"/blog/scale-employee-generated-content-linkedin/\">LinkedIn scaling guide</a>."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "policy-should-protect-judgment",
+      "text": "A Policy Should Protect Judgment, Not Flatten It"
+    },
+    {
+      "type": "paragraph",
+      "html": "The policy's job is to make employee judgment safer to publish. It should not turn every founder note, AE field lesson, or implementation insight into a company press release."
+    },
+    {
+      "type": "paragraph",
+      "html": "That distinction matters in B2B because the useful material often comes from the people closest to buyers. A sales engineer knows where evaluations stall. A customer success lead knows which implementation choices keep coming up. A founder knows which market belief is wrong. The policy should help those people share specific lessons without guessing what legal, HR, or marketing will object to later."
+    },
+    {
+      "type": "paragraph",
+      "html": "The most useful shape is a decision system:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "This can be posted without review.",
+        "This needs a quick content or manager review.",
+        "This needs legal, HR, security, finance, or customer approval.",
+        "This should not be posted."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "That structure gives employees a way to move. It also gives reviewers a way to protect the company without rewriting every sentence."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "start-with-scope-accounts-authority",
+      "text": "Start With Scope, Accounts, And Authority"
+    },
+    {
+      "type": "paragraph",
+      "html": "The first section of the policy should say which channels and accounts it covers. Do not assume everyone understands the difference between a company Page, an employee's personal LinkedIn profile, an executive profile used for company announcements, and a role-based company handle."
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://ucomm.stanford.edu/policies-and-guidance/social-media-guidelines\">Stanford's public social media guidelines</a> are useful here because they split social media use into institutional use, departmental use, and personal employee use. They also say employees whose job duties do not include social media should consult the communications lead before engaging on behalf of the institution."
+    },
+    {
+      "type": "paragraph",
+      "html": "For B2B teams, the scope section should answer five questions:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Which accounts are company-owned?",
+        "Which employee accounts stay personal?",
+        "Who can speak on behalf of the company?",
+        "Who can create a handle, Page, group, newsletter, or community using the company's name or marks?",
+        "What happens when a post uses the company's logo, customer logos, screenshots, brand templates, or trademarks?"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.intel.com/content/www/us/en/legal/intel-social-media-guidelines.html\">Intel's public guidelines</a> give a practical example. Intel tells employees not to create accounts with \"Intel\" in the handle and asks employees who post about Intel work or related industry news to identify their relationship to Intel and add a personal-opinion disclaimer."
+    },
+    {
+      "type": "paragraph",
+      "html": "A B2B policy can use the same pattern without copying the wording: employees can publish useful work-related expertise from their own profiles, but they should not create the impression that every post is an official company statement."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "make-disclosure-rules-easy",
+      "text": "Make Disclosure Rules Easy To Follow"
+    },
+    {
+      "type": "paragraph",
+      "html": "Disclosure should not be left to judgment calls in the moment. If employees are posting about the company, product, customers, or partners, the policy should say when they need to make their relationship clear."
+    },
+    {
+      "type": "paragraph",
+      "html": "The <a href=\"https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers\">FTC says</a> a material connection to a brand can include employment, personal, family, or financial relationships, and that endorsers should disclose those relationships when they endorse a product through social media if the connection is not obvious to the audience. <a href=\"https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking\">FTC staff also says</a> companies that pay and direct endorsers need reasonable programs to train and monitor them, and that companies can face liability when endorsements are deceptive or required disclosures are missing."
+    },
+    {
+      "type": "paragraph",
+      "html": "LinkedIn has its own platform rule. Its <a href=\"https://www.linkedin.com/legal/professional-community-policies\">Professional Community Policies</a> say members should not share or endorse something in exchange for personal benefit, including personal or family relationships, payment, free products or other value, unless they include a clear notice of that benefit and follow the Advertising Policies."
+    },
+    {
+      "type": "paragraph",
+      "html": "Turn that into plain employee instructions:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "If you post about our company, product, category, customers, or partners, make your role clear when the relationship would not be obvious.",
+        "If you receive compensation, points, prizes, gifts, referral fees, quota credit, partner benefits, or other incentives tied to posting, disclose that connection.",
+        "If you are posting a personal point of view, say that it is yours when readers could mistake it for an official company position.",
+        "If a post is sponsored, paid, or part of a partner campaign, follow the campaign disclosure instructions before publishing.",
+        "If you are unsure, ask before posting."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "The policy should include examples employees can copy. It should also say where the disclosure belongs. Hiding a disclosure after a pile of hashtags or in a profile bio will not help a reader understand a specific post."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "separate-green-yellow-red-information",
+      "text": "Separate Green, Yellow, And Red Information"
+    },
+    {
+      "type": "paragraph",
+      "html": "Employees need a simple way to decide what information can appear in public. A green, yellow, and red model works because it turns \"be careful\" into a concrete decision."
+    },
+    {
+      "type": "paragraph",
+      "html": "Green information is already public and safe to use. Public website copy, published case studies, approved event talks, public product docs, approved blog posts, and an employee's firsthand lesson without sensitive details can usually sit here."
+    },
+    {
+      "type": "paragraph",
+      "html": "Yellow information needs review. Put customer names, customer logos, screenshots, pricing references, product roadmap details, security details, competitive comparisons, implementation lessons, partner references, AI claims, regulated-industry examples, and contract-specific stories in this lane."
+    },
+    {
+      "type": "paragraph",
+      "html": "Red information stays out of public posts. This includes non-public customer data, trade secrets, source code, unreleased financials, board material, private employee information, incident details, deal terms, non-public roadmap items, and anything marked confidential or internal only."
+    },
+    {
+      "type": "paragraph",
+      "html": "Intel tells employees that external communications should not contain classified or proprietary information and specifically says not to post trade secret or proprietary information, including material marked confidential, classified, top secret, or internal only. Stanford's guidelines similarly tell employees not to disclose proprietary or protected information, including intellectual property, operating plans, vendor communications, financial data, internal presentations, correspondence, and personally identifiable information."
+    },
+    {
+      "type": "paragraph",
+      "html": "Customer names deserve their own rule. If the customer has approved a public case study, logo, quote, webinar, or press release, the employee can usually link to that approved asset and stay inside the public facts. If the story came from a call, Slack note, implementation issue, renewal, security review, or private customer conversation, get customer approval or make the example anonymous."
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.coca-colahellenic.com/en/about-us/corporate-governance/policies/digital-ethics-code\">Coca-Cola HBC's Digital Ethics Code</a> is another useful public example. Its social interaction rules include transparency, privacy, respect for copyrights and trademarks, not disclosing sensitive or confidential information, not speaking on behalf of the company unless designated, and accountability for online actions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "claims-need-source-of-truth",
+      "text": "Claims Need A Source Of Truth"
+    },
+    {
+      "type": "paragraph",
+      "html": "The policy should define what counts as a claim and where employees should get support before publishing. In B2B, risky claims are often ordinary-looking sentences."
+    },
+    {
+      "type": "paragraph",
+      "html": "Examples include:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "\"Our platform reduces implementation time.\"",
+        "\"We are more accurate than the leading vendor.\"",
+        "\"This AI workflow is compliant.\"",
+        "\"This customer saved six figures.\"",
+        "\"Our security process meets a named standard.\"",
+        "\"We are the first company to do this.\""
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "Some claims can be supported by a product page, approved sales deck, help doc, public case study, public benchmark, security page, or press release. Some need legal, product, finance, security, or customer review. Some should be removed because the team cannot support them."
+    },
+    {
+      "type": "paragraph",
+      "html": "<a href=\"https://www.linkedin.com/legal/ads-policy\">LinkedIn's Advertising Policies</a> say claims in ads must have factual support and that advertisers should not make deceptive or inaccurate claims about competitive products or services. That ad policy is not the same thing as an employee profile policy, but it is a useful platform-backed reminder: claims need proof before they appear in commercial content."
+    },
+    {
+      "type": "paragraph",
+      "html": "Intel's policy makes the same idea practical for employee posts. It tells social media practitioners to make sure product or service claims are properly substantiated and says substantiation can be as simple as linking to the original approved information where the claim was made."
+    },
+    {
+      "type": "paragraph",
+      "html": "Public companies need an extra lane. The <a href=\"https://www.sec.gov/newsroom/press-releases/2013-2013-51htm\">SEC says</a> companies can use social media for key announcements in compliance with Regulation FD when investors have been alerted which channels will be used, and it warns that company communications through social media can require careful Regulation FD analysis. If your company is public or preparing to go public, employee posts about revenue, usage, major customers, forecasts, incidents, launches, or other market-moving topics need a securities-law-aware process."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "use-review-lanes",
+      "text": "Use Review Lanes Instead Of One Approval Queue"
+    },
+    {
+      "type": "paragraph",
+      "html": "A single approval queue slows everything down and teaches employees to stop participating. Review lanes are faster because each post goes only to the reviewer who can actually reduce the risk."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Lane",
+        "Use it for",
+        "Reviewer"
+      ],
+      "rows": [
+        [
+          "No review",
+          "Personal lessons, public links, non-sensitive category opinions, and posts that do not mention customers or make product claims.",
+          "Employee owns the post."
+        ],
+        [
+          "Quick review",
+          "Posts drafted with company support, posts using approved facts, or posts tied to a planned campaign.",
+          "Marketing, manager, or content owner."
+        ],
+        [
+          "Specialist review",
+          "Customer names, screenshots, security claims, AI claims, regulated topics, competitive claims, legal claims, HR-sensitive topics, financial information, or public-company topics.",
+          "Legal, HR, security, finance, product, customer owner, or communications."
+        ],
+        [
+          "Do not post",
+          "Non-public customer data, private employee information, trade secrets, internal-only material, unreleased financials, or unsupported claims.",
+          "No reviewer should approve it for social."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "html": "The policy should also protect voice during review. Reviewers should check facts, risk, clarity, and consent. They should not rewrite every employee post into a brand caption. If the employee would not say the sentence out loud, the post is losing the reason it belongs on a profile."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "protect-employee-rights-workplace-conduct",
+      "text": "Protect Employee Rights And Workplace Conduct"
+    },
+    {
+      "type": "paragraph",
+      "html": "The policy needs a labor and HR review because employee-generated content sits near personal speech. A broad \"do not criticize the company\" rule can create problems."
+    },
+    {
+      "type": "paragraph",
+      "html": "The <a href=\"https://www.nlrb.gov/about-nlrb/rights-we-protect/the-law/employees/social-media-0\">NLRB says</a> employees have the right to address work-related issues and share information about pay, benefits, and working conditions with coworkers and a union. It also says social media can be protected concerted activity when it relates to group action or seeks to bring a group complaint to management."
+    },
+    {
+      "type": "paragraph",
+      "html": "That does not mean every post is protected. The NLRB also says activity is not protected if it includes things that are egregiously offensive, knowingly and deliberately false, or public disparagement of products or services without relation to a labor controversy."
+    },
+    {
+      "type": "paragraph",
+      "html": "The practical policy move is to avoid blanket bans and write a rights-preserving carveout. Have HR and counsel review it. Employees should understand that the content program is voluntary, that personal accounts remain personal unless a different agreement says otherwise, and that the policy does not limit legally protected discussions about workplace terms and conditions."
+    },
+    {
+      "type": "paragraph",
+      "html": "Workplace conduct still matters. The <a href=\"https://www.eeoc.gov/harassment\">EEOC defines harassment</a> as unwelcome conduct based on protected characteristics and says employers should clearly communicate that unwelcome harassing conduct will not be tolerated, provide complaint or grievance processes, and take appropriate action when employees complain. Put that in the policy without trying to turn every personal post into company property."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "write-platform-rules-into-workflow",
+      "text": "Write Platform Rules Into The Workflow"
+    },
+    {
+      "type": "paragraph",
+      "html": "Do not make employees hunt for platform policy after a problem. Put the relevant platform rules into the workflow where posts are drafted, reviewed, and published."
+    },
+    {
+      "type": "paragraph",
+      "html": "For LinkedIn, the policy should remind employees to use their true identity, avoid false or misleading content, avoid harassment and hate, avoid spam, and disclose personal benefit when endorsing something in exchange for value. LinkedIn's <a href=\"https://www.linkedin.com/legal/professional-community-policies\">Professional Community Policies</a> cover those points directly."
+    },
+    {
+      "type": "paragraph",
+      "html": "For paid, sponsored, or partner content, keep the ad lane separate. LinkedIn's <a href=\"https://www.linkedin.com/legal/ads-policy\">Advertising Policies</a> include rules on prohibited content, discrimination, deceptive claims, factual support, trademarks, copyright, privacy, sensitive data, and pertinent partnership disclosures."
+    },
+    {
+      "type": "paragraph",
+      "html": "The goal is not to paste every platform rule into the employee handbook. Turning the rules into a simple publishing prompt gives employees a faster, more reliable check:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Am I using my real identity?",
+        "Is my relationship or incentive clear?",
+        "Is every claim supported by an approved source?",
+        "Did I avoid private customer, employee, partner, or company information?",
+        "Could this post be read as an official company announcement?",
+        "Does this post need a specialist review before it goes live?"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "id": "policy-checklist",
+      "text": "Copy The B2B EGC Policy Checklist"
+    },
+    {
+      "type": "paragraph",
+      "html": "Use this as a starting point for your own policy review. Have legal, HR, communications, security, and sales leadership adapt it before rollout."
+    },
+    {
+      "type": "copy_block",
+      "title": "B2B employee-generated content policy checklist",
+      "code": "1. Scope\n- Name the platforms, account types, roles, and company programs covered.\n- Separate personal employee profiles from company-owned pages, handles, and communities.\n- State who can speak on behalf of the company.\n\n2. Disclosure\n- Require employees to make their employment relationship clear when posting about the company, product, category, customers, partners, or competitors if the relationship would not be obvious.\n- Require disclosure for incentives, gifts, paid campaigns, referral rewards, partner benefits, or quota credit tied to posting.\n- Give employees short disclosure examples they can use.\n\n3. Confidential information\n- Define public, review-required, and no-post information.\n- Ban non-public customer data, private employee information, trade secrets, internal-only material, unreleased financials, security incidents, and unsupported confidential details.\n\n4. Customer and partner references\n- Allow links to approved public case studies, press releases, webinars, or customer pages.\n- Require approval before naming a customer, using a logo, sharing screenshots, or describing private customer work.\n- Use anonymous examples when consent is not clear.\n\n5. Claims\n- Define product, AI, security, competitive, compliance, financial, and customer-outcome claims.\n- Require approved source links or specialist review for claims.\n- Block claims the company cannot support.\n\n6. Review lanes\n- No review: personal lessons and public links with no sensitive details.\n- Quick review: supported posts tied to company programs.\n- Specialist review: customer, legal, HR, security, finance, public-company, or regulated topics.\n- Do not post: confidential, private, unsupported, or misleading material.\n\n7. Employee rights and conduct\n- Preserve legally protected discussions about workplace terms and conditions.\n- Keep anti-harassment, privacy, and respectful conduct rules clear.\n- Explain how employees can ask questions or report issues.\n\n8. Platform rules\n- Require true identity, accurate information, non-misleading claims, disclosure where needed, and no spam or harassment.\n- Keep paid or partner content in a separate review lane."
+    },
+    {
+      "type": "faq",
+      "id": "faq",
+      "items": [
+        {
+          "question": "Do employees need to disclose that they work for the company?",
+          "answer": "If they're posting about the company, product, customers, partners, or category in a way that could affect how a reader weighs the post, the safer policy is to make the employment relationship clear. FTC guidance treats employment as a possible material connection, and LinkedIn also has disclosure expectations when something is shared for personal benefit. Have counsel set the exact wording for your company."
+        },
+        {
+          "question": "Can employees name customers in LinkedIn posts?",
+          "answer": "Only when the customer reference is already approved for public use or the customer has given the right permission for that use. A public case study, press release, webinar, or approved logo page is usually safer than a story pulled from a private call. If approval is unclear, anonymize the example or get consent first."
+        },
+        {
+          "question": "Which employee posts should legal review?",
+          "answer": "Legal or another specialist should review posts with customer names, financial information, public-company topics, regulated-industry claims, competitive claims, AI or compliance claims, security claims, confidential information, or unusual endorsement language. Most personal lessons and public links should not need the same review lane."
+        },
+        {
+          "question": "How do you keep the policy from killing employee voice?",
+          "answer": "Write rules around risks, not tone. Reviewers should check accuracy, disclosure, consent, and sensitive details, then leave the employee's judgment and phrasing intact. If every post comes back sounding like brand copy, the review process is doing too much."
+        },
+        {
+          "question": "Should the policy cover personal social media accounts?",
+          "answer": "It should cover work-related posts that could reasonably be tied to the company, especially when the employee lists the company in their profile or talks about the company's product, customers, competitors, partners, or market. It should also state that personal accounts remain personal unless a separate agreement says otherwise and that the policy does not limit protected employee rights."
+        }
+      ]
+    },
+    {
+      "type": "sources",
+      "id": "sources",
+      "items": [
+        {
+          "label": "Federal Trade Commission, Disclosures 101 for Social Media Influencers",
+          "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers"
+        },
+        {
+          "label": "Federal Trade Commission, FTC's Endorsement Guides: What People Are Asking",
+          "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking"
+        },
+        {
+          "label": "LinkedIn, Professional Community Policies",
+          "url": "https://www.linkedin.com/legal/professional-community-policies"
+        },
+        {
+          "label": "LinkedIn, Advertising Policies",
+          "url": "https://www.linkedin.com/legal/ads-policy"
+        },
+        {
+          "label": "Intel, Social Media Guidelines",
+          "url": "https://www.intel.com/content/www/us/en/legal/intel-social-media-guidelines.html"
+        },
+        {
+          "label": "National Labor Relations Board, Social Media",
+          "url": "https://www.nlrb.gov/about-nlrb/rights-we-protect/the-law/employees/social-media-0"
+        },
+        {
+          "label": "U.S. Securities and Exchange Commission, SEC Says Social Media OK for Company Announcements if Investors Are Alerted",
+          "url": "https://www.sec.gov/newsroom/press-releases/2013-2013-51htm"
+        },
+        {
+          "label": "U.S. Equal Employment Opportunity Commission, Harassment",
+          "url": "https://www.eeoc.gov/harassment"
+        },
+        {
+          "label": "Stanford University Communications, Social Media Guidelines",
+          "url": "https://ucomm.stanford.edu/policies-and-guidance/social-media-guidelines"
+        },
+        {
+          "label": "Coca-Cola HBC, Digital Ethics Code",
+          "url": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/policies/digital-ethics-code"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "label": "Next step",
+      "heading": "Want A Managed EGC System With Guardrails?",
+      "body": "Sell In Public captures your team's expertise, shapes it into LinkedIn posts and buyer signals, and runs outbound to the right ICP. Book a working session to find out whether LinkedIn can become a top revenue channel for your company.",
+      "actions": [
+        {
+          "label": "Book a Working Session",
+          "url": "https://calendly.com/jeff-tryquicksetters/30min",
+          "style": "primary"
+        },
+        {
+          "label": "Read the EGC Guide",
+          "url": "/blog/employee-generated-content-infrastructure/",
+          "style": "secondary"
+        }
+      ]
+    }
+  ]
+}

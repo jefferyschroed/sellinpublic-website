@@ -1,0 +1,21 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    "search result snippets",
+    "People Also Ask",
+    "autocomplete",
+    "trend inputs",
+    "query exports",
+    "AI-generated answers",
+    "Reddit",
+    "forums",
+    "generic policy listicles",
+    "secondary summaries of FTC, LinkedIn, NLRB, SEC, or EEOC guidance"
+  ],
+  "rules": [
+    "Cite the original source when using legal, platform, or policy guidance.",
+    "Do not cite Reddit, forums, or social comments as factual evidence.",
+    "Do not infer laws or compliance duties beyond what the primary source says.",
+    "Use public company policy examples as examples of structure, not as legal authority."
+  ]
+}

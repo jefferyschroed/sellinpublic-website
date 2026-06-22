@@ -1,0 +1,122 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "title": "Disclosures 101 for Social Media Influencers",
+    "publisher": "Federal Trade Commission",
+    "author": "FTC staff",
+    "published_date": "2019-11",
+    "accessed_date": "2026-06-22",
+    "source_type": "government guidance",
+    "reliability": "A",
+    "notes": "FTC guidance on material connection disclosures, including employment and financial relationships."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "Federal Trade Commission",
+    "author": "FTC staff",
+    "published_date": "FTC guidance page",
+    "accessed_date": "2026-06-22",
+    "source_type": "government guidance",
+    "reliability": "A",
+    "notes": "FTC FAQ on advertiser and endorser responsibilities, clear disclosures, training, monitoring, and liability risk."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.linkedin.com/legal/professional-community-policies",
+    "title": "LinkedIn Professional Community Policies",
+    "publisher": "LinkedIn",
+    "author": "LinkedIn",
+    "published_date": "current policy page",
+    "accessed_date": "2026-06-22",
+    "source_type": "platform policy",
+    "reliability": "A",
+    "notes": "Official LinkedIn policy covering true identity, accurate information, false or misleading content, harassment, spam, and clear disclosure for personal benefit."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.linkedin.com/legal/ads-policy",
+    "title": "LinkedIn Advertising Policies",
+    "publisher": "LinkedIn",
+    "author": "LinkedIn",
+    "published_date": "2025-11-18",
+    "accessed_date": "2026-06-22",
+    "source_type": "platform policy",
+    "reliability": "A",
+    "notes": "Official LinkedIn ad policy covering factual support for claims, deceptive claims, partnerships, targeting, and prohibited content."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.intel.com/content/www/us/en/legal/intel-social-media-guidelines.html",
+    "title": "Intel Social Media Guidelines",
+    "publisher": "Intel",
+    "author": "Intel",
+    "published_date": "current policy page",
+    "accessed_date": "2026-06-22",
+    "source_type": "first-party company policy example",
+    "reliability": "A",
+    "notes": "Public policy example covering employee disclosure, personal-opinion disclaimers, confidential information, code names, PR routing, and substantiated claims."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.nlrb.gov/about-nlrb/rights-we-protect/the-law/employees/social-media-0",
+    "title": "Social Media",
+    "publisher": "National Labor Relations Board",
+    "author": "NLRB",
+    "published_date": "current guidance page",
+    "accessed_date": "2026-06-22",
+    "source_type": "government employee-rights guidance",
+    "reliability": "A",
+    "notes": "Official NLRB page on protected concerted activity and employee social media rights."
+  },
+  {
+    "id": "src-007",
+    "url": "https://www.sec.gov/newsroom/press-releases/2013-2013-51htm",
+    "title": "SEC Says Social Media OK for Company Announcements if Investors Are Alerted",
+    "publisher": "U.S. Securities and Exchange Commission",
+    "author": "SEC",
+    "published_date": "2013-04-02",
+    "accessed_date": "2026-06-22",
+    "source_type": "government guidance",
+    "reliability": "A",
+    "notes": "SEC guidance on Regulation FD and social media announcements by public companies."
+  },
+  {
+    "id": "src-008",
+    "url": "https://www.eeoc.gov/harassment",
+    "title": "Harassment",
+    "publisher": "U.S. Equal Employment Opportunity Commission",
+    "author": "EEOC",
+    "published_date": "current guidance page",
+    "accessed_date": "2026-06-22",
+    "source_type": "government employment guidance",
+    "reliability": "A",
+    "notes": "Official EEOC page defining harassment and employer prevention practices."
+  },
+  {
+    "id": "src-009",
+    "url": "https://ucomm.stanford.edu/policies-and-guidance/social-media-guidelines",
+    "title": "Social Media Guidelines",
+    "publisher": "Stanford University Communications",
+    "author": "Stanford University Communications",
+    "published_date": "2024-08",
+    "accessed_date": "2026-06-22",
+    "source_type": "first-party policy example",
+    "reliability": "A",
+    "notes": "Public policy example covering institutional, departmental, and individual employee social use, confidentiality, PII, third-party rights, protected concerted activity, and account security."
+  },
+  {
+    "id": "src-010",
+    "url": "https://www.coca-colahellenic.com/en/about-us/corporate-governance/policies/digital-ethics-code",
+    "title": "Digital Ethics Code",
+    "publisher": "Coca-Cola HBC",
+    "author": "Coca-Cola HBC",
+    "published_date": "current policy page",
+    "accessed_date": "2026-06-22",
+    "source_type": "first-party company policy example",
+    "reliability": "A",
+    "notes": "Public policy example covering transparency, privacy, copyrights, diversity, confidential information, authority to speak, and accountability for online actions."
+  }
+]

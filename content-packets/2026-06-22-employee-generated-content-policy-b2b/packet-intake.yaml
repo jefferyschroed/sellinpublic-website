@@ -1,0 +1,11 @@
+packet_id: "2026-06-22-employee-generated-content-policy-b2b"
+slug: "employee-generated-content-policy-b2b"
+status: "intake_ready"
+strategic_asset_decision: "create_or_refresh_packet"
+asset_decision: "post"
+topic_id: "topic-employee-generated-content-policy-b2b"
+pillar_id: "pillar-egc-governance"
+source_readiness: "ready"
+standalone_rationale: "This post fills a governance gap in the employee-generated content cluster. Existing cluster posts explain infrastructure, advocacy differences, scaling, examples, and measurement. This post answers the policy question that blocks many B2B teams from letting employees publish useful expertise."
+discovery_sources_excluded_from_evidence: true
+discovery_notes: "Search wording, related questions, and SERP observations may shape the article, but only primary, official, or first-party sources support factual claims."

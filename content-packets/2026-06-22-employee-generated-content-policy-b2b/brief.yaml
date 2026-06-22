@@ -1,0 +1,128 @@
+packet_id: "2026-06-22-employee-generated-content-policy-b2b"
+status: "ready_to_publish"
+working_title: "Employee-Generated Content Policy For B2B Teams"
+slug: "employee-generated-content-policy-b2b"
+owner: "Sell In Public editorial"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-22"
+updated_at: "2026-06-22"
+
+audience:
+  primary_buyer: "B2B revenue leader"
+  secondary_buyers:
+    - "Marketing leader"
+    - "HR leader"
+    - "Legal reviewer"
+    - "Founder"
+  company_context: "Mid-market B2B software companies that want founders, executives, sellers, customer leaders, and subject-matter experts to publish useful LinkedIn content without creating avoidable disclosure, confidentiality, customer-reference, or claims risk."
+  pain: "The team wants more employee-generated content, but the current policy is either missing, too vague to guide decisions, or so restrictive that every post starts sounding like brand copy."
+
+business_goal: "Own the governance gap in the employee-generated content cluster and give B2B teams a practical policy model they can adapt with legal, HR, communications, and sales leadership."
+sales_use_case: "Use when a prospect wants employee-generated content but is worried about customer names, product claims, disclosure, legal review, employee voice, or LinkedIn conduct rules."
+cta:
+  primary:
+    label: "Copy The Policy Checklist"
+    url: "#policy-checklist"
+  secondary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+
+search_intent:
+  stage: "governance-and-implementation"
+  primary_query: "employee generated content policy"
+  aeo_question: "What should a B2B employee-generated content policy include?"
+  primary_keyword: "employee generated content policy"
+  secondary_keywords:
+    - "B2B social media policy employees"
+    - "employee content guidelines LinkedIn"
+    - "employee advocacy policy disclosure"
+    - "employee social media claims policy"
+    - "customer name approval social media policy"
+  related_questions:
+    - "What should employees disclose when posting about their employer?"
+    - "How should B2B teams review employee LinkedIn posts?"
+    - "Can employees name customers in LinkedIn posts?"
+    - "What claims should legal review before employees post?"
+    - "How do you protect employee voice in a social media policy?"
+
+topic_map:
+  pillar_id: "pillar-egc-governance"
+  pillar_name: "Employee-Generated Content Governance"
+  topic_id: "topic-employee-generated-content-policy-b2b"
+  topic_score: 84
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/employee-generated-content-vs-employee-advocacy/"
+    - "/blog/scale-employee-generated-content-linkedin/"
+    - "/blog/"
+
+entity_targets:
+  - "Employee-generated content"
+  - "Social media policy"
+  - "FTC Endorsement Guides"
+  - "Material connection disclosure"
+  - "LinkedIn Professional Community Policies"
+  - "Confidential information"
+  - "Customer reference approval"
+  - "Protected concerted activity"
+  - "Regulation FD"
+  - "EEOC harassment guidance"
+angle: "A B2B employee-generated content policy should work like a decision system: clear disclosure rules, confidential-information boundaries, customer-name rules, claims review, employee-rights carveouts, platform conduct rules, and fast review lanes that preserve employee voice."
+sell_in_public_pov: "The right policy gives employees a clearer field to play on. It should reduce risky improvisation without turning every useful field note into sterile brand copy."
+word_count_target: "1700-2100"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Clear note that the article is operating guidance, not legal advice."
+  - "Disclosure guidance tied to FTC material connection language and LinkedIn policy."
+  - "Practical rules for confidential information, customer names, product claims, AI claims, and competitive claims."
+  - "Review lanes that separate low-risk profile-native posts from customer, legal, HR, claims, or public-company sensitive posts."
+  - "Reminder that social media policies should not override protected employee rights."
+  - "Publicly available company policy examples from primary or first-party sources."
+  - "Internal links to the employee-generated content infrastructure, advocacy comparison, and scaling guides."
+  - "Copyable employee-generated content policy checklist."
+must_avoid:
+  - "Legal advice or jurisdiction-specific instructions."
+  - "Invented statutes, fake examples, fake customer scenarios, or unsupported compliance claims."
+  - "Blanket statements that employees can or cannot post about workplace matters."
+  - "Generic brand-safety advice without a B2B content workflow."
+  - "Feature-heavy Sell In Public service language inside the educational body."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official FTC endorsement and disclosure guidance."
+    - "Official LinkedIn policy pages."
+    - "Government guidance for protected concerted activity, harassment, and public-company disclosure context."
+    - "Public company, university, or first-party social media policy examples."
+
+internal_links:
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/employee-generated-content-vs-employee-advocacy/"
+  - "/blog/scale-employee-generated-content-linkedin/"
+  - "/blog/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

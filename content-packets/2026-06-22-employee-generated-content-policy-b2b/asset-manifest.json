@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "slug": "employee-generated-content-policy-b2b",
+  "final_prompt": "See image-brief.md",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero_image",
+      "path": "public/assets/blog/employee-generated-content-policy-b2b/hero-generated.webp",
+      "public_url": "/public/assets/blog/employee-generated-content-policy-b2b/hero-generated.webp",
+      "width": 1897,
+      "height": 829,
+      "alt": "Flat liquid-glass policy checklist with approval lanes on a soft teal mesh background",
+      "caption": "A useful employee-generated content policy gives employees clear posting lanes without sanding off their expertise.",
+      "source": "image_gen",
+      "source_path": "/Users/jeff/.codex/generated_images/019eecf2-9967-72c0-a67e-cae0f5dd9d70/ig_06a2bf67f47ea1dc016a38921223388195a329f1113ec45f8f.png",
+      "generation_method": "built-in image_gen, saved post-local as PNG, converted to WebP with Sharp",
+      "notes": "Flat head-on liquid-glass checklist graphic based on the article's review-lane policy model. Final prompt is recorded in image-brief.md."
+    }
+  ]
+}

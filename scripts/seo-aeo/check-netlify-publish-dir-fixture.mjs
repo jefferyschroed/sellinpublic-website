@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 
 const GOOGLE_TAG = "G-QCYHK55RCG";
 const FAVICON_LINK = '<link rel="icon" href="/public/assets/brand/hashtagiconlight.webp" type="image/webp" sizes="any" />';
+const INDEXNOW_KEY_FILE = "ef8b84f315281bb097c56c3418cc2887.txt";
 
 function repoRoot() {
   return path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -21,6 +22,7 @@ function writeStaticSite(root, netlifyToml) {
   for (const filePath of ["index.html", "styles.css", "script.js", "feed.xml", "sitemap.xml", "robots.txt"]) {
     fs.writeFileSync(path.join(root, filePath), `${filePath}\n`);
   }
+  fs.writeFileSync(path.join(root, INDEXNOW_KEY_FILE), "ef8b84f315281bb097c56c3418cc2887\n");
   ensureDir(path.join(root, "blog/example"));
   fs.writeFileSync(path.join(root, "blog/index.html"), "blog index\n");
   fs.writeFileSync(path.join(root, "blog/example/index.html"), "blog post\n");
@@ -76,6 +78,7 @@ function run() {
     assert(result.status === 0, `expected clean publish build to pass. Output: ${output}`);
     const topLevel = fs.readdirSync(path.join(tempRoot, "outputs/netlify-publish")).sort();
     assert(topLevel.includes("index.html"), "expected index.html in clean publish output.");
+    assert(topLevel.includes(INDEXNOW_KEY_FILE), "expected IndexNow key file in clean publish output.");
     assert(!topLevel.includes("docs"), "clean publish output must not include docs.");
 
     result = runPublishCheck(repo, tempRoot);

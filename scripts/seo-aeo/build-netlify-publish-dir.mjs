@@ -15,6 +15,7 @@ const COPY_PATHS = [
   "feed.xml",
   "sitemap.xml",
   "robots.txt",
+  "ef8b84f315281bb097c56c3418cc2887.txt",
 ];
 const FORBIDDEN_TOP_LEVEL = new Set([
   ".codex",

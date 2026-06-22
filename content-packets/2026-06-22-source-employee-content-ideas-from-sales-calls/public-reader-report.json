@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "source-employee-content-ideas-from-sales-calls",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-22T01:43:19.242Z",
+  "rendered_html_path": "blog/source-employee-content-ideas-from-sales-calls/index.html",
+  "rendered_html_sha256": "c4dbc17acffd8f9c4f5dca4ad36e75e6e3fb82c6e45f80e61a572c3aade48387",
+  "article_text_sha256": "4784f0528d16e15183ed66dce5d8e027878c3c46ae7bb59d509481ed1ec3fe51",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, practical B2B operations piece with no AI-ish filler, binary correction cadence, instruction leaks, rubric language, or internal process exposure.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

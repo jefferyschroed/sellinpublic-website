@@ -1,0 +1,28 @@
+{
+  "packet_id": "2026-06-22-source-employee-content-ideas-from-sales-calls",
+  "slug": "source-employee-content-ideas-from-sales-calls",
+  "generated_at": "2026-06-22T01:43:43Z",
+  "dry_run": false,
+  "generation_method": "direct post renderer only, constrained to child-owned output path",
+  "outputs": [
+    {
+      "path": "blog/source-employee-content-ideas-from-sales-calls/index.html",
+      "bytes": 32376,
+      "changed": true
+    }
+  ],
+  "shared_aggregate_files_edited": false,
+  "shared_aggregate_files_deferred_to_parent": [
+    "blog/index.html",
+    "sitemap.xml",
+    "feed.xml",
+    "docs/seo-aeo/topic-coverage.csv"
+  ],
+  "public_reader_qa": {
+    "path": "content-packets/2026-06-22-source-employee-content-ideas-from-sales-calls/public-reader-report.json",
+    "mode": "model",
+    "pass": true,
+    "findings": 0,
+    "rewrites_applied_final_run": 0
+  }
+}

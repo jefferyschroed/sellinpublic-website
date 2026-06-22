@@ -1,0 +1,11 @@
+packet_id: "2026-06-22-source-employee-content-ideas-from-sales-calls"
+slug: "source-employee-content-ideas-from-sales-calls"
+status: "intake_ready"
+strategic_asset_decision: "create_spoke_post"
+asset_decision: "static_blog_post"
+topic_id: "topic-source-employee-content-ideas-from-sales-calls"
+pillar_id: "pillar-content-operations"
+source_readiness: "ready"
+standalone_rationale: "The broader employee expertise post covers capture-to-post work across teams. This post owns the narrower sales-call input workflow, including consent, CRM notes, customer confidentiality, and abstraction before drafting."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false

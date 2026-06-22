@@ -1,0 +1,68 @@
+packet_id: "2026-06-22-source-employee-content-ideas-from-sales-calls"
+status: "publish_ready"
+working_title: "How To Source Employee Content Ideas From Sales Calls"
+slug: "source-employee-content-ideas-from-sales-calls"
+owner: "child orchestrator 5/5"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-22"
+updated_at: "2026-06-22"
+audience:
+  primary: "Revenue leaders, sales leaders, founders, and marketing operators at mid-market B2B software companies"
+  secondary: "Content and demand generation owners who need safer ways to turn sales insight into employee LinkedIn posts"
+business_goal: "Show a practical workflow for turning real sales-call inputs into employee-generated LinkedIn content without exposing sensitive customer information."
+search_intent:
+  primary_query: "source employee content ideas from sales calls"
+  intent_type: "how-to"
+  aeo_question: "How can sales calls become useful employee-generated content without exposing sensitive information?"
+  stage: "problem-aware"
+topic_map:
+  pillar_id: "pillar-content-operations"
+  topic_id: "topic-source-employee-content-ideas-from-sales-calls"
+  coverage_role: "spoke"
+  parent_topic: "topic-turn-employee-expertise-into-posts"
+  source_readiness: "ready"
+  target_asset: "post"
+  topic_score: 82
+  related_topics:
+    - "topic-turn-employee-expertise-into-posts"
+    - "topic-linkedin-content-infrastructure-b2b-sales"
+    - "topic-egc-definition"
+entity_targets:
+  - "sales calls"
+  - "employee-generated content"
+  - "LinkedIn content"
+  - "call recording consent"
+  - "CRM notes"
+  - "customer confidentiality"
+  - "conversation intelligence"
+angle: "A narrow operating workflow for extracting buyer questions, objections, language, and proof requests from sales calls, abstracting them safely, and routing them into employee posts."
+cta: "Final CTA must name Sell In Public and describe the managed team-expertise-to-LinkedIn-content plus buyer-signal/outbound offer in exactly two body sentences."
+word_count_target: 1500
+must_include:
+  - "Answer the AEO question in the first 150 words."
+  - "Use the broader employee expertise post only as internal-link context."
+  - "Cover consent, recording, CRM notes, retention, customer confidentiality, and abstraction."
+  - "Avoid legal advice and point readers to their own counsel or company policy where required."
+must_avoid:
+  - "Do not duplicate blog/turn-employee-expertise-into-linkedin-posts/index.html."
+  - "Do not invent customer quotes, sales-call examples, statistics, or legal rules."
+  - "Do not expose source-policy, QA, or internal prompt language in public copy."
+  - "Do not use banned AI-ish words, filler phrases, em dashes, or binary correction pairs."
+source_requirements:
+  minimum_grade: "B"
+  required_context:
+    - "call recording consent"
+    - "CRM notes and call summaries"
+    - "privacy or retention controls"
+    - "LinkedIn content question framing"
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+packet_intake:
+  status: "intake_ready"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

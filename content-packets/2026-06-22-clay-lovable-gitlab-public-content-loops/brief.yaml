@@ -1,0 +1,117 @@
+packet_id: "2026-06-22-clay-lovable-gitlab-public-content-loops"
+status: "ready_to_publish"
+working_title: "Clay, Lovable, and GitLab Public Content Loops"
+slug: "clay-lovable-gitlab-public-content-loops"
+owner: "Sell In Public editorial"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-22"
+updated_at: "2026-06-22"
+
+audience:
+  primary_buyer: "B2B revenue leader or founder"
+  secondary_buyers:
+    - "Marketing leader"
+    - "RevOps leader"
+    - "Content operator"
+  company_context: "Mid-market B2B software companies trying to turn real team expertise into public authority and warmer sales conversations."
+  pain: "The team sees public content from Clay, Lovable, and GitLab, but needs to understand the operating loop behind the public artifact rather than copying the surface format."
+
+business_goal: "Deepen the employee-generated content examples cluster with a focused analysis of public expertise loops across Clay, Lovable, and GitLab."
+sales_use_case: "Use when a prospect wants to understand how public expertise, product education, and operating knowledge can support B2B authority before direct sales outreach."
+cta:
+  primary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+  secondary:
+    label: "Read The Examples"
+    url: "/blog/employee-generated-content-examples/"
+
+search_intent:
+  stage: "examples-and-analysis"
+  primary_query: "b2b public content loops clay lovable gitlab"
+  aeo_question: "What can B2B teams learn from Clay, Lovable, and GitLab's public content loops?"
+  primary_keyword: "B2B public content loops"
+  secondary_keywords:
+    - "Clay public content loop"
+    - "Lovable public content loop"
+    - "GitLab public handbook"
+    - "B2B employee-generated content authority"
+    - "public expertise loops"
+  related_questions:
+    - "What can B2B teams learn from Clay, Lovable, and GitLab's public content loops?"
+    - "How do public content loops build B2B authority?"
+    - "What public artifacts should B2B teams study before building employee-generated content?"
+
+topic_map:
+  pillar_id: "pillar-employee-generated-content"
+  pillar_name: "Employee-Generated Content"
+  topic_id: "topic-clay-lovable-gitlab-public-content-loops"
+  topic_score: 78
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-examples"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-examples/"
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/linkedin-content-infrastructure-b2b-sales/"
+
+entity_targets:
+  - "Clay"
+  - "Lovable"
+  - "GitLab"
+  - "Public content loops"
+  - "Employee-generated content"
+  - "B2B authority"
+  - "Public handbook"
+  - "Claybooks"
+angle: "The strongest public content loops make real work inspectable, reusable, and open to feedback across more than one channel."
+sell_in_public_pov: "A B2B team earns authority when buyers can inspect how the team thinks, builds, responds, and updates public knowledge."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Literal public artifacts from Clay, Lovable, and GitLab."
+  - "Clear source limitations, including no invented LinkedIn examples or performance claims."
+  - "Internal link to the employee-generated content examples article as context."
+  - "Internal links to the employee-generated content infrastructure and LinkedIn content infrastructure pages."
+  - "Final CTA naming Sell In Public with exactly two body sentences."
+must_avoid:
+  - "Duplicating the structure or examples coverage of blog/employee-generated-content-examples/index.html."
+  - "Unsupported metrics, quotes, rankings, or causal claims."
+  - "Generic content marketing advice."
+  - "Internal QA, source policy, claim ledger, or quality-rubric language in public copy."
+  - "Banned AI-ish words, filler phrases, em dashes, and binary correction pairs."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "First-party company pages."
+    - "Public company docs, handbooks, blog posts, and launch surfaces."
+    - "Internal Sell In Public posts only for cluster context."
+
+internal_links:
+  - "/blog/employee-generated-content-examples/"
+  - "/blog/employee-generated-content-infrastructure/"
+  - "/blog/linkedin-content-infrastructure-b2b-sales/"
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

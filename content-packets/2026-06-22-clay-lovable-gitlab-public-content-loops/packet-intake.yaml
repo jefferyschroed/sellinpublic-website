@@ -1,0 +1,11 @@
+packet_id: "2026-06-22-clay-lovable-gitlab-public-content-loops"
+slug: "clay-lovable-gitlab-public-content-loops"
+status: "intake_ready"
+strategic_asset_decision: "create_standalone_spoke"
+asset_decision: "static_blog_post"
+topic_id: "topic-clay-lovable-gitlab-public-content-loops"
+pillar_id: "pillar-employee-generated-content"
+source_readiness: "ready"
+standalone_rationale: "The existing examples article mentions Clay, Lovable, and GitLab. This post goes deeper on the public loop mechanics behind those examples, so it can support revenue leaders who need an operating model instead of another examples list."
+discovery_sources_excluded_from_evidence: true
+discovery_inputs_citable: false

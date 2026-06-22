@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "clay-lovable-gitlab-public-content-loops",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-22T01:49:04.067Z",
+  "rendered_html_path": "blog/clay-lovable-gitlab-public-content-loops/index.html",
+  "rendered_html_sha256": "4ed5e684c4099ec411d00052540cca6b65fc92be4c8c68a6dea0515c97e67737",
+  "article_text_sha256": "6afe38eff9de4bf029d1ad6aafb8b6ef9611c01b86c49065beaeec43dacecefb",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, concrete B2B analysis piece with no AI filler, instruction leaks, rubric language, or binary correction cadence that would stand out to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

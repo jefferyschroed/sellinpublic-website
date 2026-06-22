@@ -1,0 +1,20 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    {
+      "source_id": "discovery-primary-query",
+      "source_type": "search_query",
+      "description": "Primary query used for source discovery only: b2b public content loops clay lovable gitlab."
+    },
+    {
+      "source_id": "discovery-existing-cluster",
+      "source_type": "internal_cluster_context",
+      "description": "Existing employee-generated content examples page used only to avoid duplication and set internal-link context."
+    }
+  ],
+  "rules": [
+    "Discovery inputs can shape research direction, but they cannot support public factual claims.",
+    "Use first-party company pages, official docs, public handbooks, and direct public artifacts as evidence.",
+    "Do not cite Reddit, forums, query exports, autocomplete, PAA, or AI answers as factual evidence."
+  ]
+}

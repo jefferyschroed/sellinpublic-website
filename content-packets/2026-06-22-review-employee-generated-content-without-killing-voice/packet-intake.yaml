@@ -1,0 +1,24 @@
+packet_id: "2026-06-22-review-employee-generated-content-without-killing-voice"
+slug: "review-employee-generated-content-without-killing-voice"
+status: "intake_ready"
+strategic_asset_decision: "create"
+asset_decision: "canonical_spoke_article"
+topic_id: "topic-review-egc-without-killing-voice"
+pillar_id: "pillar-content-operations"
+source_readiness: "ready"
+standalone_rationale: "This topic is mentioned inside broader employee-generated content infrastructure and scale articles, but it needs a focused workflow page for teams that need brand, legal, compliance, or executive review without losing employee voice."
+discovery_sources_excluded_from_evidence: true
+query:
+  primary_query: "review employee-generated content without killing voice"
+  aeo_question: "How should teams review employee-generated content without making it generic?"
+  publish_date: "2026-06-22"
+owned_paths:
+  - "content-packets/2026-06-22-review-employee-generated-content-without-killing-voice/"
+  - "blog/review-employee-generated-content-without-killing-voice/index.html"
+  - "public/assets/blog/review-employee-generated-content-without-killing-voice/"
+hard_boundaries:
+  - "No blog/index.html edits."
+  - "No sitemap.xml edits."
+  - "No feed.xml edits."
+  - "No docs/seo-aeo/topic-coverage.csv edits."
+  - "No shared CSS, JS, renderer, or unrelated post edits."

@@ -1,0 +1,51 @@
+{
+  "packet_id": "2026-06-22-review-employee-generated-content-without-killing-voice",
+  "slug": "review-employee-generated-content-without-killing-voice",
+  "generated_at": "2026-06-22T01:49:56Z",
+  "dry_run": false,
+  "scope": "child-owned-post-only",
+  "outputs": [
+    {
+      "path": "blog/review-employee-generated-content-without-killing-voice/index.html",
+      "bytes": 33049,
+      "changed": true
+    }
+  ],
+  "shared_aggregate_files_edited": false,
+  "validation": {
+    "claude_blog_pass": {
+      "ok": true,
+      "status": "applied",
+      "model": "claude-sonnet-4-6",
+      "applied_to_draft": true,
+      "applied_to_article_blocks": true,
+      "report": "content-packets/2026-06-22-review-employee-generated-content-without-killing-voice/claude-writing-pass.md"
+    },
+    "public_reader_qa": {
+      "ok": true,
+      "pass": true,
+      "mode": "model",
+      "findings": 0,
+      "rewrites_applied": 0,
+      "report": "content-packets/2026-06-22-review-employee-generated-content-without-killing-voice/public-reader-report.json"
+    },
+    "packet_validate": {
+      "ok": true,
+      "command": "node scripts/blog-orchestrator.mjs validate content-packets/2026-06-22-review-employee-generated-content-without-killing-voice/"
+    },
+    "post_check": {
+      "ok": true,
+      "command": "node scripts/check-blog-post.mjs blog/review-employee-generated-content-without-killing-voice/index.html"
+    },
+    "diff_check": {
+      "ok": true,
+      "command": "git diff --check"
+    }
+  },
+  "parent_integration_required": [
+    "blog/index.html",
+    "sitemap.xml",
+    "feed.xml",
+    "docs/seo-aeo/topic-coverage.csv"
+  ]
+}

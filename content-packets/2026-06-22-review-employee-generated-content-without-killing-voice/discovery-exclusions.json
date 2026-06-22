@@ -1,0 +1,19 @@
+{
+  "evidence_policy": "discovery_only_not_factual_evidence",
+  "excluded_sources": [
+    "autocomplete",
+    "People Also Ask",
+    "query exports",
+    "trend tools",
+    "AI answer outputs",
+    "Reddit",
+    "forums",
+    "generic listicles",
+    "unsourced statistics pages"
+  ],
+  "rules": [
+    "Cite official, attributable, primary sources for factual claims.",
+    "Use FTC, eCFR, LinkedIn, and FINRA sources only for the narrow governance context they directly support.",
+    "Do not cite discovery-only sources in draft.md, article.blocks.json, claims-ledger.csv, or public HTML."
+  ]
+}

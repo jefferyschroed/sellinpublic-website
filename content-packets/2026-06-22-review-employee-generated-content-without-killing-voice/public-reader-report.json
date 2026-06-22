@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "review-employee-generated-content-without-killing-voice",
+  "mode": "model",
+  "model_provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "generated_at": "2026-06-22T01:49:38.863Z",
+  "rendered_html_path": "blog/review-employee-generated-content-without-killing-voice/index.html",
+  "rendered_html_sha256": "2b29dc2438ba448981cb5156a15fd45dee497c22f68a438145aafc28d792dec7",
+  "article_text_sha256": "a4e14f745a8679c35978b9541eb01305121698d2b97843d7b8fe81c87e1babf9",
+  "context_policy": {
+    "clean_context": true,
+    "packet_visible_to_model": false,
+    "sources_visible_to_model": [
+      "rendered_public_html_article_text"
+    ],
+    "root_cause_inspection_after_reader_verdict": true
+  },
+  "pass": true,
+  "gate_eligible": true,
+  "summary": "The article reads as a clean, practitioner-written workflow piece with no AI filler, instruction leaks, rubric language, or binary correction cadence that would stand out to a public reader.",
+  "loop": 1,
+  "findings": [],
+  "rewrites_applied": [],
+  "root_cause": {
+    "status": "not_needed",
+    "inspected_artifacts": [
+      "outline.md",
+      "draft.md",
+      "article.blocks.json",
+      "qa-report.md",
+      "claude-writing-pass.md",
+      "research.md",
+      "subagent-work-order.md"
+    ],
+    "hypotheses": []
+  },
+  "remediation_history": []
+}

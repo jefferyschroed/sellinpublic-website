@@ -1,0 +1,110 @@
+[
+  {
+    "id": "src-001",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255",
+    "title": "16 CFR Part 255, Guides Concerning Use of Endorsements and Testimonials in Advertising",
+    "publisher": "Electronic Code of Federal Regulations",
+    "author": "Federal Trade Commission",
+    "published_date": "2023-07-26",
+    "accessed_date": "2026-06-22",
+    "source_type": "federal regulation guidance",
+    "reliability": "A",
+    "notes": "Used for endorsement definitions, honest-opinion requirements, clear and conspicuous disclosure context, and advertiser guidance and monitoring responsibilities."
+  },
+  {
+    "id": "src-002",
+    "url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "title": "Disclosures 101 for Social Media Influencers",
+    "publisher": "Federal Trade Commission",
+    "author": "FTC staff",
+    "published_date": "2019",
+    "accessed_date": "2026-06-22",
+    "source_type": "official business guidance",
+    "reliability": "A",
+    "notes": "Used for the narrow point that employment, financial, personal, or family relationships can be material connections that require clear disclosure when endorsing a brand."
+  },
+  {
+    "id": "src-003",
+    "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "title": "FTC's Endorsement Guides: What People Are Asking",
+    "publisher": "Federal Trade Commission",
+    "author": "FTC staff",
+    "published_date": "2017",
+    "accessed_date": "2026-06-22",
+    "source_type": "official business guidance",
+    "reliability": "A",
+    "notes": "Used for contextual guidance that FTC endorsement analysis is fact-specific and does not create a safe harbor."
+  },
+  {
+    "id": "src-004",
+    "url": "https://www.linkedin.com/legal/professional-community-policies",
+    "title": "LinkedIn Professional Community Policies",
+    "publisher": "LinkedIn",
+    "author": "LinkedIn",
+    "published_date": "current",
+    "accessed_date": "2026-06-22",
+    "source_type": "platform policy",
+    "reliability": "A",
+    "notes": "Used for LinkedIn's policy context on true identity, accurate information, false or misleading content, and clear notice for personal benefit."
+  },
+  {
+    "id": "src-005",
+    "url": "https://www.finra.org/rules-guidance/notices/10-06",
+    "title": "Regulatory Notice 10-06, Social Media Web Sites",
+    "publisher": "FINRA",
+    "author": "FINRA",
+    "published_date": "2010-01",
+    "accessed_date": "2026-06-22",
+    "source_type": "regulatory notice",
+    "reliability": "A",
+    "notes": "Used only for regulated financial-services context on social media communications, supervision, and recordkeeping."
+  },
+  {
+    "id": "src-006",
+    "url": "https://www.finra.org/rules-guidance/notices/17-18",
+    "title": "Regulatory Notice 17-18, Guidance on Social Networking Websites and Business Communications",
+    "publisher": "FINRA",
+    "author": "FINRA",
+    "published_date": "2017-04-25",
+    "accessed_date": "2026-06-22",
+    "source_type": "regulatory notice",
+    "reliability": "A",
+    "notes": "Used only for regulated-team routing context around digital communications, supervision, and content requirements."
+  },
+  {
+    "id": "src-007",
+    "url": "https://sellinpublic.co/blog/employee-generated-content-infrastructure/",
+    "title": "Employee-Generated Content Infrastructure",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-17",
+    "accessed_date": "2026-06-22",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Used for cluster continuity and internal linking, not external factual proof."
+  },
+  {
+    "id": "src-008",
+    "url": "https://sellinpublic.co/blog/scale-employee-generated-content-linkedin/",
+    "title": "How To Scale Employee-Generated Content On LinkedIn",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-18",
+    "accessed_date": "2026-06-22",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Used for cluster continuity and internal linking, not external factual proof."
+  },
+  {
+    "id": "src-009",
+    "url": "https://sellinpublic.co/blog/turn-employee-expertise-into-linkedin-posts/",
+    "title": "How To Turn Employee Expertise Into Useful LinkedIn Posts",
+    "publisher": "Sell In Public",
+    "author": "Jeffery Schroeder",
+    "published_date": "2026-06-20",
+    "accessed_date": "2026-06-22",
+    "source_type": "internal related article",
+    "reliability": "B",
+    "notes": "Used for cluster continuity and internal linking, not external factual proof."
+  }
+]

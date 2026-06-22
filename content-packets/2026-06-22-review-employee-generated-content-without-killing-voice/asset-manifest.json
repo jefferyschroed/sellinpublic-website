@@ -1,0 +1,17 @@
+{
+  "packet_id": "2026-06-22-review-employee-generated-content-without-killing-voice",
+  "assets": [
+    {
+      "id": "hero-generated",
+      "type": "hero",
+      "source_png": "public/assets/blog/review-employee-generated-content-without-killing-voice/hero-generated.png",
+      "path": "public/assets/blog/review-employee-generated-content-without-killing-voice/hero-generated.webp",
+      "public_url": "https://sellinpublic.co/public/assets/blog/review-employee-generated-content-without-killing-voice/hero-generated.webp",
+      "width": 1672,
+      "height": 730,
+      "alt": "Flat head-on editorial review panel preserving a distinct employee voice card on a mint and teal mesh background",
+      "notes": "Generated from the finished article draft. Prompt recorded in image-brief.md.",
+      "final_prompt_ref": "image-brief.md"
+    }
+  ]
+}

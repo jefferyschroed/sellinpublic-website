@@ -1,0 +1,117 @@
+packet_id: "2026-06-22-review-employee-generated-content-without-killing-voice"
+status: "publish-ready-child-scope"
+working_title: "How To Review Employee-Generated Content Without Killing The Voice"
+slug: "review-employee-generated-content-without-killing-voice"
+owner: "Sell In Public"
+reviewers:
+  - "Sell In Public editorial"
+created_at: "2026-06-22"
+updated_at: "2026-06-22"
+
+audience:
+  primary_buyer: "B2B founder, VP of Sales, CRO, revenue operator, or marketing leader"
+  secondary_buyers:
+    - "Sales enablement leader"
+    - "Brand lead"
+    - "Legal or compliance partner reviewing public employee content"
+  company_context: "B2B revenue teams that want employees to publish useful LinkedIn posts but need brand, legal, executive, or compliance review."
+  pain: "Reviewers protect the company by rewriting every sentence into approved brand language, which removes the employee's real judgment and makes the post sound assigned."
+
+business_goal: "Own the review workflow subtopic inside the employee-generated content cluster and give sales/marketing teams a canonical page for preserving voice during review."
+sales_use_case: "Use when a prospect wants employee-generated LinkedIn content but worries legal, brand, or executive review will make every post sound generic."
+cta:
+  primary:
+    label: "Use the Review Checklist"
+    url: "#copyable-review-checklist"
+  secondary:
+    label: "Book a Working Session"
+    url: "https://calendly.com/jeff-tryquicksetters/30min"
+
+search_intent:
+  stage: "how-to-workflow"
+  primary_query: "review employee-generated content without killing voice"
+  aeo_question: "How should teams review employee-generated content without making it generic?"
+  primary_keyword: "review employee-generated content without killing voice"
+  secondary_keywords:
+    - "employee-generated content review workflow"
+    - "review employee LinkedIn posts"
+    - "preserve employee voice in content"
+    - "employee content approval process"
+    - "legal review employee LinkedIn posts"
+  related_questions:
+    - "How should legal review employee-generated content?"
+    - "How do you keep employee LinkedIn posts from sounding generic?"
+    - "What should brand reviewers change in employee content?"
+    - "How do you approve employee-generated content quickly?"
+
+topic_map:
+  pillar_id: "pillar-content-operations"
+  pillar_name: "Content Operations"
+  topic_id: "topic-review-egc-without-killing-voice"
+  topic_score: 83
+  topic_decision: "create_or_refresh_packet"
+  coverage_role: "spoke"
+  parent_topic: "topic-egc-definition"
+  target_asset: "post"
+  source_readiness: "ready"
+  internal_link_targets:
+    - "/blog/employee-generated-content-infrastructure/"
+    - "/blog/scale-employee-generated-content-linkedin/"
+    - "/blog/turn-employee-expertise-into-linkedin-posts/"
+    - "/blog/"
+
+entity_targets:
+  - "Employee-generated content"
+  - "Employee voice"
+  - "LinkedIn"
+  - "FTC Endorsement Guides"
+  - "FINRA social media supervision"
+  - "Brand review"
+  - "Legal review"
+  - "B2B revenue teams"
+angle: "A useful review workflow separates factual and compliance risk from voice edits, gives reviewers explicit change types, and protects the employee's judgment instead of rewriting every post into brand copy."
+sell_in_public_pov: "Employee-generated content needs a review system that keeps risk checks strict and style edits restrained."
+word_count_target: "1500-1900"
+
+must_include:
+  - "Direct answer to the AEO question near the top."
+  - "Two-pass review workflow: risk first, voice second."
+  - "Guidance for legal, brand, and executive review without legal advice."
+  - "FTC disclosure context for employee endorsements and material connections."
+  - "LinkedIn policy context on false or misleading content and clear notices for personal benefit."
+  - "FINRA context for regulated teams that need supervision and recordkeeping."
+  - "Copyable review checklist."
+  - "Internal links to the EGC infrastructure, scale EGC, and turn employee expertise posts."
+  - "Final CTA that names Sell In Public and has exactly two body sentences."
+must_avoid:
+  - "Invented laws, statistics, examples, or quotes."
+  - "Treating all employee posts as ads or legal-risk content."
+  - "Public legal advice."
+  - "Flattening every voice into generic brand language."
+  - "Shared index, sitemap, feed, CSS, JS, script, or topic-coverage edits in this child worktree."
+
+source_requirements:
+  min_grade: "B"
+  banned_sources:
+    - "Reddit/forums as evidence"
+    - "generic listicles"
+    - "unsourced stat roundups"
+    - "autocomplete, PAA, query exports, trend inputs, or AI prompt outputs as factual evidence"
+  required_source_types:
+    - "Official FTC or CFR guidance for endorsement and disclosure context."
+    - "Official LinkedIn policies for platform truthfulness and disclosure context."
+    - "Official FINRA notices only for regulated-team supervision context."
+
+approval:
+  strategy_gate: true
+  source_gate: true
+  outline_gate: true
+  qa_gate: true
+  publish_gate: true
+
+packet_intake:
+  status: "intake_ready"
+  intake_artifact: "packet-intake.yaml"
+  discovery_exclusions: "discovery-exclusions.json"
+  query_run_status: "handoff_ready"
+  discovery_sources_excluded_from_evidence: true

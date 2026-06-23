@@ -78,6 +78,15 @@ function sitemapUrls(outDir, origin) {
   })));
 }
 
+function personalizedPageUrls(root, origin) {
+  const forDir = path.join(root, "for");
+  if (!fs.existsSync(forDir) || !fs.statSync(forDir).isDirectory()) return [];
+  return fs
+    .readdirSync(forDir)
+    .filter((name) => fs.existsSync(path.join(forDir, name, "index.html")))
+    .map((name) => `${origin}/for/${name}/`);
+}
+
 function topLevelEntries(outDir) {
   if (!fs.existsSync(outDir)) return [];
   return fs.readdirSync(outDir).sort();
@@ -161,7 +170,7 @@ function run() {
   const outputDirSafe = outRelative.startsWith("outputs/") && outDir !== root;
   const topLevel = topLevelEntries(outDir);
   const forbiddenTopLevel = topLevel.filter((name) => FORBIDDEN_TOP_LEVEL.has(name));
-  const urls = sitemapUrls(outDir, origin);
+  const urls = Array.from(new Set([...sitemapUrls(outDir, origin), ...personalizedPageUrls(root, origin)]));
   const routes = urls.map((url) => {
     const parsed = new URL(url);
     const localPath = outPathForUrl(outDir, url);

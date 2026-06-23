@@ -8,6 +8,7 @@ const STATIC_COPY_PATHS = [
   "index.html",
   "styles.css",
   "script.js",
+  "for",
   "privacy",
   "terms",
   "blog",

@@ -191,7 +191,7 @@ export function renderBlogIndexHtml(packets) {
     <meta name="twitter:description" content="Definitions, examples, and practical notes on employee-generated content." />
     <meta name="twitter:image" content="${escapeHtml(primaryImage)}" />
     <meta name="theme-color" content="#f3eeee" />
-    <link rel="stylesheet" href="/styles.css?v=nav-operating-desk-3" />
+    <link rel="stylesheet" href="/styles.css?v=cookie-choices-2" />
     <link rel="stylesheet" href="/blog/blog.css?v=foundation-6" />
   </head>
   <body class="blog-page">
@@ -249,7 +249,7 @@ export function renderBlogIndexHtml(packets) {
     </main>
 
     ${renderFooter()}
-    <script src="/script.js?v=nav-theme-2"></script>
+    <script src="/script.js?v=cookie-choices-2"></script>
     <script src="/blog/blog.js?v=foundation-5"></script>
   </body>
 </html>

@@ -5,6 +5,8 @@ const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .f
   const STORAGE_KEY = "sip_cookie_consent_v1";
   const ACCEPTED = "accepted";
   const DECLINED = "declined";
+  const DETAILS = "details";
+  const TRANSITION_MS = 180;
   const settings = window.SIP_TRACKING || {};
   let banner;
   let settingsButton;
@@ -76,12 +78,15 @@ const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .f
     loadReb2b();
   };
 
+  const isPrivacyPage = () => window.location.pathname.replace(/\/+$/, "") === "/privacy";
+
   const removeBanner = () => {
     banner?.remove();
     banner = null;
   };
 
   const showSettingsButton = () => {
+    if (!isPrivacyPage()) return;
     if (settingsButton) return;
     settingsButton = document.createElement("button");
     settingsButton.className = "sip-cookie-settings";
@@ -91,26 +96,42 @@ const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .f
     document.body.appendChild(settingsButton);
   };
 
-  function showBanner({ force = false } = {}) {
-    if (banner || (!force && readPreference()?.status)) return;
+  const renderBannerContent = (mode) => {
+    if (mode === DETAILS) {
+      return `
+        <div class="sip-cookie-consent__copy">
+          <h2>Cookie choices</h2>
+          <p>Some cookies keep the site working. Others help us understand which pages are useful, what brought people here, and how to make future visits more relevant.</p>
+        </div>
+        <div class="sip-cookie-consent__actions">
+          <a class="sip-cookie-consent__button" href="/privacy/">Privacy policy</a>
+          <button class="sip-cookie-consent__button" type="button" data-cookie-choice="${DECLINED}">Essentials only</button>
+        </div>
+      `;
+    }
 
-    banner = document.createElement("section");
-    banner.className = "sip-cookie-consent";
-    banner.setAttribute("role", "dialog");
-    banner.setAttribute("aria-label", "Cookie consent");
-    banner.innerHTML = `
+    return `
       <div class="sip-cookie-consent__copy">
         <h2>Cookie choices</h2>
-        <p>We use analytics and identity-resolution cookies to understand site performance and business visitors. Accept to allow Google Analytics and RB2B, or decline to keep them off.</p>
-        <a href="/privacy/">Privacy policy</a>
+        <p>We use cookies to improve your website experience and understand what's working.</p>
       </div>
       <div class="sip-cookie-consent__actions">
-        <button class="sip-cookie-consent__button" type="button" data-cookie-choice="${DECLINED}">Decline</button>
+        <button class="sip-cookie-consent__button" type="button" data-cookie-manage>Manage choices</button>
         <button class="sip-cookie-consent__button sip-cookie-consent__button--primary" type="button" data-cookie-choice="${ACCEPTED}">Accept</button>
       </div>
     `;
+  };
 
-    banner.querySelectorAll("[data-cookie-choice]").forEach((button) => {
+  const focusFirstBannerAction = () => {
+    banner?.querySelector(".sip-cookie-consent__actions a, .sip-cookie-consent__actions button")?.focus({ preventScroll: true });
+  };
+
+  const bindBannerActions = () => {
+    banner?.querySelector("[data-cookie-manage]")?.addEventListener("click", () => {
+      setBannerMode(DETAILS);
+    });
+
+    banner?.querySelectorAll("[data-cookie-choice]").forEach((button) => {
       button.addEventListener("click", () => {
         const status = button.dataset.cookieChoice === ACCEPTED ? ACCEPTED : DECLINED;
         writePreference(status);
@@ -120,9 +141,70 @@ const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .f
         showSettingsButton();
       });
     });
+  };
+
+  function setBannerMode(mode) {
+    if (!banner || banner.dataset.mode === mode) return;
+    const content = banner.querySelector("[data-cookie-content]");
+    if (!content) return;
+
+    if (reduceMotion) {
+      banner.dataset.mode = mode;
+      content.innerHTML = renderBannerContent(mode);
+      bindBannerActions();
+      focusFirstBannerAction();
+      return;
+    }
+
+    window.clearTimeout(banner._sipCookieTransitionTimer);
+    banner.style.height = `${banner.offsetHeight}px`;
+    content.classList.add("is-exit");
+
+    banner._sipCookieTransitionTimer = window.setTimeout(() => {
+      banner.dataset.mode = mode;
+      content.innerHTML = renderBannerContent(mode);
+      bindBannerActions();
+      content.classList.remove("is-exit");
+      content.classList.add("is-enter-start");
+
+      const nextHeight = banner.scrollHeight;
+      banner.style.height = `${nextHeight}px`;
+      void content.offsetHeight;
+      content.classList.remove("is-enter-start");
+
+      const finish = (event) => {
+        if (event.propertyName !== "height") return;
+        banner.removeEventListener("transitionend", finish);
+        banner.style.height = "";
+      };
+
+      banner.addEventListener("transitionend", finish);
+      window.setTimeout(() => {
+        banner.removeEventListener("transitionend", finish);
+        banner.style.height = "";
+      }, TRANSITION_MS + 180);
+      focusFirstBannerAction();
+    }, TRANSITION_MS);
+  }
+
+  function showBanner({ force = false } = {}) {
+    if (banner || (!force && readPreference()?.status)) return;
+
+    banner = document.createElement("section");
+    banner.className = "sip-cookie-consent";
+    banner.dataset.mode = "summary";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Cookie consent");
+    banner.innerHTML = `
+      <div class="sip-cookie-consent__content" data-cookie-content>
+        ${renderBannerContent("summary")}
+      </div>
+    `;
+
+    bindBannerActions();
 
     document.body.appendChild(banner);
-    banner.querySelector("[data-cookie-choice]")?.focus({ preventScroll: true });
+    focusFirstBannerAction();
   }
 
   const syncConsent = () => {

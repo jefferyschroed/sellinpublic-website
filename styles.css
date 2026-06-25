@@ -31,6 +31,12 @@
   --dropdown-pre-scale: 0.97;
   --dropdown-closing-scale: 0.99;
   --dropdown-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --resize-dur: 300ms;
+  --resize-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --text-swap-dur: 150ms;
+  --text-swap-translate-y: 4px;
+  --text-swap-blur: 2px;
+  --text-swap-ease: ease-in-out;
   --glass-bg: rgba(8, 10, 24, 0.48);
   --glass-bg-light: rgba(255, 255, 255, 0.56);
   --glass-border: rgba(255, 255, 255, 0.24);
@@ -6579,11 +6585,46 @@ summary {
   padding: 18px;
   display: grid;
   gap: 16px;
+  overflow: hidden;
   color: #f9faf7;
   background: rgba(14, 17, 22, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+  transition:
+    width var(--resize-dur) var(--resize-ease),
+    height var(--resize-dur) var(--resize-ease);
+  will-change: width, height;
+}
+
+.sip-cookie-consent[data-mode="details"] {
+  width: min(520px, calc(100vw - 32px));
+}
+
+.sip-cookie-consent__content {
+  display: grid;
+  gap: 16px;
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+  transition:
+    transform var(--text-swap-dur) var(--text-swap-ease),
+    filter var(--text-swap-dur) var(--text-swap-ease),
+    opacity var(--text-swap-dur) var(--text-swap-ease);
+  will-change: transform, filter, opacity;
+}
+
+.sip-cookie-consent__content.is-exit {
+  transform: translateY(calc(var(--text-swap-translate-y) * -1));
+  filter: blur(var(--text-swap-blur));
+  opacity: 0;
+}
+
+.sip-cookie-consent__content.is-enter-start {
+  transform: translateY(var(--text-swap-translate-y));
+  filter: blur(var(--text-swap-blur));
+  opacity: 0;
+  transition: none;
 }
 
 .sip-cookie-consent__copy {
@@ -6634,8 +6675,12 @@ summary {
 
 .sip-cookie-consent__button {
   padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #f9faf7;
   background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
 }
 
 .sip-cookie-consent__button--primary {
@@ -6679,6 +6724,11 @@ summary {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .sip-cookie-consent,
+  .sip-cookie-consent__content {
+    transition: none !important;
+  }
+
   .managed-system__console-grid span,
   .console-metric,
   .console-metric::after,

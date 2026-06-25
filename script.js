@@ -106,6 +106,7 @@ const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .f
         <div class="sip-cookie-consent__actions">
           <a class="sip-cookie-consent__button" href="/privacy/">Privacy policy</a>
           <button class="sip-cookie-consent__button" type="button" data-cookie-choice="${DECLINED}">Essentials only</button>
+          <button class="sip-cookie-consent__button sip-cookie-consent__button--primary" type="button" data-cookie-choice="${ACCEPTED}">Accept</button>
         </div>
       `;
     }

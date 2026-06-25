@@ -28,7 +28,7 @@ function html(title, withTag = true) {
 <html>
   <head>
     <title>${title}</title>
-    ${withTag ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}"></script>` : ""}
+    ${withTag ? `<script>window.SIP_TRACKING = window.SIP_TRACKING || {}; window.SIP_TRACKING.ga4MeasurementId = "${MEASUREMENT_ID}";</script>` : ""}
   </head>
   <body>${title}</body>
 </html>

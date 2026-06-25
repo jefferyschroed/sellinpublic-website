@@ -225,12 +225,12 @@ assertMaxLength("Twitter description", firstMetaContent({ name: "twitter:descrip
 
 if (
   measurementId &&
-  html.includes(`googletagmanager.com/gtag/js?id=${measurementId}`) &&
-  html.includes(`gtag('config', '${measurementId}')`)
+  html.includes("window.SIP_TRACKING.ga4MeasurementId") &&
+  html.includes(measurementId)
 ) {
-  pass(`GA4 Google tag is present for ${measurementId}.`);
+  pass(`Consent-managed GA4 config is present for ${measurementId}.`);
 } else {
-  fail(`GA4 Google tag must be present for ${measurementId || "the configured Measurement ID"}.`);
+  fail(`Consent-managed GA4 config must be present for ${measurementId || "the configured Measurement ID"}.`);
 }
 
 if (hasSiteFavicon(html)) pass(`Site favicon points to ${SITE_FAVICON_PATH}.`);

@@ -18,12 +18,9 @@ export function renderGoogleTag(measurementId = configuredMeasurementId()) {
   if (!isMeasurementId(measurementId)) return "";
   const id = String(measurementId).trim();
   return `${GOOGLE_TAG_START}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=${id}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '${id}');
+      window.SIP_TRACKING = window.SIP_TRACKING || {};
+      window.SIP_TRACKING.ga4MeasurementId = '${id}';
     </script>
     ${GOOGLE_TAG_END}`;
 }

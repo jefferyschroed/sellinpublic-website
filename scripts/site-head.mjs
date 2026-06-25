@@ -35,7 +35,10 @@ export function renderReb2bTracking(key = REB2B_TRACKING_KEY) {
   const normalizedKey = String(key || "").trim();
   if (!/^[A-Z0-9]+$/i.test(normalizedKey)) return "";
   return `${REB2B_TRACKING_START}
-    <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("${normalizedKey}");</script>
+    <script>
+      window.SIP_TRACKING = window.SIP_TRACKING || {};
+      window.SIP_TRACKING.reb2bKey = "${normalizedKey}";
+    </script>
     ${REB2B_TRACKING_END}`;
 }
 
@@ -53,8 +56,8 @@ export function hasReb2bTracking(html, key = REB2B_TRACKING_KEY) {
   const expectedKey = String(key || "").trim();
   return (
     Boolean(expectedKey) &&
-    source.includes("window.reb2b") &&
-    source.includes("https://ddwl4m2hdecbv.cloudfront.net/b/") &&
+    source.includes(REB2B_TRACKING_START) &&
+    source.includes("window.SIP_TRACKING.reb2bKey") &&
     source.includes(expectedKey)
   );
 }

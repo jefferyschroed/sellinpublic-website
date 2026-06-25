@@ -1,6 +1,155 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealTargets = document.querySelectorAll(".texts-reveal, .card-reveal, .faq-reveal");
 
+(() => {
+  const STORAGE_KEY = "sip_cookie_consent_v1";
+  const ACCEPTED = "accepted";
+  const DECLINED = "declined";
+  const settings = window.SIP_TRACKING || {};
+  let banner;
+  let settingsButton;
+
+  const readPreference = () => {
+    try {
+      const value = window.localStorage.getItem(STORAGE_KEY);
+      return value ? JSON.parse(value) : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const writePreference = (status) => {
+    const payload = {
+      status,
+      version: 1,
+      updatedAt: new Date().toISOString(),
+    };
+
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+    } catch {
+      window.__sipCookieConsent = payload;
+    }
+  };
+
+  const appendScript = (src, marker) => {
+    if (!src || document.querySelector(`script[data-sip-tracking="${marker}"]`)) return;
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = src;
+    script.dataset.sipTracking = marker;
+    document.head.appendChild(script);
+  };
+
+  const loadGoogleAnalytics = () => {
+    const id = String(settings.ga4MeasurementId || "").trim();
+    if (!/^G-[A-Z0-9]+$/i.test(id) || window.__sipGa4Loaded) return;
+
+    window.__sipGa4Loaded = true;
+    window[`ga-disable-${id}`] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function gtag() {
+      window.dataLayer.push(arguments);
+    };
+
+    appendScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`, "ga4");
+    window.gtag("js", new Date());
+    window.gtag("config", id);
+  };
+
+  const loadReb2b = () => {
+    const key = String(settings.reb2bKey || "").trim();
+    if (!/^[A-Z0-9]+$/i.test(key) || window.reb2b?.loaded || window.__sipReb2bLoaded) return;
+
+    window.__sipReb2bLoaded = true;
+    window.reb2b = { loaded: true };
+    appendScript(`https://ddwl4m2hdecbv.cloudfront.net/b/${key}/${key}.js.gz`, "reb2b");
+  };
+
+  const disableGoogleAnalytics = () => {
+    const id = String(settings.ga4MeasurementId || "").trim();
+    if (/^G-[A-Z0-9]+$/i.test(id)) window[`ga-disable-${id}`] = true;
+  };
+
+  const enableTracking = () => {
+    loadGoogleAnalytics();
+    loadReb2b();
+  };
+
+  const removeBanner = () => {
+    banner?.remove();
+    banner = null;
+  };
+
+  const showSettingsButton = () => {
+    if (settingsButton) return;
+    settingsButton = document.createElement("button");
+    settingsButton.className = "sip-cookie-settings";
+    settingsButton.type = "button";
+    settingsButton.textContent = "Cookie settings";
+    settingsButton.addEventListener("click", () => showBanner({ force: true }));
+    document.body.appendChild(settingsButton);
+  };
+
+  function showBanner({ force = false } = {}) {
+    if (banner || (!force && readPreference()?.status)) return;
+
+    banner = document.createElement("section");
+    banner.className = "sip-cookie-consent";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Cookie consent");
+    banner.innerHTML = `
+      <div class="sip-cookie-consent__copy">
+        <h2>Cookie choices</h2>
+        <p>We use analytics and identity-resolution cookies to understand site performance and business visitors. Accept to allow Google Analytics and RB2B, or decline to keep them off.</p>
+        <a href="/privacy/">Privacy policy</a>
+      </div>
+      <div class="sip-cookie-consent__actions">
+        <button class="sip-cookie-consent__button" type="button" data-cookie-choice="${DECLINED}">Decline</button>
+        <button class="sip-cookie-consent__button sip-cookie-consent__button--primary" type="button" data-cookie-choice="${ACCEPTED}">Accept</button>
+      </div>
+    `;
+
+    banner.querySelectorAll("[data-cookie-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const status = button.dataset.cookieChoice === ACCEPTED ? ACCEPTED : DECLINED;
+        writePreference(status);
+        if (status === ACCEPTED) enableTracking();
+        else disableGoogleAnalytics();
+        removeBanner();
+        showSettingsButton();
+      });
+    });
+
+    document.body.appendChild(banner);
+    banner.querySelector("[data-cookie-choice]")?.focus({ preventScroll: true });
+  }
+
+  const syncConsent = () => {
+    const preference = readPreference();
+    if (preference?.status === ACCEPTED) {
+      enableTracking();
+      showSettingsButton();
+      return;
+    }
+
+    if (preference?.status === DECLINED) {
+      disableGoogleAnalytics();
+      showSettingsButton();
+      return;
+    }
+
+    disableGoogleAnalytics();
+    showBanner();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", syncConsent, { once: true });
+  } else {
+    syncConsent();
+  }
+})();
+
 const cssTimeToMs = (value) => {
   const time = value.trim();
   if (!time) return 0;

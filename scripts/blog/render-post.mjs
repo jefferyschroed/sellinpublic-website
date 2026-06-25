@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { renderFaviconLinks } from "../site-head.mjs";
+import { renderFaviconLinks, renderReb2bTracking } from "../site-head.mjs";
 import { buildArticleAst } from "./article-ast.mjs";
 import { renderGoogleTag } from "./google-tag.mjs";
 import { assertSafeSlug, safeOutputPath, writeTextAtomic } from "./packet.mjs";
@@ -203,6 +203,7 @@ export function renderPostHtml(packet) {
 <html lang="en">
   <head>
     ${renderGoogleTag()}
+    ${renderReb2bTracking()}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="${escapeHtml(meta.robots || "index, follow")}" />

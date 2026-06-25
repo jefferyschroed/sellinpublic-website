@@ -5,7 +5,7 @@ import path from "node:path";
 import { ensureDir, envOrConfig, loadConfig, writeJsonAtomic } from "./lib/config.mjs";
 import { today } from "./lib/dates.mjs";
 import { configuredMeasurementId } from "../blog/google-tag.mjs";
-import { hasSiteFavicon, SITE_FAVICON_PATH } from "../site-head.mjs";
+import { hasReb2bTracking, hasSiteFavicon, REB2B_TRACKING_KEY, SITE_FAVICON_PATH } from "../site-head.mjs";
 
 const DEFAULT_OUT_DIR = "outputs/netlify-publish";
 const FORBIDDEN_TOP_LEVEL = new Set([
@@ -105,10 +105,11 @@ function runBuild(root) {
   };
 }
 
-function routeStatus({ exists, size, ga4Required, ga4Present, faviconRequired, faviconPresent }) {
+function routeStatus({ exists, size, ga4Required, ga4Present, faviconRequired, faviconPresent, reb2bRequired, reb2bPresent }) {
   if (!exists || size <= 0) return "blocked_missing_output_route";
   if (ga4Required && !ga4Present) return "blocked_missing_ga4_tag";
   if (faviconRequired && !faviconPresent) return "blocked_missing_favicon";
+  if (reb2bRequired && !reb2bPresent) return "blocked_missing_reb2b_tracking";
   return "ok";
 }
 
@@ -118,7 +119,9 @@ function writeMarkdown(filePath, report) {
       (route) =>
         `- ${route.status}: ${route.url} -> ${route.local_path} (${route.size} bytes; GA4 ${
           route.ga4_required ? (route.ga4_present ? "present" : "missing") : "not_required"
-        }; favicon ${route.favicon_required ? (route.favicon_present ? "present" : "missing") : "not_required"})`
+        }; favicon ${route.favicon_required ? (route.favicon_present ? "present" : "missing") : "not_required"}; ReB2B ${
+          route.reb2b_required ? (route.reb2b_present ? "present" : "missing") : "not_required"
+        })`
     )
     .join("\n");
   const forbiddenLines = report.forbidden_top_level.length
@@ -132,6 +135,7 @@ Status: ${report.status}
 Output directory: ${report.output_dir}
 GA4 Measurement ID: ${report.ga4_measurement_id || "missing"}
 Required favicon: ${report.required_favicon}
+Required ReB2B key: ${report.required_reb2b_key}
 
 ## Routes
 
@@ -181,6 +185,8 @@ function run() {
     const ga4Present = measurementId ? body.includes(measurementId) : false;
     const faviconRequired = ga4Required;
     const faviconPresent = hasSiteFavicon(body);
+    const reb2bRequired = ga4Required;
+    const reb2bPresent = hasReb2bTracking(body);
     return {
       url,
       path: parsed.pathname,
@@ -191,7 +197,9 @@ function run() {
       ga4_present: ga4Present,
       favicon_required: faviconRequired,
       favicon_present: faviconPresent,
-      status: routeStatus({ exists: state.exists, size: state.size, ga4Required, ga4Present, faviconRequired, faviconPresent }),
+      reb2b_required: reb2bRequired,
+      reb2b_present: reb2bPresent,
+      status: routeStatus({ exists: state.exists, size: state.size, ga4Required, ga4Present, faviconRequired, faviconPresent, reb2bRequired, reb2bPresent }),
     };
   });
   const blockedRoutes = routes.filter((route) => route.status !== "ok");
@@ -212,6 +220,7 @@ function run() {
     origin,
     ga4_measurement_id: measurementId,
     required_favicon: SITE_FAVICON_PATH,
+    required_reb2b_key: REB2B_TRACKING_KEY,
     build,
     top_level: topLevel,
     forbidden_top_level: forbiddenTopLevel,
@@ -220,7 +229,7 @@ function run() {
     blockers,
     routes,
     next_action: blockers.length
-      ? "Build the clean Netlify publish directory and fix blocked routes, GA4 tags, or favicons before any approved deploy."
+      ? "Build the clean Netlify publish directory and fix blocked routes, GA4 tags, favicons, or ReB2B tracking before any approved deploy."
       : "Clean Netlify publish directory is ready for a human-approved deploy path.",
   };
 

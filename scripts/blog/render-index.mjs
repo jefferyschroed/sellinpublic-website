@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { renderFaviconLinks } from "../site-head.mjs";
+import { renderFaviconLinks, renderReb2bTracking } from "../site-head.mjs";
 import { renderGoogleTag } from "./google-tag.mjs";
 import { assertSafeSlug, listPacketDirs, loadPacket, writeTextAtomic } from "./packet.mjs";
 import { escapeHtml, renderBlogRail } from "./shared-shell.mjs";
@@ -170,6 +170,7 @@ export function renderBlogIndexHtml(packets) {
 <html lang="en">
   <head>
     ${renderGoogleTag()}
+    ${renderReb2bTracking()}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />

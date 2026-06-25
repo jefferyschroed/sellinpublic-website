@@ -1,4 +1,7 @@
 export const SITE_FAVICON_PATH = "/public/assets/brand/hashtagiconlight.webp";
+export const REB2B_TRACKING_KEY = "4N210HQMXV6Z";
+export const REB2B_TRACKING_START = "<!-- SIP_REB2B_TRACKING_START -->";
+export const REB2B_TRACKING_END = "<!-- SIP_REB2B_TRACKING_END -->";
 
 function decodeEntities(value) {
   return String(value || "")
@@ -28,6 +31,14 @@ export function renderFaviconLinks() {
   ].join("\n    ");
 }
 
+export function renderReb2bTracking(key = REB2B_TRACKING_KEY) {
+  const normalizedKey = String(key || "").trim();
+  if (!/^[A-Z0-9]+$/i.test(normalizedKey)) return "";
+  return `${REB2B_TRACKING_START}
+    <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("${normalizedKey}");</script>
+    ${REB2B_TRACKING_END}`;
+}
+
 export function hasSiteFavicon(html) {
   const expected = normalizeHref(SITE_FAVICON_PATH);
   return Array.from(String(html || "").matchAll(/<link\b([^>]*)>/gi)).some((match) => {
@@ -35,4 +46,15 @@ export function hasSiteFavicon(html) {
     const href = normalizeHref(getAttr(match[1], "href"));
     return relTokens.includes("icon") && href === expected;
   });
+}
+
+export function hasReb2bTracking(html, key = REB2B_TRACKING_KEY) {
+  const source = String(html || "");
+  const expectedKey = String(key || "").trim();
+  return (
+    Boolean(expectedKey) &&
+    source.includes("window.reb2b") &&
+    source.includes("https://ddwl4m2hdecbv.cloudfront.net/b/") &&
+    source.includes(expectedKey)
+  );
 }

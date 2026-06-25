@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { configuredMeasurementId } from "./blog/google-tag.mjs";
-import { hasSiteFavicon, SITE_FAVICON_PATH } from "./site-head.mjs";
+import { hasReb2bTracking, hasSiteFavicon, REB2B_TRACKING_KEY, SITE_FAVICON_PATH } from "./site-head.mjs";
 import { extractPublicTextBlocks, scanAntiAiismsInBlocks } from "./seo-aeo/lib/anti-aiism-scan.mjs";
 
 const root = process.cwd();
@@ -235,6 +235,9 @@ if (
 
 if (hasSiteFavicon(html)) pass(`Site favicon points to ${SITE_FAVICON_PATH}.`);
 else fail(`Site favicon link must point to ${SITE_FAVICON_PATH}.`);
+
+if (hasReb2bTracking(html)) pass(`ReB2B tracking is present for ${REB2B_TRACKING_KEY}.`);
+else fail(`ReB2B tracking must be present for ${REB2B_TRACKING_KEY}.`);
 
 const metaAuthor = tagAttrs("meta", html)
   .filter((attrs) => getAttr(attrs, "name").toLowerCase() === "author")
